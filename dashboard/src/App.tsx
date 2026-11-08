@@ -13,6 +13,7 @@ import Battlecard from './pages/Battlecard';
 import MapPage from './pages/MapPage';
 import Strategy from './pages/Strategy';
 import Sources from './pages/Sources';
+import PillNav from './components/PillNav';
 
 /** Main navigation: four executive pages. Everything else is drill-down detail, still reachable. */
 const MAIN = [
@@ -44,6 +45,13 @@ export function go(path: string, params: Record<string, string> = {}) {
 
 export default function App() {
   const [route, setRoute] = useState(parseHash());
+  const [snug, setSnug] = useState(() => window.matchMedia('(max-width: 1400px)').matches);   // smaller nav pills so four tabs fit beside the wordmark
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1400px)');
+    const on = () => setSnug(mq.matches);
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
   useEffect(() => {
     const on = () => { setRoute(parseHash()); window.scrollTo({ top: 0 }); };
     window.addEventListener('hashchange', on);
@@ -68,9 +76,23 @@ export default function App() {
               <small>DMC vapor monitoring in U.S. battery manufacturing</small>
             </span>
           </a>
-          <nav className="nav" aria-label="Main">
-            {MAIN.map(p => <a key={p.path} href={`#/${p.path}`} className={p.path === activePath && !briefing ? 'active' : ''} aria-current={p.path === activePath && !briefing ? 'page' : undefined}>{p.label}</a>)}
-          </nav>
+          <div className="pillwrap">
+            <PillNav
+              items={MAIN.map(p => ({ label: p.label, href: `#/${p.path}` }))}
+              activeHref={briefing ? '' : `#/${activePath}`}
+              theme="light"
+              layout="joined"
+              itemStyle="plain"
+              hoverEffect="glide"
+              indicator="pill"
+              surface="solid"
+              barColor="#F3F8FF"
+              highlightColor="#1F60C4"
+              textColor="#454545"
+              size={snug ? 'sm' : 'md'}
+              ariaLabel="Main"
+            />
+          </div>
           <div className="top-actions">
             <a className="btn" href="#/briefing">Briefing</a>
             <a className="btn primary" href="#/present">Present</a>

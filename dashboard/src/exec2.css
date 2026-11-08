@@ -86,3 +86,24 @@ details.more ul { margin: 6px 0; }
 .present .om-insight { font-size: 18px; }
 .present .om-panel { font-size: 15px; }
 .s-find { font: 500 22px/1.4 Inter, sans-serif !important; color: var(--ink-strong); margin: 12px 0 !important; }
+
+/* PillNav (React Bits) in the top bar */
+.pillwrap { margin-left: auto; flex: 1 1 auto; min-width: 0; display: flex; justify-content: flex-end; }
+.pillwrap .pill-nav { --pn-shadow: none; }
+@media (max-width: 1320px) { .pillwrap { margin-left: 0; width: 100%; flex-basis: 100%; justify-content: flex-start; order: 3; } }
+@media (max-width: 640px) { .pillwrap { order: 0; flex: 1 1 100%; } }
+@media (max-width: 640px) {
+  .topbar-inner .wordmark { flex: 1 1 100%; }
+  .pillwrap { order: 1; flex: 0 0 auto; width: auto; }
+  .pillwrap .pill-nav[data-collapsed] { width: auto; }
+  .top-actions { order: 2; margin-left: auto; }
+  .pill-nav__panel { min-width: min(300px, calc(100vw - 32px)); }
+}
+/* PillNav keeps a hidden measuring row that can be wider than a phone; clip it so the page never scrolls sideways. */
+.topbar { overflow-x: clip; }
+/* With the compact PillNav, keep a single-row header down to ~1000px (the old 1320px wrap was for six tabs). */
+@media (min-width: 1001px) and (max-width: 1320px) {
+  .topbar-inner { flex-wrap: nowrap; height: 64px; padding: 0 16px; gap: 8px; }
+  .top-actions { margin-left: 4px; }
+  .pillwrap { margin-left: auto; width: auto; flex: 1 1 auto; justify-content: flex-end; order: 0; }
+}
