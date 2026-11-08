@@ -43,6 +43,13 @@ export default function Opportunities() {
         ))}
       </div>
 
+      <div className="grid">
+        <Card title="Adjacent segment: data center cooling" sub="Top states by 2023 data center electricity load (EPRI). A proxy for cooling demand, not a site count or market size." right={<Src ids={['S160']} />}>
+          <Bars rows={[...dataCenters.rows].sort((a, b) => b.mwh_2023 - a.mwh_2023).slice(0, 10).map(r => ({ key: r.state, label: `${stateByCode[r.state].name}${all.some(o => o.code === r.state && (o.cls === 'A' || o.cls === 'B')) ? ' ●' : ''}`, value: +(r.mwh_2023 / 1e6).toFixed(1), title: `${r.pct_state_electricity_2023}% of state electricity` }))} unit="TWh" onClick={k => go('map', { s: k, layer: 'datacenters' })} />
+          <p className="small" style={{ marginBottom: 0 }}>● also an Engage-now or Prepare battery state. ThermGAS markets data center refrigerant detection <Badge status="Verified" /> <Src ids={['S161']} />; MSA targets the same buyers <Src ids={['S162']} />.</p>
+        </Card>
+      </div>
+      <details className="more-detail"><summary>State-by-state evidence table</summary>
       <Card title={`${rows.length} state${rows.length === 1 ? '' : 's'}${f === 'all' ? '' : ` in class ${f}`}`} sub="Click a class tile to filter. Open a row to see each plant, its evidence tier and sources."
         right={f !== 'all' ? <button className="btn" onClick={() => setF('all')}>Show all</button> : undefined}>
         <div className="table-wrap">
@@ -77,12 +84,9 @@ export default function Opportunities() {
         <p className="small muted" style={{ marginBottom: 0 }}>Evidence dots: plant status verified for 2025-26 · competitor channel evidence · ThermGAS foothold. No customer contact has been identified for any plant (Unknown).</p>
       </Card>
 
-      <div className="grid">
-        <Card title="Adjacent segment: data center cooling" sub="Top states by 2023 data center electricity load (EPRI). A proxy for cooling demand, not a site count or market size." right={<Src ids={['S160']} />}>
-          <Bars rows={[...dataCenters.rows].sort((a, b) => b.mwh_2023 - a.mwh_2023).slice(0, 10).map(r => ({ key: r.state, label: `${stateByCode[r.state].name}${all.some(o => o.code === r.state && (o.cls === 'A' || o.cls === 'B')) ? ' ●' : ''}`, value: +(r.mwh_2023 / 1e6).toFixed(1), title: `${r.pct_state_electricity_2023}% of state electricity` }))} unit="TWh" onClick={k => go('map', { s: k, layer: 'datacenters' })} />
-          <p className="small" style={{ marginBottom: 0 }}>● also an Engage-now or Prepare battery state. ThermGAS markets data center refrigerant detection <Badge status="Verified" /> <Src ids={['S161']} />; MSA targets the same buyers <Src ids={['S162']} />.</p>
-        </Card>
-      </div>
+      </details>
+
+      <details className="more-detail"><summary>Plant evidence tiers and how to read the classes</summary>
       <div className="grid g2">
         <Card title="Plant evidence tiers" sub="Why some plants count more than others">
           <ul className="tier-list">
@@ -102,6 +106,7 @@ export default function Opportunities() {
           </div>
         </Card>
       </div>
+      </details>
     </div>
   );
 }

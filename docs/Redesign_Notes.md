@@ -38,3 +38,12 @@ No existing data file, source, or Phase 1-4 document was edited. No revenue, ROI
 - Competitive Landscape cards show one point per box; Roadmap is a timeline with deliverables first and task detail collapsed.
 - Interaction effects modelled on React Bits (CountUp, SpotlightCard, AnimatedContent), written without new dependencies and with reduced-motion and fallback handling.
 - Tests: 16 (adds EPRI row count, total, ranks, missing states and evidence labels for the data center claims).
+
+## Round 3: design pass (frontend-design + ui-ux-pro-max)
+Brand stays fixed as the client set it (blue #1F60C4, Poppins headings, Inter body, light background). The pass changes structure, not identity.
+- **One memorable thing:** the map. Everything else is quiet. The first screen is a large headline beside four big readout numbers separated by hairlines, not boxed KPI cards.
+- **Open sections instead of identical cards:** findings are three open columns whose top rule colour encodes the evidence level (green Verified, amber Inferred, purple Assumption). Actions are a numbered list because they are a ranked sequence. The decision is the only strongly bordered block.
+- **Removed template tells:** the uppercase blue label above every heading, per-card spotlight hover, fade-up on every section, shared soft shadows on every card. The single deliberate motion is the headline resolving word by word on load (a dependency-free take on React Bits SplitText / BlurText), plus count-up numerals. All motion respects reduced-motion and prints fully visible.
+- **Less text:** Competitive Landscape went from about 930 to about 610 visible words and Market Opportunities from about 1,040 to about 330 by moving the long tables and reference cards behind "show" disclosures. Nothing was deleted: 13 state rows, tier legend, differentiation table and other players are one click away.
+- **Accessibility and interaction (ui-ux-pro-max checks):** 4.5:1 text contrast on the brand palette, visible focus rings on links, buttons and summaries, colour is never the only signal (evidence level also has an icon and a label, map classes also have text), no horizontal scroll at 375px on any page, reduced-motion respected.
+- **PillNav** (React Bits) kept as the main navigation.

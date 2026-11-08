@@ -6,7 +6,6 @@ import { DIFF } from './Strategy';
 import { ProposalNote } from './Executive';
 import { go } from '../App';
 import OppMap from '../OppMap';
-import { Spotlight } from '../fx';
 
 const KEY = ['falco117', 'riken_fill', 'liontamer'];
 const ROLE: Record<string, string> = { falco117: 'Direct competitor', riken_fill: 'Direct competitor', liontamer: 'Competes for the same budget (indirect)' };
@@ -31,13 +30,13 @@ export default function Landscape() {
         {cards.map(({ t, b }) => {
           const lvl = threatLevel(t.task_overlap, t.battery_gtm);
           return (
-            <Spotlight key={t.product} className="card rival">
+            <section key={t.product} className="card rival">
               <header className="card-head"><div><h3>{b.title}</h3><p className="card-sub">{ROLE[t.product]}</p></div><span className={`threat threat-${lvl}`}>{lvl}</span></header>
               <h4 className="mini win">They win on</h4><Items items={b.where_they_win} n={1} />
               <h4 className="mini them">ThermGAS can win on</h4><Items items={b.where_thermgas_can_win} n={1} />
               <h4 className="mini mine">Watch out</h4><Items items={b.landmines} n={1} />
               <div className="meta"><a className="btn" onClick={() => go('battlecard', { p: t.product })} href={`#/battlecard?p=${t.product}`}>Full battlecard →</a></div>
-            </Spotlight>
+            </section>
           );
         })}
       </div>
@@ -52,6 +51,15 @@ export default function Landscape() {
         <Card title="Threat map" sub="Rule-based placement. Click a product for its battlecard.">
           <ThreatMatrix compact />
         </Card>
+        <Card title="Possible positioning" sub="A hypothesis to test, conditional on the evidence fixes in the roadmap">
+          <ProposalNote>Depends on actions A1 (published DMC spec) and A2 (hazardous-area answer).</ProposalNote>
+          <p className="positioning">The DMC-specific, multi-point, lamp-free concentration monitor that <span>complements</span> off-gas event detection in electrolyte-handling and filling rooms.</p>
+        </Card>
+      </div>
+
+      <details className="more-detail"><summary>Other players and the full differentiation table</summary>
+      <div className="stack">
+      <div className="grid">
         <Card title="Other players" sub="Adjacent, indirect or substitute. Lower overlap with ThermGAS's job.">
           <div className="table-wrap" style={{ maxHeight: 360 }}>
             <table className="t">
@@ -77,12 +85,8 @@ export default function Landscape() {
         <p className="small muted" style={{ marginBottom: 0 }}>Full ThermGAS-vs-competitor wording for each factor is on the Strategic Positioning page.</p>
       </Card>
 
-      <Card title="Possible positioning" sub="A hypothesis for management to test, conditional on the evidence fixes in the roadmap">
-        <ProposalNote>Positioning depends on actions A1 (published DMC spec) and A2 (hazardous-area answer).</ProposalNote>
-        <p style={{ fontSize: 17, color: 'var(--ink-strong)', fontFamily: 'Poppins, sans-serif', lineHeight: 1.45, marginBottom: 0 }}>
-          The DMC-specific, multi-point, lamp-free concentration monitor that <span style={{ color: 'var(--brand)' }}>complements</span> off-gas event detection in electrolyte-handling and filling rooms.
-        </p>
-      </Card>
+      </div>
+      </details>
 
       <Card title="Drill down" right={null}>
         <div className="toolbar" style={{ marginBottom: 0 }}>

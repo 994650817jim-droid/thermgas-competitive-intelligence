@@ -1,6 +1,6 @@
 /* Lightweight interaction effects, modelled on React Bits patterns (CountUp, SpotlightCard, AnimatedContent).
    Written from scratch with no extra dependencies; all respect prefers-reduced-motion. */
-import { useEffect, useRef, useState, type ReactNode, type HTMLAttributes } from 'react';
+import { Fragment, useEffect, useRef, useState, type ReactNode, type HTMLAttributes } from 'react';
 
 const reduced = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -52,4 +52,16 @@ export function Spotlight({ children, className = '', ...rest }: { children: Rea
 export function Reveal({ children, delay = 0, className = '' }: { children: ReactNode; delay?: number; className?: string }) {
   const [ref, seen] = useInView<HTMLDivElement>();
   return <div ref={ref} className={`reveal ${seen ? 'in' : ''} ${className}`} style={{ transitionDelay: `${delay}ms` }}>{children}</div>;
+}
+
+/** Headline that resolves word by word from a soft blur (React Bits "BlurText / SplitText" idea).
+    One deliberate page-load moment; renders plain text instantly under reduced motion. */
+export function SplitWords({ text, className = '', step = 70 }: { text: string; className?: string; step?: number }) {
+  const [ref, seen] = useInView<HTMLHeadingElement>('0px');
+  const words = text.split(' ');
+  return (
+    <h1 ref={ref} className={`split ${seen ? 'in' : ''} ${className}`} aria-label={text}>
+      {words.map((w, i) => <Fragment key={i}><span aria-hidden className="w" style={{ transitionDelay: `${i * step}ms` }}>{w}</span>{i < words.length - 1 ? ' ' : null}</Fragment>)}
+    </h1>
+  );
 }

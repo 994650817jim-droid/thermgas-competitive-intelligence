@@ -60,6 +60,9 @@ export function Badge({ status, full }: { status?: string; full?: boolean }) {
   return <span className={`badge badge-${lvl.toLowerCase()}`} title={status}>{icon} {full && status ? status : lvl}</span>;
 }
 
+/** CSS class for an evidence level, so layouts can colour structure by how well-founded a claim is. */
+export const statusClass = (status?: string) => `st-${statusLevel(status).toLowerCase()}`;
+
 export function BucketTag({ bucket }: { bucket: Bucket }) {
   return <span className={`bucket bucket-${bucket}`}><i />{BUCKET_LABEL[bucket]}</span>;
 }

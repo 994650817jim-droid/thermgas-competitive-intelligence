@@ -3,7 +3,6 @@ import { executive } from '../data';
 import { Card, Src, Badge, PageHead } from '../ui';
 import { comparator } from '../exec';
 import { ProposalNote } from './Executive';
-import { Spotlight, Reveal } from '../fx';
 
 const RM = executive.roadmap;
 const BC = executive.business_case;
@@ -18,9 +17,9 @@ function RoadmapTab() {
         {RM.phases.map((p: any) => <span key={p.id} className="tl-seg"><span className="tl-name">{p.name}</span><span className="tl-gate">◆ {p.gate.name.replace(/^Go \/ No-Go /, 'Gate ')}</span></span>)}
       </div>
       <div className="phases">
-        {RM.phases.map((p: any, pi: number) => (
-          <Reveal key={p.id} delay={pi * 90}>
-            <Spotlight className="phase card">
+        {RM.phases.map((p: any) => (
+          <div key={p.id}>
+            <section className="phase card">
               <header><div className="days">{p.days}</div><h3>{p.name}</h3></header>
               <ul className="tasks">
                 {p.items.map((it: any, i: number) => (
@@ -39,8 +38,8 @@ function RoadmapTab() {
                 <ul className="plain">{p.items.map((it: any, i: number) => <li key={i}>{it.task}</li>)}</ul>
                 <b>Success:</b> {p.success.join(' · ')} · thresholds <Badge status={p.gate.threshold_status} />
               </details>
-            </Spotlight>
-          </Reveal>
+            </section>
+          </div>
         ))}
       </div>
       <p className="small muted">{RM.note_after_90}</p>

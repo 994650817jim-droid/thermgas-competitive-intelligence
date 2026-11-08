@@ -1,0 +1,118 @@
+/* v3 design pass: a calm briefing sheet. One memorable thing (the map), open sections instead of identical cards,
+   structure that carries meaning (rule colour = evidence level), and a single page-load moment (headline).
+   Brand is fixed by the client: blue #1F60C4, Poppins headings, Inter body, light background. */
+:root {
+  --bg: #FAFBFD;
+  --ink-strong: #17202E;
+  --radius: 12px;
+  --shadow: none;
+  --st-verified: #1E7A45;
+  --st-inferred: #D9A21B;
+  --st-assumption: #7A52B3;
+  --st-unknown: #8A93A3;
+  --fs-small: 13.5px;
+  --fs-body: 15px;
+  --fs-lead: 17px;
+  --fs-section: 22px;
+  --fs-display: clamp(30px, 3.4vw, 44px);
+}
+body { background: var(--bg); font-size: var(--fs-body); line-height: 1.6; }
+
+/* chrome: quieter */
+.topbar { box-shadow: 0 1px 0 var(--line); border-bottom: 0; }
+.disclaimer-bar { background: transparent; border-bottom: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.disclaimer-bar b { color: var(--ink-body); }
+.page-head .kicker { display: none; }
+.page-head h1 { font-size: clamp(26px, 2.6vw, 34px); line-height: 1.18; letter-spacing: -0.02em; }
+.page-head .lead { font-size: var(--fs-lead); max-width: 70ch; color: var(--ink-body); }
+.card { box-shadow: none; border-radius: 12px; }
+.spot:hover { transform: none; box-shadow: none; }
+.spot::before { display: none; }
+
+/* lede: headline + readouts */
+.exec { display: flex; flex-direction: column; gap: 44px; }
+.lede { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 56px; align-items: end; padding: 18px 0 4px; }
+.lede h1.split { font-size: var(--fs-display); line-height: 1.12; letter-spacing: -0.025em; max-width: 17em; color: var(--ink-strong); }
+.lede .next { margin: 18px 0 0; font-size: var(--fs-lead); color: var(--ink-body); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.split .w { display: inline-block; opacity: 0; filter: blur(10px); transform: translateY(0.35em); transition: opacity .7s ease, filter .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); }
+.split.in .w { opacity: 1; filter: none; transform: none; }
+@media (prefers-reduced-motion: reduce) { .split .w { opacity: 1; filter: none; transform: none; transition: none; } }
+@media print { .split .w { opacity: 1 !important; filter: none !important; transform: none !important; } }
+.readouts { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 0; }
+.readout { display: flex; flex-direction: column; padding: 0 22px 0 20px; border-left: 1px solid var(--line-strong); min-width: 0; }
+.readout dt { font-size: var(--fs-small); font-weight: 600; color: var(--ink); line-height: 1.35; min-height: 2.7em; }
+.readout dd { order: -1; margin: 0 0 6px; }
+.readout .num { font: 600 clamp(44px, 4.4vw, 60px)/1 Poppins, sans-serif; color: var(--brand); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.rd-sub { font-size: var(--fs-small); color: var(--muted); margin-top: 2px; }
+.rd-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+@media (max-width: 960px) { .lede { grid-template-columns: 1fr; gap: 28px; } }
+
+/* sections */
+.band-title { font: 600 var(--fs-section)/1.25 Poppins, sans-serif; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 12px; }
+.band-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.mapband { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px 16px; }
+.mapband .band-title { margin-bottom: 14px; }
+
+/* findings: open columns, rule colour = evidence level */
+.finds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.find { border-top: 4px solid var(--st-unknown); padding-top: 16px; }
+.find.st-verified { border-color: var(--st-verified); } .find.st-inferred { border-color: var(--st-inferred); }
+.find.st-assumption { border-color: var(--st-assumption); }
+.find p { font: 500 var(--fs-lead)/1.5 Inter, sans-serif; color: var(--ink-strong); margin: 0 0 12px; max-width: 34ch; }
+.find .meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+@media (max-width: 960px) { .finds { grid-template-columns: 1fr; gap: 26px; } }
+
+/* actions + decision */
+.duo { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+@media (max-width: 960px) { .duo { grid-template-columns: 1fr; gap: 34px; } }
+ol.actions li { padding: 14px 0; font-size: var(--fs-lead); }
+ol.actions li::before { width: 30px; height: 30px; }
+.fine { margin: 12px 0 0; }
+.decision { background: var(--brand-tint); border: 2px solid var(--brand); border-radius: 16px; padding: 22px 24px; }
+.decision h2 { font: 600 20px/1.3 Poppins, sans-serif; letter-spacing: -0.01em; margin: 0 0 14px; }
+.decision .opts .opt { padding: 14px 10px; display: flex; flex-direction: column; gap: 2px; align-items: center; border-radius: 10px; }
+.decision .opts .opt .small { color: var(--brand); font-weight: 600; }
+.decision .needs { margin: 14px 0 0; color: var(--ink-body); }
+
+/* adjacent opportunity: a quiet band, not a card */
+.band.adjacent { border: 0; border-left: 4px solid var(--c-indirect); border-radius: 0; background: transparent; padding: 2px 0 2px 24px; box-shadow: none; }
+.adjacent .adj-text { font: 500 var(--fs-lead)/1.5 Inter, sans-serif; max-width: 40ch; margin: 0; }
+.adjacent .band-title { margin-bottom: 8px; }
+
+/* collapsibles and links */
+details.how-sure { border-top: 1px solid var(--line); padding-top: 16px; }
+.deep-links { gap: 8px 22px; padding-bottom: 8px; }
+
+/* map: calmer chrome, larger focus */
+.oppmap .seg { border-radius: 999px; padding: 3px; background: var(--brand-tint); border-color: var(--brand-tint-2); }
+.oppmap .seg button { border: 0; border-radius: 999px; padding: 7px 16px; font-weight: 500; }
+.oppmap .seg button.on { background: var(--brand); color: #fff; }
+.oppmap .seg button:not(.on):hover { background: #fff; color: var(--brand); }
+.om-panel { background: transparent; border: 0; border-left: 1px solid var(--line-strong); border-radius: 0; padding: 4px 0 4px 20px; }
+.om-state { font-size: 24px; letter-spacing: -0.01em; }
+.om-row { border-top: 1px solid var(--line); }
+.om-insight { font-size: var(--fs-body); }
+.map-svg path.st { stroke: #fff; stroke-width: 1.1; }
+.map-svg path.st.sel { stroke: var(--ink-strong); stroke-width: 2.4; }
+
+/* main-page pages: flatter cards and calmer rhythm */
+.stack > * + * { margin-top: 24px; }
+.phase.card, .rival.card, .kf.card { border-radius: 14px; }
+.timeline { margin: 8px 0 4px; }
+.cls-tile { border-radius: 12px; border-top-width: 4px; }
+.table-wrap { border-radius: 12px; }
+.callout.warn { border-radius: 10px; }
+
+/* visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, summary:focus-visible, .opt:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
+/* secondary evidence lives behind disclosures so the first screen of each page stays short */
+details.more-detail { border-top: 1px solid var(--line); padding-top: 14px; }
+details.more-detail > summary { cursor: pointer; font: 600 15px Poppins, sans-serif; color: var(--brand); list-style: none; display: flex; gap: 10px; align-items: center; }
+details.more-detail > summary::before { content: '+'; width: 16px; font-weight: 700; }
+details.more-detail[open] > summary::before { content: '–'; }
+details.more-detail > .card, details.more-detail > .stack, details.more-detail > .grid { margin-top: 14px; }
+.positioning { font: 600 19px/1.45 Poppins, sans-serif; color: var(--ink-strong); margin: 12px 0 0; letter-spacing: -0.01em; }
+.positioning span { color: var(--brand); }
+.tm-cell { min-width: 0; } .pchip { max-width: 100%; }
+@media (max-width: 640px) { .tm { grid-template-columns: 56px repeat(3, minmax(0, 1fr)); } .pchip { font-size: 11.5px; padding: 3px 6px; } }
