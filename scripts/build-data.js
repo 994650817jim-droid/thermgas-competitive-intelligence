@@ -92,6 +92,10 @@ if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   const pub = path.join(__dirname, '..', 'dashboard', 'public', 'export');
   fs.mkdirSync(pub, { recursive: true });
   for (const f of fs.readdirSync(OUT)) fs.copyFileSync(path.join(OUT, f), path.join(pub, f));
+  // Plain-text copies so readers that cannot run JavaScript (crawlers, web AI) can still read the briefing.
+  const pubDocs = path.join(__dirname, '..', 'dashboard', 'public', 'docs');
+  fs.mkdirSync(pubDocs, { recursive: true });
+  for (const f of ['Executive_Summary.md', 'Strategic_Roadmap.md', 'Phase4_Competitive_Analysis.md']) fs.copyFileSync(path.join(__dirname, '..', 'docs', f), path.join(pubDocs, f));
   fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive }, null, 2));
 }
 

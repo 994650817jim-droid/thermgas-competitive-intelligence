@@ -1,0 +1,40 @@
+# ThermGAS U.S. Competitive Intelligence: Executive Summary
+
+*Independent Student Research, Northeastern University MSBA. Not an official ThermGAS publication. Evidence as of 2026-11-07. Every recommendation below is a research-team proposal for management consideration, not approved ThermGAS strategy. The same content is in `data/executive.json` and on the website (Executive Overview, Briefing page).*
+
+## Conclusion
+ThermGAS has a credible opening as the DMC-specific, lamp-free concentration monitor that complements event detection, but it cannot yet prove it. Its own DMC specification is inconsistent, and no vendor has a public U.S. battery-plant reference.
+
+**Proposed next move:** a 30-day evidence sprint (fix the DMC spec, answer the hazardous-area question, get real quotes) before committing any pilot hardware or sales spend.
+
+| Label | What the evidence says |
+|---|---|
+| **Verified** | ION Science FALCO 2 11.7 and Riken Keiki / RKI are the two direct competitors [S22, S52]. ThermGAS's DMC figure conflicts (0.5 vs 1 ppm) and DMC is missing from its gas list [S01, S02, S08]. No public U.S. battery-plant reference was found for any vendor [S39]. The FALCO lamp lasts up to 4 months [S22, S25]. |
+| **Inferred** | PAIR should be more selective than a PID for DMC (principle only). Honeywell's event detection complements concentration monitoring. A Georgia base may help service in the Southeast. |
+| **Assumption** | Buyers will budget for both an event layer and a concentration layer. MSA could add DMC. Large Asian OEMs may standardize on Riken. |
+
+## Three key findings
+1. **The race is against two named rivals, and neither is unbeatable.** ION is cheap ($3,521 list) and approved for hazardous areas but needs a lamp about every 4 months and cannot separate DMC from other solvents. Riken has breadth and a claimed 10,000+ detectors worldwide but publishes no DMC limit.
+2. **The U.S. reference-site position is open.** Honeywell reports an off-gas rate, not DMC concentration, so it is better treated as a complement.
+3. **ThermGAS's own evidence is the main blocker.** Conflicting spec, no interference data, no hazardous-area rating found, no battery reference, no public price.
+
+## Three proposed actions
+| # | Action | Suggested owner role | Done when |
+|---|---|---|---|
+| 1 | Publish one test-conditioned DMC specification | Product / Applications Engineering lead | Spec sheet with detection limit, calibration gas, response time and cross-sensitivity to IPA, ethanol, EMC, DEC, NMP; DMC on the Master Gas List |
+| 2 | Answer the hazardous-area question | Engineering lead + safety reviewer | Written position (remote analyzer with sample lines, or named approval path), reviewed by qualified engineering |
+| 3 | Win a first U.S. reference through a side-by-side pilot | Business Development lead + Field engineer | One site signs a pilot protocol; gated on actions 1 and 2 |
+
+## Decision for management
+**Should ThermGAS commit to a validation-first U.S. battery pilot program, starting with a 30-day evidence sprint before any pilot hardware or sales spend?**
+Options: do nothing (not recommended); **evidence sprint, then decide** (research team's proposal); go straight to a pilot (higher risk, because it would run on an unresolved spec). Needed from management: an executive sponsor, engineering time, and a decision on whether ThermGAS can supply a pilot analyzer.
+
+## Where to look first (research-priority classes, not revenue estimates)
+- **Engage now:** North Carolina (Toyota in production), Georgia (home state; HL-GA 2026 start planned, outcome not verified).
+- **Prepare:** Kansas (Panasonic in production), Arizona (LGES Queen Creek 2026 start targeted, outcome not verified). No home-state or adjacent reach yet.
+- **Verify before investing:** NV, MI, TN, TX, CA, KY, OH, IN. Best evidence is the 2023 DOE list or a disruption.
+- **Separate segment:** Louisiana (UBE DMC solvent plant).
+- Tennessee moved from "priority" in Phase 4 to "verify before investing": none of its three plants has a Verified 2026 operating status.
+
+## Still unknown
+ThermGAS spec, interference data, hazardous-area rating and prices. Competitor prices and lamp cost. Riken's DMC limit. Honeywell's current Li-ion Tamer status. 2026 status of HL-GA, Queen Creek and UBE. Any customer contact. Whether buyers fund both layers.
