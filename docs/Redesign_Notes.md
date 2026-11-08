@@ -24,9 +24,17 @@
 8. **Tests:** `npm test` (Vitest, 12 tests) covers classification rules, the comparator, evidence labels, no invented dollar or percent figures, and the student-research notice.
 
 ## Not changed
-No existing data file, source, or Phase 1-4 document was edited. No revenue, ROI, market share or internal data was added. Nothing was deployed.
+No existing data file, source, or Phase 1-4 document was edited. No revenue, ROI, market share or internal data was added. Round 1 was later published to GitHub Pages at the user's request.
 
 ## Open items for the team
 - Re-verify HL-GA, Queen Creek and UBE Louisiana (dates passed), and re-check the nine "Active" 2023 plants.
 - Reconcile HL-GA capacity (15 vs 30 GWh).
 - `docs/Presentation_Script.md` describes the old page flow; the new Presentation Mode follows the executive slides.
+
+## Round 2: less text, map-first, data centers
+- Executive Overview rebuilt around one sentence, four count-up KPIs and an interactive map with three layers (battery plant classes, data center load, competitor channels; ThermGAS HQ marked). Findings, actions and the decision use short wording; the Verified / Inferred / Assumption detail is in a collapsible "How sure are we?" panel. Visible words on the page fell to about 540.
+- New data: `data/data_centers.json` from EPRI "Powering Intelligence" (May 2024) Table A1, 2023 load for 44 states. All 44 values were checked automatically against the report text; the total (152 TWh) matches EPRI's ~150 TWh headline. The 6 other states and DC are shown as "Not in EPRI table". Three sources added (S160 EPRI, S161 ThermGAS Data Centers page, S162 MSA data center blog).
+- Data center layer added to the full evidence map; data center column and top-10 chart added to Market Opportunities; competitor map added to Competitive Landscape; Presentation Mode's market slide is now the interactive map.
+- Competitive Landscape cards show one point per box; Roadmap is a timeline with deliverables first and task detail collapsed.
+- Interaction effects modelled on React Bits (CountUp, SpotlightCard, AnimatedContent), written without new dependencies and with reduced-motion and fallback handling.
+- Tests: 16 (adds EPRI row count, total, ranks, missing states and evidence labels for the data center claims).

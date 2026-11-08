@@ -84,7 +84,9 @@
         "status": "Assumption",
         "sources": []
       }
-    ]
+    ],
+    "short": "ThermGAS can win as the DMC-specific, lamp-free monitor, but it has to prove its own spec first.",
+    "short_next": "Proposal: 30-day evidence sprint before any pilot spend."
   },
   "key_findings": [
     {
@@ -98,7 +100,8 @@
         "S24",
         "S25",
         "S52"
-      ]
+      ],
+      "short": "Two direct rivals: ION Science (cheap, lamp change about every 4 months) and Riken (broad, no DMC limit published)."
     },
     {
       "id": "K2",
@@ -110,7 +113,8 @@
         "S37",
         "S38",
         "S39"
-      ]
+      ],
+      "short": "No vendor has a public U.S. battery-plant reference yet. The first one is a lasting differentiator."
     },
     {
       "id": "K3",
@@ -124,7 +128,8 @@
         "S03",
         "S04",
         "S08"
-      ]
+      ],
+      "short": "ThermGAS's own gaps (0.5 vs 1 ppm spec, no hazardous-area answer) are the main blocker."
     }
   ],
   "actions": [
@@ -143,7 +148,8 @@
         "S22",
         "S52"
       ],
-      "status": "Proposed"
+      "status": "Proposed",
+      "short": "Publish one tested DMC spec"
     },
     {
       "id": "A2",
@@ -160,7 +166,8 @@
         "S04",
         "S140"
       ],
-      "status": "Proposed"
+      "status": "Proposed",
+      "short": "Answer the hazardous-area question"
     },
     {
       "id": "A3",
@@ -174,7 +181,8 @@
         "S39",
         "S07"
       ],
-      "status": "Proposed - gated on A1 and A2"
+      "status": "Proposed - gated on A1 and A2",
+      "short": "Win a first U.S. reference pilot"
     }
   ],
   "decision": {
@@ -185,28 +193,32 @@
         "label": "Do nothing / wait",
         "upside": "No cost.",
         "downside": "The reference-site opening stays open to ION Science, Riken or Honeywell partners; ThermGAS's spec conflict stays visible to buyers.",
-        "note": "Research team does not recommend."
+        "note": "Research team does not recommend.",
+        "short": "Wait"
       },
       {
         "id": "O2",
         "label": "30-day evidence sprint, then decide on a pilot (research team's proposal)",
         "upside": "Cheapest way to fix the credibility gaps before spending on a site; keeps a clear Go / No-Go at Day 30.",
         "downside": "Delays customer contact by about a month; depends on ThermGAS engineering availability.",
-        "note": "Proposal only; not an approved ThermGAS plan."
+        "note": "Proposal only; not an approved ThermGAS plan.",
+        "short": "Sprint, then decide"
       },
       {
         "id": "O3",
         "label": "Go straight to a pilot",
         "upside": "Fastest route to a reference.",
         "downside": "A pilot would run on an unresolved spec and an unanswered hazardous-area question, so a weak result or a site-safety objection could cost credibility.",
-        "note": "Higher risk."
+        "note": "Higher risk.",
+        "short": "Pilot now"
       }
     ],
     "needs_from_management": [
       "Name an executive sponsor",
       "Release engineering time for the spec and hazardous-area work",
       "Decide whether ThermGAS can supply a pilot analyzer (loan or otherwise)"
-    ]
+    ],
+    "short_question": "Approve a 30-day evidence sprint before committing to a pilot?"
   },
   "facility_tiers": {
     "T1": {
@@ -828,5 +840,37 @@
       "status": "Assumption",
       "sources": []
     }
-  ]
+  ],
+  "adjacent_opportunity": {
+    "title": "Adjacent opportunity: data center cooling",
+    "short": "Data centers are where ThermGAS's core refrigerant business already plays, and Georgia, its home state, has battery plants and one of the largest data center loads.",
+    "points": [
+      {
+        "text": "ThermGAS already markets refrigerant detection for data center chillers and precision cooling, and flags battery / UPS gas hazards.",
+        "status": "Verified",
+        "sources": [
+          "S161"
+        ]
+      },
+      {
+        "text": "MSA / Bacharach (incl. the PAIR-based Chillgard 5000) is actively targeting the same data center buyers.",
+        "status": "Verified",
+        "sources": [
+          "S162"
+        ]
+      },
+      {
+        "text": "Data center electricity load is used as a proxy for cooling demand by state. It is not a count of sites or a market size.",
+        "status": "Inferred",
+        "sources": [
+          "S160"
+        ]
+      },
+      {
+        "text": "States with both a battery opportunity and a large data center load could share one sales and service effort.",
+        "status": "Assumption",
+        "sources": []
+      }
+    ]
+  }
 }

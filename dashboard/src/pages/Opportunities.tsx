@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react';
-import { executive } from '../data';
-import { Card, Src, PageHead } from '../ui';
+import { executive, dataCenters, dcByState, dcRank, stateByCode } from '../data';
+import { Card, Src, PageHead, Badge } from '../ui';
 import { opportunities, cellFacilities, tierOf, noteOf, TIERS, type OppClass } from '../exec';
 import { go } from '../App';
+import OppMap from '../OppMap';
+import { Bars } from './Overview';
 
 const R = executive.opportunity_rules;
 const CLS_ORDER: OppClass[] = ['A', 'B', 'C', 'D'];
@@ -21,10 +23,14 @@ export default function Opportunities() {
   return (
     <div className="stack">
       <PageHead kicker="Market Opportunities" title="Start where plants are verified running and ThermGAS can reach them"
-        lead="States are classed with four lenses: how well each plant's real status is evidenced, whether ThermGAS can reach it, the competitive environment, and how complete the evidence is. This is a research-prioritization aid, not a revenue or market-size estimate." />
+        lead="Research priority, not revenue. Classes combine plant status evidence, reach from Georgia, competitors and evidence completeness." />
+
+      <section className="card map-hero">
+        <OppMap initial="battery" />
+      </section>
 
       <div className="callout warn small">
-        <b>Plant dates to re-check.</b> HL-GA (GA) and LGES Queen Creek (AZ) were targeted to start in H1 2026, and UBE Louisiana was planned for completion in July 2026. Those dates have passed and no confirmation was found, so they are shown as <i>not yet verified</i>. Re-verification is in the Day 0-30 roadmap.
+        <b>Re-check:</b> HL-GA (GA), LGES Queen Creek (AZ) and UBE (LA) start dates have passed without confirmation.
       </div>
 
       <div className="grid g4">
@@ -32,7 +38,7 @@ export default function Opportunities() {
           <button key={c} className={`cls-tile cls-${c} ${f === c ? 'on' : ''}`} onClick={() => setF(f === c ? 'all' : c)} aria-pressed={f === c}>
             <div className="cl">{R.classes[c].label}</div>
             <div className="st">{all.filter(o => o.cls === c).map(o => o.code).join(' · ') || '-'}</div>
-            <div className="ru">{R.classes[c].rule}</div>
+            <div className="ru" title={R.classes[c].rule}>{({ A: 'Verified plants, reachable from GA', B: 'Verified plants, no reach yet', C: 'Plant status not re-verified', D: 'DMC producer, not a cell plant' } as const)[c]}</div>
           </button>
         ))}
       </div>
@@ -41,7 +47,7 @@ export default function Opportunities() {
         right={f !== 'all' ? <button className="btn" onClick={() => setF('all')}>Show all</button> : undefined}>
         <div className="table-wrap">
           <table className="t opp">
-            <thead><tr><th>State</th><th>Class</th><th>Plant status evidence</th><th>Reach for ThermGAS</th><th>Competitor environment</th><th>Evidence</th><th>Phase 4 model rank</th></tr></thead>
+            <thead><tr><th>State</th><th>Class</th><th>Plant status evidence</th><th>Reach for ThermGAS</th><th>Competitor environment</th><th>Data center load</th><th>Evidence</th><th>Phase 4 rank</th></tr></thead>
             <tbody>
               {rows.map(o => (
                 <tr key={o.code}>
@@ -60,6 +66,7 @@ export default function Opportunities() {
                   <td>{o.competitors.length
                     ? <>{o.competitors.join(', ')}<div className="muted small">{o.competitorsVerified.length ? 'Verified' : 'Inferred'} local presence</div></>
                     : <span className="nodata">Not Verified / Insufficient Evidence</span>}</td>
+                  <td>{dcByState[o.code] ? <><b className="mono">{(dcByState[o.code].mwh_2023 / 1e6).toFixed(1)} TWh</b><div className="muted small">#{dcRank(o.code)} of 44</div></> : <span className="nodata">Not in EPRI table</span>}</td>
                   <td><Dots c={o.checks} /></td>
                   <td className="mono">{o.phase4Rank ? `#${o.phase4Rank}` : 'not scored'}</td>
                 </tr>
@@ -70,6 +77,12 @@ export default function Opportunities() {
         <p className="small muted" style={{ marginBottom: 0 }}>Evidence dots: plant status verified for 2025-26 · competitor channel evidence · ThermGAS foothold. No customer contact has been identified for any plant (Unknown).</p>
       </Card>
 
+      <div className="grid">
+        <Card title="Adjacent segment: data center cooling" sub="Top states by 2023 data center electricity load (EPRI). A proxy for cooling demand, not a site count or market size." right={<Src ids={['S160']} />}>
+          <Bars rows={[...dataCenters.rows].sort((a, b) => b.mwh_2023 - a.mwh_2023).slice(0, 10).map(r => ({ key: r.state, label: `${stateByCode[r.state].name}${all.some(o => o.code === r.state && (o.cls === 'A' || o.cls === 'B')) ? ' ●' : ''}`, value: +(r.mwh_2023 / 1e6).toFixed(1), title: `${r.pct_state_electricity_2023}% of state electricity` }))} unit="TWh" onClick={k => go('map', { s: k, layer: 'datacenters' })} />
+          <p className="small" style={{ marginBottom: 0 }}>● also an Engage-now or Prepare battery state. ThermGAS markets data center refrigerant detection <Badge status="Verified" /> <Src ids={['S161']} />; MSA targets the same buyers <Src ids={['S162']} />.</p>
+        </Card>
+      </div>
       <div className="grid g2">
         <Card title="Plant evidence tiers" sub="Why some plants count more than others">
           <ul className="tier-list">

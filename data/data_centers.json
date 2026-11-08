@@ -1,0 +1,344 @@
+{
+  "description": "Data center electricity load by state, 2023 (EPRI Table A1). Used as a proxy for where data center cooling (and therefore refrigerant monitoring demand) is concentrated. It is not a count of facilities, not a market size and not a ThermGAS sales estimate. States not in the table are shown as Not Verified / Insufficient Evidence.",
+  "relevance": [
+    {
+      "text": "ThermGAS markets refrigerant detection for data center chillers, precision cooling and DX equipment, and flags battery / UPS gas hazards.",
+      "status": "Verified",
+      "sources": [
+        "S161"
+      ]
+    },
+    {
+      "text": "MSA / Bacharach actively market refrigerant leak detection (incl. the PAIR-based Chillgard 5000) to data centers.",
+      "status": "Verified",
+      "sources": [
+        "S162"
+      ]
+    },
+    {
+      "text": "Infrasensing and Honeywell Li-ion Tamer address battery off-gas in data center / BESS settings.",
+      "status": "Verified",
+      "sources": [
+        "S80",
+        "S37"
+      ]
+    },
+    {
+      "text": "Data center electricity load is a reasonable proxy for cooling (and refrigerant) intensity by state.",
+      "status": "Inferred",
+      "sources": [
+        "S160"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "state": "AL",
+      "mwh_2023": 1489200,
+      "pct_state_electricity_2023": 1.71,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "AZ",
+      "mwh_2023": 6253268,
+      "pct_state_electricity_2023": 7.43,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "CA",
+      "mwh_2023": 9331619,
+      "pct_state_electricity_2023": 3.7,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "CO",
+      "mwh_2023": 1509640,
+      "pct_state_electricity_2023": 2.66,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "CT",
+      "mwh_2023": 262800,
+      "pct_state_electricity_2023": 0.95,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "FL",
+      "mwh_2023": 1384080,
+      "pct_state_electricity_2023": 0.56,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "GA",
+      "mwh_2023": 6175391,
+      "pct_state_electricity_2023": 4.26,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "HI",
+      "mwh_2023": 8760,
+      "pct_state_electricity_2023": 0.1,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "ID",
+      "mwh_2023": 148920,
+      "pct_state_electricity_2023": 0.57,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "IL",
+      "mwh_2023": 7450176,
+      "pct_state_electricity_2023": 5.48,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "IN",
+      "mwh_2023": 192720,
+      "pct_state_electricity_2023": 0.19,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "IA",
+      "mwh_2023": 6193320,
+      "pct_state_electricity_2023": 11.43,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "KS",
+      "mwh_2023": 8760,
+      "pct_state_electricity_2023": 0.02,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "KY",
+      "mwh_2023": 1620600,
+      "pct_state_electricity_2023": 2.15,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "LA",
+      "mwh_2023": 78840,
+      "pct_state_electricity_2023": 0.08,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "ME",
+      "mwh_2023": 26280,
+      "pct_state_electricity_2023": 0.22,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "MD",
+      "mwh_2023": 96360,
+      "pct_state_electricity_2023": 0.16,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "MA",
+      "mwh_2023": 1062369,
+      "pct_state_electricity_2023": 2.08,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "MI",
+      "mwh_2023": 525600,
+      "pct_state_electricity_2023": 0.52,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "MN",
+      "mwh_2023": 824316,
+      "pct_state_electricity_2023": 1.24,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "MO",
+      "mwh_2023": 972360,
+      "pct_state_electricity_2023": 1.21,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "MT",
+      "mwh_2023": 578160,
+      "pct_state_electricity_2023": 3.71,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "NE",
+      "mwh_2023": 3959520,
+      "pct_state_electricity_2023": 11.7,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "NV",
+      "mwh_2023": 3416707,
+      "pct_state_electricity_2023": 8.69,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "NH",
+      "mwh_2023": 17520,
+      "pct_state_electricity_2023": 0.16,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "NJ",
+      "mwh_2023": 4038360,
+      "pct_state_electricity_2023": 5.42,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "NM",
+      "mwh_2023": 402960,
+      "pct_state_electricity_2023": 1.48,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "NY",
+      "mwh_2023": 4067385,
+      "pct_state_electricity_2023": 2.84,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "NC",
+      "mwh_2023": 2672676,
+      "pct_state_electricity_2023": 1.92,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "ND",
+      "mwh_2023": 3915720,
+      "pct_state_electricity_2023": 15.42,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "OH",
+      "mwh_2023": 2363886,
+      "pct_state_electricity_2023": 1.58,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "OK",
+      "mwh_2023": 1226400,
+      "pct_state_electricity_2023": 1.76,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "OR",
+      "mwh_2023": 6413663,
+      "pct_state_electricity_2023": 11.39,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "PA",
+      "mwh_2023": 4590240,
+      "pct_state_electricity_2023": 3.16,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "RI",
+      "mwh_2023": 17520,
+      "pct_state_electricity_2023": 0.23,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "SC",
+      "mwh_2023": 2023560,
+      "pct_state_electricity_2023": 2.45,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "SD",
+      "mwh_2023": 70080,
+      "pct_state_electricity_2023": 0.52,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "TN",
+      "mwh_2023": 1327140,
+      "pct_state_electricity_2023": 1.3,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "TX",
+      "mwh_2023": 21813159,
+      "pct_state_electricity_2023": 4.59,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "UT",
+      "mwh_2023": 2562037,
+      "pct_state_electricity_2023": 7.68,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "VA",
+      "mwh_2023": 33851122,
+      "pct_state_electricity_2023": 25.59,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "WA",
+      "mwh_2023": 5171612,
+      "pct_state_electricity_2023": 5.69,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "WI",
+      "mwh_2023": 148920,
+      "pct_state_electricity_2023": 0.21,
+      "source": "S160",
+      "status": "Verified"
+    },
+    {
+      "state": "WY",
+      "mwh_2023": 1857120,
+      "pct_state_electricity_2023": 11.26,
+      "source": "S160",
+      "status": "Verified"
+    }
+  ]
+}

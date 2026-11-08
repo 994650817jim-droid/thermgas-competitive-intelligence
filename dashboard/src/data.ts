@@ -27,6 +27,11 @@ export const states: StateRow[] = d.states;
 export const analysis: any = d.analysis;
 export const excluded: any[] = d.excluded;
 export const executive: any = d.executive;
+export interface DataCenterRow { state: string; mwh_2023: number; pct_state_electricity_2023: number; source: string; status: Status }
+export const dataCenters: { description: string; relevance: any[]; rows: DataCenterRow[] } = d.dataCenters;
+export const dcByState = Object.fromEntries(dataCenters.rows.map(r => [r.state, r])) as Record<string, DataCenterRow>;
+/** 1-based rank by 2023 data center load (EPRI); null when the state is not in the table. */
+export const dcRank = (code: string) => { const i = [...dataCenters.rows].sort((a, b) => b.mwh_2023 - a.mwh_2023).findIndex(r => r.state === code); return i < 0 ? null : i + 1; };
 export const generated: string = d.generated;
 
 export const sourceById = Object.fromEntries(sources.map(s => [s.id, s])) as Record<string, Source>;

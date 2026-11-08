@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { executive, facilities, sourceById, statusLevel } from './data';
+import { executive, facilities, sourceById, statusLevel, dataCenters, dcByState, dcRank } from './data';
 import { briefingMarkdown, cellFacilities, classify, comparator, opportunities, tierOf, TIERS } from './exec';
 
 const cls = (code: string) => opportunities().find(o => o.code === code)?.cls;
@@ -34,6 +34,28 @@ describe('opportunity classification', () => {
   it('never calls a state with no evidence "no competition"', () => {
     const txt = JSON.stringify(executive).toLowerCase();
     expect(txt.replace(/does not mean no competition/g, '')).not.toContain('no competition');
+  });
+});
+
+describe('data center layer (EPRI 2023)', () => {
+  it('has the 44 states from EPRI Table A1, all Verified and sourced', () => {
+    expect(dataCenters.rows).toHaveLength(44);
+    dataCenters.rows.forEach(r => { expect(r.status).toBe('Verified'); expect(r.source).toBe('S160'); expect(r.mwh_2023).toBeGreaterThan(0); });
+  });
+  it('totals about 150 TWh, matching the report headline', () => {
+    const twh = dataCenters.rows.reduce((s, r) => s + r.mwh_2023, 0) / 1e6;
+    expect(twh).toBeGreaterThan(145); expect(twh).toBeLessThan(160);
+  });
+  it('ranks correctly and leaves states outside the table unranked', () => {
+    expect(dcRank('VA')).toBe(1);
+    expect(dcRank('TX')).toBe(2);
+    expect(dcRank('GA')).toBe(8);
+    for (const c of ['AK', 'AR', 'DE', 'DC', 'MS', 'VT', 'WV']) expect(dcByState[c]).toBeUndefined();
+  });
+  it('labels the data center link to ThermGAS by evidence level', () => {
+    const pts = executive.adjacent_opportunity.points;
+    expect(pts.find((p: any) => /ThermGAS already markets/.test(p.text)).status).toBe('Verified');
+    expect(pts.some((p: any) => p.status === 'Assumption')).toBe(true);
   });
 });
 

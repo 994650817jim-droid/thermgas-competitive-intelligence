@@ -36,5 +36,11 @@ Options: do nothing (not recommended); **evidence sprint, then decide** (researc
 - **Separate segment:** Louisiana (UBE DMC solvent plant).
 - Tennessee moved from "priority" in Phase 4 to "verify before investing": none of its three plants has a Verified 2026 operating status.
 
+## Adjacent opportunity: data center cooling
+- ThermGAS already markets refrigerant detection for data center chillers and precision cooling, and flags battery / UPS gas hazards (Verified, S161).
+- MSA / Bacharach, including the PAIR-based Chillgard 5000, targets the same buyers (Verified, S162).
+- By 2023 data center electricity load (EPRI, S160), the largest states are VA, TX, CA, IL and OR. Georgia, ThermGAS's home state, ranks #8 of 44 (6.2 TWh). Load is a proxy for cooling demand, not a site count or market size (Inferred).
+- Georgia and Arizona combine a battery opportunity with a large data center load; one sales and service effort covering both is an Assumption to test.
+
 ## Still unknown
 ThermGAS spec, interference data, hazardous-area rating and prices. Competitor prices and lamp cost. Riken's DMC limit. Honeywell's current Li-ion Tamer status. 2026 status of HL-GA, Queen Creek and UBE. Any customer contact. Whether buyers fund both layers.

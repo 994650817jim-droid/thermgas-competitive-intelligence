@@ -3,6 +3,7 @@ import { executive } from '../data';
 import { Card, Src, Badge, PageHead } from '../ui';
 import { comparator } from '../exec';
 import { ProposalNote } from './Executive';
+import { Spotlight, Reveal } from '../fx';
 
 const RM = executive.roadmap;
 const BC = executive.business_case;
@@ -11,28 +12,35 @@ type Tab = 'roadmap' | 'business';
 function RoadmapTab() {
   return (
     <div className="stack">
-      <ProposalNote>{RM.status_note} Gate thresholds are assumptions for management to confirm or change.</ProposalNote>
+      <ProposalNote>Owners are suggested roles. Gate thresholds are assumptions for management to confirm.</ProposalNote>
+      <div className="timeline" aria-hidden>
+        <span className="tl-start">Day 0</span>
+        {RM.phases.map((p: any) => <span key={p.id} className="tl-seg"><span className="tl-name">{p.name}</span><span className="tl-gate">◆ {p.gate.name.replace(/^Go \/ No-Go /, 'Gate ')}</span></span>)}
+      </div>
       <div className="phases">
-        {RM.phases.map((p: any) => (
-          <section key={p.id} className="phase card">
-            <header><div className="days">{p.days}</div><h3>{p.name}</h3></header>
-            <ul className="tasks">
-              {p.items.map((it: any, i: number) => (
-                <li key={i}>
-                  <div><b>{it.task}</b></div>
-                  <div className="small muted">Suggested owner: {it.owner_role} · Deliverable: {it.deliverable} · from {it.rec}</div>
-                </li>
-              ))}
-            </ul>
-            <h4 className="mini">Success criteria</h4>
-            <ul className="plain small">{p.success.map((s: string) => <li key={s}>{s}</li>)}</ul>
-            <div className="gate">
-              <div className="gname">◆ {p.gate.name}</div>
-              <p className="small"><b className="go">Go:</b> {p.gate.go}</p>
-              <p className="small"><b className="nogo">No-Go:</b> {p.gate.no_go}</p>
-              <p className="small muted" style={{ margin: 0 }}>Thresholds: <Badge status={p.gate.threshold_status} /></p>
-            </div>
-          </section>
+        {RM.phases.map((p: any, pi: number) => (
+          <Reveal key={p.id} delay={pi * 90}>
+            <Spotlight className="phase card">
+              <header><div className="days">{p.days}</div><h3>{p.name}</h3></header>
+              <ul className="tasks">
+                {p.items.map((it: any, i: number) => (
+                  <li key={i} title={`${it.task} (from ${it.rec})`}>
+                    <b>{it.deliverable}</b>
+                    <span className="owner-tag">{it.owner_role}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="gate">
+                <div className="gname">◆ {p.gate.name}</div>
+                <p className="small"><b className="go">Go</b> {p.gate.go}</p>
+                <p className="small"><b className="nogo">Stop</b> {p.gate.no_go}</p>
+              </div>
+              <details className="small more"><summary>Tasks and success criteria</summary>
+                <ul className="plain">{p.items.map((it: any, i: number) => <li key={i}>{it.task}</li>)}</ul>
+                <b>Success:</b> {p.success.join(' · ')} · thresholds <Badge status={p.gate.threshold_status} />
+              </details>
+            </Spotlight>
+          </Reveal>
         ))}
       </div>
       <p className="small muted">{RM.note_after_90}</p>

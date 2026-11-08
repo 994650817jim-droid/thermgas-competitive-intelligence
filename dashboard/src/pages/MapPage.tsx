@@ -1,16 +1,17 @@
 import { useMemo, useState, type ReactNode } from 'react';
 import usmap from '../data/usmap.json';
-import { states, stateByCode, evidence, facilities, presence, shortName } from '../data';
+import { states, stateByCode, evidence, facilities, presence, shortName, dcByState, dcRank } from '../data';
 import { Card, Src, Badge, PageHead } from '../ui';
 import { scoreStates, DEFAULT_WEIGHTS } from '../model';
 import { go } from '../App';
 
-type Layer = 'presence' | 'service' | 'installations' | 'facilities' | 'opportunity';
+type Layer = 'presence' | 'service' | 'installations' | 'facilities' | 'datacenters' | 'opportunity';
 const LAYERS: { k: Layer; l: string; d: string }[] = [
   { k: 'presence', l: 'Competitor presence', d: 'Number of competitors with an office, HQ, distributor or service site in the state' },
   { k: 'service', l: 'Service coverage', d: 'Competitor service locations (factory-authorized service / calibration centers)' },
   { k: 'installations', l: 'Installation references', d: 'Public installation references by competitors (and, optionally, ThermGAS refrigerant references)' },
   { k: 'facilities', l: 'Customer facilities', d: 'Announced Li-ion cell capacity (GWh) and DMC solvent plants' },
+  { k: 'datacenters', l: 'Data centers', d: 'Data center electricity load in 2023, TWh (EPRI Table A1). A proxy for where data center cooling, and refrigerant monitoring demand, is concentrated. Not a site count or market size' },
   { k: 'opportunity', l: 'Market opportunity', d: 'Research-priority score from the transparent model (Strategy page). Not a revenue estimate' },
 ];
 const RAMP = ['#DCE8FA', '#A9C6F2', '#6F9EE3', '#3A75CF', '#17489A'];
@@ -47,6 +48,10 @@ export default function MapPage({ params }: { params: URLSearchParams }) {
       const v = s.battery_cell_gwh + (s.dmc_solvent_plants ? 1 : 0);
       return { v, label: f.length ? `${s.battery_cell_gwh} GWh in ${s.battery_cell_plants} cell plant(s)${s.dmc_solvent_plants ? ' + DMC solvent plant' : ''}` : '', srcs: [...new Set(f.flatMap(x => [x.source, x.status_update_source ?? '']).filter(Boolean))] };
     }
+    if (layer === 'datacenters') {
+      const r = dcByState[code];
+      return r ? { v: +(r.mwh_2023 / 1e6).toFixed(1), label: `${(r.mwh_2023 / 1e6).toFixed(1)} TWh data center load in 2023 (${r.pct_state_electricity_2023}% of state electricity) · rank ${dcRank(code)} of 44`, srcs: [r.source] } : { v: 0, label: '', srcs: [] };
+    }
     const sc = scored[code];
     return { v: sc.score ?? 0, label: sc.score === null ? '' : `Priority score ${sc.score} / 100`, srcs: ['S130'] };
   };
@@ -54,6 +59,7 @@ export default function MapPage({ params }: { params: URLSearchParams }) {
   const fill = (code: string) => {
     const { v } = val(code);
     if (layer === 'facilities') { const s = stateByCode[code]; if (s.dmc_solvent_plants && !s.battery_cell_gwh) return RAMP[1]; return ramp(s.battery_cell_gwh, Math.max(...states.map(x => x.battery_cell_gwh)), false); }
+    if (layer === 'datacenters') return v > 0 ? RAMP[DC_BINS.filter(b => v >= b).length] : null;
     if (layer === 'opportunity') return scored[code].score === null ? null : ramp(Math.max(v, 0.01), max, false);
     return ramp(v, max, COUNT_LAYERS.has(layer));
   };
@@ -145,6 +151,11 @@ export default function MapPage({ params }: { params: URLSearchParams }) {
                 </div>
               ))}
           </Section>
+          <Section title="Data center load (adjacent refrigerant opportunity)">
+            {dcByState[sel]
+              ? <div className="ev"><span><b>{(dcByState[sel].mwh_2023 / 1e6).toFixed(1)} TWh</b> in 2023 · {dcByState[sel].pct_state_electricity_2023}% of state electricity · rank {dcRank(sel)} of 44</span><span style={{ display: 'flex', gap: 4, flex: 'none' }}><Badge status="Verified" /><Src ids={['S160']} label="S160" /></span></div>
+              : <p className="nodata">Not in EPRI table (Not Verified / Insufficient Evidence)</p>}
+          </Section>
           <Section title="ThermGAS footprint">
             {S.thermgas_hq && <div className="ev"><span><b>ThermGAS headquarters & manufacturing</b> (Roswell, GA)</span><Src ids={['S06']} /></div>}
             {S.thermgas_refrigerant_references.length > 0 && <div className="ev"><span>Refrigerant-monitor references (company claim): {S.thermgas_refrigerant_references.join('; ')} <Badge status="Inferred" /></span><Src ids={['S07']} /></div>}
@@ -160,7 +171,9 @@ export default function MapPage({ params }: { params: URLSearchParams }) {
   );
 }
 
+const DC_BINS = [1, 3, 6, 10];   // TWh bin edges; the distribution is very skewed (VA alone is ~34 TWh)
 function legendItems(layer: Layer, max: number): [string, string][] {
+  if (layer === 'datacenters') return ['< 1 TWh', '1-3 TWh', '3-6 TWh', '6-10 TWh', '10+ TWh'].map((l, i) => [RAMP[i], l] as [string, string]);
   if (COUNT_LAYERS.has(layer)) return [1, 2, 3, 4].filter(n => n <= Math.max(1, max)).map(n => [RAMP[n], n === 4 ? '4+' : String(n)]);
   const gmax = layer === 'facilities' ? Math.max(...states.map(x => x.battery_cell_gwh)) : max;
   const unit = layer === 'facilities' ? ' GWh' : '';

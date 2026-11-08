@@ -574,5 +574,32 @@
     "source_date": "2025-03-06",
     "access_date": "2026-11-07",
     "type": "News"
+  },
+  {
+    "id": "S160",
+    "publisher": "EPRI (Electric Power Research Institute)",
+    "title": "Powering Intelligence: Analyzing Artificial Intelligence and Data Center Energy Consumption (Report 3002028905), Table A1 - 2023 data center load by state (MWh/y and % of state electricity)",
+    "url": "https://www.epri.com/research/products/3002028905",
+    "source_date": "2024-05",
+    "access_date": "2026-11-07",
+    "type": "Industry research report"
+  },
+  {
+    "id": "S161",
+    "publisher": "ThermGAS",
+    "title": "Data Centers - data center refrigerant detection (chillers, precision cooling, DX; battery and UPS gas hazards)",
+    "url": "https://thermgas.com/data-centers/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S162",
+    "publisher": "MSA Safety",
+    "title": "Data Center Growth Brings New Demands for Refrigerant Leak Detection (Bacharach Multi-Zone, MGS-550, Chillgard 5000)",
+    "url": "https://blog.msasafety.com/refrigerant-leak-detection-data-center-growth-brings-new-demands-for-refrigerant-leak-detection/",
+    "source_date": "2026-07-24",
+    "access_date": "2026-11-07",
+    "type": "Company blog"
   }
 ]

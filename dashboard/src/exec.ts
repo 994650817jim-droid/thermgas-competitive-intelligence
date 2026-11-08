@@ -97,6 +97,8 @@ export function briefingMarkdown(): string {
   L.push('', '## Market opportunities (research-priority classes, not revenue estimates)');
   opportunities().forEach(o => L.push(`- ${o.name} (${o.code}): class ${o.cls}, ${e.opportunity_rules.classes[o.cls].label}`));
   L.push('', e.opportunity_rules.refinement_note);
+  L.push('', '## ' + e.adjacent_opportunity.title, e.adjacent_opportunity.short);
+  e.adjacent_opportunity.points.forEach((p: any) => L.push(`- ${p.text} (${p.status})${src(p)}`));
   L.push('', '## 30 / 60 / 90 day roadmap (proposal)');
   e.roadmap.phases.forEach((p: any) => {
     L.push(`### ${p.days}: ${p.name}`);

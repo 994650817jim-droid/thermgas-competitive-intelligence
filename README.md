@@ -44,6 +44,8 @@ Four main tabs for executives; everything else is drill-down detail.
 
 All recommendations are research-team proposals, not approved ThermGAS strategy. See `docs/Executive_Summary.md`, `docs/Strategic_Roadmap.md` and `docs/Redesign_Notes.md`.
 
+The map has three executive layers (battery plant classes, data center load, competitor channels). Interaction effects (count-up, spotlight cards, scroll reveal) are dependency-free versions of patterns from [React Bits](https://reactbits.dev).
+
 Run the checks with `npm run data && npm test && npm run build` in `dashboard/`.
 
 ## Project structure
@@ -56,6 +58,7 @@ data/                     Evidence database (source of truth, hand-curated JSON)
   state_evidence.json     One row per state-level fact (hq/office/distributor/service/installation/regulatory)
   facilities.json         Battery & DMC facilities (DOE FCAB + 2025-26 updates)
   analysis.json           Phase 4: findings, threat rules, battlecards, SWOT, recommendations, priority model
+  data_centers.json       EPRI 2023 data center electricity load by state (44 states, Table A1); proxy for cooling / refrigerant demand
   executive.json          Executive layer: conclusion, actions, decision, plant evidence tiers, opportunity rules, business case, roadmap (proposals, labeled)
   excluded.json           Screened-out candidates with reasons
   export/                 Generated CSVs

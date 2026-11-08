@@ -1,7 +1,8 @@
-import { executive } from '../data';
-import { Card, Src, Badge, Legend } from '../ui';
+import { executive, dcRank, sources } from '../data';
+import { Src, Badge } from '../ui';
 import { opportunities } from '../exec';
-import { go } from '../App';
+import OppMap from '../OppMap';
+import { CountUp, Spotlight, Reveal } from '../fx';
 
 export const ProposalNote = ({ children }: { children?: React.ReactNode }) => (
   <div className="callout warn small" role="note"><b>Research-team proposal, not approved ThermGAS strategy.</b> {children ?? executive.meta.status_note}</div>
@@ -9,89 +10,104 @@ export const ProposalNote = ({ children }: { children?: React.ReactNode }) => (
 
 export default function Executive() {
   const cc = executive.core_conclusion;
-  const opp = opportunities();
-  const n = (c: string) => opp.filter(o => o.cls === c).map(o => o.code).join(', ');
+  const engage = opportunities().filter(o => o.cls === 'A').length;
+  const ad = executive.adjacent_opportunity;
+  const kpis = [
+    { v: 2, l: 'verified direct rivals', s: 'ION Science · Riken Keiki', st: 'Verified', src: ['S22', 'S52'] },
+    { v: 0, l: 'public U.S. battery-plant DMC references, any vendor', s: 'the reference position is open', st: 'Verified (absence after search)', src: ['S39'] },
+    { v: engage, l: 'states to engage first', s: 'verified plants + reachable from GA', st: 'Inferred', src: ['S143', 'S144', 'S147'] },
+    { v: dcRank('GA') ?? 0, l: 'home-state rank in data center load', s: 'Georgia, of 44 states (EPRI 2023)', st: 'Verified', src: ['S160'], prefix: '#' },
+  ];
   return (
-    <div className="stack">
-      <section className="hero">
+    <div className="stack exec">
+      <section className="hero hero-tight">
         <div className="kicker">Executive Overview · evidence as of {executive.meta.as_of}</div>
-        <h1>{cc.headline}</h1>
-        <p className="next"><b>Proposed next move.</b> {cc.next_move}</p>
+        <h1>{cc.short}</h1>
+        <p className="next"><span className="prop-chip">Proposal</span> {cc.short_next}</p>
+        <div className="kpis k4">
+          {kpis.map((k, i) => (
+            <Reveal key={k.l} delay={i * 80}>
+              <Spotlight className="kpi">
+                <div className="v">{k.prefix}<CountUp to={k.v} /></div>
+                <div className="l"><b>{k.l}</b><br /><span className="muted">{k.s}</span></div>
+                <div className="f"><Badge status={k.st} /><Src ids={k.src} /></div>
+              </Spotlight>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <Reveal>
+        <section className="card map-hero">
+          <header className="card-head"><div><h3>Where to play</h3><p className="card-sub">Switch layers to compare battery plants, data centers and competitor channels.</p></div></header>
+          <OppMap />
+        </section>
+      </Reveal>
+
+      <div className="grid g3">
+        {executive.key_findings.map((k: any, i: number) => (
+          <Reveal key={k.id} delay={i * 90}>
+            <Spotlight className="card kf">
+              <div className="num-badge">{i + 1}</div>
+              <p className="kf-text">{k.short}</p>
+              <div className="meta"><Badge status={k.status} /><Src ids={k.sources} /></div>
+            </Spotlight>
+          </Reveal>
+        ))}
+      </div>
+
+      <div className="grid g-main">
+        <Reveal>
+          <section className="card">
+            <header className="card-head"><div><h3>Three proposed actions</h3><p className="card-sub">In order. Not approved ThermGAS plans.</p></div><a className="btn" href="#/roadmap">Roadmap →</a></header>
+            <ol className="actions">
+              {executive.actions.map((a: any) => (
+                <li key={a.id}><b>{a.short}</b><span className="owner">{a.owner_role}</span></li>
+              ))}
+            </ol>
+          </section>
+        </Reveal>
+        <Reveal delay={100}>
+          <section className="decision">
+            <div className="kicker">Decision for management</div>
+            <h2>{executive.decision.short_question}</h2>
+            <div className="opts">
+              {executive.decision.options.map((o: any) => (
+                <div key={o.id} className={`opt ${o.id === 'O2' ? 'rec-opt' : ''}`} title={`Upside: ${o.upside}\nDownside: ${o.downside}`}>
+                  <b>{o.short}</b>{o.id === 'O2' && <span className="small"> · team proposal</span>}
+                </div>
+              ))}
+            </div>
+            <p className="small" style={{ margin: '10px 0 0' }}>Needs: {executive.decision.needs_from_management.join(' · ')}</p>
+          </section>
+        </Reveal>
+      </div>
+
+      <Reveal>
+        <Spotlight className="card adjacent">
+          <div>
+            <div className="kicker">{ad.title}</div>
+            <p className="adj-text">{ad.short}</p>
+          </div>
+          <ul className="adj-points">
+            {ad.points.slice(0, 3).map((p: any, i: number) => <li key={i}><Badge status={p.status} /> {p.text} <Src ids={p.sources} /></li>)}
+          </ul>
+        </Spotlight>
+      </Reveal>
+
+      <details className="card how-sure">
+        <summary><b>How sure are we?</b> <span className="muted small">What is verified, inferred and assumed behind the conclusion</span></summary>
         <div className="evid-trio">
           <div><h4><Badge status="Verified" /> We know</h4><ul>{cc.known.map((x: any, i: number) => <li key={i}>{x.text} <Src ids={x.sources} /></li>)}</ul></div>
           <div><h4><Badge status="Inferred" /> We infer</h4><ul>{cc.inferred.map((x: any, i: number) => <li key={i}>{x.text} <Src ids={x.sources} /></li>)}</ul></div>
           <div><h4><Badge status="Assumption" /> We assume</h4><ul>{cc.assumed.map((x: any, i: number) => <li key={i}>{x.text} <Src ids={x.sources} /></li>)}</ul></div>
         </div>
-      </section>
+      </details>
 
-      <h2 className="sec">Three key findings</h2>
-      <div className="grid g3">
-        {executive.key_findings.map((k: any, i: number) => (
-          <Card key={k.id} className="kf">
-            <div className="num-badge">{i + 1}</div>
-            <h3>{k.title}</h3>
-            <p className="small">{k.body}</p>
-            <p className="so">→ {k.so_what}</p>
-            <div className="meta"><Badge status={k.status} /><Src ids={k.sources} /></div>
-          </Card>
-        ))}
+      <div className="deep-links">
+        <span className="muted small">Go deeper:</span>
+        <a href="#/research">Evidence dashboard</a><a href="#/competitors">Competitors</a><a href="#/battlecard">Battlecards</a><a href="#/map">Evidence map</a><a href="#/strategy">SWOT</a><a href="#/sources">Sources ({sources.length})</a><a href="#/briefing">Printable briefing</a>
       </div>
-
-      <h2 className="sec">Three proposed actions</h2>
-      <ProposalNote>Actions are ordered by priority. Each names a suggested owner role and the condition that proves it worked.</ProposalNote>
-      <div className="grid g3">
-        {executive.actions.map((a: any) => (
-          <Card key={a.id} className="act">
-            <div className="rank">Priority {a.rank} · {a.status}</div>
-            <h3>{a.title}</h3>
-            <p className="small">{a.why}</p>
-            <dl className="kv" style={{ gridTemplateColumns: '84px 1fr' }}>
-              <dt>Owner role</dt><dd>{a.owner_role}</dd>
-              <dt>Done when</dt><dd>{a.validation}</dd>
-            </dl>
-            <div className="meta"><Src ids={a.evidence} /><a className="btn" href="#/roadmap">See in roadmap →</a></div>
-          </Card>
-        ))}
-      </div>
-
-      <section className="decision" aria-label="Decision for management">
-        <div className="kicker">Decision for management</div>
-        <h2>{executive.decision.question}</h2>
-        <div className="grid g3">
-          {executive.decision.options.map((o: any) => (
-            <div key={o.id} className={`opt ${o.id === 'O2' ? 'rec-opt' : ''}`}>
-              <h4>{o.label}</h4>
-              <p className="small"><b>Upside:</b> {o.upside}</p>
-              <p className="small"><b>Downside:</b> {o.downside}</p>
-              <p className="small muted">{o.note}</p>
-            </div>
-          ))}
-        </div>
-        <p className="small" style={{ marginBottom: 0 }}><b>Needed from management:</b> {executive.decision.needs_from_management.join(' · ')}.</p>
-      </section>
-
-      <div className="grid g2">
-        <Card title="Where to look first" sub="Market opportunity classes (research prioritization, not revenue)" right={<a className="btn" href="#/opportunities">Details →</a>}>
-          <dl className="kv" style={{ gridTemplateColumns: '150px 1fr' }}>
-            <dt>Engage now</dt><dd><b>{n('A') || '-'}</b></dd>
-            <dt>Prepare</dt><dd><b>{n('B') || '-'}</b></dd>
-            <dt>Verify before investing</dt><dd>{n('C')}</dd>
-            <dt>Separate segment</dt><dd>{n('D')}</dd>
-          </dl>
-        </Card>
-        <Card title="Go deeper" sub="All research, sources and technical comparisons are kept">
-          <div className="toolbar" style={{ marginBottom: 0 }}>
-            <a className="btn" href="#/research">Evidence dashboard</a>
-            <a className="btn" href="#/competitors">Competitor Explorer</a>
-            <a className="btn" href="#/battlecard">Product Battlecard</a>
-            <a className="btn" href="#/map">U.S. map</a>
-            <a className="btn" href="#/strategy">SWOT &amp; positioning</a>
-            <a className="btn" href="#/sources">Sources &amp; Method</a>
-          </div>
-        </Card>
-      </div>
-      <Legend />
-      <button className="linklike" onClick={() => go('briefing')}>Open the printable Executive Briefing →</button>
     </div>
   );
 }

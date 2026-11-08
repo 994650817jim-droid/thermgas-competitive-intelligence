@@ -34,6 +34,9 @@ export default function Briefing() {
       <ul>{E.decision.options.map((o: any) => <li key={o.id}><b>{o.label}:</b> {o.upside} Downside: {o.downside}</li>)}</ul>
       <h2>Where to look first</h2>
       <p>{(['A', 'B', 'C', 'D'] as const).map(c => `${E.opportunity_rules.classes[c].label}: ${opp.filter(o => o.cls === c).map(o => o.code).join(', ') || '-'}`).join(' · ')}. Research-prioritization classes, not revenue estimates.</p>
+      <h2>{E.adjacent_opportunity.title}</h2>
+      <p>{E.adjacent_opportunity.short}</p>
+      <ul>{E.adjacent_opportunity.points.map((p: any, i: number) => <li key={i} className="small">{p.text} <Badge status={p.status} /> <Src ids={p.sources} /></li>)}</ul>
       <h2>Roadmap</h2>
       <ul>{E.roadmap.phases.map((p: any) => <li key={p.id}><b>{p.days}, {p.name}.</b> {p.gate.name}. Go if: {p.gate.go}</li>)}</ul>
       <p className="small">{E.roadmap.note_after_90}</p>

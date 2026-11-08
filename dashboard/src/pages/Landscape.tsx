@@ -5,6 +5,8 @@ import { threatLevel } from '../model';
 import { DIFF } from './Strategy';
 import { ProposalNote } from './Executive';
 import { go } from '../App';
+import OppMap from '../OppMap';
+import { Spotlight } from '../fx';
 
 const KEY = ['falco117', 'riken_fill', 'liontamer'];
 const ROLE: Record<string, string> = { falco117: 'Direct competitor', riken_fill: 'Direct competitor', liontamer: 'Competes for the same budget (indirect)' };
@@ -23,23 +25,28 @@ export default function Landscape() {
   return (
     <div className="stack">
       <PageHead kicker="Competitive Landscape" title="Two rivals decide the outcome; the rest are adjacent or different jobs"
-        lead="ION Science and Riken Keiki / RKI are the verified direct competitors. Honeywell competes for the same gigafactory safety budget with a different technology. Each card shows where they win, where they are exposed, and what that means for ThermGAS." />
+        lead="ION Science and Riken are the direct rivals. Honeywell competes for the same budget with a different technology." />
 
       <div className="grid g3">
         {cards.map(({ t, b }) => {
           const lvl = threatLevel(t.task_overlap, t.battery_gtm);
           return (
-            <Card key={t.product} className="rival" title={b.title} sub={ROLE[t.product]} right={<span className={`threat threat-${lvl}`}>{lvl}</span>}>
-              <p className="small"><b>Their pitch:</b> {b.their_pitch}</p>
-              <h4 className="mini win">Where they win</h4><Items items={b.where_they_win} n={2} />
-              <h4 className="mini them">Where ThermGAS can differentiate</h4><Items items={b.where_thermgas_can_win} n={2} />
-              <h4 className="mini mine">Watch-out for ThermGAS</h4><Items items={b.landmines} n={1} />
+            <Spotlight key={t.product} className="card rival">
+              <header className="card-head"><div><h3>{b.title}</h3><p className="card-sub">{ROLE[t.product]}</p></div><span className={`threat threat-${lvl}`}>{lvl}</span></header>
+              <h4 className="mini win">They win on</h4><Items items={b.where_they_win} n={1} />
+              <h4 className="mini them">ThermGAS can win on</h4><Items items={b.where_thermgas_can_win} n={1} />
+              <h4 className="mini mine">Watch out</h4><Items items={b.landmines} n={1} />
               <div className="meta"><a className="btn" onClick={() => go('battlecard', { p: t.product })} href={`#/battlecard?p=${t.product}`}>Full battlecard →</a></div>
-            </Card>
+            </Spotlight>
           );
         })}
       </div>
-      <p className="small muted">Threat level is rule-based from two evidence ratings (task overlap, battery go-to-market). No market share or numeric threat index is used. Rules: see Strategic Positioning.</p>
+      <p className="small muted">Threat levels are rule-based; no market share or numeric index is used.</p>
+
+      <section className="card map-hero">
+        <header className="card-head"><div><h3>Where competitors have local channels</h3><p className="card-sub">Hatched means no public evidence found, not "no competition".</p></div></header>
+        <OppMap initial="competitors" />
+      </section>
 
       <div className="grid g-main">
         <Card title="Threat map" sub="Rule-based placement. Click a product for its battlecard.">

@@ -34,6 +34,9 @@ const facKeys = new Set(facilities.map(f => `${f.operator}|${f.city.replace(/ \(
 const tierIds = Object.keys(executive.facility_tiers);
 executive.facility_status.forEach(f => { if (!facKeys.has(f.key)) errors.push(`executive facility_status: unknown facility ${f.key}`); if (!tierIds.includes(f.tier)) errors.push(`executive facility_status: bad tier ${f.tier}`); });
 facilities.forEach(f => { const k = `${f.operator}|${f.city.replace(/ \(.*$/, '')}`; if (f.type.startsWith('Li-ion') && !executive.facility_status.some(x => x.key === k) && !/cancel/i.test(f.status_update || '')) errors.push(`executive facility_status: missing tier for ${k}`); });
+const dataCenters = load('data_centers.json');
+walk(dataCenters, 'data_centers');
+dataCenters.rows.forEach((r, i) => { checkSrc(r.source, `data_centers #${i}`); if (!(r.mwh_2023 > 0) || !(r.pct_state_electricity_2023 >= 0)) errors.push(`data_centers #${i}: bad value`); if (r.status !== 'Verified') errors.push(`data_centers #${i}: status must be Verified (from the source table)`); });
 const prodIds = new Set(products.map(p => p.id));
 analysis.threats.forEach(t => { if (!prodIds.has(t.product)) errors.push(`threat: unknown product ${t.product}`); });
 analysis.battlecards.forEach(b => { if (!prodIds.has(b.product)) errors.push(`battlecard: unknown product ${b.product}`); });
@@ -82,13 +85,14 @@ write('competitor_comparison_matrix.csv', products, ['id','company','model','cat
 const srcUrl = Object.fromEntries(sources.map(s => [s.id, s]));
 write('state_evidence.csv', evidence.map(e => ({...e, source_url: srcUrl[e.source].url, source_date: srcUrl[e.source].source_date, access_date: srcUrl[e.source].access_date})), ['company','product','state','metric','value','source','source_url','source_date','access_date','status','notes']);
 write('states_51.csv', states, ['code','name','evidence_status','competitors_with_verified_local_presence','competitor_hq','competitor_offices','competitor_distributors','competitor_service','competitor_installations','regulatory_notes','thermgas_hq','thermgas_refrigerant_references','battery_cell_plants','battery_cell_gwh','dmc_solvent_plants','cancelled_plants_excluded']);
+write('data_centers_by_state.csv', dataCenters.rows.map(r => ({ ...r, source_url: srcUrl[r.source].url })), ['state','mwh_2023','pct_state_electricity_2023','source','source_url','status']);
 write('facilities.csv', facilities, ['operator','city','state','type','status_in_source','capacity_gwh','capacity_note','source','status','status_update','status_update_source','status_update_status']);
 
 // ---- combined dataset for the dashboard ----------------------------------
 const dash = path.join(__dirname, '..', 'dashboard', 'src', 'data');
 if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   fs.mkdirSync(dash, { recursive: true });
-  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, executive }, null, 1));
+  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters }, null, 1));
   const pub = path.join(__dirname, '..', 'dashboard', 'public', 'export');
   fs.mkdirSync(pub, { recursive: true });
   for (const f of fs.readdirSync(OUT)) fs.copyFileSync(path.join(OUT, f), path.join(pub, f));
@@ -96,7 +100,7 @@ if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   const pubDocs = path.join(__dirname, '..', 'dashboard', 'public', 'docs');
   fs.mkdirSync(pubDocs, { recursive: true });
   for (const f of ['Executive_Summary.md', 'Strategic_Roadmap.md', 'Phase4_Competitive_Analysis.md']) fs.copyFileSync(path.join(__dirname, '..', 'docs', f), path.join(pubDocs, f));
-  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive }, null, 2));
+  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters }, null, 2));
 }
 
 const s = states;
