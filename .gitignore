@@ -3,3 +3,8 @@ dashboard/dist/
 *.log
 .DS_Store
 Thumbs.db
+
+# Third-party downloads kept locally only (copyright); sources are linked in data/sources.json
+research/raw_html/
+research/raw_pdfs/
+research/gov/

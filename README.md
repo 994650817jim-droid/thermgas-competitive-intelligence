@@ -45,7 +45,7 @@ scripts/build-data.js     Validates every source ID, builds the 51-state dataset
 scripts/patches/phase3.js Phase 3 evidence update (kept for provenance)
 dashboard/                React + TypeScript + Vite app (SVG map and charts, no runtime network calls)
 docs/                     Phase logs, Phase 4 analysis, presentation script
-research/                 Raw downloaded pages/PDFs used during research
+research/                 URL lists used during research (third-party page/PDF copies are kept locally, not published; every source is linked in data/sources.json)
 ```
 
 To change data, edit `data/*.json` and run `npm run data` in `dashboard/`. The build fails if any claim cites a missing source.
