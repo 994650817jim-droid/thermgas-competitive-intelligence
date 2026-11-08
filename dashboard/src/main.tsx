@@ -6,6 +6,7 @@ import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 import '@fontsource/poppins/600.css';
 import './styles.css';
+import './exec.css';
 import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

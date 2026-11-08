@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07",
+ "generated": "2026-11-08",
  "sources": [
   {
    "id": "S01",
@@ -4174,5 +4174,837 @@
    "reason": "Research-stage; not commercially available.",
    "evidence": "https://pubmed.ncbi.nlm.nih.gov/42470946/"
   }
- ]
+ ],
+ "executive": {
+  "meta": {
+   "title": "ThermGAS U.S. Competitive Intelligence - executive layer",
+   "as_of": "2026-11-07",
+   "status_note": "Everything in this file is a research-team PROPOSAL for management consideration. It is not an approved ThermGAS strategy, budget or commitment. Evidence labels: Verified / Inferred / Assumption / Unknown."
+  },
+  "core_conclusion": {
+   "headline": "ThermGAS has a credible opening as the DMC-specific, lamp-free concentration monitor that complements event detection, but it cannot yet prove it. Its own DMC specification is inconsistent and no vendor has a public U.S. battery-plant reference.",
+   "next_move": "Proposal for management: run a 30-day evidence sprint (fix the DMC spec, answer the hazardous-area question, get real quotes) before committing any pilot hardware or sales spend.",
+   "known": [
+    {
+     "text": "Two direct competitors sell DMC-capable fixed monitors to battery makers: ION Science FALCO 2 11.7 and Riken Keiki / RKI.",
+     "status": "Verified",
+     "sources": [
+      "S22",
+      "S52"
+     ]
+    },
+    {
+     "text": "ThermGAS's DMC detection figure conflicts across its own documents (0.5 ppm vs 1 ppm) and DMC is missing from its Master Gas List.",
+     "status": "Verified",
+     "sources": [
+      "S01",
+      "S02",
+      "S08"
+     ]
+    },
+    {
+     "text": "No public U.S. battery-plant DMC customer reference was found for any vendor (absence after search, not proof of absence).",
+     "status": "Verified",
+     "sources": [
+      "S39"
+     ]
+    },
+    {
+     "text": "The FALCO 2 11.7 UV lamp lasts up to 4 months (3-month lamp warranty).",
+     "status": "Verified",
+     "sources": [
+      "S22",
+      "S25"
+     ]
+    }
+   ],
+   "inferred": [
+    {
+     "text": "PAIR should be more selective for DMC than a PID in mixed-solvent rooms (principle only; no matched test exists).",
+     "status": "Inferred",
+     "sources": [
+      "S02",
+      "S22"
+     ]
+    },
+    {
+     "text": "Honeywell's off-gas event detection is complementary to, not a substitute for, DMC concentration monitoring.",
+     "status": "Inferred",
+     "sources": [
+      "S37",
+      "S38"
+     ]
+    },
+    {
+     "text": "A Georgia-based service model could be an advantage in the Southeast (not tested).",
+     "status": "Inferred",
+     "sources": [
+      "S06"
+     ]
+    }
+   ],
+   "assumed": [
+    {
+     "text": "Battery-plant buyers will budget for both an event layer and a concentration layer.",
+     "status": "Assumption",
+     "sources": []
+    },
+    {
+     "text": "MSA could add DMC to its PAIR-based Chillgard platform.",
+     "status": "Assumption",
+     "sources": [
+      "S100"
+     ]
+    },
+    {
+     "text": "Large Asian-OEM plants may standardize on Riken globally.",
+     "status": "Assumption",
+     "sources": []
+    }
+   ]
+  },
+  "key_findings": [
+   {
+    "id": "K1",
+    "title": "The race is against two named rivals, and neither is unbeatable",
+    "body": "ION Science is cheap to buy ($3,521 list) and hazardous-area approved, but needs a UV lamp roughly every 4 months and cannot tell DMC from other solvents. Riken has the broadest battery portfolio and a claimed 10,000+ detectors in Li-ion plants worldwide, but publishes no DMC detection limit.",
+    "so_what": "A buyer will compare ThermGAS with these two first. ThermGAS wins only with a test-conditioned DMC spec.",
+    "status": "Verified",
+    "sources": [
+     "S22",
+     "S24",
+     "S25",
+     "S52"
+    ]
+   },
+   {
+    "id": "K2",
+    "title": "The U.S. reference-site position is still open",
+    "body": "No vendor has a public U.S. battery-plant DMC reference. Honeywell sells gigafactory event detection but reports a rate, not DMC concentration.",
+    "so_what": "The first documented plant pilot would be a lasting differentiator, and Honeywell is better treated as a partner-style complement than a head-on rival.",
+    "status": "Verified (absence after search)",
+    "sources": [
+     "S37",
+     "S38",
+     "S39"
+    ]
+   },
+   {
+    "id": "K3",
+    "title": "ThermGAS's own evidence is the main blocker",
+    "body": "Conflicting DMC spec, no interference data, no hazardous-area rating found, no battery reference and no public price. Competitors publish approvals.",
+    "so_what": "These are cheap to fix compared with a sales push, and they decide whether any pilot is credible.",
+    "status": "Verified (not found in public documents)",
+    "sources": [
+     "S01",
+     "S02",
+     "S03",
+     "S04",
+     "S08"
+    ]
+   }
+  ],
+  "actions": [
+   {
+    "id": "A1",
+    "rank": 1,
+    "rec": "R1",
+    "title": "Publish one test-conditioned DMC specification",
+    "why": "Neither direct competitor publishes a DMC limit; this turns a technology claim into a buyer-checkable advantage.",
+    "owner_role": "Product / Applications Engineering lead",
+    "validation": "Spec sheet issued with detection limit, calibration gas, per-point response time and cross-sensitivity to IPA, ethanol, EMC, DEC, NMP; DMC added to the Master Gas List.",
+    "evidence": [
+     "S01",
+     "S02",
+     "S08",
+     "S22",
+     "S52"
+    ],
+    "status": "Proposed"
+   },
+   {
+    "id": "A2",
+    "rank": 2,
+    "rec": "R3",
+    "title": "Answer the hazardous-area question",
+    "why": "FALCO 2 11.7 (UL Class I Zone 1) and Riken (explosion-proof) publish approvals; ThermGAS documents do not. DMC flash point is about 14-18 C.",
+    "owner_role": "Engineering lead with a safety / compliance reviewer",
+    "validation": "A written position: remote analyzer with sample lines for classified rooms, or a named approval path. Reviewed by qualified engineering.",
+    "evidence": [
+     "S22",
+     "S52",
+     "S03",
+     "S04",
+     "S140"
+    ],
+    "status": "Proposed"
+   },
+   {
+    "id": "A3",
+    "rank": 3,
+    "rec": "R5",
+    "title": "Win a first U.S. reference through a side-by-side pilot",
+    "why": "A documented pilot becomes the proof every later proposal needs. Start in the home state, where the research found no verified local competitor service.",
+    "owner_role": "Business Development lead with a Field / Applications engineer",
+    "validation": "One site signs a pilot protocol covering DMC readings, nuisance alarms and maintenance logged next to the incumbent detector.",
+    "evidence": [
+     "S39",
+     "S07"
+    ],
+    "status": "Proposed - gated on A1 and A2"
+   }
+  ],
+  "decision": {
+   "question": "Should ThermGAS commit to a validation-first U.S. battery pilot program, starting with a 30-day evidence sprint before any pilot hardware or sales spend?",
+   "options": [
+    {
+     "id": "O1",
+     "label": "Do nothing / wait",
+     "upside": "No cost.",
+     "downside": "The reference-site opening stays open to ION Science, Riken or Honeywell partners; ThermGAS's spec conflict stays visible to buyers.",
+     "note": "Research team does not recommend."
+    },
+    {
+     "id": "O2",
+     "label": "30-day evidence sprint, then decide on a pilot (research team's proposal)",
+     "upside": "Cheapest way to fix the credibility gaps before spending on a site; keeps a clear Go / No-Go at Day 30.",
+     "downside": "Delays customer contact by about a month; depends on ThermGAS engineering availability.",
+     "note": "Proposal only; not an approved ThermGAS plan."
+    },
+    {
+     "id": "O3",
+     "label": "Go straight to a pilot",
+     "upside": "Fastest route to a reference.",
+     "downside": "A pilot would run on an unresolved spec and an unanswered hazardous-area question, so a weak result or a site-safety objection could cost credibility.",
+     "note": "Higher risk."
+    }
+   ],
+   "needs_from_management": [
+    "Name an executive sponsor",
+    "Release engineering time for the spec and hazardous-area work",
+    "Decide whether ThermGAS can supply a pilot analyzer (loan or otherwise)"
+   ]
+  },
+  "facility_tiers": {
+   "T1": {
+    "label": "Verified in production (2025-26)",
+    "rank": 1
+   },
+   "T2": {
+    "label": "Verified plan: 2026 start targeted; outcome not yet verified",
+    "rank": 2
+   },
+   "T3": {
+    "label": "Listed Active in DOE 2023 data; not re-verified for 2025-26",
+    "rank": 3
+   },
+   "T4": {
+    "label": "Verified disruption (idle, JV split or postponement)",
+    "rank": 4
+   },
+   "T5": {
+    "label": "Reported cancelled or paused (secondary tracker only; Inferred)",
+    "rank": 5
+   },
+   "T6": {
+    "label": "Planned in DOE data; no 2025-26 update found",
+    "rank": 6
+   }
+  },
+  "facility_status": [
+   {
+    "key": "Panasonic|De Soto",
+    "tier": "T1",
+    "note": "Mass production since 14 Jul 2025.",
+    "sources": [
+     "S143"
+    ]
+   },
+   {
+    "key": "Toyota|Greensboro",
+    "tier": "T1",
+    "note": "In production; official launch 12 Nov 2025.",
+    "sources": [
+     "S144"
+    ]
+   },
+   {
+    "key": "Hyundai-LG Energy Solution (HL-GA), per S147|Bryan County",
+    "tier": "T2",
+    "note": "Opening delayed to H1 2026 after a Sept 2025 raid; H1 2026 has passed and the actual start was not verified. Capacity is 15 GWh in the DOE list but 30 GWh in the 2025 update: unreconciled.",
+    "sources": [
+     "S147"
+    ]
+   },
+   {
+    "key": "LG Energy Solution|Queen Creek",
+    "tier": "T2",
+    "note": "Mass production targeted for H1 2026; H1 2026 has passed and the actual start was not verified.",
+    "sources": [
+     "S148"
+    ]
+   },
+   {
+    "key": "SK Innovation (SK On)|Commerce",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "Ultium Cells|Spring Hill",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "AESC/Envision|Smyrna",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; ownership change reported but unconfirmed.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "LG Energy Solution|Holland",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "ONE (Our Next Energy)|Van Buren Township",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "Ultium Cells|Lansing",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "Tesla|Sparks",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "Tesla|Fremont",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "Tesla|Austin",
+    "tier": "T3",
+    "note": "DOE 2023 'Active'; no 2025-26 check.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "Ultium Cells|Warren",
+    "tier": "T4",
+    "note": "Idle since Jan 2026; partial restart planned.",
+    "sources": [
+     "S145"
+    ]
+   },
+   {
+    "key": "BlueOvalSK (Ford/SK)|Glendale",
+    "tier": "T4",
+    "note": "JV dissolved Dec 2025; Ford takes Kentucky plants; second plant postponed.",
+    "sources": [
+     "S142"
+    ]
+   },
+   {
+    "key": "BlueOvalSK (Ford/SK)|Stanton",
+    "tier": "T4",
+    "note": "SK On to own and operate the Tennessee plant after the JV split; operating status not verified.",
+    "sources": [
+     "S142"
+    ]
+   },
+   {
+    "key": "AESC/Envision|Bowling Green",
+    "tier": "T5",
+    "note": "Reported paused, restart announced Mar 2026 (secondary tracker).",
+    "sources": [
+     "S146"
+    ]
+   },
+   {
+    "key": "FREYR|Newnan",
+    "tier": "T5",
+    "note": "Reported cancelled (secondary tracker); still counted in capacity totals.",
+    "sources": [
+     "S146"
+    ]
+   },
+   {
+    "key": "Honda/LG Energy Solution|Jefferson",
+    "tier": "T6",
+    "note": "No 2025-26 status found.",
+    "sources": [
+     "S130"
+    ]
+   },
+   {
+    "key": "Stellantis/Samsung (StarPlus)|Kokomo",
+    "tier": "T6",
+    "note": "No 2025-26 status found.",
+    "sources": [
+     "S130"
+    ]
+   }
+  ],
+  "opportunity_rules": {
+   "reachable": "ThermGAS home state (verified HQ in GA), or a state bordering GA (geography; the service model itself is untested). Reference installations at universities are not treated as reach because none is a battery customer.",
+   "classes": {
+    "A": {
+     "label": "Engage now",
+     "rule": "At least one plant is Verified in production or has a Verified 2026 start plan (T1-T2) AND the state is reachable."
+    },
+    "B": {
+     "label": "Prepare",
+     "rule": "Same plant evidence as A, but no home-state or adjacent reach. Build a channel or partner first."
+    },
+    "C": {
+     "label": "Verify before investing",
+     "rule": "Best plant evidence is DOE 2023 'Active' (T3), disrupted (T4-T5) or unchanged plan (T6). Re-verify status first."
+    },
+    "D": {
+     "label": "Separate segment",
+     "rule": "No cell plant, but a DMC / electrolyte-solvent plant. Different buyer and likely hazardous-area equipment."
+    }
+   },
+   "caveats": [
+    "This is a research-prioritization aid, not a revenue or market-size estimate.",
+    "Capacity is announced nominal GWh from a June 2023 list, not output.",
+    "'Not Verified / Insufficient Evidence' for competitors means no public evidence was found. It does not mean no competition.",
+    "No customer contact or EHS decision-maker has been identified for any plant (Unknown)."
+   ],
+   "refinement_note": "Compared with the Phase 4 priority list, Tennessee moves from 'priority' to 'verify before investing': none of its plants has a Verified 2026 operating status and the Stanton plant changed hands. Phase 4 documents and data are unchanged."
+  },
+  "business_case": {
+   "framing": "No revenue, ROI, market share or ThermGAS internal figures are estimated here. Scenarios define scope and resources as labeled assumptions. Every cost without a public source is shown as Unknown and must come from ThermGAS or from vendor quotes.",
+   "scenarios": [
+    {
+     "id": "B1",
+     "name": "Evidence sprint",
+     "duration": "30 days (Assumption: matches the roadmap)",
+     "scope": "No customer hardware. Fix spec, hazardous-area position, quotes, interviews.",
+     "resources": [
+      {
+       "item": "Product / Applications Engineering lead",
+       "qty": "part-time (Assumption)"
+      },
+      {
+       "item": "Lab access for DMC calibration and interferent tests",
+       "qty": "to be confirmed with ThermGAS (Unknown)"
+      },
+      {
+       "item": "Business Development lead for 5-8 EHS interviews",
+       "qty": "5-8 interviews (from recommendation R2)"
+      }
+     ],
+     "outcome": "Go / No-Go #1 at Day 30."
+    },
+    {
+     "id": "B2",
+     "name": "Single-site side-by-side pilot",
+     "duration": "60-90 days of site operation (from recommendation R5)",
+     "scope": "One electrolyte-handling or filling room. ThermGAS analyzer next to the customer's existing detector.",
+     "resources": [
+      {
+       "item": "ThermGAS Haloguard IR analyzer (supply model: loan or sale not decided)",
+       "qty": "1 (Assumption)"
+      },
+      {
+       "item": "Sample points in the room",
+       "qty": "site-defined; up to 24 per Haloguard IR spec"
+      },
+      {
+       "item": "Field / Applications engineer",
+       "qty": "install, calibration, periodic visits (Assumption)"
+      },
+      {
+       "item": "Customer EHS or process owner",
+       "qty": "1 named sponsor needed (Unknown)"
+      },
+      {
+       "item": "Hazardous-area engineering review",
+       "qty": "site-specific (Assumption)"
+      }
+     ],
+     "outcome": "Documented readings, nuisance alarms and maintenance log."
+    },
+    {
+     "id": "B3",
+     "name": "Two-site pilot",
+     "duration": "60-90 days of site operation (Assumption)",
+     "scope": "A second site in a different state, for a stronger reference and a generalizable result.",
+     "resources": [
+      {
+       "item": "ThermGAS analyzers",
+       "qty": "2 (Assumption)"
+      },
+      {
+       "item": "Field / Applications engineering capacity across two regions",
+       "qty": "Unknown"
+      },
+      {
+       "item": "Two customer sponsors",
+       "qty": "Unknown"
+      }
+     ],
+     "outcome": "Only after B2 shows a positive Day-60 readout."
+    }
+   ],
+   "cost_drivers": [
+    {
+     "driver": "ThermGAS analyzer (hardware, loan or sale)",
+     "unit_cost": "Not Publicly Available",
+     "source_of_number": "ThermGAS price list / internal cost",
+     "status": "Unknown",
+     "sources": []
+    },
+    {
+     "driver": "Installation, sample tubing, commissioning labor",
+     "unit_cost": "Unknown",
+     "source_of_number": "ThermGAS field service",
+     "status": "Unknown",
+     "sources": []
+    },
+    {
+     "driver": "DMC calibration gas and test materials",
+     "unit_cost": "Unknown",
+     "source_of_number": "ThermGAS lab / gas supplier quote",
+     "status": "Unknown",
+     "sources": []
+    },
+    {
+     "driver": "Engineer travel and site visits",
+     "unit_cost": "Unknown",
+     "source_of_number": "ThermGAS finance",
+     "status": "Unknown",
+     "sources": []
+    },
+    {
+     "driver": "Hazardous-area engineering review",
+     "unit_cost": "Unknown",
+     "source_of_number": "External engineer quote",
+     "status": "Unknown",
+     "sources": []
+    },
+    {
+     "driver": "Competitor reference: ION FALCO 2 11.7 (diffused), list",
+     "unit_cost": "$3,521 (reseller list; tariff surcharge noted)",
+     "source_of_number": "DODTEC listing",
+     "status": "Verified",
+     "sources": [
+      "S24"
+     ]
+    },
+    {
+     "driver": "Competitor reference: 11.7 eV replacement lamp",
+     "unit_cost": "Not Publicly Available (quote only)",
+     "source_of_number": "ION Science / reseller quote",
+     "status": "Unknown",
+     "sources": [
+      "S25"
+     ]
+    }
+   ],
+   "comparator": {
+    "title": "What public data can and cannot say about point-detector upkeep",
+    "falco_list_price_usd": 3521,
+    "falco_lamp_life_months": 4,
+    "horizon_months": 36,
+    "thermgas_points_per_analyzer": 24,
+    "note": "Counts only. Arithmetic from stated specs: a lamp life of up to 4 months means at least 9 lamp changes per detector over 36 months. Lamp price, labor and every ThermGAS price are unknown, so no cost of ownership or saving is claimed.",
+    "sources": [
+     "S22",
+     "S24",
+     "S25",
+     "S04"
+    ]
+   },
+   "risks": [
+    {
+     "risk": "DMC test shows weaker selectivity or sensitivity than the vendor claim",
+     "impact": "Undermines the core positioning.",
+     "early_warning": "Day-30 lab results",
+     "mitigation": "Run the lab test before any customer pilot; reposition on integration and maintenance if needed.",
+     "status": "Assumption",
+     "sources": [
+      "S02"
+     ]
+    },
+    {
+     "risk": "Hazardous-area requirement blocks installation in the target room",
+     "impact": "Pilot cannot start in the room that matters most.",
+     "early_warning": "Site classification drawings",
+     "mitigation": "Remote analyzer with sample lines outside the classified area, or a named approval path (action A2).",
+     "status": "Inferred",
+     "sources": [
+      "S140",
+      "S22",
+      "S52"
+     ]
+    },
+    {
+     "risk": "Honeywell's gigafactory fire bundle fixes the safety budget before ThermGAS is invited",
+     "impact": "Reduced access to buyers.",
+     "early_warning": "Interview feedback on who owns electrolyte-room monitoring",
+     "mitigation": "Position as the concentration complement; test with 5-8 interviews.",
+     "status": "Verified",
+     "sources": [
+      "S38",
+      "S43"
+     ]
+    },
+    {
+     "risk": "Target plants delay, pause or cancel",
+     "impact": "Pilot site disappears; demand shifts.",
+     "early_warning": "Plant status re-check at Day 30 and Day 60",
+     "mitigation": "Prioritize plants with Verified production; keep two candidate sites.",
+     "status": "Verified",
+     "sources": [
+      "S141",
+      "S142",
+      "S145",
+      "S147"
+     ]
+    },
+    {
+     "risk": "Customer follows a parent-company vendor standard (for example Riken)",
+     "impact": "Shortlisting is closed to ThermGAS.",
+     "early_warning": "Interview answers on vendor standards",
+     "mitigation": "Prefer U.S. sites with local procurement authority.",
+     "status": "Assumption",
+     "sources": []
+    },
+    {
+     "risk": "MSA or another PAIR vendor adds DMC",
+     "impact": "The no-lamp technology claim stops being unique.",
+     "early_warning": "MSA Chillgard gas-list updates",
+     "mitigation": "Move first on the published spec and a reference site.",
+     "status": "Assumption",
+     "sources": [
+      "S100"
+     ]
+    },
+    {
+     "risk": "Public-data gaps hide a competitor's real strength (for example Riken DMC range, Honeywell current status)",
+     "impact": "Mispositioned claims.",
+     "early_warning": "Vendor answers to quote requests",
+     "mitigation": "Request datasheets and quotes during the sprint; keep claims labeled.",
+     "status": "Verified",
+     "sources": [
+      "S52",
+      "S31",
+      "S37"
+     ]
+    }
+   ]
+  },
+  "roadmap": {
+   "status_note": "Proposed by the student research team. Not approved. Owner entries are suggested roles, not named people or commitments.",
+   "phases": [
+    {
+     "id": "P1",
+     "days": "Days 0-30",
+     "name": "Fix the evidence",
+     "items": [
+      {
+       "task": "Resolve 0.5 vs 1 ppm; run DMC calibration and interferent tests; publish the spec; add DMC to the Master Gas List",
+       "owner_role": "Product / Applications Engineering lead",
+       "deliverable": "Test-conditioned DMC spec sheet",
+       "rec": "R1"
+      },
+      {
+       "task": "Write the hazardous-area position for classified rooms",
+       "owner_role": "Engineering lead + safety reviewer",
+       "deliverable": "One-page installation position",
+       "rec": "R3"
+      },
+      {
+       "task": "Request quotes: FALCO lamp and service, Riken filling monitors; get ThermGAS configuration price",
+       "owner_role": "Business Development lead",
+       "deliverable": "Quote file with sources",
+       "rec": "R4"
+      },
+      {
+       "task": "Re-verify status of candidate plants (HL-GA, Queen Creek, SK Commerce, Toyota NC, Panasonic KS) and UBE Louisiana start-up",
+       "owner_role": "Research analyst (student team)",
+       "deliverable": "Updated facility evidence in data/*.json",
+       "rec": "R6"
+      },
+      {
+       "task": "Schedule 5-8 EHS / process-engineer interviews",
+       "owner_role": "Business Development lead",
+       "deliverable": "Interview guide and schedule",
+       "rec": "R2"
+      }
+     ],
+     "success": [
+      "Spec sheet issued with stated test conditions",
+      "Hazardous-area position written",
+      "At least one competitor quote received",
+      "Interviews scheduled"
+     ],
+     "gate": {
+      "name": "Go / No-Go #1 (Day 30)",
+      "go": "Spec and hazardous-area position are complete AND interferent results do not contradict the selectivity claim.",
+      "no_go": "Lab results contradict the claim, or engineering cannot support the work. Stop and reposition before any customer pilot.",
+      "threshold_status": "Assumption"
+     }
+    },
+    {
+     "id": "P2",
+     "days": "Days 31-60",
+     "name": "Test the message and line up a site",
+     "items": [
+      {
+       "task": "Complete the interviews; test the 'concentration layer complements event detection' message",
+       "owner_role": "Business Development lead",
+       "deliverable": "Interview summary: who owns electrolyte-room monitoring, what is budgeted",
+       "rec": "R2"
+      },
+      {
+       "task": "Approach Georgia / Southeast plants with verified or planned production for a pilot",
+       "owner_role": "Business Development lead + executive sponsor",
+       "deliverable": "At least two candidate sites and named customer contacts",
+       "rec": "R5"
+      },
+      {
+       "task": "Draft the pilot protocol: readings, nuisance alarms, maintenance log, success criteria",
+       "owner_role": "Field / Applications engineer",
+       "deliverable": "Pilot protocol for customer sign-off",
+       "rec": "R5"
+      },
+      {
+       "task": "Verify competitor channels in TN, KY, MI, KS, NC",
+       "owner_role": "Research analyst (student team)",
+       "deliverable": "Updated state evidence",
+       "rec": "R6"
+      }
+     ],
+     "success": [
+      "Interview findings recorded, including who budgets",
+      "Customer contact identified at two candidate sites",
+      "Pilot protocol drafted"
+     ],
+     "gate": {
+      "name": "Go / No-Go #2 (Day 60)",
+      "go": "A site agrees in principle to the protocol AND interviews do not show the message is rejected.",
+      "no_go": "No site agrees or buyers reject the message. Pivot: revisit the target segment (for example the Louisiana DMC-producer segment) or the positioning.",
+      "threshold_status": "Assumption"
+     }
+    },
+    {
+     "id": "P3",
+     "days": "Days 61-90",
+     "name": "Start the pilot",
+     "items": [
+      {
+       "task": "Install the analyzer; record a baseline against the customer's existing detector",
+       "owner_role": "Field / Applications engineer",
+       "deliverable": "Installation record and baseline readings",
+       "rec": "R5"
+      },
+      {
+       "task": "Weekly log of readings, nuisance alarms and maintenance events",
+       "owner_role": "Field / Applications engineer",
+       "deliverable": "Pilot log",
+       "rec": "R5"
+      },
+      {
+       "task": "Build the lifecycle-cost comparison from real quotes",
+       "owner_role": "Business Development lead + finance",
+       "deliverable": "Documented comparison with sources",
+       "rec": "R4"
+      },
+      {
+       "task": "Prepare an early readout for management",
+       "owner_role": "Executive sponsor",
+       "deliverable": "Readout and decision on continuing",
+       "rec": "R5"
+      }
+     ],
+     "success": [
+      "Analyzer running at one site",
+      "Baseline and first weeks of logs recorded",
+      "Comparison built only from documented inputs"
+     ],
+     "gate": {
+      "name": "Go / No-Go #3 (Day 90)",
+      "go": "Pilot is operating without a safety or access objection AND the log shows usable data. Continue to the full 60-90 day readout.",
+      "no_go": "Site withdraws, a safety objection is raised, or data is unusable. Stop spending; document lessons.",
+      "threshold_status": "Assumption"
+     }
+    }
+   ],
+   "note_after_90": "A 60-90 day pilot started inside this plan would finish after Day 90. The full readout and any commercial decision fall outside this 90-day window."
+  },
+  "open_gaps": [
+   {
+    "text": "ThermGAS: DMC spec conflict (0.5 vs 1 ppm), interference data, hazardous-area rating, price list, any battery customers",
+    "status": "Unknown",
+    "sources": [
+     "S01",
+     "S02",
+     "S08"
+    ]
+   },
+   {
+    "text": "Prices: ThermGAS, Riken and Honeywell are not public; ION 11.7 eV lamp price and replacement labor are not public",
+    "status": "Unknown",
+    "sources": [
+     "S24",
+     "S25"
+    ]
+   },
+   {
+    "text": "Riken SD-1RI / SD-D58 DMC range or detection limit; Honeywell Li-ion Tamer current status (U.S. page says Discontinued, data sheet is current)",
+    "status": "Unknown",
+    "sources": [
+     "S52",
+     "S31",
+     "S37"
+    ]
+   },
+   {
+    "text": "2026 plant status: HL-GA, LGES Queen Creek and UBE Louisiana dates have passed without verified confirmation; most 'Active' plants were not re-checked after 2023",
+    "status": "Unknown",
+    "sources": [
+     "S130",
+     "S147",
+     "S148",
+     "S131"
+    ]
+   },
+   {
+    "text": "No customer contact or EHS decision-maker identified at any plant; buyer budgeting for event plus concentration layers is untested",
+    "status": "Assumption",
+    "sources": []
+   }
+  ]
+ }
 }

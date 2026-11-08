@@ -26,6 +26,7 @@ export const facilities: Facility[] = d.facilities;
 export const states: StateRow[] = d.states;
 export const analysis: any = d.analysis;
 export const excluded: any[] = d.excluded;
+export const executive: any = d.executive;
 export const generated: string = d.generated;
 
 export const sourceById = Object.fromEntries(sources.map(s => [s.id, s])) as Record<string, Source>;
@@ -44,9 +45,11 @@ export function bucketOf(category: string): Bucket {
 export const BUCKET_LABEL: Record<Bucket, string> = { subject: 'ThermGAS', direct: 'Direct competitor', indirect: 'Indirect / adjacent', substitute: 'Potential substitute' };
 
 /** Normalise free-text evidence labels to the three-level scale. */
-export function statusLevel(s: string | undefined): 'Verified' | 'Inferred' | 'Unknown' {
+export type Level4 = 'Verified' | 'Inferred' | 'Assumption' | 'Unknown';
+export function statusLevel(s: string | undefined): Level4 {
   if (!s) return 'Unknown';
   if (/^verified/i.test(s)) return 'Verified';
+  if (/^assum/i.test(s)) return 'Assumption';
   if (/infer|assum|unresolved|conflict/i.test(s)) return 'Inferred';
   if (/^verified/i.test(s.trim())) return 'Verified';
   return /unknown|n\/a|not /i.test(s) ? 'Unknown' : 'Inferred';

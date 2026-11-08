@@ -26,6 +26,14 @@ const analysis = load('analysis.json');
 const excluded = load('excluded.json');
 const walk = (o, ctx) => { if (Array.isArray(o)) o.forEach((x, i) => walk(x, `${ctx}[${i}]`)); else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) { if ((k === 'sources' || k === 'evidence') && Array.isArray(v) && v.every(x => typeof x === 'string')) checkSrc(v, `${ctx}.${k}`); else walk(v, `${ctx}.${k}`); } };
 walk(analysis, 'analysis');
+const executive = load('executive.json');
+walk(executive, 'executive');
+const OK_STATUS = /^(Verified|Inferred|Assumption|Unknown|Proposed)/;
+(function chk(o, ctx) { if (Array.isArray(o)) o.forEach((x, i) => chk(x, `${ctx}[${i}]`)); else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) { if (k === 'status' && typeof v === 'string' && !OK_STATUS.test(v)) errors.push(`${ctx}.status: bad label "${v}"`); else chk(v, `${ctx}.${k}`); } })(executive, 'executive');
+const facKeys = new Set(facilities.map(f => `${f.operator}|${f.city.replace(/ \(.*$/, '')}`));
+const tierIds = Object.keys(executive.facility_tiers);
+executive.facility_status.forEach(f => { if (!facKeys.has(f.key)) errors.push(`executive facility_status: unknown facility ${f.key}`); if (!tierIds.includes(f.tier)) errors.push(`executive facility_status: bad tier ${f.tier}`); });
+facilities.forEach(f => { const k = `${f.operator}|${f.city.replace(/ \(.*$/, '')}`; if (f.type.startsWith('Li-ion') && !executive.facility_status.some(x => x.key === k) && !/cancel/i.test(f.status_update || '')) errors.push(`executive facility_status: missing tier for ${k}`); });
 const prodIds = new Set(products.map(p => p.id));
 analysis.threats.forEach(t => { if (!prodIds.has(t.product)) errors.push(`threat: unknown product ${t.product}`); });
 analysis.battlecards.forEach(b => { if (!prodIds.has(b.product)) errors.push(`battlecard: unknown product ${b.product}`); });
@@ -80,11 +88,11 @@ write('facilities.csv', facilities, ['operator','city','state','type','status_in
 const dash = path.join(__dirname, '..', 'dashboard', 'src', 'data');
 if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   fs.mkdirSync(dash, { recursive: true });
-  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded }, null, 1));
+  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, executive }, null, 1));
   const pub = path.join(__dirname, '..', 'dashboard', 'public', 'export');
   fs.mkdirSync(pub, { recursive: true });
   for (const f of fs.readdirSync(OUT)) fs.copyFileSync(path.join(OUT, f), path.join(pub, f));
-  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded }, null, 2));
+  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive }, null, 2));
 }
 
 const s = states;

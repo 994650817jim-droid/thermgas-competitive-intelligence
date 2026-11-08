@@ -6,7 +6,7 @@ import { threatLevel, scoreStates, DEFAULT_WEIGHTS, type Weights } from '../mode
 import { Bars } from './Overview';
 import { go } from '../App';
 
-const DIFF = [
+export const DIFF = [
   { f: 'Detection performance', tg: 'PAIR; vendor claims 0.5 ppm (web) / 1 ppm (app note) for DMC; conflict unresolved', tgS: ['S01', 'S02'], comp: 'FALCO 2 11.7: 0.1 ppm isobutylene-equivalent, DMC RF 1.50; Riken: no DMC limit published', compS: ['S20', 'S22', 'S52'], v: 'Not comparable yet: needs a DMC test under matched conditions', st: 'Unknown' },
   { f: 'Selectivity', tg: 'Wavelength-selective IR targets DMC absorption (vendor); no interference data', tgS: ['S02'], comp: 'PID responds to all compounds below lamp energy (IPA, ethanol, methanol); hot-wire sensors respond to all combustibles', compS: ['S22', 'S52'], v: 'Likely ThermGAS advantage in principle; prove with interference tests', st: 'Inferred' },
   { f: 'Application specialization', tg: 'DMC application note for storage, mixing, transfer, filling, formation/aging', tgS: ['S02'], comp: 'ION lists Li-ion manufacturing; Riken has a full battery-process portfolio and >10,000 units at Li-ion plants', compS: ['S22', 'S52'], v: 'Riken leads on breadth and installed base', st: 'Verified' },

@@ -56,7 +56,7 @@ export function Src({ ids, label }: { ids?: string[]; label?: string }) {
 /* ---------- Evidence badge ---------- */
 export function Badge({ status, full }: { status?: string; full?: boolean }) {
   const lvl = statusLevel(status);
-  const icon = lvl === 'Verified' ? '✓' : lvl === 'Inferred' ? '≈' : '?';
+  const icon = lvl === 'Verified' ? '✓' : lvl === 'Inferred' ? '≈' : lvl === 'Assumption' ? '△' : '?';
   return <span className={`badge badge-${lvl.toLowerCase()}`} title={status}>{icon} {full && status ? status : lvl}</span>;
 }
 
@@ -94,7 +94,8 @@ export function PageHead({ kicker, title, lead }: { kicker: string; title: strin
 export const Legend = () => (
   <div className="legend-row">
     <span><Badge status="Verified" /> read in an official or primary source</span>
-    <span><Badge status="Inferred" /> reasoned from evidence, conflict, or assumption</span>
+    <span><Badge status="Inferred" /> reasoned from evidence, or sources conflict</span>
+    <span><Badge status="Assumption" /> team assumption, not tested</span>
     <span><Badge status="Unknown" /> not available</span>
   </div>
 );

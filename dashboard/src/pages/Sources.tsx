@@ -16,7 +16,7 @@ export default function Sources({ params }: { params: URLSearchParams }) {
   const [type, setType] = useState('all');
   const counts = useMemo(() => {
     const all = [...evidence.map(e => e.status), ...products.map(p => p.dmc_status), ...facilities.map(f => f.status)].map(statusLevel);
-    return { Verified: all.filter(x => x === 'Verified').length, Inferred: all.filter(x => x === 'Inferred').length, Unknown: all.filter(x => x === 'Unknown').length };
+    return { Verified: all.filter(x => x === 'Verified').length, Inferred: all.filter(x => x === 'Inferred').length, Unknown: all.filter(x => x === 'Unknown' || x === 'Assumption').length };
   }, []);
 
   return (

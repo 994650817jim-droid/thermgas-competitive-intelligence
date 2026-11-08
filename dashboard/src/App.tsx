@@ -2,20 +2,34 @@ import { useEffect, useState } from 'react';
 import { SourceProvider } from './ui';
 import { analysis } from './data';
 import Overview from './pages/Overview';
+import Executive from './pages/Executive';
+import Landscape from './pages/Landscape';
+import Opportunities from './pages/Opportunities';
+import Roadmap from './pages/Roadmap';
+import Present from './pages/Present';
+import Briefing from './pages/Briefing';
 import Competitors from './pages/Competitors';
 import Battlecard from './pages/Battlecard';
 import MapPage from './pages/MapPage';
 import Strategy from './pages/Strategy';
 import Sources from './pages/Sources';
 
-const PAGES = [
-  { path: 'overview', label: 'Overview', C: Overview },
-  { path: 'competitors', label: 'Competitor Explorer', C: Competitors },
-  { path: 'battlecard', label: 'Product Battlecard', C: Battlecard },
-  { path: 'map', label: 'U.S. Landscape', C: MapPage },
-  { path: 'strategy', label: 'Strategic Positioning', C: Strategy },
-  { path: 'sources', label: 'Sources & Method', C: Sources },
+/** Main navigation: four executive pages. Everything else is drill-down detail, still reachable. */
+const MAIN = [
+  { path: 'overview', label: 'Executive Overview', C: Executive },
+  { path: 'landscape', label: 'Competitive Landscape', C: Landscape },
+  { path: 'opportunities', label: 'Market Opportunities', C: Opportunities },
+  { path: 'roadmap', label: 'Strategic Roadmap', C: Roadmap },
 ];
+const DETAIL = [
+  { path: 'research', label: 'Evidence Dashboard', C: Overview, parent: 'overview' },
+  { path: 'competitors', label: 'Competitor Explorer', C: Competitors, parent: 'landscape' },
+  { path: 'battlecard', label: 'Product Battlecard', C: Battlecard, parent: 'landscape' },
+  { path: 'map', label: 'U.S. Landscape (map)', C: MapPage, parent: 'opportunities' },
+  { path: 'strategy', label: 'Strategic Positioning', C: Strategy, parent: 'landscape' },
+  { path: 'sources', label: 'Sources & Method', C: Sources, parent: 'overview' },
+];
+const PAGES = [...MAIN, ...DETAIL];
 
 /** Hash routing: #/page?key=value */
 export function parseHash() {
@@ -35,8 +49,12 @@ export default function App() {
     window.addEventListener('hashchange', on);
     return () => window.removeEventListener('hashchange', on);
   }, []);
+  if (route.path === 'present') return <SourceProvider><Present params={route.params} /></SourceProvider>;
   const page = PAGES.find(p => p.path === route.path) ?? PAGES[0];
   const Page = page.C;
+  const detail = DETAIL.find(d => d.path === page.path);
+  const activePath = detail ? detail.parent : page.path;
+  const briefing = route.path === 'briefing';
   return (
     <SourceProvider>
       <header className="topbar">
@@ -51,8 +69,12 @@ export default function App() {
             </span>
           </a>
           <nav className="nav" aria-label="Main">
-            {PAGES.map(p => <a key={p.path} href={`#/${p.path}`} className={p.path === page.path ? 'active' : ''}>{p.label}</a>)}
+            {MAIN.map(p => <a key={p.path} href={`#/${p.path}`} className={p.path === activePath && !briefing ? 'active' : ''} aria-current={p.path === activePath && !briefing ? 'page' : undefined}>{p.label}</a>)}
           </nav>
+          <div className="top-actions">
+            <a className="btn" href="#/briefing">Briefing</a>
+            <a className="btn primary" href="#/present">Present</a>
+          </div>
         </div>
       </header>
       <div className="disclaimer-bar">
@@ -61,7 +83,10 @@ export default function App() {
           <span>Evidence as of {analysis.meta.as_of} · vendor specs are vendor claims unless stated</span>
         </div>
       </div>
-      <main><Page params={route.params} /></main>
+      <main>
+        {detail && <div className="crumb"><a href={`#/${detail.parent}`}>← {MAIN.find(m => m.path === detail.parent)?.label}</a> <span>/ Research detail: {detail.label}</span></div>}
+        {briefing ? <Briefing /> : <Page params={route.params} />}
+      </main>
       <footer className="foot">
         Built from a traceable evidence database ({'data/*.json'}). "Not Verified / Insufficient Evidence" means the research found no public evidence - it does not mean "no competition". No market shares, revenues or prices have been estimated.
       </footer>

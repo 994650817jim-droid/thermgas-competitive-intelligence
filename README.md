@@ -30,14 +30,21 @@ npm run dev
 
 ## Pages
 
+Four main tabs for executives; everything else is drill-down detail.
+
 | Page | Answers |
 |---|---|
-| **Overview** | Who are the main competitors, how threatening are they, and what matters for ThermGAS? (the 10-second view) |
-| **Competitor Explorer** | Profiles, classification rationale, products, state evidence and sources for 11 competitors + ThermGAS; excluded candidates |
-| **Product Battlecard** | ThermGAS vs. up to 3 products, 17 attributes, plus narrative battlecards (where they win / where ThermGAS can win / watch-outs / questions / gaps) |
-| **U.S. Landscape** | Interactive map with 5 layers: competitor presence, service coverage, installation references, customer facilities, market opportunity. Includes hover summaries, a state detail panel and a table view |
-| **Strategic Positioning** | Positioning statement, SWOT, rule-based threat matrix, differentiation table, adjustable state-priority model, priority states, recommendations |
-| **Sources & Method** | 64-source register, raw tables, CSV/JSON export, methodology, data gaps |
+| **Executive Overview** | The conclusion, three findings, three proposed actions and one decision for management |
+| **Competitive Landscape** | Who matters most, where they win, where ThermGAS can differentiate |
+| **Market Opportunities** | State classes (Engage now / Prepare / Verify before investing / Separate segment) from plant evidence, reach, competitors and evidence completeness |
+| **Strategic Roadmap** | 30/60/90 plan with Go/No-Go gates; the **Business Case** tab holds pilot scenarios, cost drivers, a public-data comparator and risks |
+| *Briefing* (`#/briefing`) | One-page executive briefing: print to PDF or download Markdown |
+| *Present* (`#/present`) | 9-slide Presentation Mode for meeting rooms (arrow keys, F full screen, Esc exit) |
+| Drill-down | Evidence Dashboard (`#/research`), Competitor Explorer, Product Battlecard, U.S. map, Strategic Positioning (SWOT, threat rules, state model), Sources & Method (64 sources, exports) |
+
+All recommendations are research-team proposals, not approved ThermGAS strategy. See `docs/Executive_Summary.md`, `docs/Strategic_Roadmap.md` and `docs/Redesign_Notes.md`.
+
+Run the checks with `npm run data && npm test && npm run build` in `dashboard/`.
 
 ## Project structure
 
@@ -49,6 +56,7 @@ data/                     Evidence database (source of truth, hand-curated JSON)
   state_evidence.json     One row per state-level fact (hq/office/distributor/service/installation/regulatory)
   facilities.json         Battery & DMC facilities (DOE FCAB + 2025-26 updates)
   analysis.json           Phase 4: findings, threat rules, battlecards, SWOT, recommendations, priority model
+  executive.json          Executive layer: conclusion, actions, decision, plant evidence tiers, opportunity rules, business case, roadmap (proposals, labeled)
   excluded.json           Screened-out candidates with reasons
   export/                 Generated CSVs
 scripts/build-data.js     Validates every source ID, builds the 51-state dataset, CSVs and the dashboard dataset
