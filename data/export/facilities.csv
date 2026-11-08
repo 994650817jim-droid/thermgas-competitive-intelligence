@@ -1,0 +1,23 @@
+﻿operator,city,state,type,status_in_source,capacity_gwh,capacity_note,source,status,status_update,status_update_source,status_update_status
+AESC/Envision,Smyrna,TN,Li-ion cell plant,Active,4.4,,S130,Verified,,,
+LG Energy Solution,Holland,MI,Li-ion cell plant,Active,25,,S130,Verified,,,
+ONE (Our Next Energy),Van Buren Township,MI,Li-ion cell plant,Active,20,,S130,Verified,,,
+Tesla,Sparks,NV,Li-ion cell plant,Active,100,,S130,Verified,,,
+Tesla,Fremont,CA,Li-ion cell plant,Active,10,,S130,Verified,,,
+Tesla,Austin,TX,Li-ion cell plant,Active,15,,S130,Verified,,,
+SK Innovation (SK On),Commerce,GA,Li-ion cell plant,Active,21.5,,S130,Verified,,,
+Ultium Cells,Spring Hill,TN,Li-ion cell plant,Active,30,,S130,Verified,,,
+Ultium Cells,Lansing,MI,Li-ion cell plant,Active,41,,S130,Verified,,,
+Ultium Cells,Warren,OH,Li-ion cell plant,Active,41,,S130,Verified,Idle since Jan 2026; partial restart planned later in 2026,S145,Verified
+AESC/Envision,Bowling Green,KY,Li-ion cell plant,Planned,30,,S130,Verified,Reported paused; restart announced Mar 2026 (secondary tracker),S146,Inferred
+BlueOvalSK (Ford/SK),Glendale,KY,Li-ion cell plant,Planned,86,,S130,Verified,BlueOval SK JV dissolved Dec 2025; Kentucky plants to Ford; second KY plant postponed,S142,Verified
+BlueOvalSK (Ford/SK),Stanton,TN,Li-ion cell plant,Planned,43,,S130,Verified,BlueOval SK JV dissolved Dec 2025; SK On to own/operate the Tennessee plant,S142,Verified
+FREYR,Newnan,GA,Li-ion cell plant,Planned,34,,S130,Verified,Reported cancelled (secondary tracker),S146,Inferred
+Honda/LG Energy Solution,Jefferson,OH,Li-ion cell plant,Planned,40,,S130,Verified,,,
+"Hyundai-LG Energy Solution (HL-GA), per S147",Bryan County,GA,Li-ion cell plant,Planned,15,,S130,Verified,Hyundai-LGES (HL-GA); Sept 2025 ICE raid delayed opening to H1 2026; 30 GWh,S147,Verified
+KORE Power,Buckeye,AZ,Li-ion cell plant,Planned,12,,S130,Verified,Cancelled (Feb 2025): KORE Power dropped KOREPlex,S141,Verified
+LG Energy Solution,Queen Creek,AZ,Li-ion cell plant,Planned,27,,S130,Verified,LGES targeted 46-series cylindrical mass production in H1 2026,S148,Verified
+Panasonic,De Soto,KS,Li-ion cell plant,Planned,30,,S130,Verified,Mass production began 14 Jul 2025 (~32 GWh target),S143,Verified
+Stellantis/Samsung (StarPlus),Kokomo,IN,Li-ion cell plant,Planned,23,,S130,Verified,,,
+Toyota,Greensboro,NC,Li-ion cell plant,Planned,40,,S130,Verified,Toyota Battery NC (Liberty) in production; official launch 12 Nov 2025,S144,Verified
+UBE Corporation,Jefferson Parish (Cornerstone Energy Park),LA,DMC/EMC electrolyte-solvent plant,Under construction; completion planned July 2026,,"100,000 t/y DMC; 40,000 t/y EMC",S131,Verified,,,

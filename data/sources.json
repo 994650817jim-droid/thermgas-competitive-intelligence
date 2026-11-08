@@ -1,0 +1,578 @@
+[
+  {
+    "id": "S01",
+    "publisher": "ThermGAS",
+    "title": "Dimethyl Carbonate Monitor for Battery Manufacturing (webpage)",
+    "url": "https://thermgas.com/battery-manufacturing/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S02",
+    "publisher": "ThermGAS",
+    "title": "Battery Manufacturing Application Note - Monitoring Dimethyl Carbonate (DMC), 2 pp.",
+    "url": "https://thermgas.com/wp-content/uploads/2026/09/ThermGAS_DMC_Battery_Environment_Application_Note.pdf",
+    "source_date": "2026-09 (upload folder)",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S03",
+    "publisher": "ThermGAS",
+    "title": "TracePoint 1000 Refrigerant & Specialty Gas Monitor (product page)",
+    "url": "https://thermgas.com/tracepoint-1000-refrigerant-monitor/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S04",
+    "publisher": "ThermGAS",
+    "title": "Haloguard IR Photoacoustic Refrigerant Gas Monitor (product page)",
+    "url": "https://thermgas.com/haloguard-ir/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S05",
+    "publisher": "ThermGAS",
+    "title": "Company History",
+    "url": "https://thermgas.com/company-history/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S06",
+    "publisher": "ThermGAS",
+    "title": "Contact Us (11285 Elkins Rd., Bldg. H-1, Roswell, GA 30076)",
+    "url": "https://thermgas.com/contact-us/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S07",
+    "publisher": "ThermGAS",
+    "title": "List of Notable Installations",
+    "url": "https://thermgas.com/notable-installations/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Customer references (company claim)"
+  },
+  {
+    "id": "S08",
+    "publisher": "ThermGAS",
+    "title": "HALOGUARD Master Gas List - Alphabetical (PDF)",
+    "url": "https://thermgas.com/wp-content/uploads/2026/09/HALOGUARD-Master-Gas-List-Alphabetical.pdf",
+    "source_date": "2026-09 (upload folder)",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S09",
+    "publisher": "ThermGAS",
+    "title": "Start-Up & Maintenance (pump life, service documents)",
+    "url": "https://thermgas.com/start-up-maintenance/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S10",
+    "publisher": "ThermGAS",
+    "title": "Photoacoustic Infrared Gas Monitoring Technology",
+    "url": "https://thermgas.com/refrigerant-gas-monitoring-technology/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S11",
+    "publisher": "Student team (Chisale, Zhong, Xu)",
+    "title": "ThermGAS Competitive Analysis - class project brief",
+    "url": "https://thermgas-project-brief-20261028.minty-cod-5918.chatgpt.site/",
+    "source_date": "2026-10-28",
+    "access_date": "2026-11-07",
+    "type": "Prior project work"
+  },
+  {
+    "id": "S12",
+    "publisher": "Student team",
+    "title": "ThermGAS Data Analysis Plan (PDF)",
+    "url": "https://thermgas-project-brief-20261028.minty-cod-5918.chatgpt.site/assets/Data-Analysis-Plan.pdf",
+    "source_date": "2026-10-28",
+    "access_date": "2026-11-07",
+    "type": "Prior project work"
+  },
+  {
+    "id": "S20",
+    "publisher": "ION Science",
+    "title": "Dimethyl carbonate (CAS 616-38-6) gas data - PID response factors",
+    "url": "https://ionscience.com/en/gases/dioxane-14/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S21",
+    "publisher": "ION Science",
+    "title": "TVOC 2 Continuous VOC Gas Detector (product page)",
+    "url": "https://ionscience.com/en/products/tvoc-2-continuous-voc-gas-detector/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S22",
+    "publisher": "ION Science",
+    "title": "FALCO 2 11.7 eV fixed VOC monitor (product page)",
+    "url": "https://ionscience.com/en/products/falco-2-11-7-ev/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S23",
+    "publisher": "ION Science",
+    "title": "Where to Buy - global distributors and offices (USA site)",
+    "url": "https://ionscience.com/usa/where-to-buy/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Channel / distributor list"
+  },
+  {
+    "id": "S30",
+    "publisher": "Honeywell Building Automation",
+    "title": "Li-ion Tamer Battery Off-Gas Detection (brand page)",
+    "url": "https://buildings.honeywell.com/gb/en/brands/our-brands/li-ion-tamer",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S31",
+    "publisher": "Honeywell Building Automation (US)",
+    "title": "Li-ion Tamer Gen 3 Gas Sensors (product page, marked Discontinued)",
+    "url": "https://buildings.honeywell.com/us/en/products/by-category/fire-life-safety/sensors-and-detectors/gas-detectors/li-ion-tamer-gen-3-gas-sensors",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S32",
+    "publisher": "Honeywell Building Automation (US)",
+    "title": "Li-ion Tamer Multi Output System (product page, marked Discontinued)",
+    "url": "https://buildings.honeywell.com/us/en/products/by-category/fire-life-safety/sensors-and-detectors/gas-detectors/li-ion-tamer-multi-output-system",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S33",
+    "publisher": "Chemical Engineering (chemengonline)",
+    "title": "Honeywell acquires Li-ion Tamer business from Nexceris",
+    "url": "https://www.chemengonline.com/honeywell-acquires-li-ion-tamer-business-from-nexceris/",
+    "source_date": "2025-07",
+    "access_date": "2026-11-07",
+    "type": "Industry news"
+  },
+  {
+    "id": "S34",
+    "publisher": "Li-ion Tamer (liiontamer.com)",
+    "title": "Li-ion Tamer Gen2+ Sensor Receives California State Fire Marshal Listing",
+    "url": "https://liiontamer.com/category/stationary-energy-storage",
+    "source_date": "2025-01",
+    "access_date": "2026-11-07",
+    "type": "Company news"
+  },
+  {
+    "id": "S35",
+    "publisher": "Instrumart (authorized reseller)",
+    "title": "Honeywell RAEGuard 2 PID - list price and lead time",
+    "url": "https://www.instrumart.com/products/41682/honeywell-raeguard-2-pid",
+    "source_date": "N/A (surcharge note dated 2025-08-04)",
+    "access_date": "2026-11-07",
+    "type": "Public reseller price"
+  },
+  {
+    "id": "S36",
+    "publisher": "Honeywell",
+    "title": "RAEGuard 2 PID fixed VOC detector (product page)",
+    "url": "https://automation.honeywell.com/ca/en/products/sensing-solutions/gas-and-flame-detection/fixed-gas-and-flame-detection/fixed-gas-detectors/raeguard-2-pid",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S40",
+    "publisher": "Cubic Sensor and Instrument",
+    "title": "Li-Battery Electrolyte Leakage Monitoring Gas Sensor ATRS-1050 (official page)",
+    "url": "https://en.gassensor.com.cn/LibatteryThermalRunawaySensor/info_itemid_2875.html",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S41",
+    "publisher": "DirectIndustry (catalog of Cubic)",
+    "title": "NDIR gas sensor module ATRS-1050 - catalog specification",
+    "url": "https://www.directindustry.com/prod/cubic-sensor-and-instrument-co-ltd/product-54752-2759583.html",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Third-party catalog"
+  },
+  {
+    "id": "S42",
+    "publisher": "I-Connect007",
+    "title": "Cubic Sensor & Instrument and Innovaer Technologies form joint venture: Cubic Innovaer",
+    "url": "https://iconnect007.com/article/148120/cubic-sensor-instrument-and-innovaer-technologies-form-joint-venture-cubic-innovaer/148117/ein",
+    "source_date": "2025-12",
+    "access_date": "2026-11-07",
+    "type": "Industry news"
+  },
+  {
+    "id": "S50",
+    "publisher": "GVZ Components (Riken Keiki distributor, Italy)",
+    "title": "Riken Keiki SD-2600 / Application example - gas detection in lithium-ion battery production",
+    "url": "https://gvzcomp.it/company/news/247-riken-keiki-sd-2600-furnace-gas-monitor",
+    "source_date": "2021-09-30",
+    "access_date": "2026-11-07",
+    "type": "Distributor application note"
+  },
+  {
+    "id": "S51",
+    "publisher": "RKI Instruments",
+    "title": "RKI Instruments home page (Union City, CA 94587)",
+    "url": "https://www.rkiinstruments.com/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S60",
+    "publisher": "Advanced Test Equipment Corp. (Gasmet distributor)",
+    "title": "GAS-LIB-BTRY Li-ion battery application for GT6000 Mobilis",
+    "url": "https://www.atecorp.com/getmedia/532fa0be-cc4e-421a-b44a-c5c589a661a7/gt6000-li-ion-battery-application-gasmet-atec.pdf?ext=.pdf",
+    "source_date": "2025-11-14",
+    "access_date": "2026-11-07",
+    "type": "Product documentation (distributor-hosted)"
+  },
+  {
+    "id": "S61",
+    "publisher": "GovConInABox (SAM.gov-derived)",
+    "title": "Gasmet Technologies Inc - federal contractor profile (Mississauga, ON)",
+    "url": "https://govconinabox.com/explore/contractors/profile/gasmet-technologies-inc-dnshs4",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Government-derived registry"
+  },
+  {
+    "id": "S70",
+    "publisher": "NevadaNano",
+    "title": "Early Detection of Battery Thermal Runaway with MPS Gas Classification",
+    "url": "https://nevadanano.com/early-detection-of-battery-thermal-runaway-with-mps-sensor-gas-classification-and-identification/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S71",
+    "publisher": "Built In / business directories",
+    "title": "NevadaNano company profile (1395 Greg St, Sparks, NV 89431)",
+    "url": "https://builtin.com/company/nevadanano",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Business directory"
+  },
+  {
+    "id": "S80",
+    "publisher": "Infrasensing",
+    "title": "GAS-VOC Off-Gas (Electrolyte Vapor) Detection Sensor",
+    "url": "https://infrasensing.com/sensors/sensor_gas_voc.asp",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S90",
+    "publisher": "Advanced Test Equipment Corp. (INFICON distributor)",
+    "title": "INFICON ELT3000 electrolyte leak tester datasheet",
+    "url": "https://www.atecorp.com/atecorp/media/pdfs/data-sheets/elt3000-_datasheet.pdf?ext=.pdf",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation (distributor-hosted)"
+  },
+  {
+    "id": "S91",
+    "publisher": "Industrial Production (trade press)",
+    "title": "Leak test on lithium-ion battery cells (INFICON ELT3000)",
+    "url": "https://www.industrial-production.de/sensors--measurement-technology/leak-test-on-lithium-ion-battery-cells.htm",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Industry news"
+  },
+  {
+    "id": "S92",
+    "publisher": "MRS Materials Research Equipment Directory",
+    "title": "INFICON, East Syracuse NY, USA (Two Technology Place)",
+    "url": "https://mrforum.com/materials-research-equipment-directory/1089/inficon-east-syracuse-ny-usa",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Business directory"
+  },
+  {
+    "id": "S100",
+    "publisher": "MSA Safety (via distributor-hosted datasheet)",
+    "title": "Chillgard 5000 Refrigerant Leak Monitor datasheet",
+    "url": "https://flameskill.co.uk/wp-content/uploads/2023/10/MSA-Chillguard-5000-datasheet.pdf",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation (distributor-hosted)"
+  },
+  {
+    "id": "S101",
+    "publisher": "MSA Safety (press release)",
+    "title": "MSA Safety Completes Acquisition of Bacharach, Inc.",
+    "url": "https://news.msasafety.com/2021-07-01-MSA-Safety-Completes-Acquisition-of-Bacharach,-Inc-A-Leader-in-Heating,-Ventilation,-Air-Conditioning-and-Refrigeration-HVAC-R-Leak-Detection,1",
+    "source_date": "2021-07-01",
+    "access_date": "2026-11-07",
+    "type": "Company press release"
+  },
+  {
+    "id": "S102",
+    "publisher": "Control Engineering",
+    "title": "Bacharach MGS-400 gas detection series for commercial/industrial refrigerant leaks",
+    "url": "https://www.controleng.com/gas-detection-series-for-commercial-industrial-refrigerant-leaks/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Industry news"
+  },
+  {
+    "id": "S110",
+    "publisher": "Advanced Energy",
+    "title": "INNOVA 3433i photoacoustic gas monitor data sheet",
+    "url": "https://www.advancedenergy.com/globalassets/resources-root/data-sheets/en-gs-innova3433i-data-sheet.pdf",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S120",
+    "publisher": "Westech Industrial (Gasera distributor)",
+    "title": "Gasera brand page",
+    "url": "https://westech-ind.com/brands/gasera/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Distributor page"
+  },
+  {
+    "id": "S130",
+    "publisher": "U.S. DOE - Federal Consortium for Advanced Batteries",
+    "title": "FCAB FY2023 End of Year Report - Active and Planned Battery Plants in the United States (data: Bentley 2023, OEM_EV_Investments June 2023)",
+    "url": "https://www.energy.gov/sites/default/files/2024-09/FCAB%20Year-End%20Report%20Update%20FY23_final.pdf",
+    "source_date": "2024-09 (data June 2023)",
+    "access_date": "2026-11-07",
+    "type": "Government data"
+  },
+  {
+    "id": "S131",
+    "publisher": "UBE Corporation / Chemical Engineering",
+    "title": "UBE Corp. to build integrated DMC/EMC plant in Louisiana (100,000 t/y DMC; 40,000 t/y EMC)",
+    "url": "https://www.chemengonline.com/ube-corp-to-build-integrated-dmc-emc-plant-in-louisiana",
+    "source_date": "2024",
+    "access_date": "2026-11-07",
+    "type": "Industry news"
+  },
+  {
+    "id": "S132",
+    "publisher": "NREL / NAATBatt",
+    "title": "Li-ion Battery Supply Chain Database (not retrievable from this environment; access blocked)",
+    "url": "https://www.nrel.gov/transportation/li-ion-battery-supply-chain-database",
+    "source_date": "2024-03 (per NREL news)",
+    "access_date": "2026-11-07 (attempted)",
+    "type": "Government data (not used)"
+  },
+  {
+    "id": "S140",
+    "publisher": "Sigma-Aldrich / Fisher SDS",
+    "title": "Dimethyl carbonate SDS - LEL 4.22 vol%, UEL 12.87 vol%; flash point 14-18 C; no OSHA/NIOSH/ACGIH limits listed",
+    "url": "https://fscimage.fishersci.com/msds/43465.htm",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Safety data sheet"
+  },
+  {
+    "id": "S24",
+    "publisher": "DODTEC (U.S. reseller)",
+    "title": "FALCO 2 (0.1-200 ppm) Diffused with 11.7 eV - list price $3,521.00 (available as of 6/2025)",
+    "url": "https://dodtec.com/falco-2-extractive-explosion-proof-voc-detector.html",
+    "source_date": "2025-06 (availability note)",
+    "access_date": "2026-11-07",
+    "type": "Public reseller price"
+  },
+  {
+    "id": "S25",
+    "publisher": "ION Science",
+    "title": "A basic guide to lamp variants (11.7 eV lamp LA4TM700; 3-month lamp warranty)",
+    "url": "https://euro-index.be/files/secured/documents/ion-science-a-basic-guide-to-lamp-variants.pdf",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation (search excerpt)"
+  },
+  {
+    "id": "S37",
+    "publisher": "Honeywell",
+    "title": "Li-ion Tamer GEN 3 Lithium Ion Off-Gas Detection System - data sheet",
+    "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/hon-ba-fire-li-ion-tamer-gen3-data-sheet.pdf?download=false",
+    "source_date": "N/A (current Honeywell document library)",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S38",
+    "publisher": "Honeywell Building Automation",
+    "title": "Gigafactory Fire Solution (Li-ion Tamer Gen 3 + VESDA for battery production)",
+    "url": "https://buildings.honeywell.com/gb/en/industries/industrial-manufacturing/gigafactory-fire-solution",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S39",
+    "publisher": "Xtralis (Honeywell)",
+    "title": "Alamitos Energy Center Case Study - Li-ion Tamer (Long Beach, CA; 100 MW/400 MWh BESS)",
+    "url": "https://xtralis.com/file/10646",
+    "source_date": "2021-02",
+    "access_date": "2026-11-07",
+    "type": "Public customer reference"
+  },
+  {
+    "id": "S43",
+    "publisher": "Xtralis (Honeywell)",
+    "title": "Protecting Gigafactories with VESDA & Li-ion Tamer",
+    "url": "https://xtralis.com/page/1160/gigafactories-building-a-safer-future-reducing-risk-and-supporting-continuous-supply",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website"
+  },
+  {
+    "id": "S44",
+    "publisher": "Li-ion Tamer (liiontamer.com) / company profiles",
+    "title": "Li-ion Tamer address 404 Enterprise Drive, Lewis Center, OH 43035 (pre-acquisition)",
+    "url": "https://liiontamer.com/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company website (search excerpt)"
+  },
+  {
+    "id": "S52",
+    "publisher": "Riken Keiki",
+    "title": "Gas Detection Solutions for Lithium-ion Battery Production (official landing page)",
+    "url": "https://product.rikenkeiki.co.jp/lp/en/li-ion/index.html",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Product documentation"
+  },
+  {
+    "id": "S53",
+    "publisher": "PK Safety",
+    "title": "PK Safety honored as RKI #1 distributor; factory-authorized RKI service center (California)",
+    "url": "https://pksafety.com/blogs/pk-safety-blog/pk-safety-honored-as-rkis-1-distributor",
+    "source_date": "2025-06",
+    "access_date": "2026-11-07",
+    "type": "Distributor page"
+  },
+  {
+    "id": "S54",
+    "publisher": "AFC International",
+    "title": "RKI Instruments product category (DeMotte, IN distributor)",
+    "url": "https://afcintl.com/product-category/rki-instruments/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Distributor page (search excerpt)"
+  },
+  {
+    "id": "S103",
+    "publisher": "Kele (U.S. reseller)",
+    "title": "MSA Chillgard 5000 4-point w/ strobe A-CG5000-0-4-1-0: list $29,885 / sale $15,540.20 (search excerpt; page blocked by bot check)",
+    "url": "https://www.kele.com/product/gas-and-specialty-sensors/refrigerant/msa/a-cg5000-0-4-1-0",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Public reseller price (search excerpt)"
+  },
+  {
+    "id": "S141",
+    "publisher": "Energy-Storage.news",
+    "title": "KORE Power no longer building Arizona cell gigafactory",
+    "url": "https://www.energy-storage.news/us-bess-startup-kore-power-no-longer-building-arizona-cell-gigafactory",
+    "source_date": "2025-02",
+    "access_date": "2026-11-07",
+    "type": "Industry news"
+  },
+  {
+    "id": "S142",
+    "publisher": "Tennessee Lookout",
+    "title": "Ford, SK On plan to end BlueOval SK joint venture; SK On will operate Tennessee battery plant",
+    "url": "https://tennesseelookout.com/2025/12/11/ford-sk-on-plan-to-end-blueoval-sk-joint-venture-sk-on-will-operate-tennessee-battery-plant/",
+    "source_date": "2025-12-11",
+    "access_date": "2026-11-07",
+    "type": "News"
+  },
+  {
+    "id": "S143",
+    "publisher": "Kansas Department of Commerce",
+    "title": "Governor Kelly celebrates grand opening of Panasonic EV battery facility in De Soto",
+    "url": "https://www.kansascommerce.gov/2025/07/governor-kelly-celebrates-grand-opening-of-panasonic-ev-battery-manufacturing-facility-in-de-soto/",
+    "source_date": "2025-07",
+    "access_date": "2026-11-07",
+    "type": "Government"
+  },
+  {
+    "id": "S144",
+    "publisher": "Axios Raleigh",
+    "title": "Toyota opens massive North Carolina EV battery factory",
+    "url": "https://www.axios.com/local/raleigh/2025/11/12/toyota-north-carolina-battery-factory-greensboro-liberty",
+    "source_date": "2025-11-12",
+    "access_date": "2026-11-07",
+    "type": "News"
+  },
+  {
+    "id": "S145",
+    "publisher": "Automotive World",
+    "title": "GM Ultium Ohio plant in limbo as US battery retreat deepens",
+    "url": "https://www.automotiveworld.com/news/gms-ultium-ohio-plant-in-limbo-as-us-battery-retreat-deepens/",
+    "source_date": "2026-05",
+    "access_date": "2026-11-07",
+    "type": "News"
+  },
+  {
+    "id": "S146",
+    "publisher": "RottenWifi tracker (secondary)",
+    "title": "North America EV Battery Factories: 2026 Status Tracker (FREYR Georgia cancelled; AESC Bowling Green paused)",
+    "url": "https://rottenwifi.com/tracking-the-ev-battery-factory-construction-boom-across-north-america-2026-update/",
+    "source_date": "2026",
+    "access_date": "2026-11-07",
+    "type": "Secondary tracker (low reliability)"
+  },
+  {
+    "id": "S147",
+    "publisher": "Atlanta Journal-Constitution",
+    "title": "Opening of Georgia EV battery plant to be delayed after ICE raid (HL-GA, Bryan County)",
+    "url": "https://www.ajc.com/news/2025/09/opening-of-georgia-ev-battery-plant-to-be-delayed-after-ice-raid",
+    "source_date": "2025-09",
+    "access_date": "2026-11-07",
+    "type": "News"
+  },
+  {
+    "id": "S148",
+    "publisher": "electrive",
+    "title": "LGES aims to start US production of 46 mm round cells in spring 2026 (Queen Creek, AZ)",
+    "url": "https://www.electrive.com/2025/03/06/lges-aims-to-start-us-production-of-46-mm-round-cells-in-spring-2026",
+    "source_date": "2025-03-06",
+    "access_date": "2026-11-07",
+    "type": "News"
+  }
+]

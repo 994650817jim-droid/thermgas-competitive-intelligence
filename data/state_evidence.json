@@ -1,0 +1,445 @@
+{
+  "_note": "One row per state-level fact. metric types are kept separate and never summed together: hq | office | distributor | service | installation | customer_reference | claimed_coverage | regulatory. 'installation' rows for ThermGAS are refrigerant-monitor references (company claim), NOT battery/DMC installations.",
+  "rows": [
+    {
+      "company": "thermgas",
+      "product": "All",
+      "state": "GA",
+      "metric": "hq",
+      "value": "Headquarters & manufacturing, 11285 Elkins Rd, Roswell, GA 30076",
+      "source": "S06",
+      "status": "Verified",
+      "notes": ""
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "TX",
+      "metric": "office",
+      "value": "ION Science Inc. U.S. office, 4153 Bluebonnet Dr, Stafford, TX 77477",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "U.S. sales/service office; parent HQ in UK"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "CT",
+      "metric": "distributor",
+      "value": "Listed on official Where-to-Buy map as 'USA - Connecticut'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: U.S. Environmental (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "IL",
+      "metric": "distributor",
+      "value": "Listed as 'USA - Illinois'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: U.S. Environmental (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "FL",
+      "metric": "distributor",
+      "value": "Listed as 'USA - Florida'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: U.S. Environmental (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "UT",
+      "metric": "distributor",
+      "value": "Listed as 'USA - Utah'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: FLUIDX (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "NJ",
+      "metric": "distributor",
+      "value": "Listed as 'USA - New Jersey'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: U.S. Environmental (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "GA",
+      "metric": "distributor",
+      "value": "Listed as 'USA - Georgia'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: EON Products, Inc. (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "TX",
+      "metric": "distributor",
+      "value": "Listed as 'USA - Texas' (two entries)",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: Geotech Environmental Equipment, Inc.; REPSS, Inc (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "CA",
+      "metric": "distributor",
+      "value": "Listed as 'USA - California'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: ICON Safety Co Inc. (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "LA",
+      "metric": "distributor",
+      "value": "Listed as 'USA - Louisiana'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: Moody-Price (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "ionscience",
+      "product": "All",
+      "state": "MA",
+      "metric": "distributor",
+      "value": "Listed as 'USA - Massachusetts'",
+      "source": "S23",
+      "status": "Verified",
+      "notes": "Distributor paired by page-layout position: U.S. Environmental (pairing Inferred; state tag Verified)"
+    },
+    {
+      "company": "riken",
+      "product": "All",
+      "state": "CA",
+      "metric": "office",
+      "value": "RKI Instruments, Union City, CA 94587 (U.S. subsidiary of Riken Keiki)",
+      "source": "S51",
+      "status": "Verified",
+      "notes": "Subsidiary relationship not re-verified in this session"
+    },
+    {
+      "company": "nevadanano",
+      "product": "MPS",
+      "state": "NV",
+      "metric": "hq",
+      "value": "1395 Greg St, Suite 102, Sparks, NV 89431",
+      "source": "S71",
+      "status": "Verified",
+      "notes": "Business directories (multiple agree)"
+    },
+    {
+      "company": "inficon",
+      "product": "ELT3000",
+      "state": "NY",
+      "metric": "office",
+      "value": "INFICON Inc., Two Technology Place, East Syracuse, NY 13057",
+      "source": "S92",
+      "status": "Verified",
+      "notes": "Directory listing"
+    },
+    {
+      "company": "gasmet",
+      "product": "GT6000",
+      "state": "CA",
+      "metric": "distributor",
+      "value": "Advanced Test Equipment Corp. (San Diego, CA) hosts Gasmet & INFICON documents and rents ELT3000",
+      "source": "S60",
+      "status": "Inferred",
+      "notes": "Rental/distributor relationship; not an authorized-distributor list from Gasmet"
+    },
+    {
+      "company": "honeywell",
+      "product": "Li-ion Tamer",
+      "state": "CA",
+      "metric": "regulatory",
+      "value": "Li-ion Tamer Gen2+ sensor received California State Fire Marshal (CSFM) listing, Jan 2025",
+      "source": "S34",
+      "status": "Verified",
+      "notes": "State-specific listing relevant for BESS projects in CA"
+    },
+    {
+      "company": "honeywell",
+      "product": "All",
+      "state": "ALL",
+      "metric": "claimed_coverage",
+      "value": "National sales via Honeywell Building Automation and resellers (e.g., Instrumart)",
+      "source": "S35",
+      "status": "Verified",
+      "notes": "National availability is NOT counted as local presence in any state"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "GA",
+      "metric": "installation",
+      "value": "ASHRAE Headquarters - Atlanta; Georgia Tech; Georgia State; Emory; Medical College of Georgia; Jimmy Carter Library",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Company-claimed references; state inferred from institution location; refrigerant application"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "ID",
+      "metric": "installation",
+      "value": "Boise State University",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "NM",
+      "metric": "installation",
+      "value": "University of New Mexico",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "CA",
+      "metric": "installation",
+      "value": "Stanford; UC Santa Cruz",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "CO",
+      "metric": "installation",
+      "value": "Colorado State",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "NC",
+      "metric": "installation",
+      "value": "North Carolina State University",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "NY",
+      "metric": "installation",
+      "value": "Cornell",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "IN",
+      "metric": "installation",
+      "value": "Notre Dame; Indiana University",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "CT",
+      "metric": "installation",
+      "value": "University of Connecticut",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "OR",
+      "metric": "installation",
+      "value": "Oregon Institute of Technology; Oregon Health & Science University",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "OH",
+      "metric": "installation",
+      "value": "University of Dayton Research Institute",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "MD",
+      "metric": "installation",
+      "value": "University of Maryland",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "PA",
+      "metric": "installation",
+      "value": "Pennsylvania State",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "MO",
+      "metric": "installation",
+      "value": "University of Missouri; Harry S Truman Library",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "NJ",
+      "metric": "installation",
+      "value": "Rutgers University",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "WI",
+      "metric": "installation",
+      "value": "University of Wisconsin - Madison",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "WV",
+      "metric": "installation",
+      "value": "West Virginia University",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "FL",
+      "metric": "installation",
+      "value": "Disney Resorts - Florida; Fontainebleau - Miami",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Source names Florida and Miami explicitly"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "HI",
+      "metric": "installation",
+      "value": "Disney Resorts - Hawaii",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Source names Hawaii explicitly"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "NV",
+      "metric": "installation",
+      "value": "Fontainebleau - Las Vegas",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Source names Las Vegas explicitly"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "DC",
+      "metric": "installation",
+      "value": "US Capitol Power Plant",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application"
+    },
+    {
+      "company": "thermgas",
+      "product": "Haloguard (refrigerant)",
+      "state": "TX",
+      "metric": "installation",
+      "value": "George W. Bush Library",
+      "source": "S07",
+      "status": "Inferred",
+      "notes": "Refrigerant application; state inferred"
+    },
+    {
+      "company": "riken",
+      "product": "All",
+      "state": "CA",
+      "metric": "service",
+      "value": "PK Safety - RKI #1 distributor and factory-authorized service center (California-based service department)",
+      "source": "S53",
+      "status": "Verified",
+      "notes": "Calibration/repair of RKI portable and fixed detectors"
+    },
+    {
+      "company": "riken",
+      "product": "All",
+      "state": "IN",
+      "metric": "distributor",
+      "value": "AFC International, DeMotte, IN - large RKI distributor",
+      "source": "S54",
+      "status": "Inferred",
+      "notes": "From search excerpt; distributor page not opened"
+    },
+    {
+      "company": "honeywell",
+      "product": "Li-ion Tamer",
+      "state": "CA",
+      "metric": "installation",
+      "value": "Alamitos Energy Center, Long Beach - 100 MW/400 MWh BESS, 33 Li-ion Tamer controllers (12 monitoring + 2 reference sensors each)",
+      "source": "S39",
+      "status": "Verified",
+      "notes": "BESS, not battery manufacturing"
+    },
+    {
+      "company": "honeywell",
+      "product": "Li-ion Tamer",
+      "state": "OH",
+      "metric": "office",
+      "value": "Li-ion Tamer origin (Nexceris), 404 Enterprise Dr, Lewis Center, OH 43035",
+      "source": "S44",
+      "status": "Inferred",
+      "notes": "Pre-acquisition address; post-July-2025 operating location not verified"
+    }
+  ]
+}

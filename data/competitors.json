@@ -1,0 +1,333 @@
+[
+  {
+    "id": "thermgas",
+    "name": "ThermGAS (formerly Thermal Gas Systems)",
+    "role": "Subject company",
+    "category": "Subject",
+    "hq": "Roswell, GA, USA",
+    "hq_state": "GA",
+    "hq_status": "Verified",
+    "hq_source": "S06",
+    "website": "https://thermgas.com/",
+    "industry_focus": "Refrigerant and specialty-gas leak monitoring (mechanical rooms, data centers, semiconductor, battery manufacturing)",
+    "relevant_products": [
+      "TracePoint 1000",
+      "Haloguard IR"
+    ],
+    "company_size": "Not Publicly Available",
+    "us_presence": "U.S. headquarters and manufacturer; notable-installations list names organizations across North America (company claim, refrigerant applications).",
+    "battery_experience": "Published DMC application note (2026) and battery webpage; no public battery-plant customer reference found.",
+    "relationship": "Subject of analysis",
+    "rationale": "Sponsor. PAIR fixed monitors marketed for DMC vapor monitoring in Li-ion battery manufacturing.",
+    "evidence_level": "Verified",
+    "sources": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07"
+    ]
+  },
+  {
+    "id": "ionscience",
+    "name": "ION Science",
+    "role": "Competitor",
+    "category": "A. Direct",
+    "hq": "Royston (Fowlmere), UK; U.S. office Stafford, TX",
+    "hq_state": "TX",
+    "hq_status": "Verified (U.S. office)",
+    "hq_source": "S23",
+    "website": "https://ionscience.com/usa/",
+    "industry_focus": "Photoionization (PID) VOC detection - portable, personal and fixed",
+    "relevant_products": [
+      "FALCO 2 11.7 eV",
+      "TVOC 2"
+    ],
+    "company_size": "Not Publicly Available",
+    "us_presence": "ION Science Inc. office (4153 Bluebonnet Dr, Stafford, TX 77477). Official Where-to-Buy page tags U.S. distributors in CT, IL, FL, UT, NJ, GA, TX, CA, LA, MA (company-to-state pairing not machine-readable; to be confirmed).",
+    "battery_experience": "FALCO 2 11.7 lists 'Li-ion Battery Manufacturing and Storage' among typical applications; publishes DMC response factors (11.7 eV RF 1.50; 10.6 eV RF 60).",
+    "relationship": "Closest direct competitor: fixed DMC-capable VOC monitor explicitly marketed to Li-ion battery manufacturing.",
+    "rationale": "Same task (fixed continuous vapor monitoring in battery plants); different technology (PID, non-selective).",
+    "evidence_level": "Verified",
+    "sources": [
+      "S20",
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25"
+    ]
+  },
+  {
+    "id": "riken",
+    "name": "Riken Keiki (U.S.: RKI Instruments)",
+    "role": "Competitor",
+    "category": "A. Direct",
+    "hq": "Tokyo, Japan (Riken Keiki); U.S. subsidiary RKI Instruments, Union City, CA",
+    "hq_state": "CA",
+    "hq_status": "Verified (RKI address)",
+    "hq_source": "S51",
+    "website": "https://www.rkiinstruments.com/",
+    "industry_focus": "Industrial fixed and portable gas detection",
+    "relevant_products": [
+      "SD-D58 (hot-wire, pump suction)",
+      "SD-1RI (NDIR, diffusion)",
+      "SD-1GP / SD-1GH (diffusion)",
+      "GADMS Lite remote monitoring"
+    ],
+    "company_size": "Not Publicly Available",
+    "us_presence": "RKI Instruments office in Union City, CA (verified on RKI site). PK Safety (CA) is RKI's #1 distributor and factory-authorized service center (verified); AFC International (DeMotte, IN) is a large RKI distributor (Inferred, search excerpt). Full U.S. distributor list not published.",
+    "battery_experience": "Official Riken Keiki battery page: electrolyte-filling monitors for DMC/EMC/DEC; >10,000 detectors operating at Li-ion production sites worldwide; 20+ years in Li-ion; case study of a ppm-level range customised for an electrolyte-filling customer. Also NMP duct monitors (SD-2500/2600), testing (GD-70D) and separator (FI-900).",
+    "relationship": "Direct competitor with the broadest battery-process portfolio (drying, filling, testing, separator). DMC-specific detection limits not published.",
+    "rationale": "Official product page names the same task (electrolyte filling) and the same solvents. RKI (Union City, CA) is the U.S. channel; PK Safety (CA) is an authorized service center.",
+    "evidence_level": "Verified",
+    "sources": [
+      "S50",
+      "S51",
+      "S52",
+      "S53",
+      "S54"
+    ]
+  },
+  {
+    "id": "honeywell",
+    "name": "Honeywell (Li-ion Tamer; RAEGuard 2 PID)",
+    "role": "Competitor",
+    "category": "B. Indirect / Adjacent",
+    "hq": "USA (corporate HQ not re-verified in this session)",
+    "hq_state": "N/A",
+    "hq_status": "Unknown",
+    "hq_source": "",
+    "website": "https://buildings.honeywell.com/",
+    "industry_focus": "Building automation, fire/life safety, industrial gas detection",
+    "relevant_products": [
+      "Li-ion Tamer (Gen2+/Gen3) off-gas sensors",
+      "RAEGuard 2 PID"
+    ],
+    "company_size": "Not collected (large public company; figures not used in this analysis)",
+    "us_presence": "Products sold in U.S. via Honeywell Building Automation and resellers (e.g., Instrumart list price). Li-ion Tamer Gen2+ holds a California State Fire Marshal listing (Jan 2025).",
+    "battery_experience": "Li-ion Tamer acquired from Nexceris (July 2025); detects electrolyte solvent vapor off-gas events in battery racks/ESS; UL 2075 recognition for electrolyte solvent vapor (DEC, DMC, EMC) reported. Honeywell markets an integrated \"Gigafactory Fire Solution\" built around Li-ion Tamer Gen 3 + VESDA for battery production plants (S38, S43). Public U.S. reference: Alamitos Energy Center BESS, Long Beach CA (S39).",
+    "relationship": "Event detection (cell venting) rather than DMC concentration monitoring; strong brand and fire-system channel.",
+    "rationale": "Different measurement (rate-of-change off-gas event, FM 6540 approved) but competes for the same gigafactory safety budget. Conflict: Gen 3 product page marked Discontinued while the Gen 3 data sheet and gigafactory page remain current - unresolved.",
+    "evidence_level": "Verified",
+    "sources": [
+      "S30",
+      "S31",
+      "S32",
+      "S33",
+      "S34",
+      "S35",
+      "S36",
+      "S37",
+      "S38",
+      "S39",
+      "S43",
+      "S44"
+    ]
+  },
+  {
+    "id": "cubic",
+    "name": "Cubic Sensor and Instrument Co., Ltd.",
+    "role": "Competitor",
+    "category": "B. Indirect / Adjacent",
+    "hq": "Wuhan, China; North American JV 'Cubic Innovaer' (Dec 2025, location not stated)",
+    "hq_state": "N/A",
+    "hq_status": "Verified (non-U.S. HQ)",
+    "hq_source": "S42",
+    "website": "https://en.gassensor.com.cn/",
+    "industry_focus": "Gas sensor modules (NDIR, ultrasonic) and analyzers for OEMs",
+    "relevant_products": [
+      "ATRS-1050 Li-battery electrolyte leakage sensor (NDIR)"
+    ],
+    "company_size": "Not collected (listed on Shanghai exchange, ticker 688665)",
+    "us_presence": "North American JV Cubic Innovaer announced Dec 2025; no verified U.S. office address or distributor found.",
+    "battery_experience": "ATRS-1050 designed for DMC/EMC/EC vapor detection for thermal runaway and battery manufacturing leak detection (catalog).",
+    "relationship": "OEM component sensor; DMC-specific NDIR but at high-ppm scale (0-10,000 ppm; +/-200 ppm in 0-2,000 ppm).",
+    "rationale": "Detects DMC but resolution suits leak/thermal-runaway events, not low-ppm trace monitoring. Could be integrated by system builders as a low-cost alternative.",
+    "evidence_level": "Verified (vendor claim, third-party catalog)",
+    "sources": [
+      "S40",
+      "S41",
+      "S42"
+    ]
+  },
+  {
+    "id": "nevadanano",
+    "name": "NevadaNano (Nevada Nanotech Systems, Inc.)",
+    "role": "Competitor",
+    "category": "B. Indirect / Adjacent",
+    "hq": "Sparks, NV, USA",
+    "hq_state": "NV",
+    "hq_status": "Verified (business directories)",
+    "hq_source": "S71",
+    "website": "https://nevadanano.com/",
+    "industry_focus": "MEMS 'Molecular Property Spectrometer' (MPS) gas sensors for flammable gas and refrigerants",
+    "relevant_products": [
+      "MPS Flammable Gas Sensor (H2 + DMC + EMC classification)"
+    ],
+    "company_size": "Not Publicly Available (directory estimates vary 11-100 employees; not used)",
+    "us_presence": "U.S. headquarters in Nevada; sells sensors to OEMs.",
+    "battery_experience": "Markets DMC/EMC classification for BESS off-gas early warning; no field calibration, 15-year sensor life (vendor claim).",
+    "relationship": "Component supplier for BESS/battery-safety devices; adjacent to factory DMC monitoring.",
+    "rationale": "DMC-capable but positioned for BESS enclosures; no concentration/LOD spec for DMC published on page read.",
+    "evidence_level": "Verified (vendor claim)",
+    "sources": [
+      "S70",
+      "S71"
+    ]
+  },
+  {
+    "id": "infrasensing",
+    "name": "Infrasensing",
+    "role": "Competitor",
+    "category": "B. Indirect / Adjacent",
+    "hq": "Not verified",
+    "hq_state": "N/A",
+    "hq_status": "Unknown",
+    "hq_source": "",
+    "website": "https://infrasensing.com/",
+    "industry_focus": "Environmental monitoring sensors for data centers / critical facilities",
+    "relevant_products": [
+      "GAS-VOC off-gas (electrolyte vapor) sensor"
+    ],
+    "company_size": "Not Publicly Available",
+    "us_presence": "Sold 'through OEM partners in select markets'; no U.S. office verified.",
+    "battery_experience": "Detects DMC, DEC, EMC off-gas in stationary Li-ion/BESS racks; calibration-free; UL 61010 recognized; explicitly 'not a fire detection or life safety system'.",
+    "relationship": "Rack-level BESS/data-center off-gas monitoring; overlaps ThermGAS's data-center audience, not factory DMC.",
+    "rationale": "Adjacent customer segment (data centers) where ThermGAS also sells refrigerant monitors.",
+    "evidence_level": "Verified (vendor claim)",
+    "sources": [
+      "S80"
+    ]
+  },
+  {
+    "id": "msa",
+    "name": "MSA Safety (incl. Bacharach)",
+    "role": "Competitor",
+    "category": "B. Indirect / Adjacent (technology twin)",
+    "hq": "USA (HQ not re-verified in this session)",
+    "hq_state": "N/A",
+    "hq_status": "Unknown",
+    "hq_source": "",
+    "website": "https://www.msasafety.com/",
+    "industry_focus": "Safety products incl. fixed gas detection; HVAC-R leak detection via Bacharach (acquired July 2021, $337M)",
+    "relevant_products": [
+      "Chillgard 5000 (PAIR refrigerant monitor)",
+      "Bacharach MGS-400 series",
+      "Bacharach Multi-Zone"
+    ],
+    "company_size": "Not collected",
+    "us_presence": "U.S. company with national distribution (details not collected).",
+    "battery_experience": "None found for DMC. Chillgard 5000 gas list is refrigerants only.",
+    "relationship": "Uses the same PAIR principle (1 ppm refrigerants) - the most credible technology peer if it chose to configure for DMC; main rival in ThermGAS's core refrigerant market.",
+    "rationale": "Not a DMC competitor today; strategic threat in core business and potential entrant.",
+    "evidence_level": "Verified",
+    "sources": [
+      "S100",
+      "S101",
+      "S102",
+      "S103"
+    ]
+  },
+  {
+    "id": "gasmet",
+    "name": "Gasmet Technologies (a Nederman company)",
+    "role": "Competitor",
+    "category": "C. Potential Substitute",
+    "hq": "Vantaa, Finland; North American entity Mississauga, ON, Canada",
+    "hq_state": "N/A",
+    "hq_status": "Verified (government-derived registry)",
+    "hq_source": "S61",
+    "website": "https://www.gasmet.com/",
+    "industry_focus": "FTIR multi-gas analyzers (emissions, process, safety, portable)",
+    "relevant_products": [
+      "GT6000 Mobilis with GAS-LIB-BTRY Li-ion battery library"
+    ],
+    "company_size": "Not collected",
+    "us_presence": "Sold via U.S. distributors/rental houses (e.g., Advanced Test Equipment Corp., San Diego CA); no U.S. office verified.",
+    "battery_experience": "Fixed Li-ion battery library includes DMC, EMC, EC, DEC, HF, CO, H2-related species (dated 2025-11-14).",
+    "relationship": "Multi-component FTIR used for battery off-gas / abuse testing; could substitute for area monitoring at higher cost/complexity.",
+    "rationale": "DMC capability verified in library; positioned for testing/analysis rather than permanent area alarms.",
+    "evidence_level": "Verified (distributor-hosted document)",
+    "sources": [
+      "S60",
+      "S61"
+    ]
+  },
+  {
+    "id": "inficon",
+    "name": "INFICON",
+    "role": "Competitor",
+    "category": "C. Potential Substitute",
+    "hq": "Bad Ragaz, Switzerland (Inferred); U.S. office East Syracuse, NY",
+    "hq_state": "NY",
+    "hq_status": "Verified (U.S. office, directory)",
+    "hq_source": "S92",
+    "website": "https://www.inficon.com/",
+    "industry_focus": "Leak detection, vacuum and gas analysis instruments",
+    "relevant_products": [
+      "ELT3000 battery electrolyte leak tester"
+    ],
+    "company_size": "Not collected",
+    "us_presence": "U.S. office in East Syracuse, NY; rental via Advanced Test Equipment Corp. (CA).",
+    "battery_experience": "End-of-line leak testing of pouch/prismatic/round/coin cells; quadrupole MS detects electrolyte solvents; 1e-6 mbar.l/s helium-equivalent; 'E-Check (DMC)' accessory listed.",
+    "relationship": "Cell-level QC substitute: catches leaking cells before they reach storage/aging areas, reducing the need for ambient alarms; does not monitor room air.",
+    "rationale": "Different task (product leak test) but addresses the same root cause (electrolyte leakage).",
+    "evidence_level": "Verified",
+    "sources": [
+      "S90",
+      "S91",
+      "S92"
+    ]
+  },
+  {
+    "id": "advancedenergy",
+    "name": "Advanced Energy (INNOVA / formerly LumaSense)",
+    "role": "Competitor",
+    "category": "C. Potential Substitute (watch list)",
+    "hq": "Not verified",
+    "hq_state": "N/A",
+    "hq_status": "Unknown",
+    "hq_source": "",
+    "website": "https://www.advancedenergy.com/",
+    "industry_focus": "Photoacoustic multi-gas monitors (INNOVA), power electronics",
+    "relevant_products": [
+      "INNOVA 3433i / 1512 photoacoustic monitors"
+    ],
+    "company_size": "Not collected",
+    "us_presence": "Not verified.",
+    "battery_experience": "None found.",
+    "relationship": "Same physical principle (photoacoustic IR, ppb-level for some gases per search excerpt) but no DMC or battery evidence; official datasheet URL returned 404.",
+    "rationale": "Kept as watch-list substitute; not used in comparisons until a current datasheet is obtained.",
+    "evidence_level": "Unknown",
+    "sources": [
+      "S110"
+    ]
+  },
+  {
+    "id": "gasera",
+    "name": "Gasera",
+    "role": "Competitor",
+    "category": "C. Potential Substitute (watch list)",
+    "hq": "Turku, Finland (per search excerpt)",
+    "hq_state": "N/A",
+    "hq_status": "Inferred",
+    "hq_source": "S120",
+    "website": "https://www.gasera.fi/",
+    "industry_focus": "Photoacoustic (NDIR-PAS, laser-PAS) multi-gas analyzers",
+    "relevant_products": [
+      "GASERA ONE family"
+    ],
+    "company_size": "Not collected",
+    "us_presence": "U.S. distributor brand page (Westech Industrial).",
+    "battery_experience": "None found (SF6, refrigerant, anesthetic, emissions uses).",
+    "relationship": "Photoacoustic peer; no DMC evidence.",
+    "rationale": "Watch list only.",
+    "evidence_level": "Inferred",
+    "sources": [
+      "S120"
+    ]
+  }
+]

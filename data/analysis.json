@@ -1,0 +1,960 @@
+{
+  "meta": {
+    "title": "ThermGAS U.S. Competitive Intelligence - Phase 4 analysis",
+    "as_of": "2026-11-07",
+    "disclaimer": "Independent student research by Northeastern University MSBA students. Not an official ThermGAS publication. Vendor specifications are vendor claims unless stated otherwise; no laboratory testing was performed."
+  },
+  "headline_findings": [
+    {
+      "id": "F1",
+      "title": "Two verified direct competitors: ION Science and Riken Keiki/RKI",
+      "body": "Both officially market fixed detectors for Li-ion battery manufacturing with DMC named as a target: ION Science FALCO 2 11.7 lists 'Li-ion Battery Manufacturing'; Riken Keiki lists DMC/EMC/DEC monitors for electrolyte filling and claims >10,000 detectors at Li-ion plants worldwide.",
+      "so_what": "These are the vendors a battery-plant EHS buyer will compare ThermGAS against. Neither publishes a DMC detection limit under stated conditions - a published, test-conditioned DMC spec would be a differentiator.",
+      "status": "Verified",
+      "sources": [
+        "S22",
+        "S52"
+      ]
+    },
+    {
+      "id": "F2",
+      "title": "The 11.7 eV PID trade-off is documented by the competitor itself",
+      "body": "FALCO 2 11.7 reads DMC well (RF 1.50) but its lamp lasts up to 4 months (3-month lamp warranty) and a PID responds to every compound below 11.7 eV, so it cannot tell DMC from IPA or ethanol. The 10.6 eV TVOC 2 barely sees DMC (RF 60).",
+      "so_what": "ThermGAS's strongest evidence-backed angle is selectivity plus maintenance burden - but the cost side must be proven with real lamp and labor quotes.",
+      "status": "Verified",
+      "sources": [
+        "S20",
+        "S21",
+        "S22",
+        "S25"
+      ]
+    },
+    {
+      "id": "F3",
+      "title": "Honeywell sells event detection into the same gigafactory budget",
+      "body": "Li-ion Tamer Gen 3 detects off-gas venting (10 ppm/s rate threshold, FM 6540) and Honeywell packages it with VESDA as a 'Gigafactory Fire Solution'. It does not report DMC concentration.",
+      "so_what": "Position ThermGAS as a complement (continuous DMC concentration in filling / electrolyte-handling rooms), not as a rival 'earliest warning' device.",
+      "status": "Verified",
+      "sources": [
+        "S37",
+        "S38",
+        "S43"
+      ]
+    },
+    {
+      "id": "F4",
+      "title": "ThermGAS's own DMC evidence has gaps",
+      "body": "Battery webpage says 0.5 ppm; the DMC application note says 1 ppm; DMC is absent from the Master Gas List; no interference data, no hazardous-area rating and no public battery-plant reference were found.",
+      "so_what": "Fixing the spec sheet is the cheapest, highest-impact action before any sales push.",
+      "status": "Verified",
+      "sources": [
+        "S01",
+        "S02",
+        "S08",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "F5",
+      "title": "No vendor has a public U.S. battery-plant DMC reference",
+      "body": "The only verified U.S. installation reference in this category is a Honeywell Li-ion Tamer BESS site (Long Beach, CA) - not a factory.",
+      "so_what": "The first credible U.S. reference site is still up for grabs.",
+      "status": "Verified (absence of evidence after search, not proof of absence)",
+      "sources": [
+        "S39"
+      ]
+    },
+    {
+      "id": "F6",
+      "title": "Competitor local presence is thin where battery capacity is concentrated",
+      "body": "Verified competitor offices/distributors cluster in CA, TX and the Northeast; the largest announced cell capacity sits in KY, NV, MI, OH, TN and GA, where only GA (ION distributor) and OH/IN (inferred) show competitor channel evidence.",
+      "so_what": "This is 'not verified', not 'no competition' - national vendors can still sell there - but it marks where channel research and early customer development pay off most.",
+      "status": "Verified data, Inferred interpretation",
+      "sources": [
+        "S23",
+        "S130",
+        "S53"
+      ]
+    }
+  ],
+  "threat_rules": {
+    "description": "Threat level is derived from two evidence-coded dimensions; no market-share or numeric threat index is used because none can be supported.",
+    "dimensions": {
+      "task_overlap": {
+        "High": "Officially marketed for continuous DMC / electrolyte-solvent monitoring in battery production areas",
+        "Medium": "Detects DMC or competes for the same battery-plant safety budget, but measures a different thing (event, generic VOC, high-ppm)",
+        "Low": "Different task (BESS racks, product leak test, lab analysis) or no DMC capability"
+      },
+      "battery_gtm": {
+        "High": "Official battery-manufacturing marketing AND verified U.S. office/subsidiary or distributor network",
+        "Medium": "Battery marketing OR verified U.S. presence, not both",
+        "Low": "Neither verified"
+      }
+    },
+    "matrix": {
+      "High|High": "High",
+      "High|Medium": "Elevated",
+      "Medium|High": "Elevated",
+      "High|Low": "Moderate",
+      "Medium|Medium": "Moderate",
+      "Low|High": "Moderate",
+      "Medium|Low": "Moderate",
+      "Low|Medium": "Low",
+      "Low|Low": "Low"
+    }
+  },
+  "threats": [
+    {
+      "product": "falco117",
+      "company": "ionscience",
+      "task_overlap": "High",
+      "battery_gtm": "High",
+      "why": "Lists Li-ion battery manufacturing; U.S. office (TX) + distributors in 10 states.",
+      "sources": [
+        "S22",
+        "S23"
+      ]
+    },
+    {
+      "product": "riken_fill",
+      "company": "riken",
+      "task_overlap": "High",
+      "battery_gtm": "High",
+      "why": "Official battery page names electrolyte filling + DMC; U.S. subsidiary RKI (CA) and authorized service (PK Safety).",
+      "sources": [
+        "S52",
+        "S51",
+        "S53"
+      ]
+    },
+    {
+      "product": "liontamer",
+      "company": "honeywell",
+      "task_overlap": "Medium",
+      "battery_gtm": "High",
+      "why": "Event detection, not concentration, but sold as a gigafactory solution with FM/UL credentials.",
+      "sources": [
+        "S37",
+        "S38"
+      ]
+    },
+    {
+      "product": "tvoc2",
+      "company": "ionscience",
+      "task_overlap": "Medium",
+      "battery_gtm": "Medium",
+      "why": "Fixed PID in same channel, but 10.6 eV gives a weak DMC response; not marketed for batteries.",
+      "sources": [
+        "S20",
+        "S21"
+      ]
+    },
+    {
+      "product": "raeguard2",
+      "company": "honeywell",
+      "task_overlap": "Medium",
+      "battery_gtm": "Low",
+      "why": "Generic 10.6 eV fixed PID; no battery marketing found; public price makes it a budget alternative.",
+      "sources": [
+        "S35",
+        "S36"
+      ]
+    },
+    {
+      "product": "atrs1050",
+      "company": "cubic",
+      "task_overlap": "Medium",
+      "battery_gtm": "Low",
+      "why": "DMC-specific NDIR but +/-200 ppm; OEM module; U.S. channel not verified.",
+      "sources": [
+        "S41",
+        "S42"
+      ]
+    },
+    {
+      "product": "elt3000",
+      "company": "inficon",
+      "task_overlap": "Low",
+      "battery_gtm": "High",
+      "why": "Cell leak testing (substitute at the source); battery-marketed; U.S. office NY.",
+      "sources": [
+        "S90",
+        "S92"
+      ]
+    },
+    {
+      "product": "mps",
+      "company": "nevadanano",
+      "task_overlap": "Low",
+      "battery_gtm": "Medium",
+      "why": "BESS off-gas sensor component; U.S. HQ (NV).",
+      "sources": [
+        "S70",
+        "S71"
+      ]
+    },
+    {
+      "product": "gasvoc",
+      "company": "infrasensing",
+      "task_overlap": "Low",
+      "battery_gtm": "Low",
+      "why": "BESS/data-center rack sensor; U.S. presence not verified.",
+      "sources": [
+        "S80"
+      ]
+    },
+    {
+      "product": "gt6000",
+      "company": "gasmet",
+      "task_overlap": "Low",
+      "battery_gtm": "Low",
+      "why": "FTIR battery library for off-gas testing; no U.S. office verified.",
+      "sources": [
+        "S60",
+        "S61"
+      ]
+    },
+    {
+      "product": "chillgard5000",
+      "company": "msa",
+      "task_overlap": "Low",
+      "battery_gtm": "Low",
+      "why": "No DMC today. Separate note: same PAIR principle - High threat in ThermGAS's core refrigerant business.",
+      "sources": [
+        "S100"
+      ]
+    }
+  ],
+  "battlecards": [
+    {
+      "company": "ionscience",
+      "product": "falco117",
+      "title": "ION Science FALCO 2 11.7 eV",
+      "their_pitch": "Fixed 11.7 eV PID that 'sees' high-ionization VOCs incl. DMC; ATEX/IECEx/UL Zone 1; listed for Li-ion battery manufacturing.",
+      "where_they_win": [
+        {
+          "text": "Low, published entry price: $3,521 reseller list (diffused unit).",
+          "status": "Verified",
+          "sources": [
+            "S24"
+          ]
+        },
+        {
+          "text": "Hazardous-area approvals (UL Class I Zone 1, ATEX, IECEx) for installation in classified areas.",
+          "status": "Verified",
+          "sources": [
+            "S22"
+          ]
+        },
+        {
+          "text": "Strong DMC response at 11.7 eV (RF 1.50) and 0.1 ppm sensitivity (isobutylene basis).",
+          "status": "Verified",
+          "sources": [
+            "S20",
+            "S22"
+          ]
+        },
+        {
+          "text": "U.S. office (Stafford, TX) plus distributors tagged in 10 states.",
+          "status": "Verified",
+          "sources": [
+            "S23"
+          ]
+        }
+      ],
+      "where_thermgas_can_win": [
+        {
+          "text": "Selectivity: PAIR targets DMC's IR absorption; a PID sums every compound below 11.7 eV (IPA, ethanol, methanol) - fewer nuisance alarms in mixed-solvent rooms.",
+          "status": "Inferred (from documented principles; no head-to-head test)",
+          "sources": [
+            "S02",
+            "S22"
+          ]
+        },
+        {
+          "text": "Maintenance: FALCO lamp lifetime up to 4 months (3-month lamp warranty) vs. no UV lamp / no depletable sensor in PAIR; Haloguard pump life typically 5-6 years.",
+          "status": "Verified (vendor specs)",
+          "sources": [
+            "S22",
+            "S25",
+            "S09"
+          ]
+        },
+        {
+          "text": "Coverage: one Haloguard IR scans up to 24 sample points (500 ft tubing) vs. one FALCO per point (diffusion).",
+          "status": "Verified (specs); cost impact unquantified",
+          "sources": [
+            "S04",
+            "S22"
+          ]
+        }
+      ],
+      "landmines": [
+        {
+          "text": "ThermGAS has no published hazardous-area rating; electrolyte rooms may be classified (DMC flash point ~17 C).",
+          "status": "Inferred",
+          "sources": [
+            "S140",
+            "S03",
+            "S04"
+          ]
+        },
+        {
+          "text": "Multi-point scanning means each point is revisited only once per cycle (<1 min per channel) - slower per-point update than a dedicated PID (T90 60 s).",
+          "status": "Inferred from specs",
+          "sources": [
+            "S04",
+            "S22"
+          ]
+        },
+        {
+          "text": "ThermGAS DMC spec is inconsistent (0.5 vs 1 ppm).",
+          "status": "Verified",
+          "sources": [
+            "S01",
+            "S02"
+          ]
+        }
+      ],
+      "discovery_questions": [
+        "Which other solvents (IPA, ethanol, EMC/DEC, NMP) are present in the room, and how often do you get nuisance VOC alarms?",
+        "Who replaces PID lamps today, how often, and what does each visit cost?",
+        "Is the monitored area electrically classified, and could an analyzer sit outside it with sample lines?"
+      ],
+      "evidence_gaps": [
+        "11.7 eV lamp price and replacement labor",
+        "Head-to-head DMC test with interferents",
+        "FALCO installed base in U.S. battery plants"
+      ]
+    },
+    {
+      "company": "riken",
+      "product": "riken_fill",
+      "title": "Riken Keiki / RKI Instruments",
+      "their_pitch": "Gas detection for every Li-ion process step (NMP drying, electrolyte filling, testing, separator); >10,000 detectors at Li-ion plants worldwide; 20+ years in the industry.",
+      "where_they_win": [
+        {
+          "text": "Breadth: one vendor for NMP duct monitors (up to 200 C), filling-area solvent monitors, test-area and O2 monitors.",
+          "status": "Verified (vendor)",
+          "sources": [
+            "S52"
+          ]
+        },
+        {
+          "text": "Battery credibility: claims >10,000 detectors at Li-ion production sites and a ppm-level filling-area case study.",
+          "status": "Verified (vendor claim, global)",
+          "sources": [
+            "S52"
+          ]
+        },
+        {
+          "text": "U.S. subsidiary RKI (Union City, CA) and factory-authorized service via PK Safety.",
+          "status": "Verified",
+          "sources": [
+            "S51",
+            "S53"
+          ]
+        },
+        {
+          "text": "Explosion-proof transmitter designs.",
+          "status": "Verified (vendor)",
+          "sources": [
+            "S52"
+          ]
+        }
+      ],
+      "where_thermgas_can_win": [
+        {
+          "text": "DMC specificity: Riken's filling monitors are combustible (hot-wire) or NDIR types with no published DMC limit; ThermGAS can publish a DMC-specific ppm spec.",
+          "status": "Inferred",
+          "sources": [
+            "S52",
+            "S02"
+          ]
+        },
+        {
+          "text": "Low-ppm focus: hot-wire combustible sensors are designed for %LEL ranges; low-ppm DMC trend monitoring is a different job.",
+          "status": "Inferred (sensor principle; Riken ppm customisation exists)",
+          "sources": [
+            "S52"
+          ]
+        },
+        {
+          "text": "Multi-point extractive sampling from one analyzer.",
+          "status": "Verified (ThermGAS spec)",
+          "sources": [
+            "S04"
+          ]
+        }
+      ],
+      "landmines": [
+        {
+          "text": "Riken's case study shows it will customise ranges to ppm for filling customers - do not assume it cannot do low ppm.",
+          "status": "Verified",
+          "sources": [
+            "S52"
+          ]
+        },
+        {
+          "text": "Large Asian-OEM battery makers may already standardise on Riken globally.",
+          "status": "Assumption - validate in interviews",
+          "sources": []
+        }
+      ],
+      "discovery_questions": [
+        "Is your gas-detection vendor specified by your global/parent-company standard?",
+        "Do you need a %LEL fire-safety alarm, a ppm exposure/leak trend, or both?",
+        "What does your current filling-area detector actually read when DMC is present at a few ppm?"
+      ],
+      "evidence_gaps": [
+        "DMC range/LOD for SD-1RI and SD-D58",
+        "U.S. pricing",
+        "U.S. battery-plant installations"
+      ]
+    },
+    {
+      "company": "honeywell",
+      "product": "liontamer",
+      "title": "Honeywell Li-ion Tamer Gen 3",
+      "their_pitch": "Earliest off-gas (cell venting) detection, calibration-free, >10-year life, FM 6540 approved; sold with VESDA as a Gigafactory Fire Solution.",
+      "where_they_win": [
+        {
+          "text": "Brand, fire-system channel and certifications (FM 6540; CSFM listing for Gen2+).",
+          "status": "Verified",
+          "sources": [
+            "S37",
+            "S34"
+          ]
+        },
+        {
+          "text": "Calibration-free, 10+ year life, bump test with a DEC bottle.",
+          "status": "Verified (vendor)",
+          "sources": [
+            "S37"
+          ]
+        },
+        {
+          "text": "Scales to 100 sensors per controller for rack-level coverage.",
+          "status": "Verified",
+          "sources": [
+            "S37"
+          ]
+        }
+      ],
+      "where_thermgas_can_win": [
+        {
+          "text": "It reports a rate-of-change event, not DMC ppm: no concentration trend for leak hunting, exposure records or process-area alarms.",
+          "status": "Verified (spec)",
+          "sources": [
+            "S37"
+          ]
+        },
+        {
+          "text": "Designed around battery racks and air streams (monitoring + reference sensors) - a weaker fit for electrolyte-handling or filling rooms.",
+          "status": "Inferred",
+          "sources": [
+            "S37"
+          ]
+        }
+      ],
+      "landmines": [
+        {
+          "text": "Bundled into fire-protection projects that ThermGAS may never see; buyer is fire/EHS, budget set early in plant design.",
+          "status": "Inferred",
+          "sources": [
+            "S38"
+          ]
+        },
+        {
+          "text": "U.S. product page lists Gen 3 as 'Discontinued' while datasheet is current - check before claiming anything about its status.",
+          "status": "Unresolved conflict",
+          "sources": [
+            "S31",
+            "S37"
+          ]
+        }
+      ],
+      "discovery_questions": [
+        "Is off-gas event detection already specified by the fire-protection designer?",
+        "Who owns electrolyte-leak monitoring in filling/handling rooms - EHS, process or facilities?"
+      ],
+      "evidence_gaps": [
+        "Current Li-ion Tamer lineup",
+        "U.S. gigafactory deployments",
+        "Pricing"
+      ]
+    },
+    {
+      "company": "cubic",
+      "product": "atrs1050",
+      "title": "Cubic ATRS-1050 (NDIR module)",
+      "their_pitch": "Low-cost NDIR sensor module for DMC/EMC/EC electrolyte leakage and thermal runaway.",
+      "where_they_win": [
+        {
+          "text": "DMC-specific optical sensing in a small OEM module with <1 s response (catalog).",
+          "status": "Verified (vendor via catalog)",
+          "sources": [
+            "S41"
+          ]
+        }
+      ],
+      "where_thermgas_can_win": [
+        {
+          "text": "Accuracy at low ppm: ATRS-1050 is +/-200 ppm from 0-2,000 ppm; ThermGAS claims 0.5-1 ppm sensitivity.",
+          "status": "Verified (vendor specs, different test bases)",
+          "sources": [
+            "S41",
+            "S02"
+          ]
+        },
+        {
+          "text": "Complete monitoring system (alarms, relays, BACnet, multi-point) vs. a component needing integration.",
+          "status": "Verified",
+          "sources": [
+            "S04",
+            "S41"
+          ]
+        }
+      ],
+      "landmines": [
+        {
+          "text": "System integrators could build low-cost DMC monitors on Cubic modules; North American JV formed Dec 2025.",
+          "status": "Inferred",
+          "sources": [
+            "S42"
+          ]
+        }
+      ],
+      "discovery_questions": [
+        "Is your requirement a leak/thermal event alarm or a low-ppm concentration trend?"
+      ],
+      "evidence_gaps": [
+        "Official datasheet",
+        "U.S. distribution",
+        "Price"
+      ]
+    },
+    {
+      "company": "msa",
+      "product": "chillgard5000",
+      "title": "MSA Chillgard 5000 (core-market watch)",
+      "their_pitch": "PAIR refrigerant monitor, 1 ppm, 4/8/16 points, BACnet/Modbus, 2-year warranty.",
+      "where_they_win": [
+        {
+          "text": "Same PAIR principle with published accuracy (+/-1 ppm 0-50 ppm), longer tubing (up to 1,250 ft) and 2-year warranty.",
+          "status": "Verified",
+          "sources": [
+            "S100"
+          ]
+        },
+        {
+          "text": "Large-company channel (MSA + Bacharach since 2021).",
+          "status": "Verified",
+          "sources": [
+            "S101"
+          ]
+        }
+      ],
+      "where_thermgas_can_win": [
+        {
+          "text": "No DMC on Chillgard's 37-refrigerant gas list - ThermGAS is first PAIR vendor marketing DMC.",
+          "status": "Verified",
+          "sources": [
+            "S100",
+            "S02"
+          ]
+        }
+      ],
+      "landmines": [
+        {
+          "text": "MSA could add DMC to a PAIR platform; ThermGAS's technology claim alone is not a moat.",
+          "status": "Assumption",
+          "sources": []
+        }
+      ],
+      "discovery_questions": [
+        "Do you already run MSA/Bacharach refrigerant monitors on site?"
+      ],
+      "evidence_gaps": [
+        "Current Chillgard status (UK page shows X30/X50)",
+        "Verified U.S. price"
+      ]
+    },
+    {
+      "company": "inficon",
+      "product": "elt3000",
+      "title": "INFICON ELT3000 (substitute at the source)",
+      "their_pitch": "End-of-line mass-spectrometer leak test that finds electrolyte-leaking cells before they leave the line.",
+      "where_they_win": [
+        {
+          "text": "Catches leaking cells (1e-6 mbar.l/s He-equivalent) before storage/aging; DMC check reference available.",
+          "status": "Verified",
+          "sources": [
+            "S90"
+          ]
+        }
+      ],
+      "where_thermgas_can_win": [
+        {
+          "text": "ELT3000 tests products, not room air - it does not cover spills, fittings, transfer lines or electrolyte storage.",
+          "status": "Verified (scope)",
+          "sources": [
+            "S90"
+          ]
+        }
+      ],
+      "landmines": [
+        {
+          "text": "Plants that invest in 100% cell leak testing may see less need for ambient DMC alarms in aging areas.",
+          "status": "Assumption",
+          "sources": []
+        }
+      ],
+      "discovery_questions": [
+        "Do you leak-test every cell, and where do leaks still reach the room air?"
+      ],
+      "evidence_gaps": [
+        "U.S. customers",
+        "Price"
+      ]
+    }
+  ],
+  "swot": {
+    "strengths": [
+      {
+        "text": "Photoacoustic IR targets DMC's IR absorption; no UV lamp and no depletable electrochemical sensor.",
+        "status": "Verified (vendor claim)",
+        "sources": [
+          "S02",
+          "S10"
+        ]
+      },
+      {
+        "text": "Multi-point extractive design: up to 24 sample points, 3 gases, 500 ft tubing per Haloguard IR.",
+        "status": "Verified",
+        "sources": [
+          "S04"
+        ]
+      },
+      {
+        "text": "Integration: relays, 4-20 mA, BACnet interface; UL 3111-1 listed (Haloguard IR).",
+        "status": "Verified",
+        "sources": [
+          "S04",
+          "S09"
+        ]
+      },
+      {
+        "text": "U.S. manufacturer (Roswell, GA) with decades of refrigerant installations across North America.",
+        "status": "Verified (HQ); installations are company claims",
+        "sources": [
+          "S06",
+          "S07"
+        ]
+      }
+    ],
+    "weaknesses": [
+      {
+        "text": "Conflicting DMC spec (0.5 vs 1 ppm); DMC missing from Master Gas List; no interference data.",
+        "status": "Verified",
+        "sources": [
+          "S01",
+          "S02",
+          "S08"
+        ]
+      },
+      {
+        "text": "No public battery-plant reference or published pricing.",
+        "status": "Verified (not found)",
+        "sources": [
+          "S07"
+        ]
+      },
+      {
+        "text": "No hazardous-area rating found in ThermGAS documents; competitors publish Ex/Zone approvals.",
+        "status": "Inferred (not found)",
+        "sources": [
+          "S03",
+          "S04",
+          "S22"
+        ]
+      },
+      {
+        "text": "Scanning multi-point systems update each point less often than dedicated point detectors.",
+        "status": "Inferred from specs",
+        "sources": [
+          "S04"
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "text": "No vendor has a public U.S. battery-plant DMC reference.",
+        "status": "Verified (search result)",
+        "sources": [
+          "S39"
+        ]
+      },
+      {
+        "text": "Capacity ramping in 2025-26: Panasonic KS (since Jul 2025), Toyota NC (Nov 2025), HL-GA GA (H1 2026), LGES AZ (H1 2026).",
+        "status": "Verified",
+        "sources": [
+          "S143",
+          "S144",
+          "S147",
+          "S148"
+        ]
+      },
+      {
+        "text": "UBE's Louisiana DMC/EMC plant (100,000 t/y DMC) - a DMC-handling customer outside cell making.",
+        "status": "Verified (planned completion Jul 2026)",
+        "sources": [
+          "S131"
+        ]
+      },
+      {
+        "text": "Event detectors (Li-ion Tamer) leave a concentration-monitoring gap ThermGAS can fill as a complement.",
+        "status": "Inferred",
+        "sources": [
+          "S37"
+        ]
+      }
+    ],
+    "threats": [
+      {
+        "text": "Honeywell bundles off-gas + smoke detection into gigafactory fire projects.",
+        "status": "Verified",
+        "sources": [
+          "S38",
+          "S43"
+        ]
+      },
+      {
+        "text": "Riken's large installed base with Asian battery OEMs.",
+        "status": "Verified (global vendor claim)",
+        "sources": [
+          "S52"
+        ]
+      },
+      {
+        "text": "Low entry price of PID point detectors ($3.5k-$3.7k list).",
+        "status": "Verified",
+        "sources": [
+          "S24",
+          "S35"
+        ]
+      },
+      {
+        "text": "EV-battery slowdown: KORE (AZ) cancelled, Ultium Warren (OH) idle, BlueOval SK split.",
+        "status": "Verified",
+        "sources": [
+          "S141",
+          "S145",
+          "S142"
+        ]
+      },
+      {
+        "text": "MSA's PAIR platform could add DMC.",
+        "status": "Assumption",
+        "sources": [
+          "S100"
+        ]
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "id": "R1",
+      "priority": 1,
+      "title": "Publish one test-conditioned DMC specification",
+      "action": "Resolve 0.5 vs 1 ppm; add DMC to the Master Gas List; publish detection limit, calibration gas, response time per point, and cross-sensitivity to IPA, ethanol, EMC, DEC and NMP.",
+      "business_case": "Neither direct competitor publishes a DMC limit; a credible spec turns ThermGAS's technology claim into a buyer-verifiable advantage.",
+      "evidence": [
+        "S01",
+        "S02",
+        "S08",
+        "S22",
+        "S52"
+      ],
+      "limitation": "Requires ThermGAS lab data; results could narrow the advantage if interferents affect PAIR.",
+      "next_step": "Ask the sponsor for DMC calibration and interference test records."
+    },
+    {
+      "id": "R2",
+      "priority": 2,
+      "title": "Position as the DMC-concentration layer that complements event detection",
+      "action": "Message: 'Know how much DMC is in the room, continuously' for electrolyte storage, mixing, transfer and filling rooms - alongside (not instead of) off-gas event systems.",
+      "business_case": "Honeywell owns the 'earliest event warning' story in gigafactories but reports a rate, not ppm; PIDs report ppm but not DMC specifically.",
+      "evidence": [
+        "S37",
+        "S38",
+        "S22"
+      ],
+      "limitation": "Whether buyers budget for both layers is unverified.",
+      "next_step": "Test the message in 5-8 interviews with battery-plant EHS/process engineers."
+    },
+    {
+      "id": "R3",
+      "priority": 3,
+      "title": "Answer the hazardous-area question before buyers ask",
+      "action": "Document how a remote analyzer with sample lines serves classified rooms, or pursue the relevant approvals.",
+      "business_case": "FALCO 2 11.7 (UL Class I Zone 1) and Riken (explosion-proof) publish approvals; ThermGAS documents do not.",
+      "evidence": [
+        "S22",
+        "S52",
+        "S03",
+        "S04",
+        "S140"
+      ],
+      "limitation": "Area classification is site-specific; engineering review needed.",
+      "next_step": "Confirm with ThermGAS engineering which installations are permitted."
+    },
+    {
+      "id": "R4",
+      "priority": 4,
+      "title": "Build the lifecycle-cost case with real quotes",
+      "action": "Collect quotes for FALCO 2 11.7 lamps and service, RKI filling monitors, and ThermGAS configurations for the same room (same number of points).",
+      "business_case": "Point PIDs are cheap to buy ($3,521 list) but need a lamp every ~4 months; one Haloguard IR can cover up to 24 points. The net effect is unknown until priced.",
+      "evidence": [
+        "S24",
+        "S22",
+        "S25",
+        "S04"
+      ],
+      "limitation": "Lamp, labor and ThermGAS prices are Not Publicly Available - no TCO is claimed in this dashboard.",
+      "next_step": "Request three quotations; use the dashboard's scenario fields only with documented inputs."
+    },
+    {
+      "id": "R5",
+      "priority": 5,
+      "title": "Win a first U.S. reference site through a side-by-side pilot",
+      "action": "Offer a 60-90 day pilot in an electrolyte-handling or filling room, logging DMC readings, nuisance alarms and maintenance next to the incumbent detector.",
+      "business_case": "No vendor has a public U.S. battery-plant DMC reference; a documented pilot becomes the proof every later proposal needs.",
+      "evidence": [
+        "S39",
+        "S07"
+      ],
+      "limitation": "Requires plant access and sponsor resources.",
+      "next_step": "Start with priority states below; begin with Georgia (home-state service advantage)."
+    },
+    {
+      "id": "R6",
+      "priority": 6,
+      "title": "Build channel coverage where competitors are not verified",
+      "action": "Verify competitor channels in TN, KY, MI, KS and NC, then recruit or equip a local distributor/service partner.",
+      "business_case": "These states hold most operating or ramping cell capacity but show no verified competitor office or distributor in this research.",
+      "evidence": [
+        "S130",
+        "S143",
+        "S144",
+        "S23"
+      ],
+      "limitation": "'Not verified' is not 'no competition'; national vendors sell everywhere.",
+      "next_step": "Check RKI, Honeywell and ION distributor lists state by state."
+    }
+  ],
+  "state_priority_model": {
+    "description": "Research-prioritisation score, not a market-size or revenue estimate. Only states with at least one verified battery facility are scored; all others show 'Not scored - insufficient evidence'.",
+    "inputs": {
+      "capacity": "Announced nominal Li-ion cell capacity (GWh), DOE FCAB (June 2023 data), excluding plants with Verified cancellation",
+      "plants": "Number of Li-ion cell plants in the same list",
+      "dmc_plant": "1 if a verified DMC/electrolyte-solvent plant is in the state",
+      "foothold": "ThermGAS foothold: 1 = verified HQ state; 0.5 = company-claimed refrigerant reference institutions in the state (Inferred); 0 = none",
+      "competitor_presence": "Number of competitors with verified or inferred office/distributor/service/HQ in the state (penalty)",
+      "operating": "Plants with a Verified 2025-26 update reporting production start (currently Panasonic De Soto KS and Toyota Liberty NC); targeted/delayed starts are not counted"
+    },
+    "default_weights": {
+      "capacity": 30,
+      "plants": 10,
+      "operating": 20,
+      "dmc_plant": 10,
+      "foothold": 10,
+      "competitor_presence": 20
+    },
+    "formula": "score = 100 x [wC*(C/Cmax) + wP*(P/Pmax) + wO*(O/Omax) + wD*D + wF*F - wK*(K/Kmax)] / (wC+wP+wO+wD+wF); negative values shown as 0"
+  },
+  "priority_states": [
+    {
+      "code": "GA",
+      "why": "ThermGAS home state; 3 cell plants in the DOE list incl. SK Commerce and HL-GA (Hyundai-LGES, opening H1 2026 after delay).",
+      "competitors": "ION Science distributor (EON Products, pairing Inferred); national vendors.",
+      "customers": "SK Battery America (Commerce), HL-GA (Bryan County); FREYR Newnan reported cancelled (Inferred).",
+      "evidence": [
+        "S06",
+        "S130",
+        "S147",
+        "S146",
+        "S23"
+      ],
+      "risks": "HL-GA timing; FREYR status; customer may follow parent-company vendor standards.",
+      "next": "Request introductions at SK Commerce and HL-GA EHS; propose the R5 pilot with same-day local service."
+    },
+    {
+      "code": "TN",
+      "why": "3 cell plants (Ultium Spring Hill, AESC Smyrna, SK On Stanton) in DOE list; no verified competitor local presence found.",
+      "competitors": "Not verified locally; Honeywell/ION/RKI sell nationally.",
+      "customers": "Ultium Cells Spring Hill; SK On BlueOval City (Stanton) after JV split; AESC Smyrna (reported sold, Inferred).",
+      "evidence": [
+        "S130",
+        "S142"
+      ],
+      "risks": "Ownership changes (BlueOval SK split, AESC); SK On pivot to stationary storage.",
+      "next": "Verify RKI/ION/Honeywell distributor coverage in TN; contact new SK On plant management."
+    },
+    {
+      "code": "KS",
+      "why": "Panasonic De Soto in mass production since July 2025 (~32 GWh target) - a verified operating plant.",
+      "competitors": "Not verified locally.",
+      "customers": "Panasonic Energy De Soto.",
+      "evidence": [
+        "S130",
+        "S143"
+      ],
+      "risks": "Single customer; Panasonic may follow its Nevada/Japan vendor standards.",
+      "next": "Identify Panasonic De Soto EHS contacts; check which detectors are installed at Panasonic's Nevada site."
+    },
+    {
+      "code": "NC",
+      "why": "Toyota Battery North Carolina in production (official launch Nov 2025), with more lines planned through 2030.",
+      "competitors": "Not verified locally.",
+      "customers": "Toyota Battery Manufacturing North Carolina (Liberty).",
+      "evidence": [
+        "S130",
+        "S144"
+      ],
+      "risks": "Mostly hybrid battery modules today; Toyota supplier standards.",
+      "next": "Approach via Southeast service proximity from Georgia; verify competitor channels."
+    },
+    {
+      "code": "LA",
+      "why": "UBE integrated DMC/EMC solvent plant (100,000 t/y DMC) - large-volume DMC handling. Included as a separate segment (DMC producer) even though the cell-plant-weighted model scores it low.",
+      "competitors": "ION Science distributor (Moody-Price, pairing Inferred).",
+      "customers": "UBE Corporation, Jefferson Parish.",
+      "evidence": [
+        "S131",
+        "S23"
+      ],
+      "risks": "Chemical plant likely needs hazardous-area certified equipment (see R3); completion was planned for July 2026.",
+      "next": "Confirm plant start-up status and its gas-detection specification."
+    }
+  ],
+  "watch_states": [
+    {
+      "code": "MI",
+      "note": "3 plants (LGES Holland, ONE Van Buren, Ultium Lansing) - ranks high in the model, but no plant status was re-verified for 2025-26 and competitor channels are unverified. Verify before prioritising."
+    },
+    {
+      "code": "KY",
+      "note": "Largest announced capacity (116 GWh) and high model rank, but the BlueOval SK split (Dec 2025) and AESC Bowling Green pause (Inferred) make near-term demand uncertain."
+    },
+    {
+      "code": "OH",
+      "note": "Ultium Warren idle since Jan 2026; Honda-LGES Jefferson status not re-verified."
+    },
+    {
+      "code": "NV",
+      "note": "Tesla Sparks (largest single plant in list); NevadaNano HQ; Panasonic link to KS."
+    }
+  ]
+}

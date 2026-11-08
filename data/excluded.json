@@ -1,0 +1,8 @@
+[
+  {"name":"GasAlarm (Australia)","product":"Fixed DMC / VOC sensors","reason":"Markets DMC sensors for battery rooms but no U.S. sales, office or distributor evidence found.","evidence":"https://gasalarm.com.au/hydrogen-dimethyl-carbonate-sensors-protecting-battery-rooms-and-data-centres/"},
+  {"name":"Draeger","product":"Polytron 8100 EC","reason":"Electrochemical toxic-gas transmitter; no DMC or battery-manufacturing evidence found. Draeger PID products not yet reviewed - candidate for Phase 3 follow-up.","evidence":"https://www.draeger.com/en-us_us/Products/Draeger-Polytron-8100"},
+  {"name":"Teledyne Gas & Flame Detection","product":"Fixed detectors","reason":"No DMC/electrolyte or battery-manufacturing product evidence found.","evidence":"Search 2026-11-07 (no qualifying result)"},
+  {"name":"Thermo Fisher Scientific","product":"MIRAN SapphIRe portable IR analyzer","reason":"Discontinued per Thermo Fisher catalog; DMC library entry not verified.","evidence":"https://thermofisher.com/order/catalog/product/205BDL"},
+  {"name":"Xtralis VESDA (Honeywell)","product":"Aspirating smoke detection","reason":"Smoke detection, not gas/vapor measurement; Honeywell covered via Li-ion Tamer.","evidence":"https://www.xtralis.com/file/11980"},
+  {"name":"Academic DMC sensors (perovskite, Bi2O3, In2O3-ZnO, CNT, etc.)","product":"Research prototypes","reason":"Research-stage; not commercially available.","evidence":"https://pubmed.ncbi.nlm.nih.gov/42470946/"}
+]

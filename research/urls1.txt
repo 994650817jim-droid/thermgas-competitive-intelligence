@@ -1,0 +1,8 @@
+ion_dmc https://ionscience.com/en/gases/dioxane-14/
+ion_tvoc2 https://ionscience.com/en/products/tvoc-2-continuous-voc-gas-detector/
+ion_falco2 https://ionscience.com/en/products/falco-2-11-7-ev/
+cubic_atrs https://en.gassensor.com.cn/LibatteryThermalRunawaySensor/info_itemid_2875.html
+liontamer https://buildings.honeywell.com/gb/en/brands/our-brands/li-ion-tamer
+nevadanano https://nevadanano.com/early-detection-of-battery-thermal-runaway-with-mps-sensor-gas-classification-and-identification/
+infrasensing https://infrasensing.com/sensors/sensor_gas_voc.asp
+gasalarm https://gasalarm.com.au/hydrogen-dimethyl-carbonate-sensors-protecting-battery-rooms-and-data-centres/
