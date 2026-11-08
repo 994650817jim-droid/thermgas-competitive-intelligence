@@ -4,6 +4,16 @@
 
 An evidence-based dashboard showing who competes with ThermGAS in **DMC vapor monitoring for U.S. battery manufacturing**, how the products differ, where competitors and customers are located by state, and where ThermGAS can win. Every important number links to a dated source.
 
+**Live dashboard:** https://994650817jim-droid.github.io/thermgas-competitive-intelligence/
+
+## Update the live site
+
+After editing, run this from `dashboard/`. It rebuilds the data and site and publishes it to the `gh-pages` branch:
+
+```bash
+npm run deploy
+```
+
 ## Run it (Windows)
 
 1. Install [Node.js](https://nodejs.org/) 18 or newer. It is free.
