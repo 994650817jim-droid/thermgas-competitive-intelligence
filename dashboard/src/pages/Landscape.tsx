@@ -6,6 +6,7 @@ import { DIFF } from './Strategy';
 import { ProposalNote } from './Executive';
 import { go } from '../App';
 import OppMap from '../OppMap';
+import Portfolio from '../Portfolio';
 
 const KEY = ['falco117', 'riken_fill', 'liontamer'];
 const ROLE: Record<string, string> = { falco117: 'Direct competitor', riken_fill: 'Direct competitor', liontamer: 'Competes for the same budget (indirect)' };
@@ -41,6 +42,11 @@ export default function Landscape() {
         })}
       </div>
       <p className="small muted">Threat levels are rule-based; no market share or numeric index is used.</p>
+
+      <section className="mapband" aria-label="ThermGAS product line">
+        <div className="band-head"><h2 className="band-title">What ThermGAS brings to the fight</h2><a className="btn" href="#/portfolio">Portfolio detail</a></div>
+        <Portfolio />
+      </section>
 
       <section className="card map-hero">
         <header className="card-head"><div><h3>Where competitors have local channels</h3><p className="card-sub">Hatched means no public evidence found, not "no competition".</p></div></header>

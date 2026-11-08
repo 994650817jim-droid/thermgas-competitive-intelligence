@@ -16,7 +16,7 @@ ThermGAS has a credible opening as the DMC-specific, lamp-free concentration mon
 ## Three key findings
 1. **The race is against two named rivals, and neither is unbeatable.** ION is cheap ($3,521 list) and approved for hazardous areas but needs a lamp about every 4 months and cannot separate DMC from other solvents. Riken has breadth and a claimed 10,000+ detectors worldwide but publishes no DMC limit.
 2. **The U.S. reference-site position is open.** Honeywell reports an off-gas rate, not DMC concentration, so it is better treated as a complement.
-3. **ThermGAS's own evidence is the main blocker.** Conflicting spec, no interference data, no hazardous-area rating found, no battery reference, no public price.
+3. **ThermGAS's own evidence is the main blocker.** Conflicting spec, no interference data, no product-level hazardous-area rating (the Energy page claims Class I Div 1/2 explosion-proof enclosures but names no model or certifier, S179), no battery reference, no public price.
 
 ## Three proposed actions
 | # | Action | Suggested owner role | Done when |
@@ -41,6 +41,13 @@ Options: do nothing (not recommended); **evidence sprint, then decide** (researc
 - MSA / Bacharach, including the PAIR-based Chillgard 5000, targets the same buyers (Verified, S162).
 - By 2023 data center electricity load (EPRI, S160), the largest states are VA, TX, CA, IL and OR. Georgia, ThermGAS's home state, ranks #8 of 44 (6.2 TWh). Load is a proxy for cooling demand, not a site count or market size (Inferred).
 - Georgia and Arizona combine a battery opportunity with a large data center load; one sales and service effort covering both is an Assumption to test.
+
+## ThermGAS portfolio (thermgas.com, S170-S178)
+- **Photoacoustic IR line:** TracePoint 1000 (single point, 0.5 ppm, names data centers), Haloguard IR (1 ppm, up to 24 points, UL 3111-1), Haloguard III (multigas; its page says 1 ppm in the header and 20 ppm in the spec table), Remote IR Module (adds up to 8 channels).
+- **CMOS line:** Haloguard and Haloguard II (lower-cost refrigerant leak notification, up to 6 sensors).
+- **Oxygen:** Oxyguard (0-25% O2, 18-month sensor warranty).
+- **Accessories:** remote display, calibration kit, switches, SCBA, signage.
+- No product page lists a price or a hazardous-area rating. Only TracePoint 1000 names data centers on its own page.
 
 ## Still unknown
 ThermGAS spec, interference data, hazardous-area rating and prices. Competitor prices and lamp cost. Riken's DMC limit. Honeywell's current Li-ion Tamer status. 2026 status of HL-GA, Queen Creek and UBE. Any customer contact. Whether buyers fund both layers.

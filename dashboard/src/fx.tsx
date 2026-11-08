@@ -65,3 +65,29 @@ export function SplitWords({ text, className = '', step = 70 }: { text: string; 
     </h1>
   );
 }
+
+/** Card that tilts toward the pointer with a soft glare and flips on click / Enter (React Bits "Tilted Card" idea).
+    Front and back are both real content; reduced motion turns the tilt off and makes the flip a cross-fade. */
+export function TiltCard({ front, back, label, className = '' }: { front: ReactNode; back: ReactNode; label: string; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [flipped, setFlipped] = useState(false);
+  const move = (e: React.PointerEvent) => {
+    const el = ref.current; if (!el || reduced() || e.pointerType === 'touch') return;
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
+    el.style.setProperty('--rx', `${(-py * 8).toFixed(2)}deg`);
+    el.style.setProperty('--ry', `${(px * 10).toFixed(2)}deg`);
+    el.style.setProperty('--gx', `${((px + 0.5) * 100).toFixed(1)}%`);
+    el.style.setProperty('--gy', `${((py + 0.5) * 100).toFixed(1)}%`);
+  };
+  const leave = () => { const el = ref.current; if (!el) return; el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); };
+  return (
+    <div ref={ref} className={`tilt ${flipped ? 'flipped' : ''} ${className}`} onPointerMove={move} onPointerLeave={leave}>
+      <button type="button" className="tilt-inner" aria-pressed={flipped} aria-label={`${label}: ${flipped ? 'show summary' : 'show full specs'}`} onClick={() => setFlipped(f => !f)}>
+        <span className="tilt-face tilt-front" aria-hidden={flipped}>{front}</span>
+        <span className="tilt-face tilt-back" aria-hidden={!flipped}>{back}</span>
+        <span className="tilt-glare" aria-hidden />
+      </button>
+    </div>
+  );
+}

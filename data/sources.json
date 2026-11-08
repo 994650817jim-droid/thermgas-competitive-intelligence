@@ -601,5 +601,140 @@
     "source_date": "2026-07-24",
     "access_date": "2026-11-07",
     "type": "Company blog"
+  },
+  {
+    "id": "S170",
+    "publisher": "ThermGAS",
+    "title": "Products overview (PIR monitors, CMOS monitors, Oxyguard, other mechanical room safety equipment)",
+    "url": "https://thermgas.com/products/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S171",
+    "publisher": "ThermGAS",
+    "title": "Haloguard III multichannel, multigas photoacoustic IR monitor (product page)",
+    "url": "https://thermgas.com/haloguard-iii/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company product page"
+  },
+  {
+    "id": "S172",
+    "publisher": "ThermGAS",
+    "title": "Remote IR Modules (expansion for Haloguard IR / III)",
+    "url": "https://thermgas.com/remote-ir-modules/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company product page"
+  },
+  {
+    "id": "S173",
+    "publisher": "ThermGAS",
+    "title": "Haloguard CMOS single-sensor refrigerant leak monitor",
+    "url": "https://thermgas.com/haloguard/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company product page"
+  },
+  {
+    "id": "S174",
+    "publisher": "ThermGAS",
+    "title": "Haloguard II CMOS multichannel controller (up to six sensors)",
+    "url": "https://thermgas.com/haloguard-ii/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company product page"
+  },
+  {
+    "id": "S175",
+    "publisher": "ThermGAS",
+    "title": "Oxyguard oxygen depletion monitor",
+    "url": "https://thermgas.com/oxyguard-oxygen-depletion-monitor-2/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company product page"
+  },
+  {
+    "id": "S176",
+    "publisher": "ThermGAS",
+    "title": "Other mechanical room safety equipment (SCBA, calibration kit, switches, remote display, signage)",
+    "url": "https://thermgas.com/other-mechanical-room-safety-equipment/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S177",
+    "publisher": "ThermGAS",
+    "title": "Remote Display for Haloguard systems",
+    "url": "https://thermgas.com/remote-display/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company product page"
+  },
+  {
+    "id": "S178",
+    "publisher": "ThermGAS",
+    "title": "IR Calibration Kit & CMOS Test & Demo Kit",
+    "url": "https://thermgas.com/ir-calibration-kit-cmos-test-demo-kit/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company product page"
+  },
+  {
+    "id": "S179",
+    "publisher": "ThermGAS",
+    "title": "Energy & Oil & Gas - hazardous-area gas monitoring (Class I, Div 1 / Div 2 claim)",
+    "url": "https://thermgas.com/energy-oil-gas/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S180",
+    "publisher": "ThermGAS",
+    "title": "Commercial HVAC & A2L monitoring (ASHRAE 15, UL 60335-2-40)",
+    "url": "https://thermgas.com/a2-refrigerant-monitors/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S181",
+    "publisher": "ThermGAS",
+    "title": "Cold Storage & Refrigeration",
+    "url": "https://thermgas.com/cold-storage-refrigeration/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S182",
+    "publisher": "ThermGAS",
+    "title": "Semiconductor Manufacturing (SF6, NF3, C4F6, CF4)",
+    "url": "https://thermgas.com/semiconductors/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S183",
+    "publisher": "ThermGAS",
+    "title": "Medical & Laboratory",
+    "url": "https://thermgas.com/medical-laboratory/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
+  },
+  {
+    "id": "S184",
+    "publisher": "ThermGAS",
+    "title": "Industrial & Manufacturing",
+    "url": "https://thermgas.com/industrial-manufacturing/",
+    "source_date": "N/A",
+    "access_date": "2026-11-07",
+    "type": "Company webpage"
   }
 ]

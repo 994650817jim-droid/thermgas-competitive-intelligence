@@ -119,7 +119,7 @@
     {
       "id": "K3",
       "title": "ThermGAS's own evidence is the main blocker",
-      "body": "Conflicting DMC spec, no interference data, no hazardous-area rating found, no battery reference and no public price. Competitors publish approvals.",
+      "body": "Conflicting DMC spec, no interference data, no product-level hazardous-area rating (the Energy page claims Class I Div 1/2 enclosures without naming a model), no battery reference and no public price. Competitors publish approvals.",
       "so_what": "These are cheap to fix compared with a sales push, and they decide whether any pilot is credible.",
       "status": "Verified (not found in public documents)",
       "sources": [
@@ -127,9 +127,10 @@
         "S02",
         "S03",
         "S04",
-        "S08"
+        "S08",
+        "S179"
       ],
-      "short": "ThermGAS's own gaps (0.5 vs 1 ppm spec, no hazardous-area answer) are the main blocker."
+      "short": "ThermGAS's own gaps (0.5 vs 1 ppm spec, no product-level hazardous-area rating) are the main blocker."
     }
   ],
   "actions": [
@@ -156,7 +157,7 @@
       "rank": 2,
       "rec": "R3",
       "title": "Answer the hazardous-area question",
-      "why": "FALCO 2 11.7 (UL Class I Zone 1) and Riken (explosion-proof) publish approvals; ThermGAS documents do not. DMC flash point is about 14-18 C.",
+      "why": "FALCO 2 11.7 (UL Class I Zone 1) and Riken (explosion-proof) publish product approvals. ThermGAS's Energy page claims Class I Div 1/2 explosion-proof enclosures, but no product page names a rating or certifier.",
       "owner_role": "Engineering lead with a safety / compliance reviewer",
       "validation": "A written position: remote analyzer with sample lines for classified rooms, or a named approval path. Reviewed by qualified engineering.",
       "evidence": [
@@ -164,7 +165,8 @@
         "S52",
         "S03",
         "S04",
-        "S140"
+        "S140",
+        "S179"
       ],
       "status": "Proposed",
       "short": "Answer the hazardous-area question"

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { executive, facilities, sourceById, statusLevel, dataCenters, dcByState, dcRank } from './data';
+import { executive, facilities, sourceById, statusLevel, dataCenters, dcByState, dcRank, portfolio } from './data';
 import { briefingMarkdown, cellFacilities, classify, comparator, opportunities, tierOf, TIERS } from './exec';
 
 const cls = (code: string) => opportunities().find(o => o.code === code)?.cls;
@@ -56,6 +56,23 @@ describe('data center layer (EPRI 2023)', () => {
     const pts = executive.adjacent_opportunity.points;
     expect(pts.find((p: any) => /ThermGAS already markets/.test(p.text)).status).toBe('Verified');
     expect(pts.some((p: any) => p.status === 'Assumption')).toBe(true);
+  });
+});
+
+describe('ThermGAS portfolio (thermgas.com)', () => {
+  it('lists the official product line with a source per product and no prices', () => {
+    expect(portfolio.products.map((p: any) => p.name)).toEqual(expect.arrayContaining(['TracePoint 1000', 'Haloguard IR', 'Haloguard III', 'Oxyguard']));
+    portfolio.products.forEach((p: any) => { expect(sourceById[p.source], p.id).toBeDefined(); expect(JSON.stringify(p)).not.toMatch(/\$\s?\d/); });
+  });
+  it('only marks a market "stated" where the product page names it', () => {
+    expect(portfolio.fit.tp1000.datacenter).toBe('stated');   // TracePoint page lists data centers
+    expect(portfolio.fit.tp1000.battery).toBe('linked');      // battery page names PAIR, not a model
+    expect(portfolio.fit.hgir.datacenter).toBeUndefined();
+  });
+  it('keeps the Haloguard III sensitivity conflict visible instead of picking a number', () => {
+    const hg3 = portfolio.products.find((p: any) => p.id === 'hg3');
+    expect(hg3.sensitivity).toMatch(/20 ppm/); expect(hg3.sensitivity).toMatch(/1 ppm/);
+    expect(statusLevel(hg3.status)).toBe('Inferred');
   });
 });
 

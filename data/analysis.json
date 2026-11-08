@@ -672,12 +672,13 @@
         ]
       },
       {
-        "text": "No hazardous-area rating found in ThermGAS documents; competitors publish Ex/Zone approvals.",
-        "status": "Inferred (not found)",
+        "text": "No product-level hazardous-area rating: the Energy page claims Class I Div 1/2 explosion-proof enclosures but names no model or certifier; competitors publish product approvals.",
+        "status": "Verified (claim found; product rating not found)",
         "sources": [
           "S03",
           "S04",
-          "S22"
+          "S22",
+          "S179"
         ]
       },
       {

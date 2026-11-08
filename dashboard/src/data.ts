@@ -27,6 +27,7 @@ export const states: StateRow[] = d.states;
 export const analysis: any = d.analysis;
 export const excluded: any[] = d.excluded;
 export const executive: any = d.executive;
+export const portfolio: any = d.portfolio;
 export interface DataCenterRow { state: string; mwh_2023: number; pct_state_electricity_2023: number; source: string; status: Status }
 export const dataCenters: { description: string; relevance: any[]; rows: DataCenterRow[] } = d.dataCenters;
 export const dcByState = Object.fromEntries(dataCenters.rows.map(r => [r.state, r])) as Record<string, DataCenterRow>;

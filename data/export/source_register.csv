@@ -66,3 +66,18 @@ S148,electrive,"LGES aims to start US production of 46 mm round cells in spring 
 S160,EPRI (Electric Power Research Institute),"Powering Intelligence: Analyzing Artificial Intelligence and Data Center Energy Consumption (Report 3002028905), Table A1 - 2023 data center load by state (MWh/y and % of state electricity)",https://www.epri.com/research/products/3002028905,2024-05,2026-11-07,Industry research report
 S161,ThermGAS,"Data Centers - data center refrigerant detection (chillers, precision cooling, DX; battery and UPS gas hazards)",https://thermgas.com/data-centers/,N/A,2026-11-07,Company webpage
 S162,MSA Safety,"Data Center Growth Brings New Demands for Refrigerant Leak Detection (Bacharach Multi-Zone, MGS-550, Chillgard 5000)",https://blog.msasafety.com/refrigerant-leak-detection-data-center-growth-brings-new-demands-for-refrigerant-leak-detection/,2026-07-24,2026-11-07,Company blog
+S170,ThermGAS,"Products overview (PIR monitors, CMOS monitors, Oxyguard, other mechanical room safety equipment)",https://thermgas.com/products/,N/A,2026-11-07,Company webpage
+S171,ThermGAS,"Haloguard III multichannel, multigas photoacoustic IR monitor (product page)",https://thermgas.com/haloguard-iii/,N/A,2026-11-07,Company product page
+S172,ThermGAS,Remote IR Modules (expansion for Haloguard IR / III),https://thermgas.com/remote-ir-modules/,N/A,2026-11-07,Company product page
+S173,ThermGAS,Haloguard CMOS single-sensor refrigerant leak monitor,https://thermgas.com/haloguard/,N/A,2026-11-07,Company product page
+S174,ThermGAS,Haloguard II CMOS multichannel controller (up to six sensors),https://thermgas.com/haloguard-ii/,N/A,2026-11-07,Company product page
+S175,ThermGAS,Oxyguard oxygen depletion monitor,https://thermgas.com/oxyguard-oxygen-depletion-monitor-2/,N/A,2026-11-07,Company product page
+S176,ThermGAS,"Other mechanical room safety equipment (SCBA, calibration kit, switches, remote display, signage)",https://thermgas.com/other-mechanical-room-safety-equipment/,N/A,2026-11-07,Company webpage
+S177,ThermGAS,Remote Display for Haloguard systems,https://thermgas.com/remote-display/,N/A,2026-11-07,Company product page
+S178,ThermGAS,IR Calibration Kit & CMOS Test & Demo Kit,https://thermgas.com/ir-calibration-kit-cmos-test-demo-kit/,N/A,2026-11-07,Company product page
+S179,ThermGAS,"Energy & Oil & Gas - hazardous-area gas monitoring (Class I, Div 1 / Div 2 claim)",https://thermgas.com/energy-oil-gas/,N/A,2026-11-07,Company webpage
+S180,ThermGAS,"Commercial HVAC & A2L monitoring (ASHRAE 15, UL 60335-2-40)",https://thermgas.com/a2-refrigerant-monitors/,N/A,2026-11-07,Company webpage
+S181,ThermGAS,Cold Storage & Refrigeration,https://thermgas.com/cold-storage-refrigeration/,N/A,2026-11-07,Company webpage
+S182,ThermGAS,"Semiconductor Manufacturing (SF6, NF3, C4F6, CF4)",https://thermgas.com/semiconductors/,N/A,2026-11-07,Company webpage
+S183,ThermGAS,Medical & Laboratory,https://thermgas.com/medical-laboratory/,N/A,2026-11-07,Company webpage
+S184,ThermGAS,Industrial & Manufacturing,https://thermgas.com/industrial-manufacturing/,N/A,2026-11-07,Company webpage

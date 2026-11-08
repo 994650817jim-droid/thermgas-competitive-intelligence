@@ -37,6 +37,11 @@ facilities.forEach(f => { const k = `${f.operator}|${f.city.replace(/ \(.*$/, ''
 const dataCenters = load('data_centers.json');
 walk(dataCenters, 'data_centers');
 dataCenters.rows.forEach((r, i) => { checkSrc(r.source, `data_centers #${i}`); if (!(r.mwh_2023 > 0) || !(r.pct_state_electricity_2023 >= 0)) errors.push(`data_centers #${i}: bad value`); if (r.status !== 'Verified') errors.push(`data_centers #${i}: status must be Verified (from the source table)`); });
+const portfolio = load('portfolio.json');
+walk(portfolio, 'portfolio');
+portfolio.products.forEach(p => { checkSrc(p.source, `portfolio ${p.id}`); if (!portfolio.families.some(f => f.id === p.family)) errors.push(`portfolio ${p.id}: unknown family`); });
+portfolio.markets.forEach(m => checkSrc(m.source, `portfolio market ${m.id}`));
+for (const [pid, cells] of Object.entries(portfolio.fit)) { if (!portfolio.products.some(p => p.id === pid)) errors.push(`portfolio fit: unknown product ${pid}`); for (const [mid, v] of Object.entries(cells)) { if (!portfolio.markets.some(m => m.id === mid)) errors.push(`portfolio fit ${pid}: unknown market ${mid}`); if (!['stated', 'linked'].includes(v)) errors.push(`portfolio fit ${pid}.${mid}: bad value ${v}`); } }
 const prodIds = new Set(products.map(p => p.id));
 analysis.threats.forEach(t => { if (!prodIds.has(t.product)) errors.push(`threat: unknown product ${t.product}`); });
 analysis.battlecards.forEach(b => { if (!prodIds.has(b.product)) errors.push(`battlecard: unknown product ${b.product}`); });
@@ -92,7 +97,7 @@ write('facilities.csv', facilities, ['operator','city','state','type','status_in
 const dash = path.join(__dirname, '..', 'dashboard', 'src', 'data');
 if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   fs.mkdirSync(dash, { recursive: true });
-  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters }, null, 1));
+  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters, portfolio }, null, 1));
   const pub = path.join(__dirname, '..', 'dashboard', 'public', 'export');
   fs.mkdirSync(pub, { recursive: true });
   for (const f of fs.readdirSync(OUT)) fs.copyFileSync(path.join(OUT, f), path.join(pub, f));
@@ -100,7 +105,7 @@ if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   const pubDocs = path.join(__dirname, '..', 'dashboard', 'public', 'docs');
   fs.mkdirSync(pubDocs, { recursive: true });
   for (const f of ['Executive_Summary.md', 'Strategic_Roadmap.md', 'Phase4_Competitive_Analysis.md']) fs.copyFileSync(path.join(__dirname, '..', 'docs', f), path.join(pubDocs, f));
-  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters }, null, 2));
+  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters, portfolio }, null, 2));
 }
 
 const s = states;

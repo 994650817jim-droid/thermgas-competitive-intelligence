@@ -9,16 +9,21 @@ const BC = executive.business_case;
 type Tab = 'roadmap' | 'business';
 
 function RoadmapTab() {
+  const [focus, setFocus] = useState<number | null>(null);   // React Bits "Stepper" idea: pick a phase, the rest step back
   return (
     <div className="stack">
       <ProposalNote>Owners are suggested roles. Gate thresholds are assumptions for management to confirm.</ProposalNote>
-      <div className="timeline" aria-hidden>
+      <div className="timeline" role="tablist" aria-label="Roadmap phases">
         <span className="tl-start">Day 0</span>
-        {RM.phases.map((p: any) => <span key={p.id} className="tl-seg"><span className="tl-name">{p.name}</span><span className="tl-gate">◆ {p.gate.name.replace(/^Go \/ No-Go /, 'Gate ')}</span></span>)}
+        {RM.phases.map((p: any, i: number) => (
+          <button key={p.id} type="button" role="tab" aria-selected={focus === i} className={`tl-seg ${focus === i ? 'on' : ''}`} onClick={() => setFocus(focus === i ? null : i)}>
+            <span className="tl-name">{p.name}</span><span className="tl-gate">◆ {p.gate.name.replace(/^Go \/ No-Go /, 'Gate ')}</span>
+          </button>
+        ))}
       </div>
-      <div className="phases">
-        {RM.phases.map((p: any) => (
-          <div key={p.id}>
+      <div className={`phases ${focus !== null ? 'has-focus' : ''}`}>
+        {RM.phases.map((p: any, i: number) => (
+          <div key={p.id} className={`phase-wrap ${focus === i ? 'on' : ''}`} onClick={() => setFocus(i)}>
             <section className="phase card">
               <header><div className="days">{p.days}</div><h3>{p.name}</h3></header>
               <ul className="tasks">

@@ -14,6 +14,7 @@ import MapPage from './pages/MapPage';
 import Strategy from './pages/Strategy';
 import Sources from './pages/Sources';
 import PillNav from './components/PillNav';
+import PortfolioPage from './pages/PortfolioPage';
 
 /** Main navigation: four executive pages. Everything else is drill-down detail, still reachable. */
 const MAIN = [
@@ -26,6 +27,7 @@ const DETAIL = [
   { path: 'research', label: 'Evidence Dashboard', C: Overview, parent: 'overview' },
   { path: 'competitors', label: 'Competitor Explorer', C: Competitors, parent: 'landscape' },
   { path: 'battlecard', label: 'Product Battlecard', C: Battlecard, parent: 'landscape' },
+  { path: 'portfolio', label: 'ThermGAS Portfolio', C: PortfolioPage, parent: 'landscape' },
   { path: 'map', label: 'U.S. Landscape (map)', C: MapPage, parent: 'opportunities' },
   { path: 'strategy', label: 'Strategic Positioning', C: Strategy, parent: 'landscape' },
   { path: 'sources', label: 'Sources & Method', C: Sources, parent: 'overview' },

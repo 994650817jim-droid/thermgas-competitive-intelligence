@@ -95,7 +95,7 @@ export default function Executive() {
 
       <nav className="deep-links" aria-label="Research detail">
         <span className="muted small">Go deeper</span>
-        <a href="#/research">Evidence dashboard</a><a href="#/competitors">Competitors</a><a href="#/battlecard">Battlecards</a><a href="#/map">Evidence map</a><a href="#/strategy">SWOT</a><a href="#/sources">Sources ({sources.length})</a><a href="#/briefing">Printable briefing</a>
+        <a href="#/research">Evidence dashboard</a><a href="#/portfolio">ThermGAS products</a><a href="#/competitors">Competitors</a><a href="#/battlecard">Battlecards</a><a href="#/map">Evidence map</a><a href="#/strategy">SWOT</a><a href="#/sources">Sources ({sources.length})</a><a href="#/briefing">Printable briefing</a>
       </nav>
     </div>
   );

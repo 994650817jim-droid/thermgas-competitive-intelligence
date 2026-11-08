@@ -47,3 +47,11 @@ Brand stays fixed as the client set it (blue #1F60C4, Poppins headings, Inter bo
 - **Less text:** Competitive Landscape went from about 930 to about 610 visible words and Market Opportunities from about 1,040 to about 330 by moving the long tables and reference cards behind "show" disclosures. Nothing was deleted: 13 state rows, tier legend, differentiation table and other players are one click away.
 - **Accessibility and interaction (ui-ux-pro-max checks):** 4.5:1 text contrast on the brand palette, visible focus rings on links, buttons and summaries, colour is never the only signal (evidence level also has an icon and a label, map classes also have text), no horizontal scroll at 375px on any page, reduced-motion respected.
 - **PillNav** (React Bits) kept as the main navigation.
+
+## Round 4: ThermGAS portfolio and more interaction
+- **New data:** `data/portfolio.json` from 30 thermgas.com pages (read 2026-11-07): 8 product entries in 4 families, 7 market pages, a product x market fit map and 5 observations. Sources S170-S184 added (82 total). Specs are written as the vendor states them; gaps are "Not stated"; no prices exist.
+- **Evidence refinement:** the Energy & Oil & Gas page claims explosion-proof enclosures certified for Class I, Div 1 and Div 2, but names no model, certifier or certificate. The hazardous-area wording in action A2, finding K3 and the SWOT weakness now says "no product-level rating" instead of "no rating found". The recommendation (answer the hazardous-area question) stands.
+- **Haloguard III** page conflicts with itself (1 ppm header, 20 ppm spec table); shown as a conflict, labeled Inferred.
+- **Where it shows:** a "What ThermGAS brings to the fight" section on Competitive Landscape and a drill-down page (`#/portfolio`) with observations.
+- **Interactions (React Bits ideas, no new dependencies):** Tilted Card (cards tilt toward the cursor and flip on click or Enter to a full spec sheet), PillNav reused as the product-family filter, a clickable product x market matrix that filters the cards and explains each market, a Stepper-style roadmap (click a phase on the timeline to focus it), and an elastic-feel range slider. All respect reduced motion; no horizontal scroll at 375px.
+- **Tests:** 19.

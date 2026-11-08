@@ -603,6 +603,141 @@
    "source_date": "2026-07-24",
    "access_date": "2026-11-07",
    "type": "Company blog"
+  },
+  {
+   "id": "S170",
+   "publisher": "ThermGAS",
+   "title": "Products overview (PIR monitors, CMOS monitors, Oxyguard, other mechanical room safety equipment)",
+   "url": "https://thermgas.com/products/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
+  },
+  {
+   "id": "S171",
+   "publisher": "ThermGAS",
+   "title": "Haloguard III multichannel, multigas photoacoustic IR monitor (product page)",
+   "url": "https://thermgas.com/haloguard-iii/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company product page"
+  },
+  {
+   "id": "S172",
+   "publisher": "ThermGAS",
+   "title": "Remote IR Modules (expansion for Haloguard IR / III)",
+   "url": "https://thermgas.com/remote-ir-modules/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company product page"
+  },
+  {
+   "id": "S173",
+   "publisher": "ThermGAS",
+   "title": "Haloguard CMOS single-sensor refrigerant leak monitor",
+   "url": "https://thermgas.com/haloguard/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company product page"
+  },
+  {
+   "id": "S174",
+   "publisher": "ThermGAS",
+   "title": "Haloguard II CMOS multichannel controller (up to six sensors)",
+   "url": "https://thermgas.com/haloguard-ii/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company product page"
+  },
+  {
+   "id": "S175",
+   "publisher": "ThermGAS",
+   "title": "Oxyguard oxygen depletion monitor",
+   "url": "https://thermgas.com/oxyguard-oxygen-depletion-monitor-2/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company product page"
+  },
+  {
+   "id": "S176",
+   "publisher": "ThermGAS",
+   "title": "Other mechanical room safety equipment (SCBA, calibration kit, switches, remote display, signage)",
+   "url": "https://thermgas.com/other-mechanical-room-safety-equipment/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
+  },
+  {
+   "id": "S177",
+   "publisher": "ThermGAS",
+   "title": "Remote Display for Haloguard systems",
+   "url": "https://thermgas.com/remote-display/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company product page"
+  },
+  {
+   "id": "S178",
+   "publisher": "ThermGAS",
+   "title": "IR Calibration Kit & CMOS Test & Demo Kit",
+   "url": "https://thermgas.com/ir-calibration-kit-cmos-test-demo-kit/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company product page"
+  },
+  {
+   "id": "S179",
+   "publisher": "ThermGAS",
+   "title": "Energy & Oil & Gas - hazardous-area gas monitoring (Class I, Div 1 / Div 2 claim)",
+   "url": "https://thermgas.com/energy-oil-gas/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
+  },
+  {
+   "id": "S180",
+   "publisher": "ThermGAS",
+   "title": "Commercial HVAC & A2L monitoring (ASHRAE 15, UL 60335-2-40)",
+   "url": "https://thermgas.com/a2-refrigerant-monitors/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
+  },
+  {
+   "id": "S181",
+   "publisher": "ThermGAS",
+   "title": "Cold Storage & Refrigeration",
+   "url": "https://thermgas.com/cold-storage-refrigeration/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
+  },
+  {
+   "id": "S182",
+   "publisher": "ThermGAS",
+   "title": "Semiconductor Manufacturing (SF6, NF3, C4F6, CF4)",
+   "url": "https://thermgas.com/semiconductors/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
+  },
+  {
+   "id": "S183",
+   "publisher": "ThermGAS",
+   "title": "Medical & Laboratory",
+   "url": "https://thermgas.com/medical-laboratory/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
+  },
+  {
+   "id": "S184",
+   "publisher": "ThermGAS",
+   "title": "Industrial & Manufacturing",
+   "url": "https://thermgas.com/industrial-manufacturing/",
+   "source_date": "N/A",
+   "access_date": "2026-11-07",
+   "type": "Company webpage"
   }
  ],
  "competitors": [
@@ -3878,12 +4013,13 @@
      ]
     },
     {
-     "text": "No hazardous-area rating found in ThermGAS documents; competitors publish Ex/Zone approvals.",
-     "status": "Inferred (not found)",
+     "text": "No product-level hazardous-area rating: the Energy page claims Class I Div 1/2 explosion-proof enclosures but names no model or certifier; competitors publish product approvals.",
+     "status": "Verified (claim found; product rating not found)",
      "sources": [
       "S03",
       "S04",
-      "S22"
+      "S22",
+      "S179"
      ]
     },
     {
@@ -4323,7 +4459,7 @@
    {
     "id": "K3",
     "title": "ThermGAS's own evidence is the main blocker",
-    "body": "Conflicting DMC spec, no interference data, no hazardous-area rating found, no battery reference and no public price. Competitors publish approvals.",
+    "body": "Conflicting DMC spec, no interference data, no product-level hazardous-area rating (the Energy page claims Class I Div 1/2 enclosures without naming a model), no battery reference and no public price. Competitors publish approvals.",
     "so_what": "These are cheap to fix compared with a sales push, and they decide whether any pilot is credible.",
     "status": "Verified (not found in public documents)",
     "sources": [
@@ -4331,9 +4467,10 @@
      "S02",
      "S03",
      "S04",
-     "S08"
+     "S08",
+     "S179"
     ],
-    "short": "ThermGAS's own gaps (0.5 vs 1 ppm spec, no hazardous-area answer) are the main blocker."
+    "short": "ThermGAS's own gaps (0.5 vs 1 ppm spec, no product-level hazardous-area rating) are the main blocker."
    }
   ],
   "actions": [
@@ -4360,7 +4497,7 @@
     "rank": 2,
     "rec": "R3",
     "title": "Answer the hazardous-area question",
-    "why": "FALCO 2 11.7 (UL Class I Zone 1) and Riken (explosion-proof) publish approvals; ThermGAS documents do not. DMC flash point is about 14-18 C.",
+    "why": "FALCO 2 11.7 (UL Class I Zone 1) and Riken (explosion-proof) publish product approvals. ThermGAS's Energy page claims Class I Div 1/2 explosion-proof enclosures, but no product page names a rating or certifier.",
     "owner_role": "Engineering lead with a safety / compliance reviewer",
     "validation": "A written position: remote analyzer with sample lines for classified rooms, or a named approval path. Reviewed by qualified engineering.",
     "evidence": [
@@ -4368,7 +4505,8 @@
      "S52",
      "S03",
      "S04",
-     "S140"
+     "S140",
+     "S179"
     ],
     "status": "Proposed",
     "short": "Answer the hazardous-area question"
@@ -5419,6 +5557,311 @@
     "pct_state_electricity_2023": 11.26,
     "source": "S160",
     "status": "Verified"
+   }
+  ]
+ },
+ "portfolio": {
+  "description": "ThermGAS's own product line as published on thermgas.com (read 2026-11-07). Specs are vendor claims as written on each page; 'Not stated' means the page does not say. No prices are published.",
+  "families": [
+   {
+    "id": "pair",
+    "name": "Photoacoustic IR (PAIR) monitors",
+    "blurb": "Selective, low-ppm, lamp-free; the technology behind the DMC and data center story."
+   },
+   {
+    "id": "cmos",
+    "name": "CMOS refrigerant monitors",
+    "blurb": "Lower-cost solid-state sensors for ASHRAE-style refrigerant leak notification."
+   },
+   {
+    "id": "o2",
+    "name": "Oxygen depletion",
+    "blurb": "Electrochemical O2 monitoring for machinery rooms and storage."
+   },
+   {
+    "id": "acc",
+    "name": "Mechanical room safety equipment",
+    "blurb": "Displays, calibration kits, switches, breathing apparatus and signage."
+   }
+  ],
+  "products": [
+   {
+    "id": "tp1000",
+    "family": "pair",
+    "name": "TracePoint 1000",
+    "role": "Single-point PAIR monitor",
+    "tech": "Photoacoustic infrared",
+    "gases": "All refrigerants and specialty gases",
+    "range": "0-1000 ppm",
+    "sensitivity": "0.5 ppm",
+    "points": "1 (dedicated single point)",
+    "tubing": "150 ft standard, 500 ft optional",
+    "response": "Not stated",
+    "outputs": "4-20 mA analog",
+    "certification": "Not stated",
+    "warranty": "Not stated",
+    "markets_stated": "Mechanical rooms, chiller plants, data centers, laboratories, manufacturing",
+    "source": "S03",
+    "status": "Verified (vendor page)"
+   },
+   {
+    "id": "hgir",
+    "family": "pair",
+    "name": "Haloguard IR",
+    "role": "Multi-point PAIR monitor",
+    "tech": "Photoacoustic infrared",
+    "gases": "Any refrigerant gas; expandable to 3 gases",
+    "range": "0-1000 ppm",
+    "sensitivity": "1 ppm",
+    "points": "Expandable to 24 with scanners and remote modules",
+    "tubing": "150 ft standard, 500 ft optional",
+    "response": "< 1 minute per channel",
+    "outputs": "4 x 5 A relays; optional 4-20 mA / 0-5 VDC",
+    "certification": "UL 3111-1, CAN/CSA-C22.2 No. 1010.1-92",
+    "warranty": "1 year",
+    "markets_stated": "Chiller rooms, HVAC systems, industrial applications",
+    "source": "S04",
+    "status": "Verified (vendor page)"
+   },
+   {
+    "id": "hg3",
+    "family": "pair",
+    "name": "Haloguard III",
+    "role": "Multigas PAIR monitor",
+    "tech": "Wideband photoacoustic infrared",
+    "gases": "All refrigerant gases; up to 24 different gases with scanners and modules",
+    "range": "0-1000 ppm",
+    "sensitivity": "20 ppm in the spec table (header says 1 ppm)",
+    "points": "Up to 24 with scanners and modules",
+    "tubing": "150 ft standard, 500 ft optional",
+    "response": "< 1 minute per channel",
+    "outputs": "Relays; optional 4-20 mA / 0-5 VDC",
+    "certification": "UL 3111-1, CAN/CSA-C22.2 No. 1010.1-92",
+    "warranty": "1 year (sensor element)",
+    "markets_stated": "Not stated",
+    "source": "S171",
+    "status": "Inferred (page conflicts with itself on sensitivity)"
+   },
+   {
+    "id": "rir",
+    "family": "pair",
+    "name": "Remote IR Module",
+    "role": "Expansion module",
+    "tech": "Photoacoustic infrared",
+    "gases": "Refrigerants (as host analyzer)",
+    "range": "0-1000 ppm",
+    "sensitivity": "1 ppm",
+    "points": "Adds up to 8 channels; max 2 modules per instrument",
+    "tubing": "150 ft standard, 500 ft optional",
+    "response": "Not stated",
+    "outputs": "4-20 mA to the controller",
+    "certification": "Not stated",
+    "warranty": "Not stated",
+    "markets_stated": "Not stated",
+    "source": "S172",
+    "status": "Verified (vendor page)"
+   },
+   {
+    "id": "hg",
+    "family": "cmos",
+    "name": "Haloguard (CMOS)",
+    "role": "Low-cost single-sensor monitor",
+    "tech": "CMOS solid state",
+    "gases": "CFC, HFC, HCFC (except R123); R123 0-300 ppm",
+    "range": "Not stated in ppm for CFC/HFC/HCFC",
+    "sensitivity": "Accuracy 10% of full scale",
+    "points": "1 sensor (remote cable up to 300 ft)",
+    "tubing": "n/a (diffusion sensor)",
+    "response": "< 1 minute",
+    "outputs": "4 x 3 A relays; optional 4-20 mA / 0-10 VDC",
+    "certification": "Not stated",
+    "warranty": "1 year",
+    "markets_stated": "Refrigeration systems",
+    "source": "S173",
+    "status": "Verified (vendor page)"
+   },
+   {
+    "id": "hg2",
+    "family": "cmos",
+    "name": "Haloguard II",
+    "role": "CMOS multichannel controller",
+    "tech": "CMOS solid state",
+    "gases": "Halocarbons, ammonia, oxygen depletion",
+    "range": "0-1000 ppm CFC/HFC/HCFC; 0-25% O2",
+    "sensitivity": "Accuracy 10% of full scale",
+    "points": "Up to 6 sensors",
+    "tubing": "n/a",
+    "response": "< 1 minute",
+    "outputs": "4 x 3 A relays; optional 4 x 0-5 VDC",
+    "certification": "Not stated",
+    "warranty": "1 year",
+    "markets_stated": "Not stated",
+    "source": "S174",
+    "status": "Verified (vendor page)"
+   },
+   {
+    "id": "oxy",
+    "family": "o2",
+    "name": "Oxyguard",
+    "role": "Oxygen depletion monitor",
+    "tech": "Electrochemical",
+    "gases": "Oxygen",
+    "range": "0-25% O2",
+    "sensitivity": "Accuracy 1% of full scale; alarms at 19.5% and 16.0% O2",
+    "points": "1",
+    "tubing": "n/a",
+    "response": "< 1 minute",
+    "outputs": "2 x 3 A relays; optional 4-20 mA / 0-10 VDC",
+    "certification": "Enclosure UL94V-0, NEMA 4/12/13",
+    "warranty": "18 months (sensor element)",
+    "markets_stated": "Refrigeration equipment, machinery rooms, medical imaging, oxygen incubators, food storage",
+    "source": "S175",
+    "status": "Verified (vendor page)"
+   },
+   {
+    "id": "acc",
+    "family": "acc",
+    "name": "Mechanical room safety equipment",
+    "role": "Accessories",
+    "tech": "n/a",
+    "gases": "n/a",
+    "range": "n/a",
+    "sensitivity": "n/a",
+    "points": "n/a",
+    "tubing": "n/a",
+    "response": "n/a",
+    "outputs": "Remote display for any Haloguard system; break-glass and remote switches",
+    "certification": "SCBA is a NIOSH-approved Draeger unit",
+    "warranty": "Not stated",
+    "markets_stated": "Mechanical rooms (ASHRAE notification outside each entrance)",
+    "source": "S176",
+    "status": "Verified (vendor page)"
+   }
+  ],
+  "markets": [
+   {
+    "id": "battery",
+    "name": "Battery manufacturing (DMC)",
+    "source": "S01",
+    "note": "DMC monitoring with PAIR at 0.5 ppm; no model named on the page."
+   },
+   {
+    "id": "datacenter",
+    "name": "Data centers",
+    "source": "S161",
+    "note": "Refrigerant leak detection for cooling and backup power; no model named on the page."
+   },
+   {
+    "id": "hvac",
+    "name": "Commercial HVAC / A2L",
+    "source": "S180",
+    "note": "Claims ASHRAE 15 and UL 60335-2-40 coverage; no model named."
+   },
+   {
+    "id": "cold",
+    "name": "Cold storage & refrigeration",
+    "source": "S181",
+    "note": "Early-warning micro-leak detection; no model named."
+   },
+   {
+    "id": "lab",
+    "name": "Medical & laboratory",
+    "source": "S183",
+    "note": "Sub-ppm tracking; no model named."
+   },
+   {
+    "id": "semi",
+    "name": "Semiconductor",
+    "source": "S182",
+    "note": "Configurable for SF6, NF3, C4F6, CF4; no model named."
+   },
+   {
+    "id": "energy",
+    "name": "Energy, oil & gas (hazardous areas)",
+    "source": "S179",
+    "note": "Claims explosion-proof enclosures certified for Class I, Div 1 and Div 2; no model, certifying body or certificate named."
+   }
+  ],
+  "fit": {
+   "tp1000": {
+    "battery": "linked",
+    "datacenter": "stated",
+    "hvac": "stated",
+    "lab": "stated"
+   },
+   "hgir": {
+    "battery": "linked",
+    "hvac": "stated",
+    "cold": "linked"
+   },
+   "hg3": {
+    "hvac": "linked",
+    "cold": "linked",
+    "semi": "linked"
+   },
+   "rir": {
+    "hvac": "linked"
+   },
+   "hg": {
+    "cold": "stated",
+    "hvac": "linked"
+   },
+   "hg2": {
+    "cold": "linked",
+    "hvac": "linked"
+   },
+   "oxy": {
+    "cold": "stated",
+    "lab": "stated"
+   },
+   "acc": {
+    "hvac": "stated"
+   }
+  },
+  "observations": [
+   {
+    "text": "The PAIR line (TracePoint 1000, Haloguard IR / III) is what the battery and data center stories rest on; CMOS and oxygen products are a separate, lower-cost refrigerant-safety line.",
+    "status": "Inferred",
+    "sources": [
+     "S170",
+     "S03",
+     "S04",
+     "S171"
+    ]
+   },
+   {
+    "text": "The Energy page claims explosion-proof enclosures certified for Class I, Div 1 and Div 2, but names no model, certifier or certificate, and no product page lists a hazardous-area rating.",
+    "status": "Verified",
+    "sources": [
+     "S179",
+     "S03",
+     "S04"
+    ]
+   },
+   {
+    "text": "Specs conflict inside ThermGAS pages: Haloguard III says 1 ppm in its header and 20 ppm in its spec table; the battery page and TracePoint say 0.5 ppm while Haloguard IR says 1 ppm.",
+    "status": "Verified",
+    "sources": [
+     "S171",
+     "S01",
+     "S03",
+     "S04"
+    ]
+   },
+   {
+    "text": "Only TracePoint 1000 names data centers on its own product page; the Data Centers industry page names no model.",
+    "status": "Verified",
+    "sources": [
+     "S03",
+     "S161"
+    ]
+   },
+   {
+    "text": "No product page publishes a price.",
+    "status": "Verified",
+    "sources": [
+     "S170"
+    ]
    }
   ]
  }
