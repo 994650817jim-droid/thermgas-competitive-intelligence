@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SourceProvider } from './ui';
-import { generated } from './data';
+import { analysis } from './data';
 import Overview from './pages/Overview';
 import Competitors from './pages/Competitors';
 import Battlecard from './pages/Battlecard';
@@ -58,7 +58,7 @@ export default function App() {
       <div className="disclaimer-bar">
         <div>
           <span><b>Independent Student Research</b> · Northeastern University MSBA · not an official ThermGAS publication</span>
-          <span>Evidence as of {generated} · vendor specs are vendor claims unless stated</span>
+          <span>Evidence as of {analysis.meta.as_of} · vendor specs are vendor claims unless stated</span>
         </div>
       </div>
       <main><Page params={route.params} /></main>
