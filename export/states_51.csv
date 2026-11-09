@@ -1,0 +1,52 @@
+﻿code,name,evidence_status,competitors_with_verified_local_presence,competitor_hq,competitor_offices,competitor_distributors,competitor_service,competitor_installations,regulatory_notes,thermgas_hq,thermgas_refrigerant_references,battery_cell_plants,battery_cell_gwh,dmc_solvent_plants,cancelled_plants_excluded
+AL,Alabama,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+AK,Alaska,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+AZ,Arizona,Evidence found,0,,,,,,,false,,1,27,0,1
+AR,Arkansas,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+CA,California,Evidence found,3,,riken,gasmet; ionscience,riken,honeywell,"Li-ion Tamer Gen2+ sensor received California State Fire Marshal (CSFM) listing, Jan 2025",false,Stanford; UC Santa Cruz,1,10,0,0
+CO,Colorado,Evidence found,0,,,,,,,false,Colorado State,0,0,0,0
+CT,Connecticut,Evidence found,1,,,ionscience,,,,false,University of Connecticut,0,0,0,0
+DE,Delaware,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+DC,District of Columbia,Evidence found,0,,,,,,,false,US Capitol Power Plant,0,0,0,0
+FL,Florida,Evidence found,1,,,ionscience,,,,false,Disney Resorts - Florida; Fontainebleau - Miami,0,0,0,0
+GA,Georgia,Evidence found,1,,,ionscience,,,,true,ASHRAE Headquarters - Atlanta; Georgia Tech; Georgia State; Emory; Medical College of Georgia; Jimmy Carter Library,3,70.5,0,0
+HI,Hawaii,Evidence found,0,,,,,,,false,Disney Resorts - Hawaii,0,0,0,0
+ID,Idaho,Evidence found,0,,,,,,,false,Boise State University,0,0,0,0
+IL,Illinois,Evidence found,1,,,ionscience,,,,false,,0,0,0,0
+IN,Indiana,Evidence found,1,,,riken,,,,false,Notre Dame; Indiana University,1,23,0,0
+IA,Iowa,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+KS,Kansas,Evidence found,0,,,,,,,false,,1,30,0,0
+KY,Kentucky,Evidence found,0,,,,,,,false,,2,116,0,0
+LA,Louisiana,Evidence found,1,,,ionscience,,,,false,,0,0,1,0
+ME,Maine,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+MD,Maryland,Evidence found,0,,,,,,,false,University of Maryland,0,0,0,0
+MA,Massachusetts,Evidence found,1,,,ionscience,,,,false,,0,0,0,0
+MI,Michigan,Evidence found,0,,,,,,,false,,3,86,0,0
+MN,Minnesota,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+MS,Mississippi,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+MO,Missouri,Evidence found,0,,,,,,,false,University of Missouri; Harry S Truman Library,0,0,0,0
+MT,Montana,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+NE,Nebraska,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+NV,Nevada,Evidence found,1,nevadanano,,,,,,false,Fontainebleau - Las Vegas,1,100,0,0
+NH,New Hampshire,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+NJ,New Jersey,Evidence found,1,,,ionscience,,,,false,Rutgers University,0,0,0,0
+NM,New Mexico,Evidence found,0,,,,,,,false,University of New Mexico,0,0,0,0
+NY,New York,Evidence found,1,,inficon,,,,,false,Cornell,0,0,0,0
+NC,North Carolina,Evidence found,0,,,,,,,false,North Carolina State University,1,40,0,0
+ND,North Dakota,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+OH,Ohio,Evidence found,1,,honeywell,,,,,false,University of Dayton Research Institute,2,81,0,0
+OK,Oklahoma,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+OR,Oregon,Evidence found,0,,,,,,,false,Oregon Institute of Technology; Oregon Health & Science University,0,0,0,0
+PA,Pennsylvania,Evidence found,0,,,,,,,false,Pennsylvania State,0,0,0,0
+RI,Rhode Island,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+SC,South Carolina,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+SD,South Dakota,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+TN,Tennessee,Evidence found,0,,,,,,,false,,3,77.4,0,0
+TX,Texas,Evidence found,1,,ionscience,ionscience,,,,false,George W. Bush Library,1,15,0,0
+UT,Utah,Evidence found,1,,,ionscience,,,,false,,0,0,0,0
+VT,Vermont,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+VA,Virginia,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+WA,Washington,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0
+WV,West Virginia,Evidence found,0,,,,,,,false,West Virginia University,0,0,0,0
+WI,Wisconsin,Evidence found,0,,,,,,,false,University of Wisconsin - Madison,0,0,0,0
+WY,Wyoming,Not Verified / Insufficient Evidence,0,,,,,,,false,,0,0,0,0

@@ -1,0 +1,13 @@
+﻿market,layer,kind,metric,state,value,label,status,sources,source_url
+datacenters,Under construction,construction,"Capacity under construction, H1 2026",GA,2882,"Atlanta metro: 2,882 MW",Verified,S185,https://www.cbre.com/insights/books/north-america-data-center-trends-h1-2026
+datacenters,Under construction,construction,"Capacity under construction, H1 2026",VA,2420.2,"Northern Virginia: 2,420.2 MW",Verified,S185,https://www.cbre.com/insights/books/north-america-data-center-trends-h1-2026
+semiconductors,Semiconductor fabs,count,"Electronics-manufacturing facilities reporting to EPA, 2023",TX,10,10 reporting facilities,Inferred,S197,https://www.epa.gov/ghgreporting
+semiconductors,Semiconductor fabs,count,"Electronics-manufacturing facilities reporting to EPA, 2023",OR,6,6 reporting facilities,Inferred,S197,https://www.epa.gov/ghgreporting
+semiconductors,Semiconductor fabs,count,"Electronics-manufacturing facilities reporting to EPA, 2023",AZ,3,3 reporting facilities,Inferred,S197,https://www.epa.gov/ghgreporting
+semiconductors,Semiconductor fabs,count,"Electronics-manufacturing facilities reporting to EPA, 2023",NY,3,3 reporting facilities,Inferred,S197,https://www.epa.gov/ghgreporting
+semiconductors,Semiconductor fabs,count,"Electronics-manufacturing facilities reporting to EPA, 2023",ID,1,1 reporting facility,Inferred,S197,https://www.epa.gov/ghgreporting
+pharma,Pharma priority,priority,Team priority ranking (1 = first),NC,1,Priority 1 of 5,Assumption,,
+pharma,Pharma priority,priority,Team priority ranking (1 = first),VA,2,Priority 2 of 5,Assumption,,
+pharma,Pharma priority,priority,Team priority ranking (1 = first),AL,3,Priority 3 of 5,Assumption,,
+pharma,Pharma priority,priority,Team priority ranking (1 = first),IN,4,Priority 4 of 5,Assumption,,
+pharma,Pharma priority,priority,Team priority ranking (1 = first),TX,5,Priority 5 of 5,Assumption,,
