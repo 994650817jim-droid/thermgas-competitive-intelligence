@@ -16,8 +16,8 @@
       ]
     },
     {
-      "text": "Infrasensing and Honeywell Li-ion Tamer address battery off-gas in data center / BESS settings.",
-      "status": "Verified",
+      "text": "Infrasensing and Honeywell Li-ion Tamer address battery off-gas in data center / BESS settings. Li-ion Tamer Gen 3 status is unresolved: the U.S. product page says Discontinued while the data sheet is current.",
+      "status": "Inferred (product status unresolved)",
       "sources": [
         "S80",
         "S37"

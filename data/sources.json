@@ -736,5 +736,212 @@
     "source_date": "N/A",
     "access_date": "2026-11-07",
     "type": "Company webpage"
+  },
+  {
+    "id": "S185",
+    "publisher": "CBRE",
+    "title": "North America Data Center Trends H1 2026 (Atlanta 2,882 MW and Northern Virginia 2,420.2 MW under construction; primary markets 7,481.1 MW, +24.8%; West Texas outlook; 100 kW GPU servers need closed-loop liquid cooling)",
+    "url": "https://www.cbre.com/insights/books/north-america-data-center-trends-h1-2026",
+    "source_date": "2026-08-27",
+    "access_date": "2026-11-08",
+    "type": "Industry research report"
+  },
+  {
+    "id": "S186",
+    "publisher": "FourWeekMBA",
+    "title": "US Data Center Construction Hit a Record $96.5B Rate (reports the U.S. Census Bureau construction spending release of Nov 2, 2026; the 90.3% change is the publisher's arithmetic)",
+    "url": "https://fourweekmba.com/ai-us-data-center-construction-hit-a-record-96-5b-rate/",
+    "source_date": "2026-11-02",
+    "access_date": "2026-11-08",
+    "type": "News article (secondary, cites U.S. Census Bureau)"
+  },
+  {
+    "id": "S187",
+    "publisher": "Value Add VC",
+    "title": "Big Tech AI Spending Tracker (big-four 2026 capex guidance $720-740B as of Oct 29, 2026; ~$410B in 2025)",
+    "url": "https://valueaddvc.com/ai-spending",
+    "source_date": "2026-11-04 (last updated)",
+    "access_date": "2026-11-08",
+    "type": "Third-party tracker (compiles company guidance)"
+  },
+  {
+    "id": "S188",
+    "publisher": "Lawrence Berkeley National Laboratory (for U.S. DOE)",
+    "title": "2024 United States Data Center Energy Usage Report (landing page; headline figures cited by the team brief were not visible on the page read)",
+    "url": "https://energyanalysis.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report",
+    "source_date": "2024-12",
+    "access_date": "2026-11-08",
+    "type": "Government laboratory report"
+  },
+  {
+    "id": "S189",
+    "publisher": "NVIDIA",
+    "title": "NVIDIA Blackwell Platform Boosts Water Efficiency by Over 300x (GB200 NVL72: liquid-cooled rack, 120 kW full-rack power density)",
+    "url": "https://blogs.nvidia.com/blog/blackwell-platform-water-efficiency-liquid-cooling-data-centers-ai-factories/",
+    "source_date": "2025-04-22",
+    "access_date": "2026-11-08",
+    "type": "Company blog"
+  },
+  {
+    "id": "S190",
+    "publisher": "Facility Executive",
+    "title": "MSA Refrigerant Leak Monitor (Chillgard 5000: up to six field-selectable refrigerants; 4, 8 or 16 sampling points; integrated BACnet and Modbus; reads to 1 ppm)",
+    "url": "https://facilityexecutive.com/msa-refrigerant-leak-monitor/",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Trade press (product announcement)"
+  },
+  {
+    "id": "S191",
+    "publisher": "AIStockWire",
+    "title": "US data center construction hits $85B annual pace, up 73% (Census figures for August 2026; computer, electronics and electrical plant construction $52.3B a year, down from $95.4B)",
+    "url": "https://aistockwire.com/blog/us-data-center-construction-85-billion-ai-growth-cleanspark-clsk-october-2026",
+    "source_date": "2026-10-09 (updated 2026-11-01)",
+    "access_date": "2026-11-08",
+    "type": "News article (secondary, cites U.S. Census Bureau)"
+  },
+  {
+    "id": "S192",
+    "publisher": "Nexus Semiconductor",
+    "title": "Every Major Semiconductor Fab in the US: The 2026 State-by-State Guide (TSMC Arizona $265B commitment; Micron Clay groundbreaking January 2026)",
+    "url": "https://nexussemiconductor.com/insights/industry/every-major-semiconductor-fab-in-the-us-the-2026-state-by-state-guide/",
+    "source_date": "2026",
+    "access_date": "2026-11-08",
+    "type": "Industry guide (secondary)"
+  },
+  {
+    "id": "S193",
+    "publisher": "Honeywell",
+    "title": "Midas Gas Detector With Pyrolyzer (product page; lists U.S. availability; gas list not shown on the page read)",
+    "url": "https://buildings.honeywell.com/us/en/products/by-category/sensors/air-quality-sensors/midas-gas-detector-with-pyrolyzer",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Company product page"
+  },
+  {
+    "id": "S194",
+    "publisher": "Honeywell",
+    "title": "Vertex Edge toxic gas monitoring system (up to nine Chemcassette analyzers with eight points each; virtually every gas used in semiconductor fabs, down to ppb)",
+    "url": "https://automation.honeywell.com/au/en/products/gas-and-flame-detection/high-tech-and-semiconductor/vertex-edge-toxic-gas-monitoring-system",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Company product page"
+  },
+  {
+    "id": "S195",
+    "publisher": "RKI Instruments (Riken Keiki)",
+    "title": "GD-70D Series Intelligent Gas Detector data sheet (PDF; cited by the team brief, not opened during this check)",
+    "url": "https://cdn.shopify.com/s/files/1/0561/7434/6433/files/GD-70D_Series_INTELLIGENT_GAS_DETECTOR.pdf",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Company data sheet"
+  },
+  {
+    "id": "S196",
+    "publisher": "AEI (Dempa Publications)",
+    "title": "New Gas Sensors Respond to Factories' Gas Toxic Level (Riken Keiki: a single semiconductor factory installs hundreds to thousands of gas detectors; GD-70D)",
+    "url": "https://aei.dempa.net/archives/3639",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Trade press"
+  },
+  {
+    "id": "S197",
+    "publisher": "U.S. EPA",
+    "title": "Greenhouse Gas Reporting Program, Subpart I (Electronics Manufacturing) data and parent company file (counts are the research team's own analysis)",
+    "url": "https://www.epa.gov/ghgreporting",
+    "source_date": "2011-2023 data",
+    "access_date": "2026-11-08",
+    "type": "Government dataset (team analysis)"
+  },
+  {
+    "id": "S198",
+    "publisher": "Aranca",
+    "title": "Pharma Reshoring to the US: Pledges, Plants and Timing (pledges above $500B by mid-2026, from $316B for 10 companies in July 2025; about four years to design, build and qualify; Lilly Houston $6.5B)",
+    "url": "https://www.aranca.com/knowledge-library/articles/business-research/pharma-us-manufacturing-pledges",
+    "source_date": "2026-11-05",
+    "access_date": "2026-11-08",
+    "type": "Consultancy article (secondary)"
+  },
+  {
+    "id": "S199",
+    "publisher": "Packaging Digest",
+    "title": "The Great Pharma Reshoring Wave (Lilly $6.5B Houston; Lilly $4.5B at two Lebanon, IN sites)",
+    "url": "https://www.packagingdigest.com/pharma-medical/the-great-pharma-reshoring-wave",
+    "source_date": "2026-11-04",
+    "access_date": "2026-11-08",
+    "type": "Trade press"
+  },
+  {
+    "id": "S200",
+    "publisher": "IndexBox",
+    "title": "Pharmaceutical Companies Invest $500 Billion in U.S. Manufacturing and Research (J&J plants in Wilson, NC and at Fujifilm's Holly Springs, NC site; Lilly facilities in Alabama, Virginia and Texas)",
+    "url": "https://www.indexbox.io/blog/global-pharma-giants-pledge-500-billion-in-us-investments/",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "News summary (secondary)"
+  },
+  {
+    "id": "S201",
+    "publisher": "The World Data",
+    "title": "Pharmaceutical Manufacturing in US 2026 (Lilly $6B API facility in Huntsville, AL; AstraZeneca new Virginia facility)",
+    "url": "https://theworlddata.com/pharmaceutical-manufacturing-in-us/",
+    "source_date": "2026",
+    "access_date": "2026-11-08",
+    "type": "Data summary (secondary)"
+  },
+  {
+    "id": "S202",
+    "publisher": "National Institutes of Health, Division of Occupational Health and Safety",
+    "title": "Protocol for use and maintenance of oxygen monitoring devices (PDF; cited by the team brief, not opened during this check; applies to NIH facilities)",
+    "url": "https://www.ors.od.nih.gov:443/sr/dohs/Documents/protocol-for-use-and-maintenance-of-oxygen-monitoring-devices.pdf",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Government protocol"
+  },
+  {
+    "id": "S203",
+    "publisher": "Harvard Environmental and Energy Law Program",
+    "title": "Ethylene Oxide (EtO) Emissions Standards for Commercial Sterilizers tracker (exemptions granted to 41 facilities in July 2025)",
+    "url": "https://eelp.law.harvard.edu/tracker/ethylene-oxide-eto-emissions-standards-for-commercial-sterilizers/",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Regulatory tracker"
+  },
+  {
+    "id": "S204",
+    "publisher": "AIHA",
+    "title": "EPA Proposes to Rescind, Revise Restrictions on Ethylene Oxide Emissions (sterilizers could choose CEMS or parametric monitoring)",
+    "url": "https://www.aiha.org/news/260326-epa-proposes-to-rescind-revise-restrictions-on-ethylene-oxide-emissions",
+    "source_date": "2026-03-26",
+    "access_date": "2026-11-08",
+    "type": "Professional association news"
+  },
+  {
+    "id": "S205",
+    "publisher": "Fisher Scientific",
+    "title": "ChemDAQ Steri-Trac 2+ ethylene oxide monitor (product listing; returned HTTP 403 during this check)",
+    "url": "https://www.fishersci.com/shop/products/steri-trac-2-ethylene-oxide-monitor-steel-swivel-wall-mount-includes-remote-sensor-mount/17987123",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Distributor listing"
+  },
+  {
+    "id": "S206",
+    "publisher": "Environmental Expert",
+    "title": "Thermal Gas OXYGUARD Oxygen Depletion Monitor (directory listing for Thermal Gas Systems: galvanic cell, sensor life 5+ years at 20 C / 20% O2)",
+    "url": "https://www.environmental-expert.com/products/thermal-gas-oxyguard-oxygen-depletion-monitor-1133329",
+    "source_date": "N/A",
+    "access_date": "2026-11-08",
+    "type": "Third-party directory (vendor listing)"
+  },
+  {
+    "id": "S207",
+    "publisher": "U.S. EPA",
+    "title": "ECHO Exporter and Toxics Release Inventory 2024 (pharmaceutical NAICS facility count and ethylene oxide reporters are the research team's own analysis)",
+    "url": "https://echo.epa.gov/tools/data-downloads",
+    "source_date": "2024 data",
+    "access_date": "2026-11-08",
+    "type": "Government dataset (team analysis)"
   }
 ]

@@ -1,5 +1,6 @@
 import { executive, facilities, states, presence, shortName, type Facility } from './data';
 import { scoreStates, DEFAULT_WEIGHTS } from './model';
+import { growthMarkdown } from './growth';
 
 /* ---------- facility evidence tiers (curated in data/executive.json) ---------- */
 export const facKey = (f: Pick<Facility, 'operator' | 'city'>) => `${f.operator}|${f.city.replace(/ \(.*$/, '')}`;
@@ -99,7 +100,8 @@ export function briefingMarkdown(): string {
   L.push('', e.opportunity_rules.refinement_note);
   L.push('', '## ' + e.adjacent_opportunity.title, e.adjacent_opportunity.short);
   e.adjacent_opportunity.points.forEach((p: any) => L.push(`- ${p.text} (${p.status})${src(p)}`));
-  L.push('', '## 30 / 60 / 90 day roadmap (proposal)');
+  L.push('', ...growthMarkdown());
+  L.push('## 30 / 60 / 90 day roadmap (proposal)');
   e.roadmap.phases.forEach((p: any) => {
     L.push(`### ${p.days}: ${p.name}`);
     p.items.forEach((it: any) => L.push(`- ${it.task}. Owner role: ${it.owner_role}. Deliverable: ${it.deliverable}.`));

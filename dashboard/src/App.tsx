@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SourceProvider } from './ui';
-import { analysis } from './data';
+import { analysis, growth } from './data';
 import Overview from './pages/Overview';
 import Executive from './pages/Executive';
 import Landscape from './pages/Landscape';
@@ -15,12 +15,14 @@ import Strategy from './pages/Strategy';
 import Sources from './pages/Sources';
 import PillNav from './components/PillNav';
 import PortfolioPage from './pages/PortfolioPage';
+import GrowthMarkets from './pages/GrowthMarkets';
 
-/** Main navigation: four executive pages. Everything else is drill-down detail, still reachable. */
+/** Main navigation: four executive pages plus Growth Markets (data centers, semiconductors, pharma as sub-pages). Everything else is drill-down detail, still reachable. */
 const MAIN = [
   { path: 'overview', label: 'Executive Overview', C: Executive },
   { path: 'landscape', label: 'Competitive Landscape', C: Landscape },
   { path: 'opportunities', label: 'Market Opportunities', C: Opportunities },
+  { path: 'growth', label: 'Growth Markets', C: GrowthMarkets },
   { path: 'roadmap', label: 'Strategic Roadmap', C: Roadmap },
 ];
 const DETAIL = [
@@ -33,6 +35,8 @@ const DETAIL = [
   { path: 'sources', label: 'Sources & Method', C: Sources, parent: 'overview' },
 ];
 const PAGES = [...MAIN, ...DETAIL];
+/** Smaller pills below 1400px (unchanged). With more than four tabs the nav gets its own row (see growth.css). */
+const SNUG_QUERY = '(max-width: 1400px)';
 
 /** Hash routing: #/page?key=value */
 export function parseHash() {
@@ -47,9 +51,9 @@ export function go(path: string, params: Record<string, string> = {}) {
 
 export default function App() {
   const [route, setRoute] = useState(parseHash());
-  const [snug, setSnug] = useState(() => window.matchMedia('(max-width: 1400px)').matches);   // smaller nav pills so four tabs fit beside the wordmark
+  const [snug, setSnug] = useState(() => window.matchMedia(SNUG_QUERY).matches);   // smaller nav pills so the main tabs fit beside the wordmark
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 1400px)');
+    const mq = window.matchMedia(SNUG_QUERY);
     const on = () => setSnug(mq.matches);
     mq.addEventListener('change', on);
     return () => mq.removeEventListener('change', on);
@@ -59,15 +63,18 @@ export default function App() {
     window.addEventListener('hashchange', on);
     return () => window.removeEventListener('hashchange', on);
   }, []);
+  /** Old link from the data-center-only draft: keep it working. */
+  useEffect(() => { if (route.path === 'datacenters') go('growth', { m: 'datacenters' }); }, [route.path]);
   if (route.path === 'present') return <SourceProvider><Present params={route.params} /></SourceProvider>;
   const page = PAGES.find(p => p.path === route.path) ?? PAGES[0];
   const Page = page.C;
   const detail = DETAIL.find(d => d.path === page.path);
   const activePath = detail ? detail.parent : page.path;
   const briefing = route.path === 'briefing';
+
   return (
     <SourceProvider>
-      <header className="topbar">
+      <header className={`topbar ${MAIN.length > 4 ? 'topbar-wide' : ''}`}>
         <div className="topbar-inner">
           <a className="wordmark" href="#/overview" aria-label="Home">
             <span className="logo" aria-hidden>
@@ -75,7 +82,7 @@ export default function App() {
             </span>
             <span>
               <b>Therm<span>GAS</span> · Competitive Intelligence</b>
-              <small>DMC vapor monitoring in U.S. battery manufacturing</small>
+              <small>DMC vapor monitoring in U.S. battery manufacturing, plus three growth markets</small>
             </span>
           </a>
           <div className="pillwrap">
@@ -104,7 +111,7 @@ export default function App() {
       <div className="disclaimer-bar">
         <div>
           <span><b>Independent Student Research</b> · Northeastern University MSBA · not an official ThermGAS publication</span>
-          <span>Evidence as of {analysis.meta.as_of} · vendor specs are vendor claims unless stated</span>
+          <span>Evidence as of {growth.meta.as_of} (battery research {analysis.meta.as_of}) · vendor specs are vendor claims unless stated</span>
         </div>
       </div>
       <main>

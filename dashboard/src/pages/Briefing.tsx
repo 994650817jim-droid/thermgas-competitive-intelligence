@@ -1,4 +1,4 @@
-import { executive } from '../data';
+import { executive, growth } from '../data';
 import { Badge, Src } from '../ui';
 import { briefingMarkdown, opportunities } from '../exec';
 import { go } from '../App';
@@ -37,6 +37,16 @@ export default function Briefing() {
       <h2>{E.adjacent_opportunity.title}</h2>
       <p>{E.adjacent_opportunity.short}</p>
       <ul>{E.adjacent_opportunity.points.map((p: any, i: number) => <li key={i} className="small">{p.text} <Badge status={p.status} /> <Src ids={p.sources} /></li>)}</ul>
+      <h2>Growth markets: data centers, semiconductors, pharma</h2>
+      <p className="small"><i>Research-team proposals, not approved ThermGAS strategy. Evidence as of {growth.meta.as_of}. Each market is measured differently; figures are never added together.</i></p>
+      {growth.markets.map((m: any) => (
+        <div key={m.id}>
+          <h3 className="brief-h3">{m.label}</h3>
+          <p><b>{m.verdict.headline}</b></p>
+          <ul>{m.verdict.answers.map((a: any) => <li key={a.q} className="small"><b>{a.q}:</b> {a.a} <Badge status={a.status} /> <Src ids={a.sources} /></li>)}</ul>
+          <p className="small">Key figure: {m.readouts[0].label}, {m.readouts[0].value}{m.readouts[0].unit ? ` ${m.readouts[0].unit}` : ''} <Badge status={m.readouts[0].status} /> <Src ids={m.readouts[0].sources} />. Sizing: {m.market.sizing.status}; no prices or dollar estimates are shown.</p>
+        </div>
+      ))}
       <h2>Roadmap</h2>
       <ul>{E.roadmap.phases.map((p: any) => <li key={p.id}><b>{p.days}, {p.name}.</b> {p.gate.name}. Go if: {p.gate.go}</li>)}</ul>
       <p className="small">{E.roadmap.note_after_90}</p>

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { competitors, products, evidence, excluded, bucketOf, compById, sourceById, type Bucket } from '../data';
+import { competitors, products, evidence, excluded, bucketOf, compById, sourceById, growthLinesByCompany, type Bucket } from '../data';
 import { Card, Src, Badge, BucketTag, PageHead } from '../ui';
 import { go } from '../App';
 
@@ -56,6 +56,10 @@ export default function Competitors({ params }: { params: URLSearchParams }) {
               <dt>U.S. presence</dt><dd>{c.us_presence}</dd>
               <dt>Battery experience</dt><dd>{c.battery_experience}</dd>
               <dt>Company size</dt><dd>{c.company_size}</dd>
+              {growthLinesByCompany[c.id] && <>
+                <dt>Also in growth markets</dt>
+                <dd>{growthLinesByCompany[c.id].map(l => <span key={l.market} className="gm-also"><a href={`#/growth?m=${l.market}`}>{l.label}</a>: {l.line}</span>)}<div className="small muted">Different product lines; the battery classification above is unchanged.</div></dd>
+              </>}
             </dl>
           </Card>
 

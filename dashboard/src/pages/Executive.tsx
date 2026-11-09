@@ -1,4 +1,4 @@
-import { executive, dcRank, sources } from '../data';
+import { executive, dcRank, sources, growth, growthById } from '../data';
 import { Src, Badge, statusClass } from '../ui';
 import { opportunities } from '../exec';
 import OppMap from '../OppMap';
@@ -36,6 +36,25 @@ export default function Executive() {
           ))}
         </dl>
       </header>
+
+      <section className="gm-strip" aria-label="Growth markets">
+        <div className="gm-strip-head">
+          <h2 className="band-title">Growth markets</h2>
+          <p className="small muted">Three adjacent markets, each measured differently. Figures are not comparable or additive, and none changes the battery conclusion above.</p>
+        </div>
+        <div className="gm-strip-cards">
+          {growth.highlights.map((h: any) => (
+            <div key={h.market} className={`gm-card ${statusClass(h.status)}`}>
+              <span className="gm-card-mkt">{growthById[h.market].label}</span>
+              <span className="gm-card-v">{h.value}</span>
+              <span className="gm-card-l">{h.label}</span>
+              <span className="gm-card-s">{h.sub}</span>
+              <span className="rd-meta"><Badge status={h.status} /><Src ids={h.sources} /></span>
+              <a className="gm-card-link" href={`#/growth?m=${h.market}`}>Open {growthById[h.market].label.toLowerCase()}</a>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="mapband" aria-label="Where to play">
         <h2 className="band-title">Where to play</h2>
@@ -78,6 +97,7 @@ export default function Executive() {
         <div>
           <h2 className="band-title">{ad.title.replace('Adjacent opportunity: d', 'D')}</h2>
           <p className="adj-text">{ad.short}</p>
+          <a className="btn adj-link" href="#/growth?m=datacenters">Open the data center analysis</a>
         </div>
         <ul className="adj-points">
           {ad.points.slice(0, 3).map((p: any, i: number) => <li key={i}><Badge status={p.status} /> {p.text} <Src ids={p.sources} /></li>)}

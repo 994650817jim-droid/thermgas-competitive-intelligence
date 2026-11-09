@@ -48,6 +48,10 @@ The map has three executive layers (battery plant classes, data center load, com
 
 Run the checks with `npm run data && npm test && npm run build` in `dashboard/`.
 
+### Growth Markets
+
+The **Growth Markets** tab (`#/growth?m=datacenters|semiconductors|pharma`) covers three markets next to the battery work: data centers, semiconductor fabs and pharmaceutical plants. Each sub-page follows the team briefs: industry primer, where detection fits, product reuse, market size, buyers, competitors, ThermGAS assets and website suggestions, priority states, entry plan and questions. It does not change the battery conclusion, the threat rules or the three proposed actions. Content lives in `data/growth_markets.json`; add a market by adding an entry with the same keys. `scripts/build-data.js` validates every label and source ID, rejects dollar values in sizing, and checks each state layer. Map layers per market (data center construction, semiconductor fabs, pharma priority) appear on Market Opportunities and Growth Markets and are never combined.
+
 ## Project structure
 
 ```
@@ -61,6 +65,7 @@ data/                     Evidence database (source of truth, hand-curated JSON)
   data_centers.json       EPRI 2023 data center electricity load by state (44 states, Table A1); proxy for cooling / refrigerant demand
   executive.json          Executive layer: conclusion, actions, decision, plant evidence tiers, opportunity rules, business case, roadmap (proposals, labeled)
   excluded.json           Screened-out candidates with reasons
+  growth_markets.json     Growth Markets pages (data centers, semiconductors, pharma), evidence-labelled
   export/                 Generated CSVs
 scripts/build-data.js     Validates every source ID, builds the 51-state dataset, CSVs and the dashboard dataset
 scripts/patches/phase3.js Phase 3 evidence update (kept for provenance)

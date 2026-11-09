@@ -1,4 +1,4 @@
-import { analysis, productById, shortName } from '../data';
+import { analysis, productById, shortName, growth } from '../data';
 import { Card, Src, Badge, PageHead } from '../ui';
 import ThreatMatrix from '../ThreatMatrix';
 import { threatLevel } from '../model';
@@ -11,7 +11,6 @@ import Portfolio from '../Portfolio';
 const KEY = ['falco117', 'riken_fill', 'liontamer'];
 const ROLE: Record<string, string> = { falco117: 'Direct competitor', riken_fill: 'Direct competitor', liontamer: 'Competes for the same budget (indirect)' };
 const LVL = ['High', 'Elevated', 'Moderate', 'Low'];
-
 const Items = ({ items, n }: { items: any[]; n: number }) => (
   <ul className="bc-list">
     {items.slice(0, n).map((x, i) => <li key={i}>{x.text}<div className="m"><Badge status={x.status} /><Src ids={x.sources} /></div></li>)}
@@ -42,6 +41,37 @@ export default function Landscape() {
         })}
       </div>
       <p className="small muted">Threat levels are rule-based; no market share or numeric index is used.</p>
+
+      <section className="gm-rivals" aria-label="Rivals in the growth markets">
+        <div className="band-head">
+          <h2 className="band-title">Rivals in the growth markets</h2>
+          <a className="btn" href="#/growth">Growth Markets</a>
+        </div>
+        <p className="small muted gm-rivals-note">One card per product line in each market. These are not scored on the battery threat map; where the same company appears in the battery research (Honeywell, Riken Keiki, MSA), that profile and its threat level are unchanged.</p>
+        {growth.markets.map((m: any) => {
+          const cards = m.competition.players.filter((p: any) => p.landscape_card);
+          if (!cards.length) return null;
+          return (
+            <div key={m.id} className="gm-rival-group">
+              <h3 className="gm-rival-mkt"><span className="adj-chip">{m.label}</span></h3>
+              <div className={`grid ${cards.length > 1 ? 'g2' : ''}`}>
+                {cards.map((p: any) => (
+                  <section key={p.name} className="card rival adj-rival">
+                    <header className="card-head">
+                      <div><h3>{p.name}</h3><p className="card-sub">{p.product_line}{p.company_id ? ` · also in the battery research as ${shortName(p.company_id)}, different product line` : ''}</p></div>
+                    </header>
+                    <div className="adj-rival-cols">
+                      <div><h4 className="mini win">They win on</h4><Items items={p.they_win} n={1} /></div>
+                      <div><h4 className="mini them">ThermGAS can win on</h4><Items items={p.thermgas_can_win} n={1} /></div>
+                      <div><h4 className="mini mine">Watch out</h4>{p.watch_out.length ? <Items items={p.watch_out} n={1} /> : <p className="small muted">None recorded.</p>}</div>
+                    </div>
+                  </section>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </section>
 
       <section className="mapband" aria-label="ThermGAS product line">
         <div className="band-head"><h2 className="band-title">What ThermGAS brings to the fight</h2><a className="btn" href="#/portfolio">Portfolio detail</a></div>

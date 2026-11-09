@@ -35,6 +35,24 @@ export const dcByState = Object.fromEntries(dataCenters.rows.map(r => [r.state, 
 export const dcRank = (code: string) => { const i = [...dataCenters.rows].sort((a, b) => b.mwh_2023 - a.mwh_2023).findIndex(r => r.state === code); return i < 0 ? null : i + 1; };
 export const generated: string = d.generated;
 
+/* ---------- growth markets (data/growth_markets.json): one entry per market, same shape ---------- */
+export interface Claim { text: string; status: Status; sources: string[] }
+export interface LayerRow { state: string; value: number; label: string; note?: string }
+export interface GrowthLayer { kind: 'construction' | 'count' | 'priority'; label: string; metric: string; unit: string; status: Status; sources: string[]; note: string; rows: LayerRow[] }
+export const growth: { meta: { as_of: string; status_note: string }; highlights: any[]; markets: any[] } = d.growth;
+export const growthById = Object.fromEntries(growth.markets.map(m => [m.id, m])) as Record<string, any>;
+export const growthLayer = (id: string) => growthById[id]?.geography.layer as GrowthLayer | undefined;
+const byState = (l?: GrowthLayer) => Object.fromEntries((l?.rows ?? []).map(r => [r.state, r])) as Record<string, LayerRow>;
+/** Each market's state layer, keyed by state. A missing state means Not available, never zero. */
+export const dcBuildByState = byState(growthLayer('datacenters'));
+export const semiByState = byState(growthLayer('semiconductors'));
+export const pharmaByState = byState(growthLayer('pharma'));
+/** Growth-market product lines per battery-research company, so one company is shown once per market. */
+export const growthLinesByCompany = growth.markets.reduce((acc: Record<string, { market: string; label: string; line: string }[]>, m: any) => {
+  (m.competition.players as any[]).filter(p => p.company_id).forEach(p => { (acc[p.company_id] ??= []).push({ market: m.id, label: m.label, line: p.product_line }); });
+  return acc;
+}, {});
+
 export const sourceById = Object.fromEntries(sources.map(s => [s.id, s])) as Record<string, Source>;
 export const compById = Object.fromEntries(competitors.map(c => [c.id, c])) as Record<string, Competitor>;
 export const productById = Object.fromEntries(products.map(p => [p.id, p])) as Record<string, Product>;

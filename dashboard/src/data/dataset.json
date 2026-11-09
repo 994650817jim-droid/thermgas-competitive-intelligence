@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08",
+ "generated": "2026-11-09",
  "sources": [
   {
    "id": "S01",
@@ -738,6 +738,213 @@
    "source_date": "N/A",
    "access_date": "2026-11-07",
    "type": "Company webpage"
+  },
+  {
+   "id": "S185",
+   "publisher": "CBRE",
+   "title": "North America Data Center Trends H1 2026 (Atlanta 2,882 MW and Northern Virginia 2,420.2 MW under construction; primary markets 7,481.1 MW, +24.8%; West Texas outlook; 100 kW GPU servers need closed-loop liquid cooling)",
+   "url": "https://www.cbre.com/insights/books/north-america-data-center-trends-h1-2026",
+   "source_date": "2026-08-27",
+   "access_date": "2026-11-08",
+   "type": "Industry research report"
+  },
+  {
+   "id": "S186",
+   "publisher": "FourWeekMBA",
+   "title": "US Data Center Construction Hit a Record $96.5B Rate (reports the U.S. Census Bureau construction spending release of Nov 2, 2026; the 90.3% change is the publisher's arithmetic)",
+   "url": "https://fourweekmba.com/ai-us-data-center-construction-hit-a-record-96-5b-rate/",
+   "source_date": "2026-11-02",
+   "access_date": "2026-11-08",
+   "type": "News article (secondary, cites U.S. Census Bureau)"
+  },
+  {
+   "id": "S187",
+   "publisher": "Value Add VC",
+   "title": "Big Tech AI Spending Tracker (big-four 2026 capex guidance $720-740B as of Oct 29, 2026; ~$410B in 2025)",
+   "url": "https://valueaddvc.com/ai-spending",
+   "source_date": "2026-11-04 (last updated)",
+   "access_date": "2026-11-08",
+   "type": "Third-party tracker (compiles company guidance)"
+  },
+  {
+   "id": "S188",
+   "publisher": "Lawrence Berkeley National Laboratory (for U.S. DOE)",
+   "title": "2024 United States Data Center Energy Usage Report (landing page; headline figures cited by the team brief were not visible on the page read)",
+   "url": "https://energyanalysis.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report",
+   "source_date": "2024-12",
+   "access_date": "2026-11-08",
+   "type": "Government laboratory report"
+  },
+  {
+   "id": "S189",
+   "publisher": "NVIDIA",
+   "title": "NVIDIA Blackwell Platform Boosts Water Efficiency by Over 300x (GB200 NVL72: liquid-cooled rack, 120 kW full-rack power density)",
+   "url": "https://blogs.nvidia.com/blog/blackwell-platform-water-efficiency-liquid-cooling-data-centers-ai-factories/",
+   "source_date": "2025-04-22",
+   "access_date": "2026-11-08",
+   "type": "Company blog"
+  },
+  {
+   "id": "S190",
+   "publisher": "Facility Executive",
+   "title": "MSA Refrigerant Leak Monitor (Chillgard 5000: up to six field-selectable refrigerants; 4, 8 or 16 sampling points; integrated BACnet and Modbus; reads to 1 ppm)",
+   "url": "https://facilityexecutive.com/msa-refrigerant-leak-monitor/",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Trade press (product announcement)"
+  },
+  {
+   "id": "S191",
+   "publisher": "AIStockWire",
+   "title": "US data center construction hits $85B annual pace, up 73% (Census figures for August 2026; computer, electronics and electrical plant construction $52.3B a year, down from $95.4B)",
+   "url": "https://aistockwire.com/blog/us-data-center-construction-85-billion-ai-growth-cleanspark-clsk-october-2026",
+   "source_date": "2026-10-09 (updated 2026-11-01)",
+   "access_date": "2026-11-08",
+   "type": "News article (secondary, cites U.S. Census Bureau)"
+  },
+  {
+   "id": "S192",
+   "publisher": "Nexus Semiconductor",
+   "title": "Every Major Semiconductor Fab in the US: The 2026 State-by-State Guide (TSMC Arizona $265B commitment; Micron Clay groundbreaking January 2026)",
+   "url": "https://nexussemiconductor.com/insights/industry/every-major-semiconductor-fab-in-the-us-the-2026-state-by-state-guide/",
+   "source_date": "2026",
+   "access_date": "2026-11-08",
+   "type": "Industry guide (secondary)"
+  },
+  {
+   "id": "S193",
+   "publisher": "Honeywell",
+   "title": "Midas Gas Detector With Pyrolyzer (product page; lists U.S. availability; gas list not shown on the page read)",
+   "url": "https://buildings.honeywell.com/us/en/products/by-category/sensors/air-quality-sensors/midas-gas-detector-with-pyrolyzer",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Company product page"
+  },
+  {
+   "id": "S194",
+   "publisher": "Honeywell",
+   "title": "Vertex Edge toxic gas monitoring system (up to nine Chemcassette analyzers with eight points each; virtually every gas used in semiconductor fabs, down to ppb)",
+   "url": "https://automation.honeywell.com/au/en/products/gas-and-flame-detection/high-tech-and-semiconductor/vertex-edge-toxic-gas-monitoring-system",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Company product page"
+  },
+  {
+   "id": "S195",
+   "publisher": "RKI Instruments (Riken Keiki)",
+   "title": "GD-70D Series Intelligent Gas Detector data sheet (PDF; cited by the team brief, not opened during this check)",
+   "url": "https://cdn.shopify.com/s/files/1/0561/7434/6433/files/GD-70D_Series_INTELLIGENT_GAS_DETECTOR.pdf",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Company data sheet"
+  },
+  {
+   "id": "S196",
+   "publisher": "AEI (Dempa Publications)",
+   "title": "New Gas Sensors Respond to Factories' Gas Toxic Level (Riken Keiki: a single semiconductor factory installs hundreds to thousands of gas detectors; GD-70D)",
+   "url": "https://aei.dempa.net/archives/3639",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Trade press"
+  },
+  {
+   "id": "S197",
+   "publisher": "U.S. EPA",
+   "title": "Greenhouse Gas Reporting Program, Subpart I (Electronics Manufacturing) data and parent company file (counts are the research team's own analysis)",
+   "url": "https://www.epa.gov/ghgreporting",
+   "source_date": "2011-2023 data",
+   "access_date": "2026-11-08",
+   "type": "Government dataset (team analysis)"
+  },
+  {
+   "id": "S198",
+   "publisher": "Aranca",
+   "title": "Pharma Reshoring to the US: Pledges, Plants and Timing (pledges above $500B by mid-2026, from $316B for 10 companies in July 2025; about four years to design, build and qualify; Lilly Houston $6.5B)",
+   "url": "https://www.aranca.com/knowledge-library/articles/business-research/pharma-us-manufacturing-pledges",
+   "source_date": "2026-11-05",
+   "access_date": "2026-11-08",
+   "type": "Consultancy article (secondary)"
+  },
+  {
+   "id": "S199",
+   "publisher": "Packaging Digest",
+   "title": "The Great Pharma Reshoring Wave (Lilly $6.5B Houston; Lilly $4.5B at two Lebanon, IN sites)",
+   "url": "https://www.packagingdigest.com/pharma-medical/the-great-pharma-reshoring-wave",
+   "source_date": "2026-11-04",
+   "access_date": "2026-11-08",
+   "type": "Trade press"
+  },
+  {
+   "id": "S200",
+   "publisher": "IndexBox",
+   "title": "Pharmaceutical Companies Invest $500 Billion in U.S. Manufacturing and Research (J&J plants in Wilson, NC and at Fujifilm's Holly Springs, NC site; Lilly facilities in Alabama, Virginia and Texas)",
+   "url": "https://www.indexbox.io/blog/global-pharma-giants-pledge-500-billion-in-us-investments/",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "News summary (secondary)"
+  },
+  {
+   "id": "S201",
+   "publisher": "The World Data",
+   "title": "Pharmaceutical Manufacturing in US 2026 (Lilly $6B API facility in Huntsville, AL; AstraZeneca new Virginia facility)",
+   "url": "https://theworlddata.com/pharmaceutical-manufacturing-in-us/",
+   "source_date": "2026",
+   "access_date": "2026-11-08",
+   "type": "Data summary (secondary)"
+  },
+  {
+   "id": "S202",
+   "publisher": "National Institutes of Health, Division of Occupational Health and Safety",
+   "title": "Protocol for use and maintenance of oxygen monitoring devices (PDF; cited by the team brief, not opened during this check; applies to NIH facilities)",
+   "url": "https://www.ors.od.nih.gov:443/sr/dohs/Documents/protocol-for-use-and-maintenance-of-oxygen-monitoring-devices.pdf",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Government protocol"
+  },
+  {
+   "id": "S203",
+   "publisher": "Harvard Environmental and Energy Law Program",
+   "title": "Ethylene Oxide (EtO) Emissions Standards for Commercial Sterilizers tracker (exemptions granted to 41 facilities in July 2025)",
+   "url": "https://eelp.law.harvard.edu/tracker/ethylene-oxide-eto-emissions-standards-for-commercial-sterilizers/",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Regulatory tracker"
+  },
+  {
+   "id": "S204",
+   "publisher": "AIHA",
+   "title": "EPA Proposes to Rescind, Revise Restrictions on Ethylene Oxide Emissions (sterilizers could choose CEMS or parametric monitoring)",
+   "url": "https://www.aiha.org/news/260326-epa-proposes-to-rescind-revise-restrictions-on-ethylene-oxide-emissions",
+   "source_date": "2026-03-26",
+   "access_date": "2026-11-08",
+   "type": "Professional association news"
+  },
+  {
+   "id": "S205",
+   "publisher": "Fisher Scientific",
+   "title": "ChemDAQ Steri-Trac 2+ ethylene oxide monitor (product listing; returned HTTP 403 during this check)",
+   "url": "https://www.fishersci.com/shop/products/steri-trac-2-ethylene-oxide-monitor-steel-swivel-wall-mount-includes-remote-sensor-mount/17987123",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Distributor listing"
+  },
+  {
+   "id": "S206",
+   "publisher": "Environmental Expert",
+   "title": "Thermal Gas OXYGUARD Oxygen Depletion Monitor (directory listing for Thermal Gas Systems: galvanic cell, sensor life 5+ years at 20 C / 20% O2)",
+   "url": "https://www.environmental-expert.com/products/thermal-gas-oxyguard-oxygen-depletion-monitor-1133329",
+   "source_date": "N/A",
+   "access_date": "2026-11-08",
+   "type": "Third-party directory (vendor listing)"
+  },
+  {
+   "id": "S207",
+   "publisher": "U.S. EPA",
+   "title": "ECHO Exporter and Toxics Release Inventory 2024 (pharmaceutical NAICS facility count and ethylene oxide reporters are the research team's own analysis)",
+   "url": "https://echo.epa.gov/tools/data-downloads",
+   "source_date": "2024 data",
+   "access_date": "2026-11-08",
+   "type": "Government dataset (team analysis)"
   }
  ],
  "competitors": [
@@ -5234,8 +5441,8 @@
     ]
    },
    {
-    "text": "Infrasensing and Honeywell Li-ion Tamer address battery off-gas in data center / BESS settings.",
-    "status": "Verified",
+    "text": "Infrasensing and Honeywell Li-ion Tamer address battery off-gas in data center / BESS settings. Li-ion Tamer Gen 3 status is unresolved: the U.S. product page says Discontinued while the data sheet is current.",
+    "status": "Inferred (product status unresolved)",
     "sources": [
      "S80",
      "S37"
@@ -5861,6 +6068,2453 @@
     "status": "Verified",
     "sources": [
      "S170"
+    ]
+   }
+  ]
+ },
+ "growth": {
+  "meta": {
+   "as_of": "2026-11-08",
+   "status_note": "Growth-market analysis by the research team. It does not change the battery-market conclusion, the threat rules or the three proposed actions. Recommendations are proposals, not approved ThermGAS strategy. Figures from different markets measure different things and are never added together.",
+   "how_to_add_a_market": "Add an object to markets with the same keys. scripts/build-data.js validates every evidence label and source ID."
+  },
+  "highlights": [
+   {
+    "market": "datacenters",
+    "value": "#1",
+    "label": "Atlanta in data center construction, North America",
+    "sub": "2,882 MW under construction, CBRE H1 2026",
+    "status": "Verified",
+    "sources": [
+     "S185"
+    ]
+   },
+   {
+    "market": "semiconductors",
+    "value": "46",
+    "label": "U.S. fabs reporting fluorinated gas use, 2023",
+    "sub": "About 20 parent companies (team analysis of EPA Subpart I)",
+    "status": "Inferred",
+    "sources": [
+     "S197"
+    ]
+   },
+   {
+    "market": "pharma",
+    "value": ">$500B",
+    "label": "Pledged U.S. pharma manufacturing investment",
+    "sub": "By mid-2026 (Aranca)",
+    "status": "Inferred",
+    "sources": [
+     "S198"
+    ]
+   }
+  ],
+  "markets": [
+   {
+    "id": "datacenters",
+    "label": "Data Centers",
+    "title": "Data centers: a code-required refrigerant market where ThermGAS already sells",
+    "lead": "A growth market next to the battery work. The question for management is whether to test it, where, and what has to be fixed first.",
+    "brief": "Team brief by Yunke Zhong, Nov 8, 2026",
+    "verdict": {
+     "headline": "Worth a focused test in Georgia. Lead with chiller-plant monitoring, and close the integration and new-refrigerant gaps before bidding new builds against MSA.",
+     "answers": [
+      {
+       "q": "Where first",
+       "a": "Georgia (Atlanta), then Virginia and Texas",
+       "status": "Inferred",
+       "sources": [
+        "S185",
+        "S160",
+        "S06"
+       ]
+      },
+      {
+       "q": "What to sell",
+       "a": "Haloguard IR for machinery rooms that ASHRAE 15 already requires to be monitored",
+       "status": "Inferred",
+       "sources": [
+        "S04",
+        "S161"
+       ]
+      },
+      {
+       "q": "What must be true",
+       "a": "Published detection levels for the new low-GWP refrigerants, a clear A2L listing answer, and a building-system (BACnet / Modbus) connection",
+       "status": "Unknown",
+       "sources": [
+        "S161",
+        "S180",
+        "S04"
+       ]
+      }
+     ]
+    },
+    "readouts": [
+     {
+      "value": "2,882",
+      "unit": "MW",
+      "label": "Under construction in Atlanta, H1 2026",
+      "sub": "+52.3% in a year; first time ahead of Northern Virginia",
+      "status": "Verified",
+      "sources": [
+       "S185"
+      ]
+     },
+     {
+      "value": "7,481",
+      "unit": "MW",
+      "label": "Under construction, CBRE primary markets",
+      "sub": "Record high, +24.8% in H1 2026",
+      "status": "Verified",
+      "sources": [
+       "S185"
+      ]
+     },
+     {
+      "value": "$96.5B",
+      "unit": "",
+      "label": "U.S. data center construction, annual rate",
+      "sub": "September 2026, as reported from Census data",
+      "status": "Inferred",
+      "sources": [
+       "S186"
+      ]
+     },
+     {
+      "value": "1",
+      "unit": "ppm",
+      "label": "Headline sensitivity, Haloguard IR and Chillgard 5000",
+      "sub": "Same photoacoustic technology: specs alone will not separate them",
+      "status": "Verified",
+      "sources": [
+       "S04",
+       "S100"
+      ]
+     }
+    ],
+    "primer": {
+     "summary": "Almost all the electricity a data center uses ends up as heat, so cooling is the second-largest power user and a cooling failure takes the site down. Think of a cold-storage warehouse where the product is servers.",
+     "headers": [
+      "Cooling system",
+      "Where it sits",
+      "Refrigerant",
+      "Typical in"
+     ],
+     "rows": [
+      [
+       "Central chillers",
+       "Mechanical plant room, roof or equipment yard",
+       "Large charges; R-134a today, moving to R-1234ze, R-513A, R-514A",
+       "Hyperscale and large colocation sites"
+      ],
+      [
+       "CRAH units",
+       "Data hall",
+       "None (chilled water from the chillers)",
+       "Paired with central chillers"
+      ],
+      [
+       "CRAC / DX units, in-row coolers",
+       "Data hall",
+       "R-410A today, moving to A2L refrigerants such as R-32 and R-454B",
+       "Smaller, edge and older sites"
+      ],
+      [
+       "Liquid cooling",
+       "Inside racks and rows",
+       "Water / glycol; some designs use fluorinated fluids",
+       "New AI halls"
+      ]
+     ],
+     "status": "Inferred",
+     "sources": [],
+     "notes": [
+      {
+       "text": "NVIDIA's GB200 NVL72 is a liquid-cooled rack at 120 kW; CBRE says 100 kW GPU servers can only be cooled by closed-loop liquid cooling.",
+       "status": "Verified",
+       "sources": [
+        "S189",
+        "S185"
+       ]
+      },
+      {
+       "text": "Most sites still reject heat through chillers for at least part of the year; chiller-free dry-cooler designs are the main risk to this opportunity.",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "text": "Ammonia is rare in U.S. data centers, so the refrigerant line, not the ammonia line, is the relevant one.",
+       "status": "Inferred",
+       "sources": []
+      }
+     ]
+    },
+    "entry_points": {
+     "summary": "The central chiller plant is the best entry: code-required, the largest refrigerant charge, and the same job as cold storage.",
+     "rows": [
+      {
+       "where": "Central chiller plant (machinery room)",
+       "leak": "HFC and HFO refrigerants",
+       "why": "ASHRAE 15 machinery-room detection; the largest refrigerant charge on site",
+       "product": "Haloguard IR (multi-point), TracePoint 1000",
+       "fit": "Strong",
+       "fit_note": "Same job as in cold storage",
+       "status": "Inferred",
+       "sources": [
+        "S04",
+        "S03",
+        "S161"
+       ]
+      },
+      {
+       "where": "Data halls with DX, CRAC or in-row units",
+       "leak": "A2L refrigerants such as R-32 and R-454B",
+       "why": "A2L safety standards call for leak detection and mitigation in occupied spaces",
+       "product": "Haloguard IR scanning several units; Haloguard (CMOS) for single points",
+       "fit": "Medium",
+       "fit_note": "Depends on new-gas calibration and A2L listing",
+       "status": "Inferred",
+       "sources": [
+        "S180",
+        "S173"
+       ]
+      },
+      {
+       "where": "UPS lithium-ion battery rooms",
+       "leak": "Electrolyte vapor before thermal runaway",
+       "why": "ThermGAS's data center page itself names electrolyte vapor from lithium-ion battery failures",
+       "product": "TracePoint 1000 or Haloguard IR configured for DMC",
+       "fit": "New",
+       "fit_note": "DMC is proven only for battery manufacturing so far; needs validation",
+       "status": "Assumption",
+       "sources": [
+        "S161",
+        "S02"
+       ]
+      },
+      {
+       "where": "On-site substation switchgear",
+       "leak": "SF6",
+       "why": "Potent greenhouse gas",
+       "product": "PAIR monitors (SF6 is a listed ThermGAS gas)",
+       "fit": "Adjacent",
+       "fit_note": "Not a data center buying center",
+       "status": "Inferred",
+       "sources": [
+        "S182"
+       ]
+      },
+      {
+       "where": "Liquid cooling loops",
+       "leak": "Water and glycol; some fluorinated fluids",
+       "why": "Leaks damage IT equipment",
+       "product": "Not a fit for water; fluorinated fluids unconfirmed",
+       "fit": "Watch",
+       "fit_note": "Owned by water-leak specialists today",
+       "status": "Inferred",
+       "sources": []
+      }
+     ]
+    },
+    "reuse": {
+     "summary": "Mostly yes for the chiller plant, with four gaps to close before selling into new builds.",
+     "transfers": [
+      {
+       "text": "Haloguard IR's multi-point design (up to 24 points) matches a chiller plant with several chillers in one room.",
+       "status": "Verified",
+       "sources": [
+        "S04"
+       ]
+      },
+      {
+       "text": "PAIR's selectivity and lack of consumable sensors suit small facility teams under strict uptime targets.",
+       "status": "Inferred",
+       "sources": [
+        "S10"
+       ]
+      },
+      {
+       "text": "Machinery-room installation, alarm relays and ventilation interlocks work as in cold storage.",
+       "status": "Inferred",
+       "sources": [
+        "S181"
+       ]
+      }
+     ],
+     "does_not": "Ammonia expertise. U.S. data centers rarely use ammonia.",
+     "gaps": [
+      {
+       "gap": "New low-GWP refrigerants",
+       "why": "New chillers and DX units ship with them",
+       "check": "Published detection levels for R-513A, R-515B, R-1234ze(E), R-454B and R-1233zd(E)",
+       "status": "Unknown",
+       "sources": [
+        "S161",
+        "S08"
+       ]
+      },
+      {
+       "gap": "A2L listing",
+       "why": "Inspectors look for detection listed to UL 60335-2-40",
+       "check": "ThermGAS states compliance; a third-party listing by model was not found",
+       "status": "Unknown",
+       "sources": [
+        "S180"
+       ]
+      },
+      {
+       "gap": "Building-system integration",
+       "why": "Owners monitor from a central system; Chillgard 5000 has BACnet and Modbus built in",
+       "check": "Haloguard IR: relays and analog outputs; a BACnet interface manual exists, native support not confirmed",
+       "status": "Inferred",
+       "sources": [
+        "S04",
+        "S100"
+       ]
+      },
+      {
+       "gap": "Service speed",
+       "why": "Owners expect fast response to any alarm",
+       "check": "Service partners in each target metro",
+       "status": "Unknown",
+       "sources": []
+      }
+     ]
+    },
+    "market": {
+     "summary": "Detection is a small line in a very large build-out. The attraction is growth, uptime-driven buyers and recurring service, not a large detector budget.",
+     "drivers": [
+      {
+       "title": "Record construction",
+       "text": "Capacity under construction in CBRE's primary markets reached a record 7,481.1 MW in H1 2026. Private data center construction ran at a reported $96.5B annual rate in September 2026.",
+       "status": "Verified",
+       "sources": [
+        "S185",
+        "S186"
+       ],
+       "note": "The $96.5B figure is a secondary report of Census data (Inferred)."
+      },
+      {
+       "title": "Denser AI racks",
+       "text": "NVIDIA's GB200 NVL72 is a liquid-cooled rack drawing 120 kW. CBRE notes that 100 kW GPU servers can only be cooled by closed-loop liquid cooling.",
+       "status": "Verified",
+       "sources": [
+        "S189",
+        "S185"
+       ],
+       "note": "That heat is still rejected through chiller plants at most sites is the team's reading, not a sourced fact (Inferred)."
+      },
+      {
+       "title": "Refrigerant transition",
+       "text": "ThermGAS's own data center page says newer systems increasingly use R-513A, R-515B, R-1234ze(E) and R-454B, with R-1233zd(E) in large centrifugal chillers.",
+       "status": "Verified",
+       "sources": [
+        "S161"
+       ],
+       "note": "Whether ThermGAS has published detection levels for these gases was not found (Unknown)."
+      }
+     ],
+     "indicators": [
+      {
+       "indicator": "Under construction, 8 primary markets",
+       "figure": "7,481.1 MW in H1 2026, +24.8%",
+       "status": "Verified",
+       "sources": [
+        "S185"
+       ]
+      },
+      {
+       "indicator": "Northern Virginia",
+       "figure": "2,420.2 MW under construction (+16.5%); largest inventory at 4,496.5 MW",
+       "status": "Verified",
+       "sources": [
+        "S185"
+       ]
+      },
+      {
+       "indicator": "U.S. data center construction spending",
+       "figure": "$96.5B seasonally adjusted annual rate, September 2026; +90.3% year on year (publisher's arithmetic)",
+       "status": "Inferred",
+       "sources": [
+        "S186"
+       ]
+      },
+      {
+       "indicator": "Big-four cloud capital spending",
+       "figure": "$720B to $740B guided for 2026, from about $410B in 2025",
+       "status": "Inferred",
+       "sources": [
+        "S187"
+       ]
+      },
+      {
+       "indicator": "U.S. data center electricity use",
+       "figure": "176 TWh, 4.4% of U.S. electricity in 2023 (as cited by the team brief)",
+       "status": "Inferred",
+       "sources": [
+        "S188"
+       ]
+      },
+      {
+       "indicator": "Largest state loads, 2023",
+       "figure": "Virginia 33.9 TWh, Texas 21.8 TWh, Georgia 6.2 TWh (#8 of 44)",
+       "status": "Verified",
+       "sources": [
+        "S160"
+       ]
+      }
+     ],
+     "sizing": {
+      "interactive": true,
+      "status": "Assumption",
+      "title": "How many systems could the current build-out need?",
+      "formula": "Systems = (MW under construction / MW per block) x systems per block",
+      "inputs": [
+       {
+        "name": "MW under construction",
+        "value": 7481.1,
+        "display": "7,481.1 MW",
+        "status": "Verified",
+        "sources": [
+         "S185"
+        ],
+        "note": "CBRE's eight primary markets only"
+       },
+       {
+        "name": "MW per block",
+        "value": 10,
+        "display": "10 MW",
+        "status": "Assumption",
+        "sources": [],
+        "note": "A planning unit, not an industry standard"
+       },
+       {
+        "name": "Systems per block",
+        "value_low": 2,
+        "value_high": 4,
+        "display": "2 to 4",
+        "status": "Assumption",
+        "sources": [],
+        "note": "Team brief; the biggest unknown. A typical ThermGAS chiller-plant layout would replace it."
+       }
+      ],
+      "limitations": [
+       "Counts systems only. No price is public, so no dollar value is shown (ThermGAS prices: Not Publicly Available).",
+       "Covers capacity under construction in eight primary markets, not annual installs or all U.S. sites.",
+       "Leaves out retrofits of existing sites, battery-room monitoring and calibration service.",
+       "Chiller-free designs would lower the count; their share is not known."
+      ]
+     }
+    },
+    "buyers": {
+     "summary": "New builds are won in the specification, not in a sales call to the owner. Existing sites are bought by facility teams, which is closer to how ThermGAS sells today.",
+     "segments": [
+      {
+       "segment": "Facility operations at existing sites",
+       "examples": "Operating data centers (retrofits and replacements)",
+       "decides": "Buy for retrofits and replacements",
+       "reach": "Same channel as cold storage: facility teams and local contractors",
+       "timing": "Now",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Mechanical design engineers (MEP)",
+       "examples": "Firms that design data center cooling plants",
+       "decides": "Write the spec that names the detector brand",
+       "reach": "Spec text, submittal package, technical presentations",
+       "timing": "Now",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Mechanical contractors",
+       "examples": "Regional HVAC contractors in each metro",
+       "decides": "Buy and install against the spec",
+       "reach": "Existing contractor relationships",
+       "timing": "Now",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Colocation owners",
+       "examples": "Equinix, Digital Realty, QTS, Vantage, Aligned",
+       "decides": "Approved-manufacturer lists across many sites",
+       "reach": "Operations teams, then standards",
+       "timing": "Next",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Hyperscale owners",
+       "examples": "Amazon, Microsoft, Google, Meta",
+       "decides": "Global design standards",
+       "reach": "Long cycle through their design engineers",
+       "timing": "Later",
+       "status": "Assumption",
+       "sources": []
+      },
+      {
+       "segment": "Cooling equipment makers",
+       "examples": "Trane, Carrier, Johnson Controls, Daikin, Vertiv, Schneider Electric",
+       "decides": "Whether units ship with built-in sensors",
+       "reach": "Partnership or OEM supply",
+       "timing": "Explore",
+       "status": "Assumption",
+       "sources": []
+      }
+     ]
+    },
+    "competition": {
+     "summary": "One incumbent with the same technology, several crossover suppliers and one structural threat. No public market-share data exists for data center leak detection (Unknown).",
+     "scope_note": "These suppliers are not added to the threat map: its rules score the battery DMC job, which they do not do.",
+     "head_to_head": {
+      "left": "ThermGAS Haloguard IR",
+      "right": "MSA Chillgard 5000",
+      "rows": [
+       {
+        "attr": "Technology",
+        "left": "Photoacoustic infrared",
+        "left_status": "Verified",
+        "left_sources": [
+         "S04"
+        ],
+        "right": "Photoacoustic infrared",
+        "right_status": "Verified",
+        "right_sources": [
+         "S100"
+        ]
+       },
+       {
+        "attr": "Sensitivity",
+        "left": "1 ppm",
+        "left_status": "Verified",
+        "left_sources": [
+         "S04"
+        ],
+        "right": "1 ppm",
+        "right_status": "Verified",
+        "right_sources": [
+         "S100",
+         "S162"
+        ]
+       },
+       {
+        "attr": "Sample points per analyzer",
+        "left": "Up to 24 (with scanners and remote IR modules)",
+        "left_status": "Verified",
+        "left_sources": [
+         "S04",
+         "S172"
+        ],
+        "right": "4, 8 or 16",
+        "right_status": "Verified",
+        "right_sources": [
+         "S100"
+        ]
+       },
+       {
+        "attr": "Gases per analyzer",
+        "left": "Up to 3 at once",
+        "left_status": "Verified",
+        "left_sources": [
+         "S04"
+        ],
+        "right": "Up to 6, field-selectable",
+        "right_status": "Inferred",
+        "right_sources": [
+         "S190"
+        ]
+       },
+       {
+        "attr": "Building-system output",
+        "left": "Alarm relays and analog outputs; a BACnet interface manual exists, native support not confirmed",
+        "left_status": "Inferred",
+        "left_sources": [
+         "S04"
+        ],
+        "right": "BACnet MS/TP and Modbus RTU built in",
+        "right_status": "Verified",
+        "right_sources": [
+         "S100"
+        ]
+       },
+       {
+        "attr": "A2L",
+        "left": "ThermGAS states its systems satisfy ASHRAE 15 and UL 60335-2-40; third-party listing by model not found",
+        "left_status": "Unknown",
+        "left_sources": [
+         "S180"
+        ],
+        "right": "MSA states it supports A2L refrigerants; third-party listing not checked",
+        "right_status": "Unknown",
+        "right_sources": [
+         "S162"
+        ]
+       },
+       {
+        "attr": "Data center marketing",
+        "left": "One industry page",
+        "left_status": "Verified",
+        "left_sources": [
+         "S161"
+        ],
+        "right": "Dedicated blog with three products",
+        "right_status": "Verified",
+        "right_sources": [
+         "S162"
+        ]
+       },
+       {
+        "attr": "Price",
+        "left": "Not Publicly Available",
+        "left_status": "Unknown",
+        "left_sources": [],
+        "right": "No manufacturer list price; reseller listing only (see Battlecard)",
+        "right_status": "Inferred",
+        "right_sources": [
+         "S103"
+        ]
+       }
+      ],
+      "takeaway": "The rivals match on technology and sensitivity. ThermGAS leads on points per analyzer; MSA leads on built-in building-system integration and data center marketing. A BACnet / Modbus gateway could bridge integration short term.",
+      "takeaway_status": "Inferred"
+     },
+     "players": [
+      {
+       "name": "MSA Safety (incl. Bacharach)",
+       "role": "Incumbent",
+       "they_win": [
+        {
+         "text": "BACnet and Modbus built into Chillgard 5000.",
+         "status": "Verified",
+         "sources": [
+          "S100"
+         ]
+        },
+        {
+         "text": "Three products marketed directly to data centers since July 2026, including Chillgard 5000 (1 ppm, supports A2L refrigerants).",
+         "status": "Verified",
+         "sources": [
+          "S162"
+         ]
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Up to 24 points per analyzer against Chillgard's 16-point maximum.",
+         "status": "Verified",
+         "sources": [
+          "S04",
+          "S100"
+         ]
+        },
+        {
+         "text": "Local service from Roswell for Atlanta projects.",
+         "status": "Assumption",
+         "sources": [
+          "S06"
+         ]
+        }
+       ],
+       "watch_out": [
+        {
+         "text": "Same technology and sensitivity: without integration parity, price and service alone may not win the spec.",
+         "status": "Inferred",
+         "sources": [
+          "S100",
+          "S04"
+         ]
+        }
+       ],
+       "company_id": "msa",
+       "product_line": "Chillgard 5000, Bacharach Multi-Zone, MGS-550",
+       "landscape_card": true
+      },
+      {
+       "name": "Honeywell",
+       "role": "Crossover",
+       "they_win": [
+        {
+         "text": "Brand and building-system ecosystem.",
+         "status": "Inferred",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Concentration readings rather than off-gas event alarms in battery rooms.",
+         "status": "Inferred",
+         "sources": [
+          "S37"
+         ]
+        }
+       ],
+       "watch_out": [
+        {
+         "text": "Li-ion Tamer Gen 3 is marked Discontinued on the U.S. product page while its data sheet is current. Status unresolved.",
+         "status": "Inferred",
+         "sources": [
+          "S31",
+          "S37"
+         ]
+        }
+       ],
+       "company_id": "honeywell",
+       "product_line": "Fixed refrigerant and toxic gas detectors; Li-ion Tamer"
+      },
+      {
+       "name": "Danfoss",
+       "role": "Crossover",
+       "they_win": [
+        {
+         "text": "Refrigerant detectors from a supplier to chiller makers (team brief; not yet checked against Danfoss sources).",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Independence from equipment makers; multi-point PAIR.",
+         "status": "Assumption",
+         "sources": []
+        }
+       ],
+       "watch_out": []
+      },
+      {
+       "name": "Sensors built into cooling equipment",
+       "role": "Structural threat",
+       "they_win": [
+        {
+         "text": "Ship inside new DX units and chillers at no extra line item (team brief; not verified by model).",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Room-level machinery-room monitoring that unit sensors do not provide.",
+         "status": "Inferred",
+         "sources": [
+          "S161"
+         ]
+        }
+       ],
+       "watch_out": [
+        {
+         "text": "Owners may see detection as already covered.",
+         "status": "Assumption",
+         "sources": []
+        }
+       ]
+      },
+      {
+       "name": "Low-cost A2L sensor brands",
+       "role": "Price pressure",
+       "they_win": [
+        {
+         "text": "Low price per point through controls contractors (team brief; not verified).",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Selectivity and fewer false alarms from photoacoustic sensing.",
+         "status": "Inferred",
+         "sources": [
+          "S10"
+         ]
+        }
+       ],
+       "watch_out": []
+      },
+      {
+       "name": "Water-leak detection (nVent TraceTek, RLE)",
+       "role": "Partner, not rival",
+       "they_win": [
+        {
+         "text": "Own the leak-detection budget for liquid cooling (team brief; not verified).",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Different job: a possible partner.",
+         "status": "Assumption",
+         "sources": []
+        }
+       ],
+       "watch_out": []
+      }
+     ]
+    },
+    "assets": {
+     "summary": "The pieces of a credible data center story exist; ThermGAS's data center page uses none of them yet.",
+     "items": [
+      {
+       "text": "ThermGAS's installation list names \"AT&T Data Centers\" (under Consumer Products).",
+       "caveat": "The list gives no location, product or scale. Ask before using it as a case study.",
+       "status": "Verified",
+       "sources": [
+        "S07"
+       ]
+      },
+      {
+       "text": "ASHRAE headquarters in Atlanta is on the same list.",
+       "caveat": "Relevant to mechanical engineers; ASHRAE publishes Standard 15.",
+       "status": "Verified",
+       "sources": [
+        "S07"
+       ]
+      },
+      {
+       "text": "Headquarters in Roswell, Georgia, in the Atlanta metro.",
+       "caveat": "Local service is a proposal, not a measured response time.",
+       "status": "Verified",
+       "sources": [
+        "S06"
+       ]
+      },
+      {
+       "text": "A published DMC application note for TracePoint 1000 and Haloguard IR.",
+       "caveat": "Written for battery manufacturing, not for data center battery rooms.",
+       "status": "Verified",
+       "sources": [
+        "S02"
+       ]
+      }
+     ],
+     "improvements": [
+      "Move the AT&T Data Centers reference to the top of the page, once ThermGAS confirms what it covers and that it can be named.",
+      "A product-by-location guide: Haloguard IR for chiller plants, TracePoint 1000 for single points, Haloguard (CMOS) for small DX units, TracePoint for DMC in battery rooms.",
+      "A detection table for the refrigerants the page already names.",
+      "A short code section: ASHRAE 15 machinery rooms and A2L leak mitigation.",
+      "Spec-ready downloads: specification text, submittal sheet, building-system points list.",
+      "The AI and Atlanta story: liquid cooling still relies on chiller plants, and ThermGAS is local to the busiest market."
+     ],
+     "message": "Refrigerant monitoring for data centers, built and supported in Atlanta, where North America's data center build-out is now centered. Up to 24 points per analyzer, and ready for your battery rooms too.",
+     "message_note": "Draft. The team brief also proposed \"trusted in AT&T data centers\"; that needs ThermGAS to confirm the installation and permission to name it."
+    },
+    "geography": {
+     "summary": "Georgia combines ThermGAS's home base with the largest construction pipeline. Virginia is the largest installed base. Texas is large and growing in the west.",
+     "layer": {
+      "kind": "construction",
+      "label": "Under construction",
+      "metric": "Capacity under construction, H1 2026",
+      "unit": "MW",
+      "status": "Verified",
+      "sources": [
+       "S185"
+      ],
+      "note": "CBRE reports by metro market. Only the two metros below were captured; every other state shows Not available.",
+      "rows": [
+       {
+        "state": "GA",
+        "value": 2882,
+        "label": "Atlanta metro: 2,882 MW",
+        "note": "+52.3% year on year; #1 in North America for total construction"
+       },
+       {
+        "state": "VA",
+        "value": 2420.2,
+        "label": "Northern Virginia: 2,420.2 MW",
+        "note": "+16.5%; Largest inventory (4,496.5 MW)"
+       }
+      ]
+     },
+     "columns": [
+      {
+       "key": "build",
+       "label": "Under construction, H1 2026"
+      },
+      {
+       "key": "load",
+       "label": "Data center load, 2023"
+      }
+     ],
+     "priority_states": [
+      {
+       "rank": 1,
+       "state": "GA",
+       "why": "Home market and service reach; largest new-build pipeline; ASHRAE headquarters on the installation list",
+       "status": "Inferred",
+       "sources": [
+        "S185",
+        "S06",
+        "S07"
+       ]
+      },
+      {
+       "rank": 2,
+       "state": "VA",
+       "why": "Largest operating market, so the biggest retrofit and replacement base",
+       "status": "Inferred",
+       "sources": [
+        "S185",
+        "S160"
+       ]
+      },
+      {
+       "rank": 3,
+       "state": "TX",
+       "why": "Second-largest 2023 load; CBRE expects West Texas to become a top-five colocation market by 2028",
+       "status": "Inferred",
+       "sources": [
+        "S160",
+        "S185"
+       ]
+      },
+      {
+       "rank": 4,
+       "state": "AZ",
+       "why": "Phoenix is a CBRE primary market; hot climate suggests heavy mechanical cooling",
+       "status": "Assumption",
+       "sources": [
+        "S160"
+       ]
+      },
+      {
+       "rank": 5,
+       "state": "IL",
+       "why": "Chicago is a CBRE primary market with steady new builds",
+       "status": "Assumption",
+       "sources": [
+        "S160"
+       ]
+      }
+     ],
+     "reading_note": "Two different measures: EPRI 2023 load is a state's installed base; CBRE construction is a metro's pipeline. Georgia ranks #8 on load and its Atlanta metro ranks #1 on construction. Both are true."
+    },
+    "entry": {
+     "plan": [
+      "Win a reference chiller plant in Georgia, starting with existing sites through facility teams.",
+      "Close the product gaps in parallel: low-GWP refrigerant detection levels, A2L listing, BACnet or Modbus.",
+      "Get into specifications: spec text, submittal package, a side-by-side with Chillgard 5000.",
+      "Expand to Virginia and Texas through contractor and service partners.",
+      "Pilot UPS battery-room DMC monitoring with one operator."
+     ],
+     "recommendations": {
+      "entry": "Test, do not launch. Start with existing Georgia sites through facility teams, prove one chiller plant, and only then pursue new-build specifications.",
+      "priorities": [
+       {
+        "level": "P1",
+        "title": "Win one Georgia reference chiller plant",
+        "why": "Home service reach plus the largest pipeline; a retrofit avoids the long specification cycle.",
+        "status": "Assumption"
+       },
+       {
+        "level": "P2",
+        "title": "Close the parity gaps before new builds",
+        "why": "Detection levels for the named low-GWP refrigerants, model-level A2L listing, and BACnet / Modbus (native or gateway).",
+        "status": "Assumption"
+       },
+       {
+        "level": "P3",
+        "title": "Get into specifications, then expand",
+        "why": "Spec text and submittals for MEP engineers; Virginia and Texas through contractor and service partners.",
+        "status": "Assumption"
+       },
+       {
+        "level": "Option",
+        "title": "Scope a UPS battery-room DMC pilot",
+        "why": "Links the data center and battery stories, but DMC in data centers is unvalidated.",
+        "status": "Assumption"
+       }
+      ],
+      "risks": [
+       {
+        "risk": "Liquid cooling and chiller-free designs shrink the machinery-room need",
+        "impact": "Fewer systems per site",
+        "early_warning": "Dry-cooler-only designs in Atlanta projects",
+        "mitigation": "Track designs in the first ten spec reviews",
+        "status": "Inferred",
+        "sources": [
+         "S185"
+        ]
+       },
+       {
+        "risk": "MSA's integration lead decides the specification",
+        "impact": "ThermGAS excluded from new-build specs",
+        "early_warning": "Specs that require native BACnet or Modbus",
+        "mitigation": "Confirm the BACnet path or a gateway before bidding",
+        "status": "Inferred",
+        "sources": [
+         "S100",
+         "S04"
+        ]
+       },
+       {
+        "risk": "A compliance statement is read as a certification",
+        "impact": "Credibility with inspectors and engineers",
+        "early_warning": "Requests for a listing number",
+        "mitigation": "Publish model-level listing status",
+        "status": "Inferred",
+        "sources": [
+         "S180"
+        ]
+       },
+       {
+        "risk": "Built-in equipment sensors make room monitoring look redundant",
+        "impact": "Smaller scope per site",
+        "early_warning": "Owners citing unit sensors",
+        "mitigation": "Lead with the ASHRAE 15 machinery-room requirement",
+        "status": "Assumption",
+        "sources": []
+       },
+       {
+        "risk": "Service coverage outside Georgia",
+        "impact": "Slow response in Virginia and Texas",
+        "early_warning": "Alarm-response terms in bids",
+        "mitigation": "Sign partners before expanding",
+        "status": "Unknown",
+        "sources": []
+       }
+      ]
+     },
+     "plan90": {
+      "note": "A proposal. Owners are suggested roles; gate thresholds are assumptions for management to confirm.",
+      "phases": [
+       {
+        "days": "Days 1-30",
+        "name": "Confirm the product answer",
+        "items": [
+         {
+          "task": "Confirm PAIR calibration and detection levels for R-513A, R-515B, R-1234ze(E), R-454B and R-1233zd(E)",
+          "owner": "Applications engineering"
+         },
+         {
+          "task": "State the A2L listing status of each model",
+          "owner": "Engineering with compliance"
+         },
+         {
+          "task": "Document the building-system path: native BACnet or a gateway",
+          "owner": "Product management"
+         },
+         {
+          "task": "Ask what the AT&T Data Centers installation covers and whether it can be named",
+          "owner": "Business development"
+         }
+        ],
+        "gate": {
+         "name": "Gate 1",
+         "go": "Detection levels confirmed for most of the five gases and an integration path documented.",
+         "stop": "Neither can be confirmed: keep data centers as a watch item."
+        }
+       },
+       {
+        "days": "Days 31-60",
+        "name": "Build the Georgia case",
+        "items": [
+         {
+          "task": "List Atlanta MEP firms and contractors on active data center projects",
+          "owner": "Business development"
+         },
+         {
+          "task": "Draft spec text, a submittal sheet and a building-system points list",
+          "owner": "Applications engineering"
+         },
+         {
+          "task": "Write a Haloguard IR and Chillgard 5000 comparison using verified specs only",
+          "owner": "Marketing"
+         }
+        ],
+        "gate": {
+         "name": "Gate 2",
+         "go": "At least one facility team or contractor agrees to a site walk.",
+         "stop": "No interest after outreach: revisit positioning before spending more."
+        }
+       },
+       {
+        "days": "Days 61-90",
+        "name": "Prove it on one site",
+        "items": [
+         {
+          "task": "Scope a retrofit or pilot at one Georgia chiller plant with agreed success criteria",
+          "owner": "Business development with field engineering"
+         },
+         {
+          "task": "Record readings, alarms and maintenance for the reference file",
+          "owner": "Field engineering"
+         },
+         {
+          "task": "Decide on partner outreach in Virginia and Texas",
+          "owner": "Management"
+         }
+        ],
+        "gate": {
+         "name": "Gate 3",
+         "go": "A pilot site is signed and its success criteria are agreed.",
+         "stop": "No site signed: hold expansion and report back."
+        }
+       }
+      ]
+     },
+     "questions": [
+      "What does the AT&T Data Centers installation cover, and can it be named as a reference?",
+      "Can PAIR be calibrated for R-1234ze(E), R-513A and R-454B, and at what detection level?",
+      "Which ThermGAS models carry a third-party A2L listing?",
+      "How many monitoring points does a typical chiller plant need?",
+      "Would ThermGAS supply sensors to cooling equipment makers?"
+     ]
+    },
+    "checks": [
+     "CBRE figures were read in the report: Atlanta 2,882 MW, Northern Virginia 2,420.2 MW, 7,481.1 MW in total.",
+     "\"Over 80% preleased\" in the team brief refers to Northern Virginia (80.4%), not all primary markets. It is not used here.",
+     "The Census link in the brief returned page not found; the $96.5B figure is shown from a secondary report.",
+     "The ES Magazine link in the brief redirects elsewhere; Chillgard's six-gas figure comes from Facility Executive instead.",
+     "The brief's \"about 8 kW per typical rack\" had no traceable source and was dropped.",
+     "The customer-supplied average price and the dollar sizing in the brief are not shown."
+    ]
+   },
+   {
+    "id": "semiconductors",
+    "label": "Semiconductors",
+    "title": "Semiconductor fabs: fewer sites, many detection points, one technical argument to prove",
+    "lead": "Fabs monitor fluorinated gases continuously and at scale. ThermGAS's case rests on photoacoustic NF3 detection against pyrolyzer-based incumbents, and that case still needs published data.",
+    "brief": "Team brief by the MISM 6414 ThermGAS team, Nov 8, 2026",
+    "verdict": {
+     "headline": "A sharper but harder market than data centers. Enter through the fab's chiller plant, and do not lead with NF3 until ThermGAS publishes the spec and interference data behind it.",
+     "answers": [
+      {
+       "q": "Where first",
+       "a": "Texas, Arizona and Oregon, through a regional rep or distributor; none is near Georgia",
+       "status": "Inferred",
+       "sources": [
+        "S197",
+        "S192"
+       ]
+      },
+      {
+       "q": "What to sell",
+       "a": "Haloguard IR for the facility chiller plant first, then NF3 and C4F6 point monitoring at tools",
+       "status": "Assumption",
+       "sources": [
+        "S04",
+        "S182"
+       ]
+      },
+      {
+       "q": "What must be true",
+       "a": "A published NF3 detection spec and solvent interference data, a first fab reference, and a Modbus output",
+       "status": "Unknown",
+       "sources": [
+        "S182"
+       ]
+      }
+     ]
+    },
+    "readouts": [
+     {
+      "value": "46",
+      "unit": "fabs",
+      "label": "U.S. electronics facilities reporting fluorinated gas use, 2023",
+      "sub": "About 20 parent companies (team analysis of EPA data)",
+      "status": "Inferred",
+      "sources": [
+       "S197"
+      ]
+     },
+     {
+      "value": "100s-1,000s",
+      "unit": "",
+      "label": "Gas detectors in a single fab",
+      "sub": "Riken Keiki, as reported by trade press",
+      "status": "Inferred",
+      "sources": [
+       "S196"
+      ]
+     },
+     {
+      "value": "$52.3B",
+      "unit": "",
+      "label": "Computer, electronics and electrical plant construction, annual rate",
+      "sub": "August 2026, down from $95.4B a year earlier. Broader than fabs.",
+      "status": "Inferred",
+      "sources": [
+       "S191"
+      ]
+     },
+     {
+      "value": "$265B",
+      "unit": "",
+      "label": "TSMC Arizona commitment",
+      "sub": "Fab 21 phase 1 in volume production; more fabs announced",
+      "status": "Inferred",
+      "sources": [
+       "S192"
+      ]
+     }
+    ],
+    "primer": {
+     "summary": "A fab runs hundreds of process steps, many using toxic, flammable or high-global-warming gases piped from gas cabinets to tools. Every cabinet, valve box and tool exhaust is a possible leak point.",
+     "headers": [
+      "Gas family",
+      "Examples",
+      "Used for",
+      "Why it is monitored"
+     ],
+     "rows": [
+      [
+       "Fluorinated cleaning and etch gases",
+       "NF3, C4F6, CF4, C4F8, SF6",
+       "CVD chamber cleaning, plasma etching",
+       "Toxic (NF3), potent greenhouse gases, EPA reporting"
+      ],
+      [
+       "Hydrides",
+       "Silane, phosphine, arsine, diborane",
+       "Deposition and doping",
+       "Highly toxic or pyrophoric; usually tape-based detectors"
+      ],
+      [
+       "Solvents",
+       "IPA, acetone and other cleaning solvents",
+       "Wafer and tool cleaning",
+       "Flammable; also a source of false alarms for other detectors"
+      ],
+      [
+       "Heat transfer fluids",
+       "Perfluorinated and HFE fluids",
+       "Tool temperature control",
+       "Fluorinated; tracked by EPA under Subpart I"
+      ]
+     ],
+     "status": "Inferred",
+     "sources": [],
+     "notes": [
+      {
+       "text": "Photoacoustic infrared fits the first row. Hydrides are dominated by colorimetric tape systems and are not ThermGAS's market.",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "text": "ThermGAS's semiconductor page says its systems can be configured for SF6, NF3, C4F6 and CF4. It names no model.",
+       "status": "Verified",
+       "sources": [
+        "S182"
+       ]
+      }
+     ]
+    },
+    "entry_points": {
+     "summary": "The best fit is NF3 and C4F6 around CVD and etch tools, plus the facility chiller plant, which is ThermGAS's home ground.",
+     "rows": [
+      {
+       "where": "CVD tool areas and NF3 gas delivery",
+       "leak": "NF3",
+       "why": "Daily chamber cleaning uses large volumes; NF3 is toxic",
+       "product": "TracePoint 1000 near each tool",
+       "fit": "Strong",
+       "fit_note": "Only once the NF3 spec is published; the application note cited by the team brief was not found",
+       "status": "Inferred",
+       "sources": [
+        "S182",
+        "S03"
+       ]
+      },
+      {
+       "where": "Etch tool areas",
+       "leak": "C4F6 and other fluorocarbons",
+       "why": "New etch chemistries, high-value tools",
+       "product": "TracePoint 1000 or Haloguard IR",
+       "fit": "Strong",
+       "fit_note": "C4F6 is named on ThermGAS's semiconductor page",
+       "status": "Inferred",
+       "sources": [
+        "S182"
+       ]
+      },
+      {
+       "where": "Gas cabinets and valve manifold boxes",
+       "leak": "NF3, fluorocarbons",
+       "why": "Continuous monitoring of hazardous gases",
+       "product": "Haloguard IR scanning up to 24 points",
+       "fit": "Medium",
+       "fit_note": "Competes with installed multi-point systems",
+       "status": "Inferred",
+       "sources": [
+        "S04"
+       ]
+      },
+      {
+       "where": "Sub-fab chillers and heat transfer loops",
+       "leak": "Fluorinated heat transfer fluids",
+       "why": "Fluid loss is costly and EPA-reported",
+       "product": "PAIR, if calibrated for the fluids in use",
+       "fit": "New",
+       "fit_note": "Calibration unconfirmed",
+       "status": "Unknown",
+       "sources": []
+      },
+      {
+       "where": "Facility chiller plants",
+       "leak": "HFC and HFO refrigerants",
+       "why": "Same machinery-room requirement as any building",
+       "product": "Haloguard IR",
+       "fit": "Strong",
+       "fit_note": "Core business; a low-risk first sale to the facilities team",
+       "status": "Inferred",
+       "sources": [
+        "S04"
+       ]
+      }
+     ]
+    },
+    "reuse": {
+     "summary": "Yes for the chiller plant, and probably for NF3 and C4F6, but fabs set a high bar for proof.",
+     "transfers": [
+      {
+       "text": "Haloguard IR's multi-point scanning (up to 24 points) suits clusters of tools or gas cabinets.",
+       "status": "Verified",
+       "sources": [
+        "S04"
+       ]
+      },
+      {
+       "text": "TracePoint 1000 is a single-point monitor that can sit close to a tool.",
+       "status": "Verified",
+       "sources": [
+        "S03"
+       ]
+      },
+      {
+       "text": "No consumable electrochemical cell lowers maintenance where every sensor swap needs cleanroom access.",
+       "status": "Inferred",
+       "sources": [
+        "S10"
+       ]
+      }
+     ],
+     "does_not": "",
+     "gaps": [
+      {
+       "gap": "Published NF3 spec and interference data",
+       "why": "ThermGAS's claim is fewer solvent false alarms than pyrolyzers; fabs will want it proven",
+       "check": "The NF3 and C4F6 application note cited by the team brief was not found on thermgas.com",
+       "status": "Unknown",
+       "sources": [
+        "S182"
+       ]
+      },
+      {
+       "gap": "Reference site",
+       "why": "Fabs buy from vendors already qualified at other fabs",
+       "check": "Any semiconductor customer, even a small or R&D fab",
+       "status": "Unknown",
+       "sources": []
+      },
+      {
+       "gap": "Digital integration",
+       "why": "Fab monitoring systems collect data centrally",
+       "check": "Haloguard IR: relays and analog outputs; a BACnet interface manual exists; Modbus not confirmed",
+       "status": "Inferred",
+       "sources": [
+        "S04"
+       ]
+      },
+      {
+       "gap": "Heat transfer fluid coverage",
+       "why": "Fluids such as HT-200, FC-3283 and HFE-7500 are EPA-reported",
+       "check": "Whether PAIR can be calibrated for them",
+       "status": "Unknown",
+       "sources": [
+        "S08"
+       ]
+      },
+      {
+       "gap": "Response time near tools",
+       "why": "Point-of-use monitoring needs fast alarms",
+       "check": "Per-point response for TracePoint versus multi-point scanning",
+       "status": "Unknown",
+       "sources": []
+      }
+     ]
+    },
+    "market": {
+     "summary": "A concentrated customer base with many detection points per site. Shell construction is falling, but the fabs now enter tool install and ramp, when gas detection is bought.",
+     "drivers": [],
+     "indicators": [
+      {
+       "indicator": "U.S. fabs reporting fluorinated gas use",
+       "figure": "46 facilities in 2023 (65 since 2011), about 20 parent companies",
+       "status": "Inferred",
+       "sources": [
+        "S197"
+       ]
+      },
+      {
+       "indicator": "Fab size mix, 2023",
+       "figure": "53 fabs: 28 run 200 mm wafers, 15 run 150 mm, 11 run 300 mm. The brief does not explain why this is 53 when 46 facilities reported.",
+       "status": "Inferred",
+       "sources": [
+        "S197"
+       ]
+      },
+      {
+       "indicator": "Computer, electronics and electrical plant construction",
+       "figure": "$52.3B annual rate in August 2026, down from $95.4B a year earlier",
+       "status": "Inferred",
+       "sources": [
+        "S191"
+       ]
+      },
+      {
+       "indicator": "TSMC Arizona",
+       "figure": "$265B commitment; Fab 21 phase 1 in volume production, phase 2 built",
+       "status": "Inferred",
+       "sources": [
+        "S192"
+       ]
+      },
+      {
+       "indicator": "Detectors per fab",
+       "figure": "Hundreds to thousands (Riken Keiki)",
+       "status": "Inferred",
+       "sources": [
+        "S196"
+       ]
+      }
+     ],
+     "sizing": {
+      "status": "Unknown",
+      "title": "Sizing structure: inputs still missing",
+      "formula": "Points = fabs x NF3 and fluorocarbon points per fab (+ chiller plant systems)",
+      "inputs": [
+       {
+        "name": "Fabs",
+        "display": "46 reporting facilities (2023)",
+        "status": "Inferred",
+        "sources": [
+         "S197"
+        ],
+        "note": "Team analysis of EPA data"
+       },
+       {
+        "name": "NF3 and fluorocarbon points per fab",
+        "display": "Unknown",
+        "status": "Unknown",
+        "sources": [],
+        "note": "A subset of the hundreds to thousands of detectors; must come from ThermGAS or a fab engineer"
+       },
+       {
+        "name": "Price per point",
+        "display": "Not Publicly Available",
+        "status": "Unknown",
+        "sources": [],
+        "note": "No TracePoint 1000 price is public"
+       }
+      ],
+      "limitations": [
+       "No count or dollar value is computed because the points-per-fab input is unknown.",
+       "Mid-size 150 mm and 200 mm fabs are the realistic first targets; megafabs have longer qualification cycles."
+      ]
+     }
+    },
+    "buyers": {
+     "summary": "Fabs buy gas detection through a few specialists, so ThermGAS has to be qualified at the fab level, not just quoted by a contractor.",
+     "segments": [
+      {
+       "segment": "Fab EHS and facilities teams",
+       "examples": "Gas and chemical safety engineers at each fab",
+       "decides": "Specify and maintain gas monitoring",
+       "reach": "Technical seminars, interference data, pilot units",
+       "timing": "Now",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Mid-size fabs (150 mm and 200 mm)",
+       "examples": "Older monitoring systems due for replacement",
+       "decides": "Retrofits with shorter qualification",
+       "reach": "Facilities team via the chiller plant",
+       "timing": "Now",
+       "status": "Assumption",
+       "sources": [
+        "S197"
+       ]
+      },
+      {
+       "segment": "Gas system integrators",
+       "examples": "Firms that build gas cabinets and valve boxes",
+       "decides": "Bundle detectors into gas delivery packages",
+       "reach": "OEM or reference-design partnerships",
+       "timing": "Next",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Construction and design firms",
+       "examples": "Engineering firms on new fab projects",
+       "decides": "Write the gas detection specification",
+       "reach": "Spec text and submittals",
+       "timing": "Next",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Fab owners",
+       "examples": "TSMC, Intel, Samsung, Micron, Texas Instruments, GlobalFoundries",
+       "decides": "Approved vendor lists, global standards",
+       "reach": "Long qualification; start with one site",
+       "timing": "Later",
+       "status": "Inferred",
+       "sources": []
+      }
+     ]
+    },
+    "competition": {
+     "summary": "Two incumbents own fab gas monitoring and, per the team brief, both detect NF3 with pyrolyzers. No public market-share data exists (Unknown).",
+     "scope_note": "Honeywell and Riken Keiki also appear in the battery research with different product lines. Their battery threat levels are not changed here.",
+     "players": [
+      {
+       "name": "Honeywell",
+       "role": "Incumbent",
+       "company_id": "honeywell",
+       "product_line": "Midas gas detector with pyrolyzer; Vertex Edge",
+       "landscape_card": true,
+       "they_win": [
+        {
+         "text": "Vertex Edge: up to nine Chemcassette analyzers with eight points each, for virtually every gas used in fabs, down to ppb.",
+         "status": "Verified",
+         "sources": [
+          "S194"
+         ]
+        },
+        {
+         "text": "A Midas gas detector with pyrolyzer is sold in the U.S.; its gas list was not visible on the page read.",
+         "status": "Verified",
+         "sources": [
+          "S193"
+         ]
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "NF3 without a pyrolyzer: fewer solvent false alarms and no electrolyte to replace, if ThermGAS publishes data to prove it.",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "watch_out": [
+        {
+         "text": "Covers almost every fab gas, so a fab can standardise on one supplier.",
+         "status": "Inferred",
+         "sources": [
+          "S194"
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Riken Keiki (RKI in the U.S.)",
+       "role": "Incumbent",
+       "company_id": "riken",
+       "product_line": "GD-70D detector with PLU-70 pyrolyzer",
+       "landscape_card": true,
+       "they_win": [
+        {
+         "text": "GD-70D detects toxic gases used in semiconductor manufacturing.",
+         "status": "Inferred",
+         "sources": [
+          "S196",
+          "S195"
+         ]
+        },
+        {
+         "text": "Strong with Asian-owned fabs (team brief; not verified).",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "The same pyrolyzer argument, once ThermGAS publishes NF3 data.",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "watch_out": [
+        {
+         "text": "RKI has U.S. offices and service; ThermGAS has no presence near Texas, Arizona or Oregon.",
+         "status": "Inferred",
+         "sources": [
+          "S06"
+         ]
+        }
+       ]
+      },
+      {
+       "name": "MSA (Chillgard 5000, Bacharach)",
+       "role": "Chiller plant only",
+       "company_id": "msa",
+       "product_line": "Refrigerant monitors",
+       "they_win": [
+        {
+         "text": "Strong in facility chiller plants.",
+         "status": "Inferred",
+         "sources": [
+          "S162"
+         ]
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Competes with ThermGAS only in the chiller plant row.",
+         "status": "Inferred",
+         "sources": []
+        }
+       ],
+       "watch_out": []
+      }
+     ]
+    },
+    "assets": {
+     "summary": "ThermGAS's semiconductor page names the right gases but no model, no detection level and no reference.",
+     "items": [
+      {
+       "text": "ThermGAS's semiconductor page lists SF6, NF3, C4F6 and CF4 as configurable gases.",
+       "caveat": "No model, detection level or comparison with pyrolyzers is on the page.",
+       "status": "Verified",
+       "sources": [
+        "S182"
+       ]
+      },
+      {
+       "text": "The team brief cites an NF3 and C4F6 application note with 0.5 ppm NF3 sensitivity.",
+       "caveat": "Not found on thermgas.com. Ask ThermGAS or the team for the document before using it.",
+       "status": "Unknown",
+       "sources": []
+      },
+      {
+       "text": "TracePoint 1000 (single point) and Haloguard IR (up to 24 points) product pages.",
+       "caveat": "Point-of-use at tools; scanning across gas cabinets.",
+       "status": "Verified",
+       "sources": [
+        "S03",
+        "S04"
+       ]
+      },
+      {
+       "text": "Lockheed Martin and Siemens are on ThermGAS's installation list.",
+       "caveat": "The list gives no site, product or scale.",
+       "status": "Verified",
+       "sources": [
+        "S07"
+       ]
+      }
+     ],
+     "improvements": [
+      "A \"PAIR vs pyrolyzer\" comparison backed by interference test data.",
+      "A gas coverage table for NF3, C4F6, CF4, C4F8, SF6 and the heat transfer fluids fabs report to EPA, with detection levels.",
+      "A first semiconductor reference, even a university cleanroom or a small fab.",
+      "A digital integration statement (Modbus) for fab monitoring systems."
+     ],
+     "message": "NF3 and fluorocarbon monitoring without a pyrolyzer: selective photoacoustic detection that ignores cleaning solvents and has no electrolyte to replace.",
+     "message_note": "Draft. The team brief's version adds \"reads 0.5 ppm NF3 at the tool\"; keep that out until the spec is published."
+    },
+    "geography": {
+     "summary": "Texas, Arizona and Oregon hold most existing fabs and the biggest new builds. None is close to Georgia.",
+     "layer": {
+      "kind": "count",
+      "label": "Semiconductor fabs",
+      "metric": "Fabs reporting fluorinated gas use to EPA, 2023",
+      "unit": "fabs",
+      "status": "Inferred",
+      "sources": [
+       "S197"
+      ],
+      "note": "Team analysis of EPA Subpart I. Only the five priority states were given; every other state shows Not available.",
+      "rows": [
+       {
+        "state": "TX",
+        "value": 10,
+        "label": "10 reporting fabs"
+       },
+       {
+        "state": "OR",
+        "value": 6,
+        "label": "6 reporting fabs"
+       },
+       {
+        "state": "AZ",
+        "value": 3,
+        "label": "3 reporting fabs"
+       },
+       {
+        "state": "NY",
+        "value": 3,
+        "label": "3 reporting fabs"
+       },
+       {
+        "state": "ID",
+        "value": 1,
+        "label": "1 reporting fab"
+       }
+      ]
+     },
+     "columns": [
+      {
+       "key": "layer",
+       "label": "Reporting fabs, 2023"
+      },
+      {
+       "key": "detail",
+       "label": "Major activity"
+      }
+     ],
+     "priority_states": [
+      {
+       "rank": 1,
+       "state": "TX",
+       "detail": "Samsung Taylor; Texas Instruments",
+       "why": "Most reporting fabs plus a new leading-edge site",
+       "status": "Inferred",
+       "sources": [
+        "S197",
+        "S192"
+       ]
+      },
+      {
+       "rank": 2,
+       "state": "AZ",
+       "detail": "TSMC Fab 21 phases; Intel Chandler",
+       "why": "Largest new-build cluster in the U.S.",
+       "status": "Inferred",
+       "sources": [
+        "S192"
+       ]
+      },
+      {
+       "rank": 3,
+       "state": "OR",
+       "detail": "Intel Hillsboro; several mid-size fabs",
+       "why": "Dense base of existing fabs to retrofit",
+       "status": "Inferred",
+       "sources": [
+        "S192"
+       ]
+      },
+      {
+       "rank": 4,
+       "state": "NY",
+       "detail": "Micron Clay megafab (broke ground January 2026); GlobalFoundries Malta",
+       "why": "Long build, early specification window",
+       "status": "Inferred",
+       "sources": [
+        "S192"
+       ]
+      },
+      {
+       "rank": 5,
+       "state": "ID",
+       "detail": "Micron Boise",
+       "why": "Ramp timing fits the next two years (team brief)",
+       "status": "Assumption",
+       "sources": []
+      }
+     ],
+     "reading_note": "Counts are reporting facilities, not fab size or detector demand. They are not comparable with battery plant counts or data center load."
+    },
+    "entry": {
+     "plan": [
+      "Win one fab facility chiller plant with Haloguard IR to get inside the fab's vendor system.",
+      "Publish NF3 interference test data against common fab solvents and humidity.",
+      "Pilot TracePoint 1000 on NF3 at one mid-size fab alongside its existing pyrolyzer detector.",
+      "Add Modbus output and confirm calibration for C4F6 and the main heat transfer fluids.",
+      "Sign a regional partner in Texas, Arizona or Oregon before scaling."
+     ],
+     "questions": [
+      "Does the NF3 and C4F6 application note exist, and can it be published?",
+      "Does ThermGAS have any semiconductor customers, including R&D or university cleanrooms?",
+      "How many NF3 and fluorocarbon points does a typical fab need?",
+      "Can PAIR be calibrated for HT-200, FC-3283 and HFE-7500?",
+      "Would ThermGAS partner with gas cabinet integrators?"
+     ]
+    },
+    "checks": [
+     "The NF3 and C4F6 application note cited by the team brief was not found on thermgas.com or by its site search.",
+     "The brief gives 46 reporting facilities and a 53-fab size mix for the same year; the difference is not explained.",
+     "The $52.3B figure covers computer, electronics and electrical plants, not only fabs (AIStockWire, from Census data).",
+     "Honeywell's Midas pyrolyzer page shows U.S. availability but no gas list; the gases named by the brief are not verified.",
+     "The RKI GD-70D data sheet is a PDF and was not opened."
+    ]
+   },
+   {
+    "id": "pharma",
+    "label": "Pharma",
+    "title": "Pharmaceutical plants: a building wave that needs refrigerant and oxygen monitoring ThermGAS already makes",
+    "lead": "Every new plant has chillers, cold rooms and labs. The question is whether ThermGAS can meet pharma's validation and documentation bar.",
+    "brief": "Team brief by the MISM 6414 ThermGAS team, Nov 8, 2026",
+    "verdict": {
+     "headline": "The broadest near-term fit of the three. Offer refrigerant and oxygen monitoring together for new Southeast plants, and build the validation package first.",
+     "answers": [
+      {
+       "q": "Where first",
+       "a": "North Carolina, Virginia and Alabama, within service reach of Georgia",
+       "status": "Assumption",
+       "sources": [
+        "S200",
+        "S201",
+        "S198"
+       ]
+      },
+      {
+       "q": "What to sell",
+       "a": "Haloguard IR for chillers and cold rooms plus Oxyguard for liquid nitrogen rooms, as one utilities-and-labs offer",
+       "status": "Assumption",
+       "sources": [
+        "S04",
+        "S175"
+       ]
+      },
+      {
+       "q": "What must be true",
+       "a": "A validation documentation kit (IQ/OQ, calibration records), a pharma reference and audit-ready data logging",
+       "status": "Unknown",
+       "sources": []
+      }
+     ]
+    },
+    "readouts": [
+     {
+      "value": ">$500B",
+      "unit": "",
+      "label": "Pledged U.S. pharma manufacturing investment",
+      "sub": "By mid-2026, up from about $316B for 10 companies in July 2025",
+      "status": "Inferred",
+      "sources": [
+       "S198"
+      ]
+     },
+     {
+      "value": "~4",
+      "unit": "years",
+      "label": "To design, build and qualify a new plant",
+      "sub": "Most new sites are being specified now",
+      "status": "Inferred",
+      "sources": [
+       "S198"
+      ]
+     },
+     {
+      "value": "~5,000",
+      "unit": "",
+      "label": "Facilities with a pharmaceutical NAICS code in EPA's register",
+      "sub": "All statuses (team analysis)",
+      "status": "Inferred",
+      "sources": [
+       "S207"
+      ]
+     },
+     {
+      "value": "$6.5B",
+      "unit": "",
+      "label": "Eli Lilly Houston API plant",
+      "sub": "Ground broken in 2026; construction to finish in 2027",
+      "status": "Inferred",
+      "sources": [
+       "S198",
+       "S199"
+      ]
+     }
+    ],
+    "primer": {
+     "summary": "A plant makes either the active ingredient (API) or the finished drug. Each step depends on tight temperature control and controlled environments.",
+     "headers": [
+      "Area",
+      "What happens",
+      "Gas hazards relevant to ThermGAS"
+     ],
+     "rows": [
+      [
+       "API synthesis",
+       "Chemical reactions in solvents, including peptide synthesis for GLP-1 drugs",
+       "Solvent vapors such as methanol, dichloromethane, acetonitrile, toluene"
+      ],
+      [
+       "Biologics production",
+       "Cell culture in bioreactors",
+       "CO2 and nitrogen use; refrigerated storage"
+      ],
+      [
+       "QC labs and biorepositories",
+       "Testing and sample storage in liquid nitrogen freezers",
+       "Oxygen depletion from nitrogen leaks"
+      ],
+      [
+       "Cold storage and cold chain",
+       "Materials and drugs held at 2 to 8 C or frozen",
+       "Refrigerant leaks in cold rooms and chillers"
+      ],
+      [
+       "Utilities",
+       "Central chiller plants and process cooling",
+       "Refrigerant leaks in machinery rooms"
+      ],
+      [
+       "Sterilization (some sites)",
+       "Ethylene oxide sterilization",
+       "Ethylene oxide, a carcinogen"
+      ]
+     ],
+     "status": "Inferred",
+     "sources": [],
+     "notes": [
+      {
+       "text": "ThermGAS's Medical & Laboratory page exists but names no model.",
+       "status": "Verified",
+       "sources": [
+        "S183"
+       ]
+      }
+     ]
+    },
+    "entry_points": {
+     "summary": "Start with the refrigeration side of the plant, then oxygen depletion in labs: both are existing ThermGAS business and needed at every site.",
+     "rows": [
+      {
+       "where": "Central chiller plant and process chillers",
+       "leak": "HFC and HFO refrigerants",
+       "why": "ASHRAE 15 machinery-room detection; process cooling is critical to batch quality",
+       "product": "Haloguard IR (multi-point)",
+       "fit": "Strong",
+       "fit_note": "Core business",
+       "status": "Inferred",
+       "sources": [
+        "S04"
+       ]
+      },
+      {
+       "where": "Cold rooms and warehouse cold chain",
+       "leak": "Refrigerants",
+       "why": "Product loss and regulatory deviations if temperature fails",
+       "product": "Haloguard IR, Haloguard (CMOS)",
+       "fit": "Strong",
+       "fit_note": "Same as cold storage",
+       "status": "Inferred",
+       "sources": [
+        "S04",
+        "S173"
+       ]
+      },
+      {
+       "where": "Liquid nitrogen rooms, QC labs, biorepositories",
+       "leak": "Nitrogen displacing oxygen",
+       "why": "NIH's own protocol requires oxygen monitoring in freezer rooms; many labs follow similar practice",
+       "product": "Oxyguard",
+       "fit": "Strong",
+       "fit_note": "Product exists today",
+       "status": "Inferred",
+       "sources": [
+        "S175",
+        "S202"
+       ]
+      },
+      {
+       "where": "Solvent areas in API synthesis",
+       "leak": "Methanol, dichloromethane, acetonitrile, toluene, IPA",
+       "why": "Flammability and worker exposure",
+       "product": "Haloguard IR or TracePoint 1000 configured for the solvent",
+       "fit": "Medium",
+       "fit_note": "On the Master Gas List per the team brief; needs positioning",
+       "status": "Inferred",
+       "sources": [
+        "S08"
+       ]
+      },
+      {
+       "where": "Ethylene oxide sterilization",
+       "leak": "Ethylene oxide",
+       "why": "OSHA exposure limits; EPA sterilizer rules",
+       "product": "PAIR (ethylene oxide on the Master Gas List per the team brief)",
+       "fit": "Niche",
+       "fit_note": "Specialists dominate and federal rules are being relaxed",
+       "status": "Inferred",
+       "sources": [
+        "S203",
+        "S204"
+       ]
+      }
+     ]
+    },
+    "reuse": {
+     "summary": "Yes, with less adaptation than the other two markets: refrigerants, oxygen depletion and common solvents.",
+     "transfers": [
+      {
+       "text": "Haloguard IR for chiller plants and cold rooms, as in cold storage.",
+       "status": "Inferred",
+       "sources": [
+        "S04"
+       ]
+      },
+      {
+       "text": "Oxyguard: electrochemical oxygen monitor, alarms at 19.5% and 16.0% O2, 18-month sensor warranty (ThermGAS page).",
+       "status": "Verified",
+       "sources": [
+        "S175"
+       ]
+      },
+      {
+       "text": "A third-party directory listing describes Oxyguard's galvanic sensor as lasting 5+ years at 20 C.",
+       "status": "Inferred",
+       "sources": [
+        "S206"
+       ]
+      }
+     ],
+     "does_not": "",
+     "gaps": [
+      {
+       "gap": "Validation documentation",
+       "why": "Plants qualify equipment (IQ/OQ) and keep calibration records",
+       "check": "A validation and calibration package per product",
+       "status": "Unknown",
+       "sources": []
+      },
+      {
+       "gap": "Pharma reference",
+       "why": "Buyers want proof from another regulated site",
+       "check": "Any pharma or biotech customer",
+       "status": "Unknown",
+       "sources": []
+      },
+      {
+       "gap": "Data integrity",
+       "why": "Alarm and calibration records must be retrievable for audits",
+       "check": "Data logging and export options",
+       "status": "Unknown",
+       "sources": []
+      },
+      {
+       "gap": "Building-system integration",
+       "why": "Plants monitor utilities centrally",
+       "check": "Haloguard IR: relays and analog outputs; a BACnet interface manual exists, native support not confirmed",
+       "status": "Inferred",
+       "sources": [
+        "S04"
+       ]
+      }
+     ]
+    },
+    "market": {
+     "summary": "A once-in-a-generation build cycle concentrated in the next four years, with many plants close to ThermGAS's home region.",
+     "drivers": [],
+     "indicators": [
+      {
+       "indicator": "Pledged U.S. pharma manufacturing investment",
+       "figure": "More than $500B by mid-2026, up from about $316B (10 companies) in July 2025",
+       "status": "Inferred",
+       "sources": [
+        "S198"
+       ]
+      },
+      {
+       "indicator": "Largest pledges",
+       "figure": "Johnson & Johnson $55B; AstraZeneca $50B; Eli Lilly at least $27B for four new plants",
+       "status": "Inferred",
+       "sources": [
+        "S198"
+       ]
+      },
+      {
+       "indicator": "Build time for a new plant",
+       "figure": "About four years to design, build and qualify",
+       "status": "Inferred",
+       "sources": [
+        "S198"
+       ]
+      },
+      {
+       "indicator": "Existing facilities",
+       "figure": "About 5,000 with a pharmaceutical NAICS code (all statuses)",
+       "status": "Inferred",
+       "sources": [
+        "S207"
+       ]
+      },
+      {
+       "indicator": "Ethylene oxide reporting",
+       "figure": "153 facilities reported ethylene oxide to TRI in 2024 (all industries)",
+       "status": "Inferred",
+       "sources": [
+        "S207"
+       ]
+      }
+     ],
+     "sizing": {
+      "status": "Unknown",
+      "title": "Sizing structure: inputs still missing",
+      "formula": "Systems = plants x (chiller and cold-room systems + oxygen monitors + solvent points)",
+      "inputs": [
+       {
+        "name": "Plants",
+        "display": "About 5,000 existing facilities plus announced new plants",
+        "status": "Inferred",
+        "sources": [
+         "S207",
+         "S198"
+        ],
+        "note": "Facility count includes all statuses"
+       },
+       {
+        "name": "Systems per plant",
+        "display": "Unknown",
+        "status": "Unknown",
+        "sources": [],
+        "note": "A typical plant layout from ThermGAS or a facilities engineer would close the gap"
+       },
+       {
+        "name": "Oxyguard and system prices",
+        "display": "Not Publicly Available",
+        "status": "Unknown",
+        "sources": [],
+        "note": ""
+       }
+      ],
+      "limitations": [
+       "No count or dollar value is computed because systems per plant are unknown."
+      ]
+     }
+    },
+    "buyers": {
+     "summary": "Pharma buys through engineering firms during design and through facilities and EHS teams afterward, with validation as the gate.",
+     "segments": [
+      {
+       "segment": "Engineering and construction firms",
+       "examples": "Firms designing pharma plants",
+       "decides": "Write the specification during design",
+       "reach": "Spec text, submittals, validation documents",
+       "timing": "Now",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Universities and research hospitals",
+       "examples": "Academic medical centers and their labs",
+       "decides": "Buy oxygen and refrigerant monitoring for labs",
+       "reach": "An existing ThermGAS channel",
+       "timing": "Now",
+       "status": "Inferred",
+       "sources": [
+        "S07"
+       ]
+      },
+      {
+       "segment": "Drugmakers building new plants",
+       "examples": "Eli Lilly, Johnson & Johnson, AstraZeneca, Merck, Amgen, Novartis",
+       "decides": "Site standards and approved vendors",
+       "reach": "Facilities and EHS teams at each site",
+       "timing": "Next",
+       "status": "Inferred",
+       "sources": []
+      },
+      {
+       "segment": "Contract manufacturers",
+       "examples": "Large CDMOs with many client products",
+       "decides": "Buy for several sites at once",
+       "reach": "Corporate EHS standards",
+       "timing": "Later",
+       "status": "Inferred",
+       "sources": []
+      }
+     ]
+    },
+    "competition": {
+     "summary": "No incumbent owns pharma gas detection; each hazard has its own specialist, which favors a supplier covering several hazards in one plant. No public market-share data exists (Unknown).",
+     "scope_note": "MSA and Honeywell also appear in the battery research. Draeger was excluded from the battery research for lack of DMC evidence; that exclusion is unchanged.",
+     "players": [
+      {
+       "name": "ChemDAQ",
+       "role": "Sterilant specialist",
+       "product_line": "Steri-Trac ethylene oxide, hydrogen peroxide and peracetic acid monitors",
+       "landscape_card": true,
+       "they_win": [
+        {
+         "text": "Specialist in sterilant gas monitoring for hospitals, device sterilizers and pharma.",
+         "status": "Inferred",
+         "sources": [
+          "S205"
+         ]
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Not worth attacking head-on; ThermGAS covers the refrigerant and oxygen needs ChemDAQ does not.",
+         "status": "Assumption",
+         "sources": []
+        }
+       ],
+       "watch_out": [
+        {
+         "text": "The distributor page cited by the brief was blocked during this check; product details are unverified.",
+         "status": "Unknown",
+         "sources": [
+          "S205"
+         ]
+        }
+       ]
+      },
+      {
+       "name": "PureAire",
+       "role": "Oxygen specialist",
+       "product_line": "Oxygen depletion monitors for liquid nitrogen and labs",
+       "landscape_card": true,
+       "they_win": [
+        {
+         "text": "A focused oxygen specialist with strong lab marketing (team brief; no source link given).",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Oxyguard plus refrigerant monitoring from one supplier.",
+         "status": "Assumption",
+         "sources": [
+          "S175"
+         ]
+        }
+       ],
+       "watch_out": [
+        {
+         "text": "Oxyguard is a single-point monitor; a multi-point oxygen option is not confirmed.",
+         "status": "Unknown",
+         "sources": [
+          "S175"
+         ]
+        }
+       ]
+      },
+      {
+       "name": "MSA (incl. Bacharach)",
+       "role": "Chiller plant",
+       "company_id": "msa",
+       "product_line": "Refrigerant monitors; broad fixed gas detection",
+       "they_win": [
+        {
+         "text": "Scale and brand in refrigerant monitoring.",
+         "status": "Inferred",
+         "sources": [
+          "S162"
+         ]
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "The same chiller-plant contest as in data centers, with local service in the Southeast.",
+         "status": "Assumption",
+         "sources": [
+          "S06"
+         ]
+        }
+       ],
+       "watch_out": []
+      },
+      {
+       "name": "Honeywell, Draeger",
+       "role": "Broad safety programs",
+       "company_id": "honeywell",
+       "product_line": "Fixed toxic and flammable gas detection",
+       "they_win": [
+        {
+         "text": "Large plant-wide safety programs (team brief; not verified).",
+         "status": "Unknown",
+         "sources": []
+        }
+       ],
+       "thermgas_can_win": [
+        {
+         "text": "Specialist focus on refrigerant and oxygen.",
+         "status": "Assumption",
+         "sources": []
+        }
+       ],
+       "watch_out": []
+      }
+     ]
+    },
+    "assets": {
+     "summary": "ThermGAS already sells into labs and has an oxygen monitor most refrigerant-detection competitors do not offer.",
+     "items": [
+      {
+       "text": "Oxyguard oxygen depletion monitor.",
+       "caveat": "Single point; alarms at 19.5% and 16.0% O2.",
+       "status": "Verified",
+       "sources": [
+        "S175"
+       ]
+      },
+      {
+       "text": "Emory, Medical College of Georgia and Oregon Health & Science University are on ThermGAS's installation list.",
+       "caveat": "The list gives no product or scale.",
+       "status": "Verified",
+       "sources": [
+        "S07"
+       ]
+      },
+      {
+       "text": "Haloguard IR for chiller plants and cold rooms.",
+       "caveat": "Process cooling and cold chain in every plant.",
+       "status": "Verified",
+       "sources": [
+        "S04"
+       ]
+      },
+      {
+       "text": "Headquarters in Roswell, Georgia.",
+       "caveat": "Fast service for North Carolina, Virginia and Alabama is a proposal, not measured.",
+       "status": "Verified",
+       "sources": [
+        "S06"
+       ]
+      }
+     ],
+     "improvements": [
+      "A pharma manufacturing section separate from hospitals and labs: chiller plants, cold rooms, liquid nitrogen and solvents.",
+      "Oxygen monitoring guidance, citing NIH's protocol as a benchmark, with Oxyguard as the answer.",
+      "A validation documentation package (IQ/OQ support, calibration records).",
+      "Lab references pulled forward from the installation list: Emory, Medical College of Georgia, OHSU."
+     ],
+     "message": "Refrigerant, oxygen and solvent monitoring for the new generation of U.S. pharma plants, supported from Atlanta, close to the Southeast's new manufacturing sites.",
+     "message_note": "Draft. Naming Emory or OHSU as references needs their and ThermGAS's permission."
+    },
+    "geography": {
+     "summary": "Start in the Southeast, where new plants and ThermGAS's service reach overlap.",
+     "layer": {
+      "kind": "priority",
+      "label": "Pharma priority",
+      "metric": "Team priority ranking (1 = first)",
+      "unit": "",
+      "status": "Assumption",
+      "sources": [],
+      "note": "A ranking, not a measure of size. Project details come from public announcements; no plant counts are shown.",
+      "rows": [
+       {
+        "state": "NC",
+        "value": 1,
+        "label": "Priority 1 of 5"
+       },
+       {
+        "state": "VA",
+        "value": 2,
+        "label": "Priority 2 of 5"
+       },
+       {
+        "state": "AL",
+        "value": 3,
+        "label": "Priority 3 of 5"
+       },
+       {
+        "state": "IN",
+        "value": 4,
+        "label": "Priority 4 of 5"
+       },
+       {
+        "state": "TX",
+        "value": 5,
+        "label": "Priority 5 of 5"
+       }
+      ]
+     },
+     "columns": [
+      {
+       "key": "detail",
+       "label": "New or expanding plants (public announcements)"
+      }
+     ],
+     "priority_states": [
+      {
+       "rank": 1,
+       "state": "NC",
+       "detail": "Johnson & Johnson plants in Wilson and at Fujifilm's Holly Springs site",
+       "why": "Largest Southeast pharma cluster; within reach of Atlanta",
+       "status": "Inferred",
+       "sources": [
+        "S200"
+       ]
+      },
+      {
+       "rank": 2,
+       "state": "VA",
+       "detail": "AstraZeneca new facility; Merck $3B facility",
+       "why": "Two major greenfield sites",
+       "status": "Inferred",
+       "sources": [
+        "S201",
+        "S198"
+       ]
+      },
+      {
+       "rank": 3,
+       "state": "AL",
+       "detail": "Eli Lilly $6B API facility in Huntsville",
+       "why": "Close to Georgia; API synthesis means solvents and chillers",
+       "status": "Inferred",
+       "sources": [
+        "S201"
+       ]
+      },
+      {
+       "rank": 4,
+       "state": "IN",
+       "detail": "Eli Lilly $4.5B at two Lebanon sites",
+       "why": "Lilly's home base and several plants",
+       "status": "Inferred",
+       "sources": [
+        "S199"
+       ]
+      },
+      {
+       "rank": 5,
+       "state": "TX",
+       "detail": "Eli Lilly $6.5B Houston API plant; construction to finish in 2027",
+       "why": "Large single project on a near-term schedule",
+       "status": "Inferred",
+       "sources": [
+        "S198",
+        "S199"
+       ]
+      }
+     ],
+     "reading_note": "Ranks reflect team judgment on proximity and project timing. Dollar figures are individual company announcements and are not added together."
+    },
+    "entry": {
+     "plan": [
+      "Package Haloguard IR and Oxyguard together as a \"plant utilities and labs\" offer for new sites.",
+      "Build a validation documentation kit so engineering firms can specify ThermGAS without extra work.",
+      "Target engineering firms on Southeast projects in North Carolina, Virginia and Alabama.",
+      "Use university lab references to enter biologics and QC labs.",
+      "Treat ethylene oxide and solvents as add-ons, not the lead."
+     ],
+     "questions": [
+      "Does ThermGAS have pharma or biotech customers today?",
+      "What validation and calibration documentation can ThermGAS provide?",
+      "Is a multi-point oxygen option available, and what does Oxyguard sell for?",
+      "Which solvents has PAIR been calibrated and tested for in practice?",
+      "Would ThermGAS offer refrigerant and oxygen monitoring as one bundle?"
+     ]
+    },
+    "note": {
+     "title": "Ethylene oxide rules are being relaxed",
+     "text": "In July 2025 the administration exempted 41 facilities from EPA's 2024 sterilizer rule, and in March 2026 EPA proposed letting sterilizers choose continuous or parametric monitoring. Workplace exposure limits still apply, which is why this page does not lead with ethylene oxide.",
+     "status": "Inferred",
+     "sources": [
+      "S203",
+      "S204"
+     ]
+    },
+    "checks": [
+     "Aranca says Lilly broke ground in Houston in 2026; the brief's \"September\" was not found and is not used.",
+     "AstraZeneca's Virginia facility is confirmed; the brief's \"largest single-site investment\" was not found and is not used.",
+     "Huntsville is confirmed by The World Data ($6B API facility).",
+     "The ChemDAQ distributor page returned HTTP 403 during this check.",
+     "NIH's oxygen protocol applies to NIH facilities; it is cited as a benchmark, not a pharma regulation. The PDF was not opened.",
+     "Oxyguard's 5+ year sensor life comes from a third-party directory; ThermGAS's own page states an 18-month sensor warranty."
     ]
    }
   ]

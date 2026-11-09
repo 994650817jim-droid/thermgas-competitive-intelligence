@@ -42,6 +42,27 @@ walk(portfolio, 'portfolio');
 portfolio.products.forEach(p => { checkSrc(p.source, `portfolio ${p.id}`); if (!portfolio.families.some(f => f.id === p.family)) errors.push(`portfolio ${p.id}: unknown family`); });
 portfolio.markets.forEach(m => checkSrc(m.source, `portfolio market ${m.id}`));
 for (const [pid, cells] of Object.entries(portfolio.fit)) { if (!portfolio.products.some(p => p.id === pid)) errors.push(`portfolio fit: unknown product ${pid}`); for (const [mid, v] of Object.entries(cells)) { if (!portfolio.markets.some(m => m.id === mid)) errors.push(`portfolio fit ${pid}: unknown market ${mid}`); if (!['stated', 'linked'].includes(v)) errors.push(`portfolio fit ${pid}.${mid}: bad value ${v}`); } }
+const STATE_CODES = ['AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
+// Growth markets (one object per market; every market added later gets the same validation)
+const growth = load('growth_markets.json');
+walk(growth, 'growth');
+(function chk(o, ctx) { if (Array.isArray(o)) o.forEach((x, i) => chk(x, `${ctx}[${i}]`)); else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) { if (/(^|_)status$/.test(k) && typeof v === 'string' && !/^(Verified|Inferred|Assumption|Unknown)$/.test(v)) errors.push(`${ctx}.${k}: bad label "${v}"`); else if (/(^|_)sources$/.test(k) && Array.isArray(v)) checkSrc(v, `${ctx}.${k}`); else chk(v, `${ctx}.${k}`); } })(growth, 'growth');
+const GROWTH_KEYS = ['id', 'label', 'title', 'verdict', 'readouts', 'primer', 'entry_points', 'reuse', 'market', 'buyers', 'competition', 'assets', 'geography', 'entry'];
+const LAYER_KINDS = ['construction', 'count', 'priority'];
+const growthIds = new Set();
+growth.markets.forEach(m => {
+  GROWTH_KEYS.forEach(k => { if (!(k in m)) errors.push(`growth ${m.id}: missing ${k}`); });
+  if (growthIds.has(m.id)) errors.push(`growth: duplicate id ${m.id}`); growthIds.add(m.id);
+  const sz = m.market && m.market.sizing;
+  if (sz && !['Assumption', 'Unknown'].includes(sz.status)) errors.push(`growth ${m.id}: sizing must be labelled Assumption or Unknown`);
+  if (/\$\s?\d/.test(JSON.stringify(sz || {}))) errors.push(`growth ${m.id}: sizing must not contain dollar values`);
+  const ly = m.geography && m.geography.layer;
+  if (!ly || !LAYER_KINDS.includes(ly.kind)) errors.push(`growth ${m.id}: geography.layer.kind must be one of ${LAYER_KINDS}`);
+  else ly.rows.forEach((r, i) => { if (!STATE_CODES.includes(r.state) || !(r.value > 0)) errors.push(`growth ${m.id} layer #${i}: bad row`); });
+  (m.geography.priority_states || []).forEach((p, i) => { if (!STATE_CODES.includes(p.state)) errors.push(`growth ${m.id} priority #${i}: bad state`); });
+  (m.competition.players || []).forEach(p => { if (p.company_id && !compIds.has(p.company_id)) errors.push(`growth ${m.id}: unknown company ${p.company_id}`); });
+});
+(growth.highlights || []).forEach((h, i) => { if (!growthIds.has(h.market)) errors.push(`growth highlight #${i}: unknown market ${h.market}`); });
 const prodIds = new Set(products.map(p => p.id));
 analysis.threats.forEach(t => { if (!prodIds.has(t.product)) errors.push(`threat: unknown product ${t.product}`); });
 analysis.battlecards.forEach(b => { if (!prodIds.has(b.product)) errors.push(`battlecard: unknown product ${b.product}`); });
@@ -91,13 +112,14 @@ const srcUrl = Object.fromEntries(sources.map(s => [s.id, s]));
 write('state_evidence.csv', evidence.map(e => ({...e, source_url: srcUrl[e.source].url, source_date: srcUrl[e.source].source_date, access_date: srcUrl[e.source].access_date})), ['company','product','state','metric','value','source','source_url','source_date','access_date','status','notes']);
 write('states_51.csv', states, ['code','name','evidence_status','competitors_with_verified_local_presence','competitor_hq','competitor_offices','competitor_distributors','competitor_service','competitor_installations','regulatory_notes','thermgas_hq','thermgas_refrigerant_references','battery_cell_plants','battery_cell_gwh','dmc_solvent_plants','cancelled_plants_excluded']);
 write('data_centers_by_state.csv', dataCenters.rows.map(r => ({ ...r, source_url: srcUrl[r.source].url })), ['state','mwh_2023','pct_state_electricity_2023','source','source_url','status']);
+write('growth_market_state_layers.csv', growth.markets.flatMap(m => m.geography.layer.rows.map(r => ({ market: m.id, layer: m.geography.layer.label, kind: m.geography.layer.kind, metric: m.geography.layer.metric, state: r.state, value: r.value, label: r.label, status: m.geography.layer.status, sources: m.geography.layer.sources, source_url: m.geography.layer.sources.map(id => srcUrl[id].url) }))), ['market','layer','kind','metric','state','value','label','status','sources','source_url']);
 write('facilities.csv', facilities, ['operator','city','state','type','status_in_source','capacity_gwh','capacity_note','source','status','status_update','status_update_source','status_update_status']);
 
 // ---- combined dataset for the dashboard ----------------------------------
 const dash = path.join(__dirname, '..', 'dashboard', 'src', 'data');
 if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   fs.mkdirSync(dash, { recursive: true });
-  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters, portfolio }, null, 1));
+  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters, portfolio, growth }, null, 1));
   const pub = path.join(__dirname, '..', 'dashboard', 'public', 'export');
   fs.mkdirSync(pub, { recursive: true });
   for (const f of fs.readdirSync(OUT)) fs.copyFileSync(path.join(OUT, f), path.join(pub, f));
@@ -105,11 +127,12 @@ if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   const pubDocs = path.join(__dirname, '..', 'dashboard', 'public', 'docs');
   fs.mkdirSync(pubDocs, { recursive: true });
   for (const f of ['Executive_Summary.md', 'Strategic_Roadmap.md', 'Phase4_Competitive_Analysis.md']) fs.copyFileSync(path.join(__dirname, '..', 'docs', f), path.join(pubDocs, f));
-  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters, portfolio }, null, 2));
+  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, executive, dataCenters, portfolio, growth }, null, 2));
 }
 
 const s = states;
 console.log(`OK  sources=${sources.length} competitors=${competitors.length - 1} (+ThermGAS) products=${products.length} evidence=${evidence.length} facilities=${facilities.length}`);
 console.log(`States with any competitor local presence: ${s.filter(x => x.competitors_with_verified_local_presence).map(x => x.code).join(', ')}`);
 console.log(`States with battery cell plants (DOE FCAB): ${s.filter(x => x.battery_cell_plants).map(x => `${x.code}(${x.battery_cell_plants}, ${x.battery_cell_gwh} GWh)`).join(', ')}`);
+console.log(`Growth markets: ${growth.markets.map(m => m.id).join(', ')}`);
 console.log(`States "Not Verified / Insufficient Evidence": ${s.filter(x => x.evidence_status !== 'Evidence found').length} of 51`);

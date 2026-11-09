@@ -26,7 +26,7 @@ export default function Opportunities() {
         lead="Research priority, not revenue. Classes combine plant status evidence, reach from Georgia, competitors and evidence completeness." />
 
       <section className="card map-hero">
-        <OppMap initial="battery" />
+        <OppMap initial="battery" growthLayers />
       </section>
 
       <div className="callout warn small">
@@ -46,7 +46,7 @@ export default function Opportunities() {
       <div className="grid">
         <Card title="Adjacent segment: data center cooling" sub="Top states by 2023 data center electricity load (EPRI). A proxy for cooling demand, not a site count or market size." right={<Src ids={['S160']} />}>
           <Bars rows={[...dataCenters.rows].sort((a, b) => b.mwh_2023 - a.mwh_2023).slice(0, 10).map(r => ({ key: r.state, label: `${stateByCode[r.state].name}${all.some(o => o.code === r.state && (o.cls === 'A' || o.cls === 'B')) ? ' ●' : ''}`, value: +(r.mwh_2023 / 1e6).toFixed(1), title: `${r.pct_state_electricity_2023}% of state electricity` }))} unit="TWh" onClick={k => go('map', { s: k, layer: 'datacenters' })} />
-          <p className="small" style={{ marginBottom: 0 }}>● also an Engage-now or Prepare battery state. ThermGAS markets data center refrigerant detection <Badge status="Verified" /> <Src ids={['S161']} />; MSA targets the same buyers <Src ids={['S162']} />.</p>
+          <p className="small" style={{ marginBottom: 0 }}>● also an Engage-now or Prepare battery state. ThermGAS markets data center refrigerant detection <Badge status="Verified" /> <Src ids={['S161']} />; MSA targets the same buyers <Src ids={['S162']} />. <a href="#/growth?m=datacenters">Full data center analysis</a></p>
         </Card>
       </div>
       <details className="more-detail"><summary>State-by-state evidence table</summary>
