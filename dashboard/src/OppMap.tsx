@@ -28,8 +28,8 @@ const BUILD_BINS = [2500];                       // MW under construction (CBRE 
 const BUILD_LABELS = ['2,000-2,500 MW', '2,500+ MW'];
 const buildFill = (mw: number) => RAMP[3 + BUILD_BINS.filter(b => mw >= b).length];
 const fmtMw = (mw: number) => `${mw.toLocaleString('en-US')} MW`;
-const FAB_BINS = [2, 6, 10];                     // reporting fabs: 1, 2-5, 6-9, 10+
-const FAB_LABELS = ['1 fab', '2-5 fabs', '6-9 fabs', '10+ fabs'];
+const FAB_BINS = [2, 6, 10];                     // EPA-reporting facilities: 1, 2-5, 6-9, 10+
+const FAB_LABELS = ['1 facility', '2-5 facilities', '6-9 facilities', '10+ facilities'];
 const fabFill = (n: number) => RAMP[1 + FAB_BINS.filter(b => n >= b).length];
 /** Ordinal, not quantitative: a different hue so a rank is never read as a size. Priority 1 is darkest. */
 const PRIORITY = ['#0B6E78', '#2F8F98', '#5FADB4', '#93CACE', '#C6E4E6'];
@@ -67,7 +67,7 @@ export default function OppMap({ initial = 'battery', compact = false, initialDc
     battery: <>Engage now: <b>{byCls(opp, 'A')}</b> · Prepare: <b>{byCls(opp, 'B')}</b> · Separate segment: <b>{byCls(opp, 'D')}</b></>,
     datacenter: build ? <>Under construction, H1 2026: <b>Atlanta {fmtMw(dcBuildByState.GA?.value ?? 0)}</b>, first in North America · <b>Northern Virginia {fmtMw(dcBuildByState.VA?.value ?? 0)}</b>. Other states: not available in our sources.</> : <>Largest 2023 load: <b>{[...dataCenters.rows].sort((a, b) => b.mwh_2023 - a.mwh_2023).slice(0, 5).map(r => r.state).join(', ')}</b> · ThermGAS home state GA ranks <b>#{dcRank('GA')}</b></>,
     competitors: <>Verified channels cluster in <b>CA, TX and the Northeast</b>. Most battery states show no verified local channel (not the same as no competition).</>,
-    semis: <>Reporting fabs, 2023: <b>{semiL?.rows.map(r => `${r.state} ${r.value}`).join(' · ')}</b>. Other states: not available in our sources. None is near Georgia.</>,
+    semis: <>EPA-reporting facilities, 2023: <b>{semiL?.rows.map(r => `${r.state} ${r.value}`).join(' · ')}</b>. Other states: not available in our sources. None is near Georgia.</>,
     pharma: <>Team priority: <b>{rowsBy(pharmaL?.rows ?? [], true)}</b>. A ranking of where to start, not a measure of market size.</>,
   }[layer];
   const S = stateByCode[sel]; const o = opp[sel]; const dc = dcByState[sel];
@@ -136,7 +136,7 @@ export default function OppMap({ initial = 'battery', compact = false, initialDc
           </div>
           {growthLayers && (
             <div className={`om-row ${layer === 'semis' ? 'on' : ''}`}>
-              <span className="k">Fabs</span>
+              <span className="k">Facilities</span>
               <span>{semiByState[sel] ? <><b>{semiByState[sel].label}</b> <span className="small muted">to EPA, 2023</span> <Badge status={semiL?.status} /> <Src ids={semiL?.sources} /></> : <span className="nodata">Not available</span>}</span>
             </div>
           )}

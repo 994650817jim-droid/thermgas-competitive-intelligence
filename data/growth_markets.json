@@ -18,11 +18,11 @@
     {
       "market": "semiconductors",
       "value": "46",
-      "label": "U.S. fabs reporting fluorinated gas use, 2023",
-      "sub": "About 20 parent companies (team analysis of EPA Subpart I)",
-      "status": "Inferred",
+      "label": "Electronics facilities reporting to EPA, 2023",
+      "sub": "Semiconductor, display and solar sites; not a fab count",
+      "status": "Verified",
       "sources": [
-        "S197"
+        "S208"
       ]
     },
     {
@@ -1104,7 +1104,7 @@
       "lead": "Fabs monitor fluorinated gases continuously and at scale. ThermGAS's case rests on photoacoustic NF3 detection against pyrolyzer-based incumbents, and that case still needs published data.",
       "brief": "Team brief by the MISM 6414 ThermGAS team, Nov 8, 2026",
       "verdict": {
-        "headline": "A sharper but harder market than data centers. Enter through the fab's chiller plant, and do not lead with NF3 until ThermGAS publishes the spec and interference data behind it.",
+        "headline": "A sharper but harder market than data centers. Enter through the fab's chiller plant, and publish NF3 data before leading with it. The solvent false-alarm argument does not hold against Honeywell's own data sheet.",
         "answers": [
           {
             "q": "Where first",
@@ -1126,10 +1126,12 @@
           },
           {
             "q": "What must be true",
-            "a": "A published NF3 detection spec and solvent interference data, a first fab reference, and a Modbus output",
+            "a": "Published NF3 figures (range, sensitivity, response time), an interference test that includes acid gases, a first fab reference, and a Modbus output",
             "status": "Unknown",
             "sources": [
-              "S182"
+              "S08",
+              "S182",
+              "S209"
             ]
           }
         ]
@@ -1137,12 +1139,12 @@
       "readouts": [
         {
           "value": "46",
-          "unit": "fabs",
-          "label": "U.S. electronics facilities reporting fluorinated gas use, 2023",
-          "sub": "About 20 parent companies (team analysis of EPA data)",
-          "status": "Inferred",
+          "unit": "facilities",
+          "label": "Electronics-manufacturing facilities reporting to EPA, 2023",
+          "sub": "Down from 56 in 2011. Includes displays, MEMS and solar, not only semiconductor fabs.",
+          "status": "Verified",
           "sources": [
-            "S197"
+            "S208"
           ]
         },
         {
@@ -1224,6 +1226,21 @@
             "sources": [
               "S182"
             ]
+          },
+          {
+            "text": "ThermGAS's Master Gas List (Sep 2026) includes NF3, C4F6 (hexafluoro-1,3-butadiene), C4F8, SF6 and hexafluoropropylene. It shows no detection levels, and it does not list CF4 or fluorinated heat-transfer fluids such as HT-200, FC-3283 or HFE-7500.",
+            "status": "Verified",
+            "sources": [
+              "S08"
+            ]
+          },
+          {
+            "text": "NF3 exposure limits are 10 ppm as an 8-hour average (OSHA PEL, NIOSH REL, and an ACGIH TLV from a 1993-94 listing); NIOSH's revised IDLH is 1,000 ppm. Honeywell's NF3 cartridge allows a minimum first alarm of 4 ppm.",
+            "status": "Verified",
+            "sources": [
+              "S210",
+              "S209"
+            ]
           }
         ]
       },
@@ -1236,10 +1253,10 @@
             "why": "Daily chamber cleaning uses large volumes; NF3 is toxic",
             "product": "TracePoint 1000 near each tool",
             "fit": "Strong",
-            "fit_note": "Only once the NF3 spec is published; the application note cited by the team brief was not found",
+            "fit_note": "NF3 is on the Master Gas List, but no NF3 detection level, range or response time is published",
             "status": "Inferred",
             "sources": [
-              "S182",
+              "S08",
               "S03"
             ]
           },
@@ -1249,9 +1266,10 @@
             "why": "New etch chemistries, high-value tools",
             "product": "TracePoint 1000 or Haloguard IR",
             "fit": "Strong",
-            "fit_note": "C4F6 is named on ThermGAS's semiconductor page",
+            "fit_note": "C4F6 and C4F8 are on the Master Gas List and C4F6 is named on the semiconductor page; no detection level is published",
             "status": "Inferred",
             "sources": [
+              "S08",
               "S182"
             ]
           },
@@ -1273,9 +1291,11 @@
             "why": "Fluid loss is costly and EPA-reported",
             "product": "PAIR, if calibrated for the fluids in use",
             "fit": "New",
-            "fit_note": "Calibration unconfirmed",
+            "fit_note": "HT-200, FC-3283 and HFE-7500 are not on the Master Gas List",
             "status": "Unknown",
-            "sources": []
+            "sources": [
+              "S08"
+            ]
           },
           {
             "where": "Facility chiller plants",
@@ -1292,7 +1312,7 @@
         ]
       },
       "reuse": {
-        "summary": "Yes for the chiller plant, and probably for NF3 and C4F6, but fabs set a high bar for proof.",
+        "summary": "Yes for the chiller plant. For NF3 and C4F6 the gases are on ThermGAS's list, but no performance figures are published, and fabs set a high bar for proof.",
         "transfers": [
           {
             "text": "Haloguard IR's multi-point scanning (up to 24 points) suits clusters of tools or gas cabinets.",
@@ -1302,29 +1322,42 @@
             ]
           },
           {
-            "text": "TracePoint 1000 is a single-point monitor that can sit close to a tool.",
+            "text": "TracePoint 1000 is a single-point monitor that can sit close to a tool; its page lists a 0-1000 ppm range, a 4-20 mA output and 150 ft of standard sample tubing.",
             "status": "Verified",
             "sources": [
               "S03"
             ]
           },
           {
-            "text": "No consumable electrochemical cell lowers maintenance where every sensor swap needs cleanroom access.",
+            "text": "A photoacoustic monitor has no electrolyte cartridge or pyrolyzer to replace (Honeywell's NF3 path has both), which matters where every sensor swap needs cleanroom access.",
             "status": "Inferred",
             "sources": [
-              "S10"
+              "S10",
+              "S209"
             ]
           }
         ],
         "does_not": "",
         "gaps": [
           {
-            "gap": "Published NF3 spec and interference data",
-            "why": "ThermGAS's claim is fewer solvent false alarms than pyrolyzers; fabs will want it proven",
-            "check": "The NF3 and C4F6 application note cited by the team brief was not found on thermgas.com",
+            "gap": "Published NF3 figures and interference data",
+            "why": "Honeywell publishes a range (0-40 ppm), minimum alarm (4 ppm), response (under 110 s) and cross-sensitivities for its NF3 path. ThermGAS publishes none that are NF3-specific.",
+            "check": "TracePoint 1000's page gives a generic 0.5 ppm sensitivity and no NF3 figure. The NF3 and C4F6 application note cited by the team brief was not found on thermgas.com or by web search.",
             "status": "Unknown",
             "sources": [
-              "S182"
+              "S03",
+              "S08",
+              "S182",
+              "S209"
+            ]
+          },
+          {
+            "gap": "The solvent false-alarm argument",
+            "why": "The team brief says pyrolyzer detectors false-alarm on cleaning solvents.",
+            "check": "Honeywell's data sheet shows isopropanol and methanol at 500 ppm reading 0 ppm NF3. Its real cross-sensitivities are chlorine, hydrogen chloride, hydrogen fluoride, sulphur dioxide and nitrogen dioxide. ThermGAS would need to test against those acid gases.",
+            "status": "Verified",
+            "sources": [
+              "S209"
             ]
           },
           {
@@ -1337,27 +1370,40 @@
           {
             "gap": "Digital integration",
             "why": "Fab monitoring systems collect data centrally",
-            "check": "Haloguard IR: relays and analog outputs; a BACnet interface manual exists; Modbus not confirmed",
+            "check": "TracePoint 1000: 4-20 mA output. Haloguard IR: relays and analog outputs; a BACnet interface manual exists. Neither product page mentions Modbus.",
             "status": "Inferred",
             "sources": [
+              "S03",
               "S04"
             ]
           },
           {
             "gap": "Heat transfer fluid coverage",
-            "why": "Fluids such as HT-200, FC-3283 and HFE-7500 are EPA-reported",
-            "check": "Whether PAIR can be calibrated for them",
+            "why": "HT-200, FC-3283 and HFE-7500 are EPA-reported fluids",
+            "check": "None of the three is on the Master Gas List (Sep 2026). Whether PAIR can be calibrated for them is unknown.",
             "status": "Unknown",
             "sources": [
               "S08"
             ]
           },
           {
+            "gap": "CF4 coverage",
+            "why": "ThermGAS's semiconductor page names CF4 as a configurable gas",
+            "check": "CF4 is not on the Master Gas List (Sep 2026)",
+            "status": "Unknown",
+            "sources": [
+              "S08",
+              "S182"
+            ]
+          },
+          {
             "gap": "Response time near tools",
             "why": "Point-of-use monitoring needs fast alarms",
-            "check": "Per-point response for TracePoint versus multi-point scanning",
+            "check": "Per-point response for TracePoint versus multi-point scanning; Honeywell states under 110 s for its NF3 path",
             "status": "Unknown",
-            "sources": []
+            "sources": [
+              "S209"
+            ]
           }
         ]
       },
@@ -1366,24 +1412,30 @@
         "drivers": [],
         "indicators": [
           {
-            "indicator": "U.S. fabs reporting fluorinated gas use",
-            "figure": "46 facilities in 2023 (65 since 2011), about 20 parent companies",
+            "indicator": "Electronics-manufacturing facilities reporting to EPA (Subpart I)",
+            "figure": "46 in 2023; 56 in 2011; peak of 59 in 2014; 53 in 2016. The sector covers semiconductors (incl. LEDs), MEMS, LCDs and solar; EPA's page gives no semiconductor-only count.",
+            "status": "Verified",
+            "sources": [
+              "S208"
+            ]
+          },
+          {
+            "indicator": "Parent companies behind those facilities",
+            "figure": "About 20; Texas Instruments and Intel run 9 (team analysis of EPA parent-company data)",
             "status": "Inferred",
             "sources": [
               "S197"
             ]
           },
           {
-            "indicator": "Fab size mix, 2023",
-            "figure": "53 fabs: 28 run 200 mm wafers, 15 run 150 mm, 11 run 300 mm. The brief does not explain why this is 53 when 46 facilities reported.",
-            "status": "Inferred",
-            "sources": [
-              "S197"
-            ]
+            "indicator": "Fab size mix (team brief)",
+            "figure": "The brief gives 53 fabs for 2023 (28 at 200 mm, 15 at 150 mm, 11 at 300 mm). EPA's table shows 53 facilities for 2016, not 2023, and the split could not be matched to any source. Treat as unverified.",
+            "status": "Unknown",
+            "sources": []
           },
           {
             "indicator": "Computer, electronics and electrical plant construction",
-            "figure": "$52.3B annual rate in August 2026, down from $95.4B a year earlier",
+            "figure": "$52.3B annual rate in August 2026, down from $95.4B a year earlier. Broader than fabs.",
             "status": "Inferred",
             "sources": [
               "S191"
@@ -1409,19 +1461,19 @@
         "sizing": {
           "status": "Unknown",
           "title": "Sizing structure: inputs still missing",
-          "formula": "Points = fabs x NF3 and fluorocarbon points per fab (+ chiller plant systems)",
+          "formula": "Points = facilities x NF3 and fluorocarbon points per facility (+ chiller plant systems)",
           "inputs": [
             {
-              "name": "Fabs",
-              "display": "46 reporting facilities (2023)",
-              "status": "Inferred",
+              "name": "Facilities",
+              "display": "46 reporting to EPA (2023)",
+              "status": "Verified",
               "sources": [
-                "S197"
+                "S208"
               ],
-              "note": "Team analysis of EPA data"
+              "note": "Includes display and solar sites; the number that would buy NF3 monitoring is smaller and unknown"
             },
             {
-              "name": "NF3 and fluorocarbon points per fab",
+              "name": "NF3 and fluorocarbon points per facility",
               "display": "Unknown",
               "status": "Unknown",
               "sources": [],
@@ -1436,7 +1488,8 @@
             }
           ],
           "limitations": [
-            "No count or dollar value is computed because the points-per-fab input is unknown.",
+            "No count or dollar value is computed because the points-per-facility input is unknown.",
+            "The EPA count is not a semiconductor-only count.",
             "Mid-size 150 mm and 200 mm fabs are the realistic first targets; megafabs have longer qualification cycles."
           ]
         }
@@ -1494,39 +1547,56 @@
         ]
       },
       "competition": {
-        "summary": "Two incumbents own fab gas monitoring and, per the team brief, both detect NF3 with pyrolyzers. No public market-share data exists (Unknown).",
+        "summary": "Honeywell and Riken Keiki both detect NF3 with a pyrolyzer add-on (confirmed in their data sheets). MSA has sold a photoacoustic monitor, Chemgard, that overlaps ThermGAS's technology; its current status and NF3 support are unverified. No public market-share data exists (Unknown).",
         "scope_note": "Honeywell and Riken Keiki also appear in the battery research with different product lines. Their battery threat levels are not changed here.",
         "players": [
           {
             "name": "Honeywell",
             "role": "Incumbent",
             "company_id": "honeywell",
-            "product_line": "Midas gas detector with pyrolyzer; Vertex Edge",
+            "product_line": "Midas NF3 path (pyrolyzer + cartridge); Vertex Edge",
             "landscape_card": true,
             "they_win": [
+              {
+                "text": "Midas NF3 path: pyrolyzer module plus electrochemical cartridge, 0-40 ppm, response under 110 s, 24-month cartridge life (data sheet dated November 2019).",
+                "status": "Verified",
+                "sources": [
+                  "S209"
+                ]
+              },
               {
                 "text": "Vertex Edge: up to nine Chemcassette analyzers with eight points each, for virtually every gas used in fabs, down to ppb.",
                 "status": "Verified",
                 "sources": [
                   "S194"
                 ]
-              },
-              {
-                "text": "A Midas gas detector with pyrolyzer is sold in the U.S.; its gas list was not visible on the page read.",
-                "status": "Verified",
-                "sources": [
-                  "S193"
-                ]
               }
             ],
             "thermgas_can_win": [
               {
-                "text": "NF3 without a pyrolyzer: fewer solvent false alarms and no electrolyte to replace, if ThermGAS publishes data to prove it.",
-                "status": "Unknown",
-                "sources": []
+                "text": "Honeywell's NF3 path needs a pyrolyzer, a cartridge replaced about every 24 months and calibration about every 6 months. A photoacoustic monitor has no cartridge to replace, but ThermGAS publishes no NF3 maintenance data.",
+                "status": "Inferred",
+                "sources": [
+                  "S209",
+                  "S10"
+                ]
+              },
+              {
+                "text": "Honeywell's cartridge reads chlorine, hydrogen chloride, hydrogen fluoride and sulphur dioxide as NF3. A selective optical method might avoid that, but ThermGAS has not published a test.",
+                "status": "Assumption",
+                "sources": [
+                  "S209"
+                ]
               }
             ],
             "watch_out": [
+              {
+                "text": "Not a solvent problem: Honeywell's sheet shows isopropanol and methanol at 500 ppm reading 0. A solvent false-alarm pitch would be answered with Honeywell's own data.",
+                "status": "Verified",
+                "sources": [
+                  "S209"
+                ]
+              },
               {
                 "text": "Covers almost every fab gas, so a fab can standardise on one supplier.",
                 "status": "Inferred",
@@ -1544,10 +1614,9 @@
             "landscape_card": true,
             "they_win": [
               {
-                "text": "GD-70D detects toxic gases used in semiconductor manufacturing.",
-                "status": "Inferred",
+                "text": "A PLU-70 pyrolyzer unit for \"NF3 / TEOS gases detected in air\" connects to the GD-70D transmitter, and NF3 appears in the detectable-gas table with a 100 ppm range (table text garbled in extraction).",
+                "status": "Verified",
                 "sources": [
-                  "S196",
                   "S195"
                 ]
               },
@@ -1576,9 +1645,9 @@
           },
           {
             "name": "MSA (Chillgard 5000, Bacharach)",
-            "role": "Chiller plant only",
+            "role": "Chiller plant, and a photoacoustic overlap",
             "company_id": "msa",
-            "product_line": "Refrigerant monitors",
+            "product_line": "Chillgard 5000 and Bacharach monitors; Chemgard photoacoustic monitor",
             "they_win": [
               {
                 "text": "Strong in facility chiller plants.",
@@ -1586,22 +1655,172 @@
                 "sources": [
                   "S162"
                 ]
+              },
+              {
+                "text": "Chemgard photoacoustic IR monitor: 100 gases (59 standard), three alarm levels, UL 2075 approval, per a 2014 press release.",
+                "status": "Inferred",
+                "sources": [
+                  "S211"
+                ]
               }
             ],
             "thermgas_can_win": [
               {
-                "text": "Competes with ThermGAS only in the chiller plant row.",
+                "text": "Competes with ThermGAS in the chiller plant row.",
                 "status": "Inferred",
+                "sources": []
+              }
+            ],
+            "watch_out": [
+              {
+                "text": "Chemgard uses the same photoacoustic principle. Whether it is still sold and whether it supports NF3 is unverified: MSA's product page no longer resolves and a trade-press page listing NF3 could not be opened.",
+                "status": "Unknown",
+                "sources": [
+                  "S211"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NDIR sensor-module makers (for example EOC / Senovol)",
+            "role": "Component alternative",
+            "product_line": "NDIR NF3 sensor module",
+            "they_win": [
+              {
+                "text": "An NDIR NF3 sensor module with a 0-40 ppm range is sold as a component.",
+                "status": "Inferred",
+                "sources": [
+                  "S212"
+                ]
+              }
+            ],
+            "thermgas_can_win": [
+              {
+                "text": "Module makers sell parts, not fab monitoring systems (team assumption).",
+                "status": "Assumption",
                 "sources": []
               }
             ],
             "watch_out": []
           }
-        ]
+        ],
+        "head_to_head": {
+          "left": "ThermGAS TracePoint 1000",
+          "right": "Honeywell Midas NF3 (pyrolyzer + cartridge)",
+          "rows": [
+            {
+              "attr": "Principle",
+              "left": "Photoacoustic infrared, extractive single point",
+              "left_status": "Verified",
+              "left_sources": [
+                "S03"
+              ],
+              "right": "Pyrolyzer module (MIDAS-T-NP1) breaks NF3 down thermally; a 3-electrode electrochemical cartridge reads the result",
+              "right_status": "Verified",
+              "right_sources": [
+                "S209"
+              ]
+            },
+            {
+              "attr": "NF3 on the product's gas list",
+              "left": "Yes: NF3 is on the Master Gas List and named on the semiconductor page; no model is named",
+              "left_status": "Verified",
+              "left_sources": [
+                "S08",
+                "S182"
+              ],
+              "right": "NF3 is the cartridge's designated gas",
+              "right_status": "Verified",
+              "right_sources": [
+                "S209"
+              ]
+            },
+            {
+              "attr": "NF3 range",
+              "left": "No NF3-specific range published (generic range 0-1000 ppm)",
+              "left_status": "Unknown",
+              "left_sources": [
+                "S03"
+              ],
+              "right": "0-40 ppm",
+              "right_status": "Verified",
+              "right_sources": [
+                "S209"
+              ]
+            },
+            {
+              "attr": "Sensitivity or lowest alarm",
+              "left": "Generic 0.5 ppm sensitivity; NF3-specific figure unknown",
+              "left_status": "Unknown",
+              "left_sources": [
+                "S03"
+              ],
+              "right": "Minimum first alarm 4.0 ppm",
+              "right_status": "Verified",
+              "right_sources": [
+                "S209"
+              ]
+            },
+            {
+              "attr": "Response time",
+              "left": "Not published (the page notes slower response with 500 ft tubing)",
+              "left_status": "Unknown",
+              "left_sources": [
+                "S03"
+              ],
+              "right": "t62.5 under 110 seconds",
+              "right_status": "Verified",
+              "right_sources": [
+                "S209"
+              ]
+            },
+            {
+              "attr": "Consumables and calibration",
+              "left": "Not published for NF3",
+              "left_status": "Unknown",
+              "left_sources": [],
+              "right": "Cartridge life 24 months or more; calibrate about every 6 months; 30-70% RH and 10-40 C for stated performance",
+              "right_status": "Verified",
+              "right_sources": [
+                "S209"
+              ]
+            },
+            {
+              "attr": "Interference",
+              "left": "No interference data published",
+              "left_status": "Unknown",
+              "left_sources": [],
+              "right": "Chlorine 5 ppm reads 34.5; sulphur dioxide 10 ppm reads 22.8; hydrogen chloride 8 ppm reads 14; hydrogen fluoride 2 ppm reads 9.2; isopropanol and methanol at 500 ppm read 0",
+              "right_status": "Verified",
+              "right_sources": [
+                "S209"
+              ]
+            },
+            {
+              "attr": "Price",
+              "left": "Not Publicly Available",
+              "left_status": "Unknown",
+              "left_sources": [],
+              "right": "Not on the data sheet",
+              "right_status": "Unknown",
+              "right_sources": []
+            }
+          ],
+          "takeaway": "On published data, Honeywell's NF3 path has documented figures and ThermGAS has none that are NF3-specific. The solvent argument is not supported: Honeywell's sheet shows no response to isopropanol or methanol. The sheet is dated November 2019, so check the current revision. A defensible ThermGAS argument is no cartridge or pyrolyzer to maintain, and possibly less acid-gas interference, but both need ThermGAS tests.",
+          "takeaway_status": "Inferred"
+        }
       },
       "assets": {
-        "summary": "ThermGAS's semiconductor page names the right gases but no model, no detection level and no reference.",
+        "summary": "ThermGAS lists the right gases but publishes no NF3 performance figures, no model for semiconductors and no reference.",
         "items": [
+          {
+            "text": "ThermGAS's Master Gas List (Sep 2026) includes NF3, C4F6, C4F8, SF6 and hexafluoropropylene.",
+            "caveat": "It shows no detection levels. It does not list CF4 or fluorinated heat-transfer fluids (HT-200, FC-3283, HFE-7500).",
+            "status": "Verified",
+            "sources": [
+              "S08"
+            ]
+          },
           {
             "text": "ThermGAS's semiconductor page lists SF6, NF3, C4F6 and CF4 as configurable gases.",
             "caveat": "No model, detection level or comparison with pyrolyzers is on the page.",
@@ -1612,13 +1831,13 @@
           },
           {
             "text": "The team brief cites an NF3 and C4F6 application note with 0.5 ppm NF3 sensitivity.",
-            "caveat": "Not found on thermgas.com. Ask ThermGAS or the team for the document before using it.",
+            "caveat": "Not found on thermgas.com or by web search. Ask ThermGAS or the team for the document before using it.",
             "status": "Unknown",
             "sources": []
           },
           {
             "text": "TracePoint 1000 (single point) and Haloguard IR (up to 24 points) product pages.",
-            "caveat": "Point-of-use at tools; scanning across gas cabinets.",
+            "caveat": "TracePoint's page gives a generic 0.5 ppm sensitivity and a 4-20 mA output; neither page mentions NF3 or Modbus.",
             "status": "Verified",
             "sources": [
               "S03",
@@ -1635,58 +1854,59 @@
           }
         ],
         "improvements": [
-          "A \"PAIR vs pyrolyzer\" comparison backed by interference test data.",
-          "A gas coverage table for NF3, C4F6, CF4, C4F8, SF6 and the heat transfer fluids fabs report to EPA, with detection levels.",
+          "Publish NF3 detection range, sensitivity and response time for TracePoint 1000 and Haloguard IR. The Master Gas List shows the gas but no figures.",
+          "A \"PAIR vs pyrolyzer\" comparison backed by interference tests against acid gases (HF, HCl, Cl2, SO2) as well as solvents and humidity, answering Honeywell's published figures.",
+          "Add CF4 to the Master Gas List or explain its absence, and state coverage for the heat transfer fluids fabs report to EPA.",
           "A first semiconductor reference, even a university cleanroom or a small fab.",
           "A digital integration statement (Modbus) for fab monitoring systems."
         ],
-        "message": "NF3 and fluorocarbon monitoring without a pyrolyzer: selective photoacoustic detection that ignores cleaning solvents and has no electrolyte to replace.",
-        "message_note": "Draft. The team brief's version adds \"reads 0.5 ppm NF3 at the tool\"; keep that out until the spec is published."
+        "message": "NF3 and fluorocarbon monitoring without a pyrolyzer: photoacoustic infrared detection with no electrolyte cartridge to replace.",
+        "message_note": "Draft. The team brief's version also said \"ignores cleaning solvents\" and \"reads 0.5 ppm NF3 at the tool\". Both stay out until ThermGAS publishes NF3 test data."
       },
       "geography": {
         "summary": "Texas, Arizona and Oregon hold most existing fabs and the biggest new builds. None is close to Georgia.",
         "layer": {
           "kind": "count",
           "label": "Semiconductor fabs",
-          "metric": "Fabs reporting fluorinated gas use to EPA, 2023",
+          "metric": "Electronics-manufacturing facilities reporting to EPA, 2023",
           "unit": "fabs",
           "status": "Inferred",
           "sources": [
             "S197"
           ],
-          "note": "Team analysis of EPA Subpart I. Only the five priority states were given; every other state shows Not available.",
+          "note": "Team analysis of EPA Subpart I facility data. EPA's public sector page gives only the national total (46 facilities, 2023). Only the five priority states were given; every other state shows Not available.",
           "rows": [
             {
               "state": "TX",
               "value": 10,
-              "label": "10 reporting fabs"
+              "label": "10 reporting facilities"
             },
             {
               "state": "OR",
               "value": 6,
-              "label": "6 reporting fabs"
+              "label": "6 reporting facilities"
             },
             {
               "state": "AZ",
               "value": 3,
-              "label": "3 reporting fabs"
+              "label": "3 reporting facilities"
             },
             {
               "state": "NY",
               "value": 3,
-              "label": "3 reporting fabs"
+              "label": "3 reporting facilities"
             },
             {
               "state": "ID",
               "value": 1,
-              "label": "1 reporting fab"
+              "label": "1 reporting facility"
             }
           ]
         },
         "columns": [
           {
             "key": "layer",
-            "label": "Reporting fabs, 2023"
+            "label": "Reporting facilities, 2023"
           },
           {
             "key": "detail",
@@ -1698,7 +1918,7 @@
             "rank": 1,
             "state": "TX",
             "detail": "Samsung Taylor; Texas Instruments",
-            "why": "Most reporting fabs plus a new leading-edge site",
+            "why": "Most reporting facilities plus a new leading-edge site",
             "status": "Inferred",
             "sources": [
               "S197",
@@ -1744,18 +1964,19 @@
             "sources": []
           }
         ],
-        "reading_note": "Counts are reporting facilities, not fab size or detector demand. They are not comparable with battery plant counts or data center load."
+        "reading_note": "Counts are EPA-reporting electronics facilities (semiconductor, display and solar), not fab size or detector demand. The five states account for 23 of the national 46 (the sum of the brief's counts). They are not comparable with battery plant counts or data center load."
       },
       "entry": {
         "plan": [
           "Win one fab facility chiller plant with Haloguard IR to get inside the fab's vendor system.",
-          "Publish NF3 interference test data against common fab solvents and humidity.",
+          "Publish NF3 interference test data, including acid gases (HF, HCl, Cl2, SO2), solvents and humidity.",
           "Pilot TracePoint 1000 on NF3 at one mid-size fab alongside its existing pyrolyzer detector.",
           "Add Modbus output and confirm calibration for C4F6 and the main heat transfer fluids.",
           "Sign a regional partner in Texas, Arizona or Oregon before scaling."
         ],
         "questions": [
           "Does the NF3 and C4F6 application note exist, and can it be published?",
+          "Will ThermGAS publish NF3 detection range, sensitivity and response time, and add CF4 to the Master Gas List?",
           "Does ThermGAS have any semiconductor customers, including R&D or university cleanrooms?",
           "How many NF3 and fluorocarbon points does a typical fab need?",
           "Can PAIR be calibrated for HT-200, FC-3283 and HFE-7500?",
@@ -1763,11 +1984,15 @@
         ]
       },
       "checks": [
-        "The NF3 and C4F6 application note cited by the team brief was not found on thermgas.com or by its site search.",
-        "The brief gives 46 reporting facilities and a 53-fab size mix for the same year; the difference is not explained.",
-        "The $52.3B figure covers computer, electronics and electrical plants, not only fabs (AIStockWire, from Census data).",
-        "Honeywell's Midas pyrolyzer page shows U.S. availability but no gas list; the gases named by the brief are not verified.",
-        "The RKI GD-70D data sheet is a PDF and was not opened."
+        "EPA's sector page was read: 46 facilities reported in 2023 (56 in 2011, 53 in 2016). It covers semiconductors, LEDs, MEMS, LCDs and solar, so 46 is not a fab count.",
+        "The brief's 53-fab size mix for 2023 and its \"65 since 2011\" could not be matched to EPA's table (which shows 53 facilities in 2016). Neither is used as a headline figure.",
+        "ThermGAS's Master Gas List PDF (Sep 2026) was read and its layout checked: NF3, C4F6, C4F8 and SF6 are listed; CF4, HT-200, FC-3283 and HFE-7500 are not. No detection levels are shown.",
+        "The NF3 and C4F6 application note cited by the team brief was not found on thermgas.com or through web search.",
+        "Honeywell's NF3 cartridge sheet (SS01115K_v5, November 2019) and RKI's GD-70D data sheet were read. A search result suggested a regional Honeywell page marks the Midas pyrolyzer out of production; the page text could not confirm it, so it is not stated.",
+        "The brief's claim that pyrolyzer detectors false-alarm on cleaning solvents is not supported by Honeywell's sheet (isopropanol and methanol read 0). Its cross-sensitivities are chlorine, hydrogen chloride, hydrogen fluoride, sulphur dioxide and nitrogen dioxide.",
+        "MSA's Chemgard is documented only by a 2014 press release; NF3 support and current status are unverified (a trade-press page was blocked).",
+        "NF3 exposure limits come from NIOSH's IDLH page; the ACGIH value is from a 1993-94 listing.",
+        "The $52.3B figure covers computer, electronics and electrical plants, not only fabs."
       ]
     },
     {

@@ -15,11 +15,11 @@ describe('growth markets: evidence rules', () => {
     });
   });
   it('gives every new source a traceable URL and access date', () => {
-    for (let n = 185; n <= 207; n++) {
+    for (let n = 185; n <= 212; n++) {
       const s = sourceById[`S${n}`];
       expect(s, `S${n}`).toBeDefined();
       expect(s.url).toMatch(/^https:\/\//);
-      expect(s.access_date).toBe('2026-11-08');
+      expect(['2026-11-08', '2026-11-09']).toContain(s.access_date);
     }
   });
   it('never labels a claim Verified when its only sources are secondary or team analysis', () => {
@@ -44,6 +44,49 @@ describe('growth markets: evidence rules', () => {
     const note = growthById.semiconductors.assets.items.find((p: any) => /application note/.test(p.text));
     expect(note.status).toBe('Unknown');
     expect(growthById.semiconductors.assets.message).not.toMatch(/0\.5 ppm/);
+  });
+});
+
+describe('semiconductors: findings from the source check', () => {
+  const semi = growthById.semiconductors;
+  it('does not call the EPA count a fab count', () => {
+    expect(JSON.stringify(semi)).not.toMatch(/46 (U\.S\. )?fabs/);
+    expect(semi.readouts[0].status).toBe('Verified');
+    expect(semi.readouts[0].sources).toContain('S208');
+    expect(semi.readouts[0].sub).toMatch(/not only semiconductor/i);
+    expect(growth.highlights.find((h: any) => h.market === 'semiconductors').sub).toMatch(/not a fab count/i);
+  });
+  it('keeps unmatched brief figures out of the headline numbers', () => {
+    const mix = semi.market.indicators.find((i: any) => /size mix/i.test(i.indicator));
+    expect(mix.status).toBe('Unknown');
+    expect(mix.figure).toMatch(/2016/);
+  });
+  it('does not claim solvents cause false alarms on pyrolyzer detectors', () => {
+    const gap = semi.reuse.gaps.find((g: any) => /solvent false-alarm/i.test(g.gap));
+    expect(gap.check).toMatch(/isopropanol and methanol at 500 ppm reading 0/i);
+    expect(gap.sources).toContain('S209');
+    expect(semi.assets.message).not.toMatch(/ignores cleaning solvents/i);
+    expect(semi.verdict.headline).toMatch(/does not hold/i);
+  });
+  it('shows ThermGAS NF3 performance as Unknown while Honeywell\'s is sourced', () => {
+    const h2h = semi.competition.head_to_head;
+    const range = h2h.rows.find((r: any) => r.attr === 'NF3 range');
+    expect(range.left_status).toBe('Unknown');
+    expect(range.right).toBe('0-40 ppm');
+    expect(range.right_sources).toContain('S209');
+    expect(h2h.rows.find((r: any) => r.attr === 'Price').left).toBe('Not Publicly Available');
+  });
+  it('records the Master Gas List facts without inventing detection levels', () => {
+    const item = semi.assets.items.find((i: any) => /Master Gas List/.test(i.text));
+    expect(item.status).toBe('Verified');
+    expect(item.caveat).toMatch(/no detection levels/i);
+    expect(item.caveat).toMatch(/CF4/);
+    expect(semi.reuse.gaps.find((g: any) => /CF4/.test(g.gap)).status).toBe('Unknown');
+  });
+  it('treats MSA Chemgard NF3 support as unverified', () => {
+    const msa = semi.competition.players.find((p: any) => p.company_id === 'msa');
+    expect(msa.watch_out[0].status).toBe('Unknown');
+    expect(sourceById.S211.title).toMatch(/NF3 is not named/i);
   });
 });
 

@@ -829,11 +829,11 @@
   },
   {
     "id": "S195",
-    "publisher": "RKI Instruments (Riken Keiki)",
-    "title": "GD-70D Series Intelligent Gas Detector data sheet (PDF; cited by the team brief, not opened during this check)",
+    "publisher": "RKI Instruments (Riken Keiki); data sheet hosted by distributor ERE Inc.",
+    "title": "GD-70D Series Intelligent Gas Detector data sheet (PDF, read 2026-11-09: PLU-70 pyrolyzer unit for \"NF3 / TEOS gases detected in air\", used with a GD-70D transmitter; NF3 appears in the detectable-gas table with a 100 ppm range; table text is garbled in extraction)",
     "url": "https://cdn.shopify.com/s/files/1/0561/7434/6433/files/GD-70D_Series_INTELLIGENT_GAS_DETECTOR.pdf",
     "source_date": "N/A",
-    "access_date": "2026-11-08",
+    "access_date": "2026-11-09",
     "type": "Company data sheet"
   },
   {
@@ -943,5 +943,50 @@
     "source_date": "2024 data",
     "access_date": "2026-11-08",
     "type": "Government dataset (team analysis)"
+  },
+  {
+    "id": "S208",
+    "publisher": "U.S. EPA",
+    "title": "GHGRP Electronics Manufacturing sector page: facilities reporting under Subpart I were 56 (2011), 59 (2014), 53 (2016) and 46 (2023), as of 2024-08-16. The sector covers semiconductors (incl. LEDs), MEMS, LCDs and photovoltaics; no semiconductor-only count is given.",
+    "url": "https://www.epa.gov/ghgreporting/ghgrp-electronics-manufacturing",
+    "source_date": "2024-08-16 (data as of)",
+    "access_date": "2026-11-09",
+    "type": "Government dataset"
+  },
+  {
+    "id": "S209",
+    "publisher": "Honeywell Analytics",
+    "title": "Midas sensor cartridge specifications, Midas-S-XHF / Midas-E-XHF for nitrogen trifluoride (SS01115K_v5, 11/19): 3-electrode electrochemical cell behind a separate pyrolyzer module (MIDAS-T-NP1); range 0-40 ppm; minimum Alarm 1 4.0 ppm; t62.5 under 110 s; cartridge life 24 months or more; calibrate about every 6 months at 30-70% RH; cross-sensitivities listed for Cl2, HCl, HF, SO2, NO2; isopropanol and methanol at 500 ppm read 0",
+    "url": "https://www.honeywellanalytics.com/~/media/honeywell-analytics/products/midas/documents/english/ss01115k_midas-s_xhf_e_xhf_spec-sheet.pdf?la=en",
+    "source_date": "2019-11",
+    "access_date": "2026-11-09",
+    "type": "Company data sheet"
+  },
+  {
+    "id": "S210",
+    "publisher": "NIOSH (CDC)",
+    "title": "Nitrogen trifluoride, IDLH page: NIOSH REL 10 ppm TWA; OSHA PEL 10 ppm TWA; ACGIH TLV 10 ppm TWA (1993-94 listing); revised IDLH 1,000 ppm",
+    "url": "https://www.cdc.gov/niosh/idlh/7783542.html",
+    "source_date": "2014-12-04 (last reviewed)",
+    "access_date": "2026-11-09",
+    "type": "Government occupational-health reference"
+  },
+  {
+    "id": "S211",
+    "publisher": "Offshore Technology (MSA press release)",
+    "title": "MSA's Chemgard Photoacoustic Infrared Gas Monitor can Monitor 100 Gases (100 gases, 59 standard; photoacoustic IR; three alarm levels; UL 2075 approval). NF3 is not named in this release.",
+    "url": "https://www.offshore-technology.com/contractors/safety/msa/pressreleases/press-chemgard-photoacoustic-infrared-gas-monitor/",
+    "source_date": "2014-11-21",
+    "access_date": "2026-11-09",
+    "type": "Vendor press release (trade press)"
+  },
+  {
+    "id": "S212",
+    "publisher": "EOC (Senovol)",
+    "title": "GDM NF3 gas sensor module data sheet: non-dispersive infrared (NDIR) sensor, 0-40 ppm NF3 (a component, not a monitoring system)",
+    "url": "https://www.eoc-inc.com/wp-content/uploads/EOC-GDM-NF3-gas-sensor-module.pdf",
+    "source_date": "N/A",
+    "access_date": "2026-11-09",
+    "type": "Company data sheet"
   }
 ]
