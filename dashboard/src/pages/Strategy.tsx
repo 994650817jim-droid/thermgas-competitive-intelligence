@@ -1,9 +1,8 @@
 import { Fragment, useMemo, useState } from 'react';
 import { analysis, productById, shortName, stateByCode } from '../data';
-import { Card, Src, Badge, PageHead } from '../ui';
+import { Card, Src, Badge, Bars } from '../ui';
 import ThreatMatrix from '../ThreatMatrix';
 import { threatLevel, scoreStates, DEFAULT_WEIGHTS, type Weights } from '../model';
-import { Bars } from './Overview';
 import { go } from '../App';
 
 const DIFF = [
@@ -22,14 +21,12 @@ const W_LABEL: Record<keyof Weights, string> = { capacity: 'Cell capacity (GWh)'
 export default function Strategy() {
   const [w, setW] = useState<Weights>({ ...DEFAULT_WEIGHTS });
   const [inf, setInf] = useState(true);
+  const [full, setFull] = useState(false);
   const scored = useMemo(() => scoreStates(w, inf), [w, inf]);
   const ranked = scored.filter(s => s.score !== null).sort((a, b) => (b.score! - a.score!) || a.row.name.localeCompare(b.row.name));
   const sw = analysis.swot;
   return (
     <div className="stack">
-      <PageHead kicker="Strategic Positioning" title="How can ThermGAS compete more effectively?"
-        lead="SWOT, competitor threats, differentiation and state priorities. Each recommendation states its business case, its limitation and the next step to validate it." />
-
       <Card title="Recommended positioning">
         <p style={{ fontSize: 18, color: 'var(--ink-strong)', margin: 0, fontFamily: 'Poppins, sans-serif', lineHeight: 1.45 }}>
           "For battery-plant EHS and process engineers who need to <span style={{ color: 'var(--brand)' }}>know how much DMC is in electrolyte-handling and filling rooms</span>, ThermGAS provides a
@@ -39,16 +36,40 @@ export default function Strategy() {
         <p className="small muted" style={{ marginBottom: 0 }}>Conditional on R1 (published DMC spec + interference data) and R3 (hazardous-area answer). Built from F1-F4.</p>
       </Card>
 
-      <h2 style={{ fontSize: 22 }}>SWOT</h2>
+      <Card title="Three things to do first" sub="Highest-priority recommendations">
+        {analysis.recommendations.slice(0, 3).map((r: any) => (
+          <div key={r.id} className="rec">
+            <div className="num">{r.priority}</div>
+            <div><h4>{r.title}</h4><p style={{ margin: '2px 0 0' }}>{r.action}</p></div>
+          </div>
+        ))}
+      </Card>
+
+      <h2 style={{ fontSize: 22 }}>SWOT in brief</h2>
       <div className="swot">
         {([['strengths', 'Strengths', 'q-s'], ['weaknesses', 'Weaknesses', 'q-w'], ['opportunities', 'Opportunities', 'q-o'], ['threats', 'Threats', 'q-t']] as const).map(([k, t, cls]) => (
           <div key={k} className={`q ${cls}`}>
             <h4>{t}</h4>
-            <ul className="bc-list">{sw[k].map((x: any, i: number) => <li key={i}>{x.text}<div className="m"><Badge status={x.status} full /><Src ids={x.sources} /></div></li>)}</ul>
+            <ul className="bc-list">{sw[k].slice(0, full ? undefined : 2).map((x: any, i: number) => <li key={i}>{x.text}{full && <div className="m"><Badge status={x.status} full /><Src ids={x.sources} /></div>}</li>)}</ul>
           </div>
         ))}
       </div>
 
+      <h2 style={{ fontSize: 22 }}>Where to go first</h2>
+      <div className="grid g3">
+        {analysis.priority_states.map((p: any) => (
+          <Card key={p.code} title={stateByCode[p.code].name} right={<Src ids={p.evidence} />}>
+            <p style={{ margin: '0 0 6px' }}>{p.why}</p>
+            <p style={{ margin: 0 }}><b>Next step:</b> {p.next}</p>
+          </Card>
+        ))}
+      </div>
+
+      <div className="toolbar" style={{ marginBottom: 0 }}>
+        <button className="btn primary" onClick={() => setFull(!full)} aria-expanded={full}>{full ? 'Hide full analysis' : 'Show full analysis: threats, differentiation, state model, all recommendations'}</button>
+      </div>
+
+      {full && <div className="stack">
       <div className="grid g-main">
         <Card title="Competitor threat matrix" sub="Placement follows explicit rules; no numeric threat index is claimed">
           <ThreatMatrix compact />
@@ -123,7 +144,7 @@ export default function Strategy() {
         </Card>
       </div>
 
-      <h3 style={{ fontSize: 18 }}>Priority states for customer development</h3>
+      <h3 style={{ fontSize: 18 }}>Priority states: full detail</h3>
       <div className="grid g3">
         {analysis.priority_states.map((p: any) => (
           <Card key={p.code} title={`${stateByCode[p.code].name} (${p.code})`} sub={(() => { const i = ranked.findIndex(r => r.row.code === p.code); return i < 0 ? 'Not scored by model' : `Model score ${ranked[i].score} · rank ${i + 1} of ${ranked.length} (current weights)`; })()} right={<Src ids={p.evidence} />}>
@@ -157,6 +178,7 @@ export default function Strategy() {
           </div>
         ))}
       </Card>
+      </div>}
     </div>
   );
 }

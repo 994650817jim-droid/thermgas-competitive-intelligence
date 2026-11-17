@@ -1,7 +1,7 @@
 import raw from './data/dataset.json';
 
 export type Status = 'Verified' | 'Inferred' | 'Unknown' | string;
-export interface Source { id: string; publisher: string; title: string; url: string; source_date: string; access_date: string; type: string }
+export interface Source { id: string; publisher: string; title: string; url: string; source_date: string; access_date: string; type: string; link_check?: string; link_checked?: string }
 export interface Competitor {
   id: string; name: string; role: string; category: string; hq: string; hq_state: string; hq_status: string; hq_source: string; website: string;
   industry_focus: string; relevant_products: string[]; company_size: string; us_presence: string; battery_experience: string;
@@ -27,6 +27,11 @@ export const states: StateRow[] = d.states;
 export const analysis: any = d.analysis;
 export const excluded: any[] = d.excluded;
 export const generated: string = d.generated;
+export const market: any = d.market;
+export const marketStates: any = d.marketStates;
+export const marketGeo: any = d.marketGeo;
+export interface Watchout { id: string; scope: string; market: string; level: 'risk' | 'opportunity' | 'caution'; title: string; text: string; status: string; sources: string[] }
+export const watchouts: Watchout[] = d.watchouts.items;
 
 export const sourceById = Object.fromEntries(sources.map(s => [s.id, s])) as Record<string, Source>;
 export const compById = Object.fromEntries(competitors.map(c => [c.id, c])) as Record<string, Competitor>;
@@ -67,3 +72,5 @@ export function presence(code: string, includeInferred: boolean): Evidence[] {
   return evidence.filter(e => e.state === code && e.company !== 'thermgas' && ['hq', 'office', 'distributor', 'service'].includes(e.metric)
     && (includeInferred ? e.status !== 'Unknown' : e.status === 'Verified'));
 }
+
+export const XLSX_URL = './export/ThermGAS_Market_Intelligence_Data.xlsx';

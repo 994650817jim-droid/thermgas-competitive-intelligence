@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { products, productById, analysis, bucketOf, shortName, type Product } from '../data';
-import { Card, Src, Badge, BucketTag, PageHead } from '../ui';
+import { Card, Src, Badge, BucketTag } from '../ui';
 import { threatLevel } from '../model';
 
 const ROWS: { k: string; l: string; status?: string }[] = [
@@ -22,6 +22,14 @@ const ROWS: { k: string; l: string; status?: string }[] = [
   { k: 'warranty', l: 'Warranty' },
   { k: 'conditions', l: 'Test basis / caveats' },
 ];
+const KEY = new Set(['technology', 'dmc_capability', 'selectivity', 'maintenance', 'price']);
+/** Short version of a long cell for the executive view; the full text shows under "all attributes". */
+const clip = (s: string, n = 95) => {
+  if (s.length <= n) return s;
+  const cut = s.slice(0, n);
+  const i = Math.max(cut.lastIndexOf(';'), cut.lastIndexOf('. '), cut.lastIndexOf(', '));
+  return (i > 40 ? cut.slice(0, i) : cut.replace(/\s+\S*$/, '')) + '…';
+};
 const thermgasProducts = products.filter(p => p.company === 'thermgas');
 const rivals = products.filter(p => p.company !== 'thermgas');
 const NA = /^(not (collected|stated|published|applicable)|n\/a)/i;
@@ -29,8 +37,11 @@ const NA = /^(not (collected|stated|published|applicable)|n\/a)/i;
 export default function Battlecard({ params }: { params: URLSearchParams }) {
   const pre = params.get('p');
   const [tg, setTg] = useState('hgir');
+  const [allRows, setAllRows] = useState(false);
+  const [showCards, setShowCards] = useState(false);
+  const [pick, setPick] = useState(false);
   const [sel, setSel] = useState<string[]>(() => {
-    const base = ['falco117', 'riken_fill', 'liontamer'];
+    const base = ['falco117', 'riken_fill'];
     return pre && productById[pre] && pre !== 'hgir' && pre !== 'tp1000' ? [pre, ...base.filter(x => x !== pre)].slice(0, 3) : base;
   });
   useEffect(() => { if (pre && productById[pre] && productById[pre].company !== 'thermgas') setSel(s => [pre, ...s.filter(x => x !== pre)].slice(0, 3)); }, [pre]);
@@ -42,16 +53,18 @@ export default function Battlecard({ params }: { params: URLSearchParams }) {
 
   return (
     <div className="stack">
-      <PageHead kicker="Product Battlecard" title="ThermGAS side by side with up to three competing products"
-        lead="Pick a ThermGAS monitor and up to three competitors. Every cell is quoted from the cited document. Missing values stay visible as gaps." />
 
       <Card>
         <div className="toolbar" style={{ marginBottom: 8 }}>
           <b>ThermGAS product:</b>
           <div className="seg">{thermgasProducts.map(p => <button key={p.id} className={tg === p.id ? 'on' : ''} onClick={() => setTg(p.id)}>{p.model}</button>)}</div>
         </div>
-        <div className="toolbar" style={{ marginBottom: 0, alignItems: 'flex-start' }}>
-          <b style={{ paddingTop: 4 }}>Compare with (max 3):</b>
+        <div className="toolbar" style={{ marginBottom: 0 }}>
+          <b>Compared with:</b>
+          <span>{sel.map(id => `${shortName(productById[id].company)} ${productById[id].model.replace(/\s*\(.*\)$/, '')}`).join(' · ')}</span>
+          <button className="btn" onClick={() => setPick(!pick)} aria-expanded={pick}>{pick ? 'Done' : 'Change (max 3)'}</button>
+        </div>
+        <div className="toolbar" style={{ marginBottom: 0, marginTop: 8, alignItems: 'flex-start', display: pick ? 'flex' : 'none' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, flex: 1 }}>
             {rivals.map(p => {
               const on = sel.includes(p.id);
@@ -66,9 +79,11 @@ export default function Battlecard({ params }: { params: URLSearchParams }) {
       </Card>
 
       <div className="callout warn">
-        <b>Not a leaderboard.</b> These specs are measured on different bases: PID figures are isobutylene-equivalent, Li-ion Tamer reports a rate (ppm/s), ELT3000 a leak rate, and ThermGAS's DMC figure conflicts between its own documents (0.5 vs 1 ppm). So no product is ranked "most sensitive".
+        <b>Not a leaderboard.</b> Specs are measured on different bases, so no product is ranked "most sensitive".
+        {allRows && <> PID figures are isobutylene-equivalent, Li-ion Tamer reports a rate (ppm/s), ELT3000 a leak rate, and ThermGAS's own DMC figure conflicts (0.5 vs 1 ppm).</>}
       </div>
 
+      <div className="toolbar" style={{ marginBottom: 0 }}><button className="btn" onClick={() => setAllRows(!allRows)}>{allRows ? 'Show key rows only' : 'Show all ' + ROWS.length + ' attributes, full text'}</button><span className="small muted">{allRows ? 'All attributes, full text' : `Showing the ${KEY.size} key rows`}</span></div>
       <div style={{ overflowX: 'auto' }}>
         <div className="cmp" style={{ minWidth: 180 + cols.length * 200 }}>
           <div className="cmp-row cmp-head" style={grid}>
@@ -87,15 +102,15 @@ export default function Battlecard({ params }: { params: URLSearchParams }) {
               );
             })}
           </div>
-          {ROWS.map((r, i) => (
+          {ROWS.filter(r => allRows || KEY.has(r.k)).map((r, i) => (
             <div key={r.k} className={`cmp-row ${i % 2 ? 'alt' : ''}`} style={grid}>
               <div className="rl">{r.l}</div>
               {cols.map(p => {
                 const v = String(p[r.k] ?? 'Not collected');
                 return (
                   <div key={p.id} className={NA.test(v) ? 'nodata' : ''}>
-                    {v}
-                    {r.status && <div style={{ marginTop: 4 }}><Badge status={p[r.status]} full /></div>}
+                    <span title={allRows ? undefined : v}>{allRows ? v : clip(v)}</span>
+                    {r.status && <div style={{ marginTop: 4 }}><Badge status={p[r.status]} full={allRows} /></div>}
                   </div>
                 );
               })}
@@ -104,9 +119,13 @@ export default function Battlecard({ params }: { params: URLSearchParams }) {
         </div>
       </div>
 
-      {cards.length > 0 && <h2 style={{ fontSize: 22, marginTop: 28 }}>Battlecards</h2>}
-      {cards.map((b: any) => <BattleCard key={b.product} b={b} />)}
-      {cards.length === 0 && <p className="muted">No narrative battlecard for the selected products. Battlecards exist for ION Science FALCO 2 11.7, Riken Keiki/RKI, Honeywell Li-ion Tamer, Cubic ATRS-1050, MSA Chillgard 5000 and INFICON ELT3000.</p>}
+      {cards.length > 0 && (
+        <div className="toolbar" style={{ marginBottom: 0 }}>
+          <button className="btn" onClick={() => setShowCards(!showCards)} aria-expanded={showCards}>{showCards ? 'Hide battlecards' : `Show battlecards (where they win, where ThermGAS wins)`}</button>
+        </div>
+      )}
+      {showCards && cards.map((b: any) => <BattleCard key={b.product} b={b} />)}
+      {cards.length === 0 && <p className="small muted">No narrative battlecard for the selected products. Battlecards exist for ION Science FALCO 2 11.7, Riken Keiki/RKI, Honeywell Li-ion Tamer, Cubic ATRS-1050, MSA Chillgard 5000 and INFICON ELT3000.</p>}
     </div>
   );
 }

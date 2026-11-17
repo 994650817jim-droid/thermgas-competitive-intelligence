@@ -1,0 +1,545 @@
+{
+  "meta": {
+    "title": "ThermGAS market sizing and targeting evidence",
+    "as_of": "2026-11-16",
+    "note": "Independent student research. Figures are quoted from the cited sources; derived numbers (sums, counts) are computed by scripts/tools/compute-market.js. Applicability to ThermGAS (why a facility needs leak detection) is the team's reasoning and is labeled Inferred."
+  },
+  "q1": {
+    "question": "Which NAICS code(s) for pharmaceutical manufacturing?",
+    "family": "NAICS 3254 Pharmaceutical and Medicine Manufacturing (sector 325 Chemical Manufacturing). Census 2022 NAICS has one 5-digit industry (32541) with four 6-digit U.S. industries.",
+    "codes": [
+      {
+        "code": "325411",
+        "title": "Medicinal and Botanical Manufacturing",
+        "adopted": false,
+        "definition": "Establishments primarily engaged in (1) manufacturing uncompounded medicinal chemicals and their derivatives (generally for use by pharmaceutical preparation manufacturers) and/or (2) grading, grinding, and milling uncompounded botanicals.",
+        "why": "Excluded. Chemical-synthesis and botanical processing plants. Refrigerant-dependent cold storage and cleanroom fill/finish are less central here (team reasoning).",
+        "why_status": "Inferred",
+        "est": 761,
+        "emp": 30382,
+        "size": {
+          "<5": 276,
+          "5-9": 117,
+          "10-19": 105,
+          "20-49": 124,
+          "50-99": 66,
+          "100-249": 54,
+          "250-499": 10,
+          "500-999": 8,
+          "1000+": 0
+        }
+      },
+      {
+        "code": "325412",
+        "title": "Pharmaceutical Preparation Manufacturing",
+        "adopted": true,
+        "definition": "Establishments primarily engaged in manufacturing in-vivo diagnostic substances and pharmaceutical preparations (except biological) intended for internal and external consumption in dose forms, such as ampoules, tablets, capsules, vials, ointments, powders, solutions, and suspensions.",
+        "why": "Adopted (primary). Finished dosage-form plants: sterile vials and ampoules, solutions and suspensions need cleanroom HVAC, chilled process water and refrigerated storage, i.e. chillers and refrigerant inventories to monitor (team reasoning).",
+        "why_status": "Inferred",
+        "est": 1436,
+        "emp": 170029,
+        "size": {
+          "<5": 369,
+          "5-9": 199,
+          "10-19": 186,
+          "20-49": 190,
+          "50-99": 157,
+          "100-249": 158,
+          "250-499": 105,
+          "500-999": 53,
+          "1000+": 19
+        }
+      },
+      {
+        "code": "325413",
+        "title": "In-Vitro Diagnostic Substance Manufacturing",
+        "adopted": false,
+        "definition": "Establishments primarily engaged in manufacturing in-vitro (i.e., not taken internally) diagnostic substances, such as chemical, biological, or radioactive substances used for diagnostic tests performed in test tubes, petri dishes, machines, and other diagnostic test-type devices.",
+        "why": "Excluded. Diagnostic reagents and kits; smaller establishments, and the link to refrigerant or specialty-gas hazards is weaker (team reasoning).",
+        "why_status": "Inferred",
+        "est": 267,
+        "emp": 45459,
+        "size": {
+          "<5": 52,
+          "5-9": 44,
+          "10-19": 28,
+          "20-49": 41,
+          "50-99": 32,
+          "100-249": 29,
+          "250-499": 17,
+          "500-999": 12,
+          "1000+": 12
+        }
+      },
+      {
+        "code": "325414",
+        "title": "Biological Product (except Diagnostic) Manufacturing",
+        "adopted": true,
+        "definition": "Establishments primarily engaged in manufacturing vaccines, toxoids, blood fractions, and culture media of plant or animal origin (except diagnostic).",
+        "why": "Adopted (secondary). Vaccines, toxoids and blood fractions are cold-chain, cleanroom-intensive products; large 250+ employee plants are a bigger share than in 325412 (team reasoning backed by the size counts).",
+        "why_status": "Inferred",
+        "est": 441,
+        "emp": 75198,
+        "size": {
+          "<5": 123,
+          "5-9": 47,
+          "10-19": 45,
+          "20-49": 53,
+          "50-99": 63,
+          "100-249": 35,
+          "250-499": 32,
+          "500-999": 29,
+          "1000+": 14
+        }
+      }
+    ],
+    "adopted_summary": {
+      "codes": [
+        "325412",
+        "325414"
+      ],
+      "est": 1877,
+      "emp": 245227,
+      "est_50plus": 665,
+      "size": {
+        "<5": 492,
+        "5-9": 246,
+        "10-19": 231,
+        "20-49": 243,
+        "50-99": 220,
+        "100-249": 193,
+        "250-499": 137,
+        "500-999": 82,
+        "1000+": 33
+      },
+      "all_four_codes_est": 2905,
+      "states_listed": 45,
+      "states_sum": 1854,
+      "top_states": [
+        {
+          "325412": 215,
+          "325414": 71,
+          "state": "CA",
+          "est": 286
+        },
+        {
+          "325412": 125,
+          "325414": 22,
+          "state": "NJ",
+          "est": 147
+        },
+        {
+          "325412": 104,
+          "325414": 19,
+          "state": "FL",
+          "est": 123
+        },
+        {
+          "325412": 75,
+          "325414": 40,
+          "state": "MA",
+          "est": 115
+        },
+        {
+          "325412": 102,
+          "325414": 9,
+          "state": "NY",
+          "est": 111
+        },
+        {
+          "325412": 82,
+          "325414": 22,
+          "state": "TX",
+          "est": 104
+        },
+        {
+          "325412": 57,
+          "325414": 30,
+          "state": "PA",
+          "est": 87
+        },
+        {
+          "325412": 41,
+          "325414": 22,
+          "state": "NC",
+          "est": 63
+        },
+        {
+          "325412": 44,
+          "325414": 7,
+          "state": "UT",
+          "est": 51
+        },
+        {
+          "325412": 43,
+          "325414": 5,
+          "state": "CO",
+          "est": 48
+        }
+      ]
+    },
+    "short": "We adopt NAICS 325412 (Pharmaceutical Preparation Manufacturing) as the main code and 325414 (Biological Products) as the second. Together they have 1,877 U.S. establishments (Census CBP 2023); 665 have 50+ employees.",
+    "paragraph": "We adopt NAICS 325412 (Pharmaceutical Preparation Manufacturing) as the primary code and NAICS 325414 (Biological Product, except Diagnostic, Manufacturing) as the secondary code. The Census 2022 NAICS definition of 325412 covers pharmaceutical preparations in dose forms such as ampoules, tablets, capsules, vials, ointments, powders, solutions and suspensions, which is the finished-product, cleanroom and cold-storage end of the industry; 325414 covers vaccines, toxoids and blood fractions, the most cold-chain-dependent products. We exclude 325411 (uncompounded medicinal chemicals and botanicals) and 325413 (in-vitro diagnostics) because their facilities are less tied to refrigerated storage and cleanroom HVAC. County Business Patterns 2023 (the latest year released) counts 1,436 establishments in 325412 and 441 in 325414, 1,877 in total with 245,227 employees; 665 of them (35%) have 50 or more employees, which is a better proxy for sites with chiller plants. California (286), New Jersey (147), Florida (123), Massachusetts (115) and New York (111) have the most. CBP counts establishments with paid employees, not sites that need leak detection, so these are an upper bound for targeting, not a market size.",
+    "limitations": [
+      "CBP counts establishments with paid employees and does not say which have refrigerant or specialty-gas hazards: an upper bound, not a market size.",
+      "CBP 2023 is the latest national release; the 2024 files were not available on 2026-11-16.",
+      "State counts sum to 1,854 of the 1,877 national total because some state cells are not published (suppressed or zero).",
+      "The choice of adopted codes rests on the official definitions plus team reasoning (Inferred); no survey of which pharma plants buy leak detection was done."
+    ],
+    "sources": [
+      "M01",
+      "M02",
+      "M03"
+    ]
+  },
+  "q2": {
+    "question": "Growth markets: semiconductors and batteries",
+    "intro": "Semiconductor and battery manufacturing are both named ThermGAS industries (thermgas.com). Evidence below is limited to announcements and status updates from March 2025 to November 2026 (roughly the last 20 months).",
+    "markets": [
+      {
+        "id": "semis",
+        "name": "Semiconductor manufacturing",
+        "evidence_of_growth": [
+          {
+            "text": "Federal CHIPS incentives: $30.9B in direct funding plus $5.5B in loans awarded to date; no award publicly rescinded or reduced as of July 2026. The 35% investment tax credit applies to construction begun before Dec 31, 2026.",
+            "status": "Verified",
+            "sources": [
+              "M14"
+            ]
+          },
+          {
+            "text": "TSMC and Micron both raised their U.S. capital commitments in 2025 (TSMC to $165B, Micron to $200B).",
+            "status": "Verified",
+            "sources": [
+              "M11",
+              "M12",
+              "M14"
+            ]
+          },
+          {
+            "text": "Counter-signal: several fabs slipped (Micron New York from 2028 to Q3 2030; Intel Ohio from 2026 to 2030; Samsung Taylor delayed), so some of the construction-stage demand is later than first announced.",
+            "status": "Verified",
+            "sources": [
+              "M14"
+            ]
+          }
+        ],
+        "rows": [
+          {
+            "company": "TSMC Arizona",
+            "location": "Phoenix, AZ",
+            "state": "AZ",
+            "investment": "$165B total planned U.S. investment (incl. $65B ongoing Phoenix investment); CHIPS award up to $11.565B",
+            "status": "First Phoenix fab in volume production since late 2024; expansion adds three fabs, two advanced-packaging plants and an R&D center. Second-fab volume production reported for 2027 (secondary).",
+            "sources": [
+              "M11",
+              "M14"
+            ]
+          },
+          {
+            "company": "Texas Instruments",
+            "location": "Sherman, TX (also Lehi, UT and Richardson, TX)",
+            "state": "TX / UT",
+            "investment": "More than $60B across seven U.S. fabs; Sherman up to $40B for four fabs (SM1-SM4); CHIPS award up to $1.61B",
+            "status": "SM1 initial production planned for 2025 and reported started Dec 2025 (trade press); SM2 shell complete; SM3 and SM4 are future phases.",
+            "sources": [
+              "M10",
+              "M14",
+              "M17"
+            ]
+          },
+          {
+            "company": "Micron",
+            "location": "Boise, ID and Clay, NY (also Manassas, VA)",
+            "state": "ID / NY",
+            "investment": "$200B plan announced June 2025 (NIST); later raised to $250B through 2035 (TrendForce, secondary); CHIPS award $6.44B",
+            "status": "Idaho first fab: wafer output mid-to-2H 2027 (secondary). New York first fab opening delayed from 2028 to Q3 2030 (CRS).",
+            "sources": [
+              "M12",
+              "M14",
+              "M15",
+              "M16"
+            ]
+          },
+          {
+            "company": "Samsung Austin Semiconductor",
+            "location": "Taylor, TX (and Austin expansion)",
+            "state": "TX",
+            "investment": "Over $37B; CHIPS award up to $4.745B",
+            "status": "Production start delayed from 2024 to 2025 (CRS). Current operating status not confirmed from a primary source; trade trackers conflict.",
+            "sources": [
+              "M13",
+              "M14"
+            ]
+          }
+        ],
+        "fit": {
+          "text": "Fabs use fluorinated process gases such as SF6, NF3, C4F6 and CF4 for plasma etch and chamber cleaning, and large chiller plants and cleanroom HVAC for the building. ThermGAS already markets configurable monitors for exactly these gases, and a fab contains many gases and vapors, so selective detection matters. New construction means monitor locations (process tools, gas cabinets, sub-fab, chiller rooms) are specified during design.",
+          "status": "Inferred (product fit is ThermGAS's own claim; why a given fab buys it is team reasoning)",
+          "sources": [
+            "M18"
+          ]
+        }
+      },
+      {
+        "id": "batteries",
+        "name": "Battery manufacturing",
+        "evidence_of_growth": [
+          {
+            "text": "Operating and ramping plants in 2025-26: Panasonic (KS) in mass production since July 2025; Toyota (NC) shipping since June 2025 with an official launch in Nov 2025.",
+            "status": "Verified",
+            "sources": [
+              "S143",
+              "M21",
+              "S144"
+            ]
+          },
+          {
+            "text": "Counter-signals: KORE Power's Arizona plant cancelled (Feb 2025), Ultium Warren (OH) idle since Jan 2026, BlueOval SK joint venture dissolved (Dec 2025). Demand has shifted toward energy storage in some plants.",
+            "status": "Verified",
+            "sources": [
+              "S141",
+              "S145",
+              "S142"
+            ]
+          },
+          {
+            "text": "This project's earlier research tracks 20 U.S. cell plants (DOE FCAB list with 2025-26 updates).",
+            "status": "Verified",
+            "sources": [
+              "S130"
+            ]
+          }
+        ],
+        "rows": [
+          {
+            "company": "Panasonic Energy",
+            "location": "De Soto, KS",
+            "state": "KS",
+            "investment": "$4B",
+            "status": "Grand opening July 2025; mass production started; about 1,000 staff hired; up to 4,000 jobs planned; two wings, four lines each.",
+            "sources": [
+              "S143"
+            ]
+          },
+          {
+            "company": "Toyota Battery Manufacturing North Carolina",
+            "location": "Liberty, NC",
+            "state": "NC",
+            "investment": "$13.9B",
+            "status": "Began shipping batteries June 2025; official production launch Nov 12, 2025; more lines scheduled through 2030 (press).",
+            "sources": [
+              "M21",
+              "S144"
+            ]
+          },
+          {
+            "company": "HL-GA Battery (Hyundai Motor Group and LG Energy Solution)",
+            "location": "Bryan County, GA",
+            "state": "GA",
+            "investment": "$4.3B (2023 announcement)",
+            "status": "Opening delayed by the Sept 2025 immigration raid; April 2026 reporting says the plant is about to open. Production start not confirmed.",
+            "sources": [
+              "M23",
+              "S147",
+              "M22"
+            ]
+          },
+          {
+            "company": "LG Energy Solution",
+            "location": "Queen Creek, AZ",
+            "state": "AZ",
+            "investment": "$5.5B",
+            "status": "Cylindrical-cell mass production targeted for H1 2026 (March 2025 reports). No 2026 confirmation found.",
+            "sources": [
+              "M24",
+              "S148"
+            ]
+          }
+        ],
+        "fit": {
+          "text": "Electrolyte solvents such as dimethyl carbonate (DMC) are volatile and flammable; vapor can signal loss of containment in electrolyte storage, mixing, transfer and cell filling. Battery plants also run dry rooms and chilled process cooling, where refrigerant monitoring applies. ThermGAS publishes a DMC application note for these areas (its DMC specification is still inconsistent: 0.5 vs 1 ppm; see the competitor pages).",
+          "status": "Inferred (ThermGAS's application note is a vendor claim; plant-level need is team reasoning)",
+          "sources": [
+            "S01",
+            "S02"
+          ]
+        }
+      }
+    ]
+  },
+  "q3": {
+    "question": "Data center construction activity by state",
+    "intro": "State rows combine a project tracker (counts and announced dollars) with primary sources for incentives and flagship projects. The tracker is a secondary compilation (April 2026, largest projects re-checked October 2026). It is not filtered to the last 24 months because it does not give an announcement date for every project; dollars are announced investment, not spending.",
+    "national": {
+      "text": "Data center construction starts reached $135.8B across 178 projects in January-September 2026 and are on pace to exceed $180B for the year (ConstructConnect). A further $74.8B across 115 planned projects is expected to start in the next six months, almost 80% of it in the South.",
+      "status": "Verified",
+      "sources": [
+        "M30"
+      ]
+    },
+    "states": [
+      {
+        "state": "VA",
+        "name": "Virginia",
+        "projects": 41,
+        "announced_b": 162.2,
+        "under_construction": 13,
+        "uc_b": 18.4,
+        "ex_largest_b": 62.2,
+        "developers": "Google, Amazon Web Services, The Garrett Companies, Tract, QTS, Iron Mountain",
+        "flagship": "Southern Virginia Megasite at Berry Hill ($100B, planned; Stack Infrastructure affiliate); Google Chesterfield ($9B, under construction)",
+        "incentives": "Long-standing sales and use tax exemption for data center equipment under review: the 2026 Appropriation Act directs a tax-policy study of it, and adds a data center electricity consumption tax of $0.011/kWh from July 2026 to July 2028 (revenue to the general fund capped at $600M a year).",
+        "incentive_status": "Verified",
+        "incentive_sources": [
+          "M33"
+        ],
+        "sources": [
+          "M31",
+          "M33"
+        ],
+        "incentive_short": "Exemption under review + new electricity tax (Jul 2026)"
+      },
+      {
+        "state": "GA",
+        "name": "Georgia",
+        "projects": 43,
+        "announced_b": 128,
+        "under_construction": 9,
+        "uc_b": 18.9,
+        "ex_largest_b": 107,
+        "developers": "Atlas Development, Amazon, QTS, Microsoft, Trammell Crow Company",
+        "flagship": "Forsyth Technology Campus ($21B, planned); AWS Richmond County ($10B, under construction)",
+        "incentives": "HB 463 (2026), as passed, repeals the state sales and use tax exemption for data center equipment, effective on approval by the Governor and applicable to tax years beginning on or after Jan 1, 2026. The text is hosted in the Governor's 2026 signed-legislation folder; the signing date was not confirmed in this review.",
+        "incentive_status": "Verified (bill text); signing date not confirmed",
+        "incentive_sources": [
+          "M34"
+        ],
+        "sources": [
+          "M31",
+          "M34"
+        ],
+        "incentive_short": "Equipment exemption being repealed (HB 463)"
+      },
+      {
+        "state": "TX",
+        "name": "Texas",
+        "projects": 58,
+        "announced_b": 116.2,
+        "under_construction": 26,
+        "uc_b": 52.9,
+        "ex_largest_b": 104.2,
+        "developers": "Crusoe, Stream Data Centers, Fermi America, Core Scientific, Microsoft, EdgeConneX",
+        "flagship": "Texas Critical Data Centers, Ector County ($12B, under construction); Meta El Paso ($10B, under construction); Skybox/Prologis Hutto ($10B, under construction)",
+        "incentives": "State sales tax exemption (6.25% state portion) for qualifying data centers: at least $200M and 20 jobs for a 10-15 year exemption; large projects at least $500M and 40 jobs for 20 years, including local taxes.",
+        "incentive_status": "Verified",
+        "incentive_sources": [
+          "M32"
+        ],
+        "sources": [
+          "M31",
+          "M32"
+        ],
+        "incentive_short": "Sales-tax exemption: up to 20 years for large projects"
+      },
+      {
+        "state": "IN",
+        "name": "Indiana",
+        "projects": 21,
+        "announced_b": 105.9,
+        "under_construction": 4,
+        "uc_b": 23.8,
+        "ex_largest_b": 40.9,
+        "developers": "Amazon Web Services, Google, Microsoft, Meta, Sentinel Data Centers",
+        "flagship": "Meta LEAP District, Lebanon ($10B; groundbreaking Feb 2026); AWS New Carlisle ($11B, announced Apr 2024); Heartland Industrial Park ($65B, planned, developer undisclosed)",
+        "incentives": "Data center sales tax exemptions through the Indiana Economic Development Corporation: AWS New Carlisle committed for a 50-year term and Meta Lebanon for a 35-year term on at least $1B of eligible capital invested within six years (performance-based).",
+        "incentive_status": "Verified",
+        "incentive_sources": [
+          "M37",
+          "M38"
+        ],
+        "sources": [
+          "M31",
+          "M37",
+          "M38"
+        ],
+        "incentive_short": "35-50 year sales-tax exemptions (IEDC)"
+      },
+      {
+        "state": "PA",
+        "name": "Pennsylvania",
+        "projects": 32,
+        "announced_b": 84,
+        "under_construction": 7,
+        "uc_b": 43.1,
+        "ex_largest_b": 69,
+        "developers": "Carlisle Development Partners / PowerHouse Data Centers, Aligned Data Centers, Homer City Redevelopment / Kiewit, International Electric Power",
+        "flagship": "Amazon at least $20B (announced June 2025; Salem Township and Falls Township first); PAX-1 Cumberland County ($15B, under construction); Homer City energy campus ($10B)",
+        "incentives": "No data center sales-tax exemption confirmed in this review. The Governor's announcement credits faster permitting and site-development support, and the state later issued GRID standards with disclosure requirements for developers.",
+        "incentive_status": "Verified (announcement); equipment-tax exemption not confirmed",
+        "incentive_sources": [
+          "M36"
+        ],
+        "caveat": "The tracker lists two Homer City rows of $10B each (Somerset and Indiana counties) that may be the same campus. Counting it once gives $74.0B announced and $33.1B under construction.",
+        "sources": [
+          "M31",
+          "M36"
+        ],
+        "incentive_short": "No equipment exemption confirmed; faster permitting"
+      },
+      {
+        "state": "OH",
+        "name": "Ohio",
+        "projects": 33,
+        "announced_b": 66.6,
+        "under_construction": 13,
+        "uc_b": 15.5,
+        "ex_largest_b": 33.3,
+        "developers": "Amazon Web Services, SoftBank / SB Energy, OpenAI, Oracle, Meta, Microsoft",
+        "flagship": "PORTS Technology Campus, Pike County ($33.3B, planned); AWS Xenia ($4B, under construction); Stargate campus, Trumbull County ($3.6B, under construction)",
+        "incentives": "Sales and use tax exemption for data center equipment via the Ohio Tax Credit Authority, but on May 27, 2026 the Governor directed it to pause consideration of new exemption requests while the legislature's Joint Data Center Committee studies growth. Previously exempted data centers reported $27.2B of capital investment in 2025. It is not a ban.",
+        "incentive_status": "Verified",
+        "incentive_sources": [
+          "M35"
+        ],
+        "sources": [
+          "M31",
+          "M35"
+        ],
+        "incentive_short": "New exemptions paused since May 27, 2026"
+      }
+    ],
+    "ranking_note": "Rankings differ by measure, so three are shown. Announced dollars are dominated by a few very large planned campuses (e.g., $100B in Virginia, $65B in Indiana, $21B in Georgia), which may never be built as announced. Projects already under construction are the better signal for near-term chiller-room demand.",
+    "recommendation": {
+      "short": "Go first to Texas (most projects, 26 under construction), then Virginia (largest announced total), then Georgia (home state, but its equipment tax exemption is being repealed). Watch Ohio.",
+      "text": "Prioritize Texas first and Virginia second, and treat Georgia as the third target. Texas has the most projects (58) and by far the most under construction (26, $52.9B), with a stable large-project tax exemption. Virginia has the largest announced total ($162.2B) and 13 projects under construction, though its incentive regime is being reviewed. Georgia (43 projects, $128.0B) is ThermGAS's home state (Roswell) so service and sales travel is shortest, but its equipment tax exemption is being repealed and only 9 projects are under construction. Ohio has 13 projects under construction but has paused new exemptions, so keep it on a watch list.",
+      "status": "Inferred (ranking and recommendation are the team's judgment from Verified counts and incentive facts)",
+      "sources": [
+        "M31",
+        "M32",
+        "M33",
+        "M34",
+        "M35"
+      ]
+    },
+    "fit": {
+      "text": "Data center chillers, precision cooling and DX equipment contain refrigerants (R-134a and R-410A in older systems; R-513A, R-515B, R-1234ze(E), R-454B in newer ones), and a leak can reduce cooling capacity as well as create safety risk. Refrigerant detection is also required in certain machinery-room and equipment applications. ThermGAS notes that lithium-ion UPS batteries can release hydrogen, CO and electrolyte vapors, a second monitoring need.",
+      "status": "Verified (ThermGAS's own statements); buying behavior is Inferred",
+      "sources": [
+        "M19"
+      ]
+    },
+    "limitations": [
+      "The tracker is a secondary compilation (compiled April 2026, largest projects re-checked October 2026), not an audited list; dollars are announced investment, not spending, and projects get cancelled.",
+      "Project counts are not limited to the last 12-24 months; announcement dates are only given for the flagship projects cited from primary sources (e.g., Amazon Pennsylvania, June 2025; Meta Indiana groundbreaking, Feb 2026; AWS Indiana is older, April 2024).",
+      "Developer lists come from the tracker rows and were checked against primary sources only for the flagship projects named above.",
+      "The Georgia signing date, Virginia's final sales-tax outcome and Pennsylvania's equipment-tax rules were not confirmed from primary sources."
+    ]
+  },
+  "evidence_gaps": [
+    "No survey or sales data shows how many pharma, fab, battery or data center sites actually buy refrigerant or specialty-gas leak detection; all fit statements are reasoning.",
+    "CBP 2024 files were not yet released; state cells are partly suppressed.",
+    "Samsung Taylor, Hyundai-LG Georgia and LG Arizona operating status could not be confirmed from primary sources.",
+    "Micron's $250B figure and the Idaho/New York timing come from trade press, not a company release read in full."
+  ]
+}

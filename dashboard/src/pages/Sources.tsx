@@ -4,6 +4,7 @@ import { Card, Badge, Src, PageHead, Legend } from '../ui';
 
 type Tab = 'register' | 'state' | 'products' | 'facilities' | 'method';
 const EXPORTS = [
+  ['ThermGAS_Market_Intelligence_Data.xlsx', 'Excel workbook (15 sheets)'],
   ['source_register.csv', 'Source register'], ['competitors.csv', 'Competitor research dataset'], ['competitor_comparison_matrix.csv', 'Comparison matrix'],
   ['state_evidence.csv', 'State evidence'], ['states_51.csv', 'State-level dataset (51)'], ['facilities.csv', 'Facilities'], ['thermgas_ci_dataset.json', 'Full dataset (JSON)'],
 ];
@@ -66,9 +67,9 @@ export default function Sources({ params }: { params: URLSearchParams }) {
       {tab === 'register' && (
         <div className="table-wrap" style={{ maxHeight: 620 }}>
           <table className="t">
-            <thead><tr><th>ID</th><th>Publisher</th><th>Title</th><th>Type</th><th>Source date</th><th>Accessed</th><th>Link</th></tr></thead>
+            <thead><tr><th>ID</th><th>Publisher</th><th>Title</th><th>Type</th><th>Source date</th><th>Accessed</th><th>Link</th><th>Link check</th></tr></thead>
             <tbody>{sources.filter(match).filter(s => type === 'all' || s.type.startsWith(type)).map(s => (
-              <tr key={s.id}><td><b>{s.id}</b></td><td>{s.publisher}</td><td>{s.title}</td><td className="small">{s.type}</td><td className="small">{s.source_date}</td><td className="small">{s.access_date}</td><td><a href={s.url} target="_blank" rel="noreferrer">open ↗</a></td></tr>
+              <tr key={s.id}><td><b>{s.id}</b></td><td>{s.publisher}</td><td>{s.title}</td><td className="small">{s.type}</td><td className="small">{s.source_date}</td><td className="small">{s.access_date}</td><td><a href={s.url} target="_blank" rel="noreferrer">open ↗</a></td><td className="small">{s.link_check === 'OK' ? <span className="badge badge-verified">✓ OK</span> : <span className="badge badge-inferred" title={s.link_check}>{(s.link_check ?? '-').startsWith('Blocked') ? 'Blocked (403)' : s.link_check}</span>}</td></tr>
             ))}</tbody>
           </table>
         </div>

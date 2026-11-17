@@ -1,0 +1,2563 @@
+{
+ "note": "Derived by scripts/tools/compute-market.js. pharma = Census CBP 2023 establishments for NAICS 325412 + 325414 (null = not published or zero). data_centers = BoomTownIndex tracker rows (secondary compilation; withdrawn projects excluded), top 6 projects per state by announced investment.",
+ "sources": {
+  "pharma": [
+   "M02",
+   "M03"
+  ],
+  "data_centers": [
+   "M31"
+  ]
+ },
+ "states": {
+  "DE": {
+   "pharma": {
+    "est": 14,
+    "emp": 994,
+    "est_325412": 7,
+    "est_325414": 7
+   },
+   "data_centers": {
+    "projects": 1,
+    "announced_b": 9.7,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Project Washington Data Center Campus",
+      "developer": "Starwood Digital Ventures LLC",
+      "county": "New Castle County",
+      "investment_b": 9.7,
+      "status": "Proposed",
+      "timeline": "Q3 2026 - Q2 2028 (initial operations)"
+     }
+    ]
+   }
+  },
+  "DC": {
+   "pharma": null,
+   "data_centers": null
+  },
+  "FL": {
+   "pharma": {
+    "est": 123,
+    "emp": 8008,
+    "est_325412": 104,
+    "est_325414": 19
+   },
+   "data_centers": {
+    "projects": 17,
+    "announced_b": 14.7,
+    "under_construction": 5,
+    "top": [
+     {
+      "project": "Stream Data Centers Campus (Project Liberty)",
+      "developer": "Stream Data Centers",
+      "county": "Marion County",
+      "investment_b": 6,
+      "status": "Proposed",
+      "timeline": "Phase one: by 2027, Full build: 5-6 years from 2026"
+     },
+     {
+      "project": "Fort Meade Data Center Campus",
+      "developer": "Bohler Places LLC (developer, end-user undisclosed)",
+      "county": "Polk County",
+      "investment_b": 2.7,
+      "status": "Planned",
+      "timeline": "2027-2028 (targeted development)"
+     },
+     {
+      "project": "Datacore Innovations Data Center Campus",
+      "developer": "Datacore Innovations LLC (Capital Land Group LLC)",
+      "county": "Monroe County",
+      "investment_b": 1.12,
+      "status": "Proposed",
+      "timeline": "Expected completion December 2038"
+     },
+     {
+      "project": "Project Tango AI Data Center Campus",
+      "developer": "PBA Holdings (Palm Beach Aggregates & Phillips Inc.)",
+      "county": "Palm Beach County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Proposed for vote April 23, 2026"
+     },
+     {
+      "project": "US Development Data Center Campus",
+      "developer": "US Development",
+      "county": "Osceola County",
+      "investment_b": 1,
+      "status": "Planned",
+      "timeline": "Proposed"
+     },
+     {
+      "project": "Holder Industrial Park Data Center Proposal",
+      "developer": "Deltona Corporation",
+      "county": "Citrus County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed, under review in 2026"
+     }
+    ]
+   }
+  },
+  "GA": {
+   "pharma": {
+    "est": 41,
+    "emp": 4094,
+    "est_325412": 31,
+    "est_325414": 10
+   },
+   "data_centers": {
+    "projects": 43,
+    "announced_b": 128,
+    "under_construction": 9,
+    "top": [
+     {
+      "project": "Forsyth Technology Campus",
+      "developer": "Trammell Crow Company",
+      "county": "Monroe County",
+      "investment_b": 21,
+      "status": "Planned",
+      "timeline": "Through 2037"
+     },
+     {
+      "project": "Project Bunkhouse Data Center Campus",
+      "developer": "Undisclosed Developer (working with Kimley-Horn)",
+      "county": "Bartow County",
+      "investment_b": 19,
+      "status": "Planned",
+      "timeline": "By 2035 (10+ year buildout)"
+     },
+     {
+      "project": "Project Sail Data Center Campus",
+      "developer": "Atlas Development (with Prologis)",
+      "county": "Coweta County",
+      "investment_b": 17,
+      "status": "Proposed",
+      "timeline": "Proposed, full buildout by 2037"
+     },
+     {
+      "project": "Amazon Web Services (AWS) Data Center Campus",
+      "developer": "Amazon",
+      "county": "Richmond County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "By 2030 (initial phase)"
+     },
+     {
+      "project": "Project West Data Center Campus",
+      "developer": "Project West WHP - GA LLC",
+      "county": "Troup County",
+      "investment_b": 9.7,
+      "status": "Planned",
+      "timeline": "Phase I by 2028, Phase II by 2030, Phase III by 2033"
+     },
+     {
+      "project": "Gregory Road Data Center Campus",
+      "developer": "Universal Planning LLC (proposed)",
+      "county": "Newton County",
+      "investment_b": 5.7,
+      "status": "Proposed",
+      "timeline": "Phase 1 starting 2027, full build-out by 2036"
+     }
+    ]
+   }
+  },
+  "HI": {
+   "pharma": null,
+   "data_centers": null
+  },
+  "ID": {
+   "pharma": {
+    "est": 3,
+    "emp": 63,
+    "est_325412": 3,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 4,
+    "announced_b": 2.4,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "Meta Kuna Data Center",
+      "developer": "Meta",
+      "county": "Ada County",
+      "investment_b": 0.8,
+      "status": "Under construction",
+      "timeline": "Late 2025-2026"
+     },
+     {
+      "project": "Deep Atomic INL Data Center",
+      "developer": "Deep Atomic",
+      "county": "Bonneville County",
+      "investment_b": 0.6,
+      "status": "Planned",
+      "timeline": "Planned"
+     },
+     {
+      "project": "Meta Data Center",
+      "developer": "Meta",
+      "county": "Twin Falls County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Expected completion 2025"
+     },
+     {
+      "project": "Microsoft Data Center",
+      "developer": "Microsoft",
+      "county": "Twin Falls County",
+      "investment_b": 0.5,
+      "status": "Operating",
+      "timeline": "Ongoing"
+     }
+    ]
+   }
+  },
+  "IL": {
+   "pharma": {
+    "est": 46,
+    "emp": 7243,
+    "est_325412": 35,
+    "est_325414": 11
+   },
+   "data_centers": {
+    "projects": 23,
+    "announced_b": 25.8,
+    "under_construction": 6,
+    "top": [
+     {
+      "project": "T5 @ Chicago IV Data Center Campus",
+      "developer": "T5 Data Centers",
+      "county": "Lake County",
+      "investment_b": 8.5,
+      "status": "Under construction",
+      "timeline": "2027-2036"
+     },
+     {
+      "project": "Joliet Data Center Campus",
+      "developer": "HW Technology Park Development LLC (Hillwood)",
+      "county": "Will County",
+      "investment_b": 2,
+      "status": "Planned",
+      "timeline": "First building by 2028, full completion by 2030"
+     },
+     {
+      "project": "Pekin Data Center (Lutticken Farm)",
+      "developer": "Western Hospitality Partners (WHP)",
+      "county": "Tazewell County",
+      "investment_b": 2,
+      "status": "Proposed",
+      "timeline": "Proposed, decision months away"
+     },
+     {
+      "project": "Project Cardinal Data Center",
+      "developer": "Pioneer Development",
+      "county": "Kendall County",
+      "investment_b": 1.8,
+      "status": "Planned",
+      "timeline": "Planned"
+     },
+     {
+      "project": "Meta DeKalb Data Center Campus",
+      "developer": "Meta",
+      "county": "DeKalb County",
+      "investment_b": 1,
+      "status": "Operating",
+      "timeline": "Operational 2023, ongoing expansion"
+     },
+     {
+      "project": "Tract Morris Data Center",
+      "developer": "Tract",
+      "county": "Grundy County",
+      "investment_b": 1,
+      "status": "Planned",
+      "timeline": "Initial energization by June 2028, full 1 GW load by 2032"
+     }
+    ]
+   }
+  },
+  "IN": {
+   "pharma": {
+    "est": 24,
+    "emp": 11339,
+    "est_325412": 19,
+    "est_325414": 5
+   },
+   "data_centers": {
+    "projects": 21,
+    "announced_b": 105.9,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "Heartland Industrial Park Data Center Campus",
+      "developer": "Undisclosed (first tenant is a $65B private investment)",
+      "county": "Sullivan County",
+      "investment_b": 65,
+      "status": "Planned",
+      "timeline": "Underway, multi-year build-out"
+     },
+     {
+      "project": "AWS Data Center Campus (New Carlisle)",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "St. Joseph County",
+      "investment_b": 11,
+      "status": "Under construction",
+      "timeline": "Operational by Q3 2026 (initial phase), multi-phase development through 2030"
+     },
+     {
+      "project": "Meta Data Center Campus (LEAP Innovation and Research District)",
+      "developer": "Meta Platforms",
+      "county": "Boone County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "First buildings online by end of 2027, operational by late 2027 or early 2028"
+     },
+     {
+      "project": "Sentinel Data Centers Campus",
+      "developer": "Sentinel Data Centers",
+      "county": "Lake County",
+      "investment_b": 5,
+      "status": "Proposed",
+      "timeline": "Due diligence through 2026, zoning process ongoing"
+     },
+     {
+      "project": "Google Data Center Campus (Project Zodiac)",
+      "developer": "Google",
+      "county": "Allen County",
+      "investment_b": 2,
+      "status": "Under construction",
+      "timeline": "Phase 1 operational by December 2025, ongoing construction for future phases"
+     },
+     {
+      "project": "QTS Data Center Campus (Proposed)",
+      "developer": "QTS Data Centers",
+      "county": "Porter County",
+      "investment_b": 2,
+      "status": "Proposed",
+      "timeline": "Proposed (withdrawn as of Sept 2025)"
+     }
+    ]
+   }
+  },
+  "IA": {
+   "pharma": {
+    "est": 31,
+    "emp": 3814,
+    "est_325412": 14,
+    "est_325414": 17
+   },
+   "data_centers": {
+    "projects": 12,
+    "announced_b": 27.1,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "Proposed Norwalk Data Center Campus",
+      "developer": "Undisclosed Developer",
+      "county": "Warren County",
+      "investment_b": 12,
+      "status": "Proposed",
+      "timeline": "Infrastructure starting Summer 2026, completion by 2030"
+     },
+     {
+      "project": "Microsoft Data Center Campus (Van Meter)",
+      "developer": "Microsoft",
+      "county": "Dallas County",
+      "investment_b": 6,
+      "status": "Planned",
+      "timeline": "Construction to begin late 2025"
+     },
+     {
+      "project": "Microsoft Data Center (Project Osmium)",
+      "developer": "Microsoft",
+      "county": "Warren County",
+      "investment_b": 1.5,
+      "status": "Under construction",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Apple Data Center Campus",
+      "developer": "Apple",
+      "county": "Dallas County",
+      "investment_b": 1.3,
+      "status": "Operating",
+      "timeline": "Partially operational as of Oct 2024"
+     },
+     {
+      "project": "Google Data Center - Campus 2 West",
+      "developer": "Google",
+      "county": "Pottawattamie County",
+      "investment_b": 1,
+      "status": "Operating",
+      "timeline": "2020"
+     },
+     {
+      "project": "Meta Data Center Campus Expansion",
+      "developer": "Meta",
+      "county": "Polk County",
+      "investment_b": 1,
+      "status": "Under construction",
+      "timeline": "Ongoing since 2013"
+     }
+    ]
+   }
+  },
+  "KS": {
+   "pharma": {
+    "est": 18,
+    "emp": 4495,
+    "est_325412": 10,
+    "est_325414": 8
+   },
+   "data_centers": {
+    "projects": 7,
+    "announced_b": 17.6,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Red Wolf DCD Properties Data Center Campus (Project Red Wolf)",
+      "developer": "Red Wolf DCD Properties LLC",
+      "county": "Wyandotte County",
+      "investment_b": 12.6,
+      "status": "Planned",
+      "timeline": "Expected decision 2026, full buildout 6 years"
+     },
+     {
+      "project": "De Soto Data Center Campus (",
+      "developer": "Mount Sunflower Properties LLC (managed by Beale Infrastructure)",
+      "county": "Johnson County",
+      "investment_b": 3.1,
+      "status": "Proposed",
+      "timeline": "Starting 2026"
+     },
+     {
+      "project": "Data Center Campus (Flint Commerce Center)",
+      "developer": "Undisclosed (developer)",
+      "county": "Douglas County",
+      "investment_b": 0.7,
+      "status": "Proposed",
+      "timeline": "Proposed, initial phase $700M"
+     },
+     {
+      "project": "Project Bluestem Hyperscale Data Center",
+      "developer": "Cloverleaf Infrastructure",
+      "county": "Leavenworth County",
+      "investment_b": 0.6,
+      "status": "Proposed",
+      "timeline": "Proposed, no formal filings yet"
+     },
+     {
+      "project": "Project Yardbird Data Center Campus",
+      "developer": "PowerTransitions",
+      "county": "Wyandotte County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Online 2027-2028"
+     },
+     {
+      "project": "KC2 Data Center (7801 Nieman Road)",
+      "developer": "Netrality Data Centers",
+      "county": "Shawnee County",
+      "investment_b": 0.1,
+      "status": "Operating",
+      "timeline": "Completed (June 2024)"
+     }
+    ]
+   }
+  },
+  "KY": {
+   "pharma": {
+    "est": 11,
+    "emp": 1012,
+    "est_325412": 7,
+    "est_325414": 4
+   },
+   "data_centers": {
+    "projects": 5,
+    "announced_b": 12,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "Project Lincoln: OC Data Center",
+      "developer": "Western Hospitality Partners - Kentucky LLC",
+      "county": "Oldham County",
+      "investment_b": 6,
+      "status": "Proposed",
+      "timeline": "Proposed, expected sometime after June 2025 for Board of Adjustments review"
+     },
+     {
+      "project": "AWS Data Center Campus",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Fayette County",
+      "investment_b": 5,
+      "status": "Planned",
+      "timeline": "Construction to begin early 2025, operational by 2030"
+     },
+     {
+      "project": "AI Data Centers at Paducah Site",
+      "developer": "US Department of Energy (DOE)",
+      "county": "McCracken County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposals due by January 30, 2026"
+     },
+     {
+      "project": "Louisville Hyperscale Data Center Campus",
+      "developer": "PowerHouse Data Centers and Poe Companies",
+      "county": "Jefferson County",
+      "investment_b": 0.45,
+      "status": "Under construction",
+      "timeline": "First building operational by Q4 2026, fully operational by 2030"
+     },
+     {
+      "project": "Windstream Fiber-backed Network Expansion",
+      "developer": "Windstream",
+      "county": "Jessamine County",
+      "investment_b": 0.05,
+      "status": "Under construction",
+      "timeline": "Ongoing (announced Sept 2021, multi-year investment)"
+     }
+    ]
+   }
+  },
+  "LA": {
+   "pharma": {
+    "est": 10,
+    "emp": 333,
+    "est_325412": 7,
+    "est_325414": 3
+   },
+   "data_centers": {
+    "projects": 1,
+    "announced_b": 1,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Project Lightning (Data Center Campus)",
+      "developer": "Applied Digital Corporation",
+      "county": "Rapides Parish",
+      "investment_b": 1,
+      "status": "Under construction",
+      "timeline": "Phase 1 operations expected Q2 2027, Phase 2 details expected by end of 2026"
+     }
+    ]
+   }
+  },
+  "ME": {
+   "pharma": {
+    "est": 10,
+    "emp": 262,
+    "est_325412": 6,
+    "est_325414": 4
+   },
+   "data_centers": {
+    "projects": 3,
+    "announced_b": 1.5,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Loring LiquidCool Data Center Campus",
+      "developer": "Loring LiquidCool Data Center (LiquidCool Solutions / Green 4 Maine)",
+      "county": "Aroostook County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Operational by mid-2026, campus expansion ongoing"
+     },
+     {
+      "project": "Androscoggin Mill Data Center",
+      "developer": "JGT2 Redevelopment LLC (managed by Sentinel Data Centers)",
+      "county": "Androscoggin County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed, construction to employ 800-1000 workers"
+     },
+     {
+      "project": "Sanford Data Center",
+      "developer": "Undisclosed (New England Energy Co. owns land)",
+      "county": "York County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed, potentially operational by 2028 if moratorium bypassed"
+     }
+    ]
+   }
+  },
+  "MD": {
+   "pharma": {
+    "est": 30,
+    "emp": 4459,
+    "est_325412": 20,
+    "est_325414": 10
+   },
+   "data_centers": {
+    "projects": 6,
+    "announced_b": 8,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "Brightseat Tech Park Data Center Campus",
+      "developer": "Brightseat Associates LLC (Lerner Enterprises)",
+      "county": "Prince George's County",
+      "investment_b": 5,
+      "status": "Planned",
+      "timeline": "Groundbreaking 2026-2027, anticipated development by 2034"
+     },
+     {
+      "project": "Dickerson Data Center",
+      "developer": "Undisclosed (Terra Energy owns the former plant site)",
+      "county": "Montgomery County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Proposed (under review, potential 2026-2030 development)"
+     },
+     {
+      "project": "Amazon Web Services (AWS) Data Center Campus",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Calvert County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed, no formal proposal submitted yet"
+     },
+     {
+      "project": "Data Center in Woodlawn (Proposed)",
+      "developer": "Undisclosed",
+      "county": "Baltimore County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed (moratorium in place)"
+     },
+     {
+      "project": "Aligned Data Centers Campus Expansion",
+      "developer": "Aligned Data Centers",
+      "county": "Frederick County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Underway, with site plan approvals in May 2023 and March 2025 for additional buildings"
+     },
+     {
+      "project": "Quantum Frederick Data Center Development",
+      "developer": "Quantum Maryland, LLC",
+      "county": "Frederick County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Underway, with preliminary subdivision plan approval and numerous site plans approved since 2021"
+     }
+    ]
+   }
+  },
+  "MA": {
+   "pharma": {
+    "est": 115,
+    "emp": 11167,
+    "est_325412": 75,
+    "est_325414": 40
+   },
+   "data_centers": {
+    "projects": 1,
+    "announced_b": 3,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Westfield Data Center Campus",
+      "developer": "Servistar Realties, LLC",
+      "county": "Hampshire County",
+      "investment_b": 3,
+      "status": "Planned",
+      "timeline": "12-18 year build-out (from 2021)"
+     }
+    ]
+   }
+  },
+  "MI": {
+   "pharma": {
+    "est": 43,
+    "emp": 12508,
+    "est_325412": 37,
+    "est_325414": 6
+   },
+   "data_centers": {
+    "projects": 18,
+    "announced_b": 22.5,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Stargate Michigan Campus (OpenAI, Oracle, Related Digital)",
+      "developer": "OpenAI, Oracle, Related Digital",
+      "county": "Washtenaw County",
+      "investment_b": 7,
+      "status": "Planned",
+      "timeline": "Construction to begin in early 2026"
+     },
+     {
+      "project": "Rocklocker Data Center (Kalkaska County, regional impact)",
+      "developer": "Rocklocker (subsidiary of Reefworks)",
+      "county": "Grand Traverse County",
+      "investment_b": 2,
+      "status": "Proposed",
+      "timeline": "Proposed (early 2026 construction pending approval)"
+     },
+     {
+      "project": "University of Michigan / Los Alamos National Laboratory High-Performance Computational Facility",
+      "developer": "University of Michigan, Los Alamos National Laboratory",
+      "county": "Washtenaw County",
+      "investment_b": 1.25,
+      "status": "Proposed",
+      "timeline": "Ongoing, potential move to Willow Run site being investigated"
+     },
+     {
+      "project": "Form8tion (Thor Equities) Data Center",
+      "developer": "Thor Equities (Form8tion unit)",
+      "county": "Washtenaw County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Announced 2025, facing zoning and environmental review challenges"
+     },
+     {
+      "project": "Project Cannoli (Google Data Center Campus)",
+      "developer": "Google (developer Panattoni)",
+      "county": "Wayne County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Under public review, construction not finalized (announced 2024)"
+     },
+     {
+      "project": "Project Cannoli Data Center",
+      "developer": "Google",
+      "county": "Van Buren County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Under discussion/approval process (as of March 2026)"
+     }
+    ]
+   }
+  },
+  "MN": {
+   "pharma": {
+    "est": 29,
+    "emp": 2374,
+    "est_325412": 17,
+    "est_325414": 12
+   },
+   "data_centers": {
+    "projects": 11,
+    "announced_b": 13.2,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "Farmington Technology Park (Hyperscale Data Center Campus)",
+      "developer": "Tract Development",
+      "county": "Dakota County",
+      "investment_b": 5,
+      "status": "Proposed",
+      "timeline": "Ongoing (Lawsuit filed Feb 2026)"
+     },
+     {
+      "project": "Monticello Tech Campus",
+      "developer": "Frattalone Companies",
+      "county": "Wright County",
+      "investment_b": 2.5,
+      "status": "Proposed",
+      "timeline": "2025-2028"
+     },
+     {
+      "project": "Cielo Chisago Data Center",
+      "developer": "Cielo Digital Infrastructure",
+      "county": "Chisago County",
+      "investment_b": 1.5,
+      "status": "Planned",
+      "timeline": "Planned"
+     },
+     {
+      "project": "Oppidan MN Technology Park (5 Data Centers)",
+      "developer": "Oppidan",
+      "county": "Dakota County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     },
+     {
+      "project": "Meta Data Center",
+      "developer": "Meta",
+      "county": "Dakota County",
+      "investment_b": 0.8,
+      "status": "Under construction",
+      "timeline": "Expected 2026"
+     },
+     {
+      "project": "Google Data Center Campus (Project Loon)",
+      "developer": "Google",
+      "county": "St. Louis County",
+      "investment_b": 0.65,
+      "status": "Proposed",
+      "timeline": "Under development, announced March 2026"
+     }
+    ]
+   }
+  },
+  "MS": {
+   "pharma": {
+    "est": 6,
+    "emp": 1034,
+    "est_325412": 6,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 8,
+    "announced_b": 60.3,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "xAI Data Center (MACROHARDRR)",
+      "developer": "xAI (Elon Musk)",
+      "county": "DeSoto County",
+      "investment_b": 20,
+      "status": "Operating",
+      "timeline": "Operations to begin February 2026"
+     },
+     {
+      "project": "AWS Data Center Campuses",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Madison County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "First wave operational Q2/Q3 2025, full construction completion targeted 2027"
+     },
+     {
+      "project": "Compass Datacenters Hyperscale Campus",
+      "developer": "Compass Datacenters",
+      "county": "Lauderdale County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "Over an eight-year period (starting 2025)"
+     },
+     {
+      "project": "AWS Data Center Campuses (Madison County, impacting region)",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Jackson County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "Partially operational by 2027"
+     },
+     {
+      "project": "AVAIO Digital Taurus Data Center Campus",
+      "developer": "AVAIO Digital",
+      "county": "Rankin County",
+      "investment_b": 6,
+      "status": "Under construction",
+      "timeline": "First half of 2027"
+     },
+     {
+      "project": "Amazon Vicksburg Data Center Campus",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Warren County",
+      "investment_b": 3,
+      "status": "Planned",
+      "timeline": "Construction from 2026"
+     }
+    ]
+   }
+  },
+  "MO": {
+   "pharma": {
+    "est": 36,
+    "emp": 5129,
+    "est_325412": 24,
+    "est_325414": 12
+   },
+   "data_centers": {
+    "projects": 14,
+    "announced_b": 150.2,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Project Kestrel (Hyperscale Data Center Campus)",
+      "developer": "Undisclosed (Port KC envisions)",
+      "county": "Platte County",
+      "investment_b": 100,
+      "status": "Proposed",
+      "timeline": "Construction expected to start 2026"
+     },
+     {
+      "project": "Amazon Web Services (AWS) ",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Montgomery County",
+      "investment_b": 35,
+      "status": "Planned",
+      "timeline": "Q1 2026 (property acquisition)"
+     },
+     {
+      "project": "CRG Data Center",
+      "developer": "CRG (developer), unnamed technology tenant",
+      "county": "Jefferson County",
+      "investment_b": 6,
+      "status": "Proposed",
+      "timeline": "Proposed, expected to be operational after regulatory approval"
+     },
+     {
+      "project": "Metrobloks Data Center Campus",
+      "developer": "Metrobloks",
+      "county": "Clay County",
+      "investment_b": 1.4,
+      "status": "Planned",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Meta Data Center (Golden Plains Technology Park)",
+      "developer": "Meta Platforms, Inc.",
+      "county": "Platte County",
+      "investment_b": 1,
+      "status": "Operating",
+      "timeline": "Operational in 2024 (initial phase), opened August 2025"
+     },
+     {
+      "project": "Google Data Center Campus (Project Mica)",
+      "developer": "Google",
+      "county": "Clay County",
+      "investment_b": 1,
+      "status": "Under construction",
+      "timeline": "Ongoing, operations as early as 2024"
+     }
+    ]
+   }
+  },
+  "MT": {
+   "pharma": {
+    "est": 9,
+    "emp": 500,
+    "est_325412": 5,
+    "est_325414": 4
+   },
+   "data_centers": {
+    "projects": 4,
+    "announced_b": 3.6,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Meta Data Center",
+      "developer": "Meta",
+      "county": "Gallatin County",
+      "investment_b": 1.5,
+      "status": "Operating",
+      "timeline": "Broke ground 2020, serving traffic November 2024, fully built out by late 2023 (initial estimate)"
+     },
+     {
+      "project": "Big Sky Campus Data Center",
+      "developer": "Quantica Infrastructure (Big Sky Digital Infrastructure)",
+      "county": "Yellowstone County",
+      "investment_b": 1,
+      "status": "Planned",
+      "timeline": "Phase 1 construction to begin 2026, power ramps to 500 MW in 2028, Phase 2 power ramps to 500 MW in 2031"
+     },
+     {
+      "project": "Project Cardinal Data Center",
+      "developer": "TAC Data Centers",
+      "county": "Cascade County",
+      "investment_b": 0.6,
+      "status": "Planned",
+      "timeline": "2030"
+     },
+     {
+      "project": "Krambu AI Data Center",
+      "developer": "Krambu",
+      "county": "Missoula County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Initial phase by June 2026, potential expansion to 2030"
+     }
+    ]
+   }
+  },
+  "NE": {
+   "pharma": {
+    "est": 24,
+    "emp": 2229,
+    "est_325412": 13,
+    "est_325414": 11
+   },
+   "data_centers": {
+    "projects": 7,
+    "announced_b": 3.9,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Google Data Center Campus (Northwest Omaha)",
+      "developer": "Google (Fireball Group LLC)",
+      "county": "Douglas County",
+      "investment_b": 1.2,
+      "status": "Operating",
+      "timeline": "Operating (construction ongoing)"
+     },
+     {
+      "project": "Compute North Data Center Expansion",
+      "developer": "Compute North",
+      "county": "Buffalo County",
+      "investment_b": 0.7,
+      "status": "Operating",
+      "timeline": "Completed (expansion in 2021)"
+     },
+     {
+      "project": "Google Lincoln Hyperscale Campus - Phase 1",
+      "developer": "Google",
+      "county": "Lancaster County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "2025"
+     },
+     {
+      "project": "Google Data Center Expansion (Papillion)",
+      "developer": "Google",
+      "county": "Sarpy County",
+      "investment_b": 0.5,
+      "status": "Operating",
+      "timeline": "Completed (announced 2021)"
+     },
+     {
+      "project": "Sequitor Edge Kearney Data Center",
+      "developer": "Sequitor Edge",
+      "county": "Buffalo County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "2027"
+     },
+     {
+      "project": "Meta Sarpy Data Center Campus Expansion",
+      "developer": "Meta",
+      "county": "Sarpy County",
+      "investment_b": 0.4,
+      "status": "Operating",
+      "timeline": "Completed (announced 2021)"
+     }
+    ]
+   }
+  },
+  "NV": {
+   "pharma": {
+    "est": 18,
+    "emp": 608,
+    "est_325412": 18,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 8,
+    "announced_b": 16.3,
+    "under_construction": 3,
+    "top": [
+     {
+      "project": "Monarch Data Center Campus",
+      "developer": "Copia Power (backed by Carlyle)",
+      "county": "Lyon County",
+      "investment_b": 11,
+      "status": "Proposed",
+      "timeline": "Phased development, initial phase 2-3 years, full build-out 5-10 years"
+     },
+     {
+      "project": "Tract Silver Springs Data Center Campus",
+      "developer": "Tract",
+      "county": "Lyon County",
+      "investment_b": 1.6,
+      "status": "Planned",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Tract Peru Ridge Data Center",
+      "developer": "Tract",
+      "county": "Washoe County",
+      "investment_b": 1.15,
+      "status": "Planned",
+      "timeline": "Planned"
+     },
+     {
+      "project": "EdgeCore Reno Campus",
+      "developer": "EdgeCore Digital Infrastructure",
+      "county": "Washoe County",
+      "investment_b": 0.75,
+      "status": "Under construction",
+      "timeline": "2026"
+     },
+     {
+      "project": "Microsoft Silver Springs Data Center Land Acquisition & Potential Development",
+      "developer": "Microsoft",
+      "county": "Lyon County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "BluSky Wells Data Center",
+      "developer": "BluSky AI",
+      "county": "Elko County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "Planned, initial lease 10 years with extensions"
+     }
+    ]
+   }
+  },
+  "NH": {
+   "pharma": {
+    "est": 12,
+    "emp": 2637,
+    "est_325412": 9,
+    "est_325414": 3
+   },
+   "data_centers": {
+    "projects": 1,
+    "announced_b": 0.5,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "AI Data Center (Former Unifi Building)",
+      "developer": "White Fiber",
+      "county": "Rockingham County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Within 12 months of June 2025"
+     }
+    ]
+   }
+  },
+  "NJ": {
+   "pharma": {
+    "est": 147,
+    "emp": 13300,
+    "est_325412": 125,
+    "est_325414": 22
+   },
+   "data_centers": {
+    "projects": 8,
+    "announced_b": 2.2,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "Somerset Technology Park Data Center Campus",
+      "developer": "Russo Development",
+      "county": "Somerset County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "First facility scheduled for H2 2012 (initial phase), ongoing development likely"
+     },
+     {
+      "project": "Logan Township Data Center",
+      "developer": "Undisclosed",
+      "county": "Gloucester County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "2027"
+     },
+     {
+      "project": "Proposed Data Center (Undisclosed Location)",
+      "developer": "Unknown",
+      "county": "Mercer County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed, under debate"
+     },
+     {
+      "project": "Sycamore Totowa Data Center",
+      "developer": "Sycamore",
+      "county": "Passaic County",
+      "investment_b": 0.3,
+      "status": "Under construction",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "CyrusOne NYM1 Somerset Data Center",
+      "developer": "CyrusOne",
+      "county": "Somerset County",
+      "investment_b": 0.2,
+      "status": "Operating",
+      "timeline": "Operating"
+     },
+     {
+      "project": "American Tower Corp. Data Center (East Greenwich)",
+      "developer": "American Tower Corp.",
+      "county": "Gloucester County",
+      "investment_b": 0.1,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     }
+    ]
+   }
+  },
+  "NM": {
+   "pharma": {
+    "est": 6,
+    "emp": 519,
+    "est_325412": 6,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 4,
+    "announced_b": 176.8,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Project Jupiter Data Center Campus",
+      "developer": "STACK Infrastructure, BorderPlex Digital Assets, Oracle, OpenAI",
+      "county": "Doña Ana County",
+      "investment_b": 165,
+      "status": "Under construction",
+      "timeline": "Anticipated Q4 2026 (initial operations), Q3 2028 (Phase 1 completion), full campus by October 2029"
+     },
+     {
+      "project": "Zenith Volts Corp. Data Center Campus",
+      "developer": "Zenith Volts Corp.",
+      "county": "Chaves County",
+      "investment_b": 6,
+      "status": "Planned",
+      "timeline": "Operational by November 2027"
+     },
+     {
+      "project": "AI Data Center Campus (with Natural Gas and Nuclear Power)",
+      "developer": "New Era Energy & Digital",
+      "county": "Lea County",
+      "investment_b": 5,
+      "status": "Planned",
+      "timeline": "Initial power delivery expected 2028"
+     },
+     {
+      "project": "Meta Los Lunas Data Center Expansion (Phase 3)",
+      "developer": "Meta Platforms",
+      "county": "Valencia County",
+      "investment_b": 0.8,
+      "status": "Planned",
+      "timeline": "Spring 2025 groundbreaking, total campus completion by 2026"
+     }
+    ]
+   }
+  },
+  "NY": {
+   "pharma": {
+    "est": 111,
+    "emp": 19790,
+    "est_325412": 102,
+    "est_325414": 9
+   },
+   "data_centers": {
+    "projects": 20,
+    "announced_b": 19.3,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "STAMP Data Center Campus (Stream Data Centers)",
+      "developer": "Stream Data Centers",
+      "county": "Genesee County",
+      "investment_b": 6.3,
+      "status": "Planned",
+      "timeline": "Construction to start 2026, basic operations 2027, fully operational 2030"
+     },
+     {
+      "project": "Lake Mariner Data Center Expansion",
+      "developer": "TeraWulf",
+      "county": "Niagara County",
+      "investment_b": 3.2,
+      "status": "Under construction",
+      "timeline": "Under Construction (as of Dec 2025)"
+     },
+     {
+      "project": "IBM Poughkeepsie Quantum Data Center (IBM Quantum Starling)",
+      "developer": "IBM",
+      "county": "Dutchess County",
+      "investment_b": 2,
+      "status": "Planned",
+      "timeline": "Planned"
+     },
+     {
+      "project": "Niagara Digital Campus",
+      "developer": "Niagara Falls Redevelopment (NFR) & Urbacon Data Centre Solutions",
+      "county": "Niagara County",
+      "investment_b": 1.5,
+      "status": "Proposed",
+      "timeline": "Proposed, aiming for 2030 operations"
+     },
+     {
+      "project": "Treetop Development Data Center",
+      "developer": "Donovan Drive Holdings LLC",
+      "county": "Dutchess County",
+      "investment_b": 1.25,
+      "status": "Planned",
+      "timeline": "Planned"
+     },
+     {
+      "project": "Bloomberg-RDC 8 Data Center",
+      "developer": "Bloomberg / Russo Development",
+      "county": "Rockland County",
+      "investment_b": 0.84,
+      "status": "Operating",
+      "timeline": "Completed 2014"
+     }
+    ]
+   }
+  },
+  "NC": {
+   "pharma": {
+    "est": 63,
+    "emp": 22452,
+    "est_325412": 41,
+    "est_325414": 22
+   },
+   "data_centers": {
+    "projects": 17,
+    "announced_b": 18.6,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "Fayetteville Data Center Project (Dunn Road)",
+      "developer": "Energy Storage Solutions (ESS)",
+      "county": "Cumberland County",
+      "investment_b": 6.4,
+      "status": "Proposed",
+      "timeline": "8 phases, part of $19.2B investment"
+     },
+     {
+      "project": "Digital Realty Charlotte Campus",
+      "developer": "Digital Realty",
+      "county": "Mecklenburg County",
+      "investment_b": 1.5,
+      "status": "Planned",
+      "timeline": "Planned, rezoning approved May 2025"
+     },
+     {
+      "project": "Project Snow Data Center Campus (Phase 1)",
+      "developer": "Prime Data Centers LLC",
+      "county": "Caldwell County",
+      "investment_b": 1.3,
+      "status": "Planned",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Microsoft Data Center Campuses (Conover, Hickory, Maiden, Newton)",
+      "developer": "Microsoft",
+      "county": "Catawba County",
+      "investment_b": 1,
+      "status": "Under construction",
+      "timeline": "Phased development over the next decade, construction restarted March 2026"
+     },
+     {
+      "project": "Google Data Center Expansion",
+      "developer": "Google",
+      "county": "Caldwell County",
+      "investment_b": 1,
+      "status": "Under construction",
+      "timeline": "2026-2027"
+     },
+     {
+      "project": "WhiteFiber AI Data Center Campus (NC-1)",
+      "developer": "WhiteFiber Inc. (Bit Digital)",
+      "county": "Rockingham County",
+      "investment_b": 1,
+      "status": "Under construction",
+      "timeline": "2025-2026 (initial 24 MW by end of 2025)"
+     }
+    ]
+   }
+  },
+  "ND": {
+   "pharma": null,
+   "data_centers": {
+    "projects": 3,
+    "announced_b": 4,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Applied Digital AI Factory (Polaris Forge 2)",
+      "developer": "Applied Digital",
+      "county": "Cass County",
+      "investment_b": 3,
+      "status": "Under construction",
+      "timeline": "Partially operational by end of 2026, fully operational early 2027"
+     },
+     {
+      "project": "Core Scientific Grand Forks Data Center",
+      "developer": "Core Scientific",
+      "county": "Grand Forks County",
+      "investment_b": 0.5,
+      "status": "Operating",
+      "timeline": "Established 2021"
+     },
+     {
+      "project": "Aurum Bismarck Campus (AI Data Center)",
+      "developer": "Aurum Capital Ventures",
+      "county": "Burleigh County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed, potential 2026-2027 online"
+     }
+    ]
+   }
+  },
+  "OH": {
+   "pharma": {
+    "est": 33,
+    "emp": 4958,
+    "est_325412": 28,
+    "est_325414": 5
+   },
+   "data_centers": {
+    "projects": 33,
+    "announced_b": 66.6,
+    "under_construction": 13,
+    "top": [
+     {
+      "project": "PORTS Technology Campus AI Data Center & Gas Plant",
+      "developer": "SoftBank / SB Energy",
+      "county": "Pike County",
+      "investment_b": 33.3,
+      "status": "Planned",
+      "timeline": "Announced 2026"
+     },
+     {
+      "project": "AWS Data Center (Xenia)",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Greene County",
+      "investment_b": 4,
+      "status": "Under construction",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Stargate AI Data Center Campus",
+      "developer": "OpenAI, Oracle, SoftBank",
+      "county": "Trumbull County",
+      "investment_b": 3.6,
+      "status": "Under construction",
+      "timeline": "Operational by 2026"
+     },
+     {
+      "project": "Lordstown Data Center Campus (Stargate Project)",
+      "developer": "Bristolville 25 Developer LLC (in collaboration with OpenAI, Oracle, and SoftBank Group Corp.)",
+      "county": "Mahoning County",
+      "investment_b": 3.6,
+      "status": "Proposed",
+      "timeline": "Targeting revenue generation by late 2027"
+     },
+     {
+      "project": "Vantage Data Centers OH2 - Millersport Campus",
+      "developer": "Vantage Data Centers Management Company, LLC",
+      "county": "Fairfield County",
+      "investment_b": 2.1,
+      "status": "Planned",
+      "timeline": "Ongoing, approval in October 2025"
+     },
+     {
+      "project": "Amazon Web Services Data Center Campus",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Delaware County",
+      "investment_b": 2,
+      "status": "Planned",
+      "timeline": "By 2030"
+     }
+    ]
+   }
+  },
+  "OK": {
+   "pharma": {
+    "est": 15,
+    "emp": 388,
+    "est_325412": 9,
+    "est_325414": 6
+   },
+   "data_centers": {
+    "projects": 8,
+    "announced_b": 31.1,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "Google Data Center Campuses (2 facilities)",
+      "developer": "Google",
+      "county": "Muskogee County",
+      "investment_b": 9,
+      "status": "Planned",
+      "timeline": "Announced November 2025, part of a two-year investment"
+     },
+     {
+      "project": "Google Data Center Expansion (Stillwater)",
+      "developer": "Google",
+      "county": "Oklahoma County",
+      "investment_b": 9,
+      "status": "Under construction",
+      "timeline": "Next two years (from August 2025)"
+     },
+     {
+      "project": "Core Scientific High-Performance Computing Data Center",
+      "developer": "Core Scientific / CoreWeave",
+      "county": "Muskogee County",
+      "investment_b": 4,
+      "status": "Under construction",
+      "timeline": "Operational in 2026"
+     },
+     {
+      "project": "Project Clydesdale Data Center Campus (Phases 1-4)",
+      "developer": "Beale Infrastructure",
+      "county": "Tulsa County",
+      "investment_b": 3,
+      "status": "Under construction",
+      "timeline": "Construction to begin early 2026, 5-year build-out for initial phase"
+     },
+     {
+      "project": "Google Data Center Campus",
+      "developer": "Google",
+      "county": "Payne County",
+      "investment_b": 3,
+      "status": "Under construction",
+      "timeline": "Phased development, initial phases under construction, potential for up to six phases"
+     },
+     {
+      "project": "Oklahoma Data Center Campus (1,600MW AI Campus)",
+      "developer": "IREN",
+      "county": "Oklahoma County",
+      "investment_b": 1.6,
+      "status": "Planned",
+      "timeline": "Ramping up from 2028"
+     }
+    ]
+   }
+  },
+  "OR": {
+   "pharma": {
+    "est": 26,
+    "emp": 500,
+    "est_325412": 22,
+    "est_325414": 4
+   },
+   "data_centers": {
+    "projects": 5,
+    "announced_b": 3.8,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Google Data Centers (multiple campuses)",
+      "developer": "Google",
+      "county": "Linn County",
+      "investment_b": 1.3,
+      "status": "Proposed",
+      "timeline": "Early stages, timeline TBD"
+     },
+     {
+      "project": "Amazon Web Services (AWS) Data Center Campuses",
+      "developer": "Amazon Web Services (AWS)",
+      "county": "Umatilla County",
+      "investment_b": 1,
+      "status": "Operating",
+      "timeline": "Ongoing, with more planned by 2027"
+     },
+     {
+      "project": "Sabey Data Centers Umatilla Campus",
+      "developer": "Sabey Data Centers",
+      "county": "Umatilla County",
+      "investment_b": 0.52,
+      "status": "Planned",
+      "timeline": "Groundbreaking Q1 2025"
+     },
+     {
+      "project": "Crane Data Centers Campus (Forest Grove)",
+      "developer": "Crane Data Centers",
+      "county": "Washington County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Phase 1: 2026, Phase 2: Undetermined"
+     },
+     {
+      "project": "Proposed Data Center Campus",
+      "developer": "Undisclosed (Stream Data Center mentioned in news)",
+      "county": "Marion County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed (discussion ongoing)"
+     }
+    ]
+   }
+  },
+  "PA": {
+   "pharma": {
+    "est": 87,
+    "emp": 16112,
+    "est_325412": 57,
+    "est_325414": 30
+   },
+   "data_centers": {
+    "projects": 32,
+    "announced_b": 84,
+    "under_construction": 7,
+    "top": [
+     {
+      "project": "Pennsylvania Digital 1 (PAX-1) Hyperscale Data Center Campus",
+      "developer": "Carlisle Development Partners / PowerHouse Data Centers",
+      "county": "Cumberland County",
+      "investment_b": 15,
+      "status": "Under construction",
+      "timeline": "Initial 450 MW power delivery Q2 2027, expandable to 1.8 GW"
+     },
+     {
+      "project": "Project Phoenix Data Center Campus",
+      "developer": "Aligned Data Centers",
+      "county": "Beaver County",
+      "investment_b": 10,
+      "status": "Proposed",
+      "timeline": "Expected to begin construction in 2026"
+     },
+     {
+      "project": "Homer City Energy Campus (Data Center & Natural Gas Power Plant)",
+      "developer": "Homer City Redevelopment LLC & Kiewit Power Constructors Company",
+      "county": "Somerset County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "2027"
+     },
+     {
+      "project": "Homer City Energy Campus (Data Center & Natural Gas Plant)",
+      "developer": "Homer City Redevelopment (HCR) and Kiewit Power Constructors Co.",
+      "county": "Indiana County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "Construction starts 2026, power generation expected 2027"
+     },
+     {
+      "project": "Project Hummingbird Data Center Campus",
+      "developer": "International Electric Power (IEP)",
+      "county": "Greene County",
+      "investment_b": 10,
+      "status": "Proposed",
+      "timeline": ""
+     },
+     {
+      "project": "CoreWeave AI Data Center Campus (216 Greenfield Road & 1375 Harrisburg Pike)",
+      "developer": "CoreWeave, Chirisa Technology Parks, Machine Investment Group",
+      "county": "Lancaster County",
+      "investment_b": 6,
+      "status": "Under construction",
+      "timeline": "Phase 1: Summer 2027, Phase 2: Mid-to-late 2027"
+     }
+    ]
+   }
+  },
+  "RI": {
+   "pharma": {
+    "est": 7,
+    "emp": 461,
+    "est_325412": 7,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 1,
+    "announced_b": 0.5,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Microsoft Data Center Campus",
+      "developer": "Microsoft",
+      "county": "Kent County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     }
+    ]
+   }
+  },
+  "SC": {
+   "pharma": {
+    "est": 19,
+    "emp": 5790,
+    "est_325412": 19,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 14,
+    "announced_b": 21.8,
+    "under_construction": 8,
+    "top": [
+     {
+      "project": "QTS Data Center Campus (Project Cobra)",
+      "developer": "QTS Data Centers",
+      "county": "York County",
+      "investment_b": 8,
+      "status": "Under construction",
+      "timeline": "Ongoing (initial $1B investment announced 2023)"
+     },
+     {
+      "project": "Project Sparrow (AI-focused High-Performance Computing Data Center)",
+      "developer": "TigerDC",
+      "county": "Spartanburg County",
+      "investment_b": 3,
+      "status": "Proposed",
+      "timeline": "Construction expected to begin later in 2026"
+     },
+     {
+      "project": "Project Moc-1 (High-Performance Computing Center)",
+      "developer": "NorthMark Strategies",
+      "county": "Spartanburg County",
+      "investment_b": 2.8,
+      "status": "Under construction",
+      "timeline": "Under Construction"
+     },
+     {
+      "project": "Cielo Digital Infrastructure Data Center Campus",
+      "developer": "Cielo Digital Infrastructure, LLC",
+      "county": "Cherokee County",
+      "investment_b": 2.1,
+      "status": "Planned",
+      "timeline": "Initial operations by year-end 2028"
+     },
+     {
+      "project": "Data Center Campuses (Pine Hill Business Campus & Winding Woods Commerce Park)",
+      "developer": "Google",
+      "county": "Dorchester County",
+      "investment_b": 2,
+      "status": "Under construction",
+      "timeline": "Under active construction (announced Sept 2024), further investment through 2027"
+     },
+     {
+      "project": "Google Data Center Expansion",
+      "developer": "Google",
+      "county": "Berkeley County",
+      "investment_b": 1.3,
+      "status": "Under construction",
+      "timeline": "Ongoing through 2027"
+     }
+    ]
+   }
+  },
+  "SD": {
+   "pharma": null,
+   "data_centers": {
+    "projects": 2,
+    "announced_b": 1,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Data Center Development (Black Hills Industrial Center)",
+      "developer": "Various (e.g., Amazon, Google, Meta, Microsoft, Apple, Open AI)",
+      "county": "Pennington County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed, moratorium discussed April 2025"
+     },
+     {
+      "project": "Gemini Data Center Sioux Falls",
+      "developer": "Gemini Data Center SD LLC",
+      "county": "Minnehaha County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "Planned"
+     }
+    ]
+   }
+  },
+  "TN": {
+   "pharma": {
+    "est": 20,
+    "emp": 2392,
+    "est_325412": 16,
+    "est_325414": 4
+   },
+   "data_centers": {
+    "projects": 7,
+    "announced_b": 5.7,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "Google Data Center Campus Expansion",
+      "developer": "Google",
+      "county": "Montgomery County",
+      "investment_b": 2.5,
+      "status": "Operating",
+      "timeline": "Operating since 2018, ongoing expansion"
+     },
+     {
+      "project": "Meta Gallatin Data Center",
+      "developer": "Meta",
+      "county": "Sumner County",
+      "investment_b": 1.5,
+      "status": "Under construction",
+      "timeline": "Broke ground 2020, operational 10+ years"
+     },
+     {
+      "project": "xAI Data Center (Project Colossus)",
+      "developer": "xAI (Elon Musk)",
+      "county": "Shelby County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Under Construction (ongoing expansion)"
+     },
+     {
+      "project": "USAF Data Center Proposal",
+      "developer": "U.S. Air Force",
+      "county": "Coffee County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed (December 2025)"
+     },
+     {
+      "project": "Urban Story Ventures Data Center (Jailhouse Studios project)",
+      "developer": "Urban Story Ventures (in partnership with Oracle)",
+      "county": "Hamilton County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     },
+     {
+      "project": "Nashville I Data Center",
+      "developer": "Radius Data Centers",
+      "county": "Davidson County",
+      "investment_b": 0.1,
+      "status": "Under construction",
+      "timeline": "2026"
+     }
+    ]
+   }
+  },
+  "TX": {
+   "pharma": {
+    "est": 104,
+    "emp": 7456,
+    "est_325412": 82,
+    "est_325414": 22
+   },
+   "data_centers": {
+    "projects": 58,
+    "announced_b": 116.2,
+    "under_construction": 26,
+    "top": [
+     {
+      "project": "Texas Critical Data Centers (TCDC) Campus",
+      "developer": "New Era Energy & Digital, Stream Data Centers",
+      "county": "Ector County",
+      "investment_b": 12,
+      "status": "Under construction",
+      "timeline": "Phase 1 by end of 2027, full build-out beyond 2030"
+     },
+     {
+      "project": "PowerCampus Austin (Hutto Megasite)",
+      "developer": "Skybox Datacenters LLC and Prologis Inc.",
+      "county": "Williamson County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "Phased, first phase Q4 2024"
+     },
+     {
+      "project": "Fermi America Advanced Energy and Intelligence Campus",
+      "developer": "Fermi America and Texas Tech University System",
+      "county": "Potter County",
+      "investment_b": 10,
+      "status": "Proposed",
+      "timeline": "First 1 GW targeted for late 2026"
+     },
+     {
+      "project": "Infrakey Data Center Campus",
+      "developer": "Infrakey",
+      "county": "McLennan County",
+      "investment_b": 10,
+      "status": "Proposed",
+      "timeline": "Proposed, full buildout by unknown date"
+     },
+     {
+      "project": "Meta El Paso Data Center Campus",
+      "developer": "Meta",
+      "county": "El Paso County",
+      "investment_b": 10,
+      "status": "Under construction",
+      "timeline": "Ongoing, scaling to 1GW"
+     },
+     {
+      "project": "Data City, Texas (Phases 1-3)",
+      "developer": "Energy Abundance Development Corp.",
+      "county": "Webb County",
+      "investment_b": 5,
+      "status": "Planned",
+      "timeline": "Construction begins 2026, commercial operations expected 2029 (Phase 1)"
+     }
+    ]
+   }
+  },
+  "UT": {
+   "pharma": {
+    "est": 51,
+    "emp": 6323,
+    "est_325412": 44,
+    "est_325414": 7
+   },
+   "data_centers": {
+    "projects": 8,
+    "announced_b": 11.3,
+    "under_construction": 3,
+    "top": [
+     {
+      "project": "Wonder Valley AI Data Center Project",
+      "developer": "O'Leary Digital",
+      "county": "Box Elder County",
+      "investment_b": 7.5,
+      "status": "Planned",
+      "timeline": "Ongoing (announced Feb 2026)"
+     },
+     {
+      "project": "Dugway Proving Ground Data Center",
+      "developer": "CyrusOne (KKR and BlackRock)",
+      "county": "Tooele County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Proposed, no deal finalized"
+     },
+     {
+      "project": "QTS Eagle Mountain II Data Center Campus",
+      "developer": "QTS",
+      "county": "Salt Lake County",
+      "investment_b": 0.65,
+      "status": "Under construction",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Tract Data Center Campus",
+      "developer": "Tract",
+      "county": "Salt Lake County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "By 2028"
+     },
+     {
+      "project": "NOVVA Data Center Campus Expansion & Natural Gas Plant",
+      "developer": "NOVVA",
+      "county": "Salt Lake County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Antelope Data Center (Proposed AI Data Center)",
+      "developer": "Pronghorn Development",
+      "county": "Iron County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Under review, public hearings held March 2026"
+     }
+    ]
+   }
+  },
+  "VT": {
+   "pharma": null,
+   "data_centers": null
+  },
+  "VA": {
+   "pharma": {
+    "est": 17,
+    "emp": 2568,
+    "est_325412": 14,
+    "est_325414": 3
+   },
+   "data_centers": {
+    "projects": 41,
+    "announced_b": 162.2,
+    "under_construction": 13,
+    "top": [
+     {
+      "project": "Southern Virginia Megasite at Berry Hill Data Center Campus",
+      "developer": "SAC III Acquisition Co. (affiliated with Stack Infrastructure)",
+      "county": "Pittsylvania County",
+      "investment_b": 100,
+      "status": "Planned",
+      "timeline": "Over the next 30 years"
+     },
+     {
+      "project": "Google Data Center Campus (Project Peanut)",
+      "developer": "Google",
+      "county": "Chesterfield County",
+      "investment_b": 9,
+      "status": "Under construction",
+      "timeline": "Construction expected to begin by end of 2025, multi-building campus with first building anticipated by 2026"
+     },
+     {
+      "project": "Google Data Center Expansion (Loudoun County)",
+      "developer": "Google",
+      "county": "Loudoun County",
+      "investment_b": 9,
+      "status": "Planned",
+      "timeline": "Announced 2025 (additional investment across Virginia)"
+     },
+     {
+      "project": "Stafford Technology Center (Data Center Complex)",
+      "developer": "The Garrett Companies",
+      "county": "Stafford County",
+      "investment_b": 7.9,
+      "status": "Planned",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "GWV Data Center",
+      "developer": "The Garrett Companies",
+      "county": "Stafford County",
+      "investment_b": 7.9,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     },
+     {
+      "project": "Google Data Center Campus (Project Raspberry)",
+      "developer": "Google",
+      "county": "Roanoke County",
+      "investment_b": 3,
+      "status": "Planned",
+      "timeline": "First data center by 2030"
+     }
+    ]
+   }
+  },
+  "WA": {
+   "pharma": {
+    "est": 36,
+    "emp": 6371,
+    "est_325412": 30,
+    "est_325414": 6
+   },
+   "data_centers": {
+    "projects": 9,
+    "announced_b": 8.8,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "Wallula Gap Data Center Campus",
+      "developer": "Amazon Data Services, Inc. (formerly Advance Phase LLC)",
+      "county": "Walla Walla County",
+      "investment_b": 5,
+      "status": "Proposed",
+      "timeline": "Under development, over four phases (estimated 15 years)"
+     },
+     {
+      "project": "Gateway Digital Campus & Beltline Energy Data Centers",
+      "developer": "Undisclosed Developers (supported by L.B. Eckelkamp, Jr. of Bank of Washington)",
+      "county": "Franklin County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Proposed for 2026 onwards"
+     },
+     {
+      "project": "West Richland Data Center Campus",
+      "developer": "Likely Hyperscaler (unidentified)",
+      "county": "Benton County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     },
+     {
+      "project": "Plymouth Data Center Campus",
+      "developer": "Likely Hyperscaler (unidentified)",
+      "county": "Benton County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     },
+     {
+      "project": "Microsoft Data Center Campus Interconnection",
+      "developer": "Microsoft / Chelan County PUD",
+      "county": "Chelan County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Ongoing, three phases"
+     },
+     {
+      "project": "Two New Data Centers (Tax Exemption Legislation)",
+      "developer": "Undisclosed (potentially Microsoft, Avista)",
+      "county": "Spokane County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "Construction after June 30, 2026, before July 1, 2035"
+     }
+    ]
+   }
+  },
+  "WV": {
+   "pharma": {
+    "est": 3,
+    "emp": 413,
+    "est_325412": 3,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 5,
+    "announced_b": 8.4,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "Bedington Data Center Campus",
+      "developer": "Penzance Management",
+      "county": "Berkeley County",
+      "investment_b": 4,
+      "status": "Planned",
+      "timeline": "Ongoing (full build-out)"
+     },
+     {
+      "project": "Project Liberty Data Center Campus",
+      "developer": "Stream",
+      "county": "Marion County",
+      "investment_b": 2.4,
+      "status": "Proposed",
+      "timeline": "2025-2037 (6 buildings over 10-12 years)"
+     },
+     {
+      "project": "Data Center Campus",
+      "developer": "Google",
+      "county": "Putnam County",
+      "investment_b": 1,
+      "status": "Planned",
+      "timeline": "Early stages, ongoing discussions"
+     },
+     {
+      "project": "QTS Data Center Campus",
+      "developer": "QTS Realty Trust",
+      "county": "Jefferson County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Under development"
+     },
+     {
+      "project": "Proposed Data Center Development (Ghent/Whitby Mountain Area)",
+      "developer": "Undisclosed",
+      "county": "Raleigh County",
+      "investment_b": 0.5,
+      "status": "Proposed",
+      "timeline": "N/A"
+     }
+    ]
+   }
+  },
+  "WI": {
+   "pharma": {
+    "est": 45,
+    "emp": 3397,
+    "est_325412": 31,
+    "est_325414": 14
+   },
+   "data_centers": {
+    "projects": 10,
+    "announced_b": 37.9,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "Lighthouse Campus Data Center",
+      "developer": "Vantage Data Centers (for Oracle and OpenAI)",
+      "county": "Ozaukee County",
+      "investment_b": 15,
+      "status": "Under construction",
+      "timeline": "Construction began recently, continuing for several years; expected completion 2028"
+     },
+     {
+      "project": "Viridian Janesville Data Center (Former GM Plant)",
+      "developer": "Viridian Acquisitions LLC",
+      "county": "Rock County",
+      "investment_b": 8,
+      "status": "Proposed",
+      "timeline": "Proposed"
+     },
+     {
+      "project": "Microsoft Data Center Campus (Mount Pleasant)",
+      "developer": "Microsoft",
+      "county": "Racine County",
+      "investment_b": 7.3,
+      "status": "Under construction",
+      "timeline": "Phase I by 2026, Phase II by 2028, additional expansions ongoing through 2030s"
+     },
+     {
+      "project": "Microsoft Project Nova Data Center (Caledonia)",
+      "developer": "Microsoft",
+      "county": "Racine County",
+      "investment_b": 4,
+      "status": "Proposed",
+      "timeline": "Proposed, zoning approvals in late 2025"
+     },
+     {
+      "project": "Meta 'Project Cornmaze' Data Center Campus",
+      "developer": "Meta (via Cambrin LLC)",
+      "county": "Rock County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Pre-development agreement signed July 2025"
+     },
+     {
+      "project": "Cassville Data Center",
+      "developer": "Undisclosed (one of the big five or six tech companies)",
+      "county": "Grant County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Decision expected by Spring 2026"
+     }
+    ]
+   }
+  },
+  "WY": {
+   "pharma": {
+    "est": 3,
+    "emp": 39,
+    "est_325412": 3,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 4,
+    "announced_b": 52.5,
+    "under_construction": 3,
+    "top": [
+     {
+      "project": "Project Jade Data Center Campus & BFC Power/Cheyenne Power Hub",
+      "developer": "Crusoe and Tallgrass Energy Partners",
+      "county": "Laramie County",
+      "investment_b": 50,
+      "status": "Under construction",
+      "timeline": "First buildings completed 2027, scalable to 2030 and beyond"
+     },
+     {
+      "project": "Related Digital Cheyenne Data Center Campus",
+      "developer": "Related Digital (anchor tenant CoreWeave)",
+      "county": "Laramie County",
+      "investment_b": 1.2,
+      "status": "Under construction",
+      "timeline": "First building completed late 2026"
+     },
+     {
+      "project": "Meta Cheyenne Data Center (Project Cosmo)",
+      "developer": "Meta",
+      "county": "Laramie County",
+      "investment_b": 0.8,
+      "status": "Under construction",
+      "timeline": "Under construction, expected online 2027"
+     },
+     {
+      "project": "Project Casper (Carbon-Negative Digital Infrastructure Campus)",
+      "developer": "Prometheus Hyperscale, Spiritus, and Casper Carbon Capture",
+      "county": "Natrona County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "Initial power supply slated for 2026"
+     }
+    ]
+   }
+  },
+  "AL": {
+   "pharma": {
+    "est": 15,
+    "emp": 398,
+    "est_325412": 11,
+    "est_325414": 4
+   },
+   "data_centers": {
+    "projects": 9,
+    "announced_b": 19.2,
+    "under_construction": 4,
+    "top": [
+     {
+      "project": "Project Marvel Data Center Campus",
+      "developer": "Logistic Land Investments LLC",
+      "county": "Jefferson County",
+      "investment_b": 14.5,
+      "status": "Planned",
+      "timeline": "Approved/Permitted (Feb 2025 - Feb 2026)"
+     },
+     {
+      "project": "Meta Huntsville Data Center Expansion (Project Ferris)",
+      "developer": "Meta (formerly Facebook)",
+      "county": "Madison County",
+      "investment_b": 1.5,
+      "status": "Under construction",
+      "timeline": "Broke ground 2018, opened 2021, Phase 2 completion 2026"
+     },
+     {
+      "project": "Meta Data Center Campus Expansion",
+      "developer": "Meta",
+      "county": "Montgomery County",
+      "investment_b": 1.5,
+      "status": "Under construction",
+      "timeline": "Initial phase operational end of 2026"
+     },
+     {
+      "project": "Google Data Center",
+      "developer": "Google",
+      "county": "Jackson County",
+      "investment_b": 0.6,
+      "status": "Operating",
+      "timeline": "Operational 2022"
+     },
+     {
+      "project": "Western Hospitality Childersburg Data Center",
+      "developer": "Western Hospitality Partners",
+      "county": "Talladega County",
+      "investment_b": 0.5,
+      "status": "Planned",
+      "timeline": "Planned"
+     },
+     {
+      "project": "Wells Fargo Data Center Refresh",
+      "developer": "Wells Fargo",
+      "county": "Jefferson County",
+      "investment_b": 0.2,
+      "status": "Operating",
+      "timeline": "2023"
+     }
+    ]
+   }
+  },
+  "AK": {
+   "pharma": null,
+   "data_centers": {
+    "projects": 1,
+    "announced_b": 0.8,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "Terra Energy Center Campus (Advanced Manufacturing & Compute Campus)",
+      "developer": "Terra Energy Center Corp. (in partnership with Matanuska-Susitna Borough)",
+      "county": "Matanuska-Susitna Borough",
+      "investment_b": 0.75,
+      "status": "Proposed",
+      "timeline": "2029-2031 (Vertical Development & Expansion)"
+     }
+    ]
+   }
+  },
+  "AZ": {
+   "pharma": {
+    "est": 36,
+    "emp": 2317,
+    "est_325412": 31,
+    "est_325414": 5
+   },
+   "data_centers": {
+    "projects": 7,
+    "announced_b": 81.1,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "La Osa Project (Data Center & Energy Hub)",
+      "developer": "Vermaland LLC",
+      "county": "Pinal County",
+      "investment_b": 33,
+      "status": "Proposed",
+      "timeline": "Construction could begin in 2-3 years, full build-out over a decade (anticipated by 2035)"
+     },
+     {
+      "project": "Tract Buckeye Data Center Campus (formerly Project Range)",
+      "developer": "Tract",
+      "county": "Maricopa County",
+      "investment_b": 20,
+      "status": "Planned",
+      "timeline": "2025-2040+"
+     },
+     {
+      "project": "Entrata Data Center",
+      "developer": "Clean Cloud Energy (developer), Atwell, Inc. (civil engineer)",
+      "county": "Mohave County",
+      "investment_b": 12.5,
+      "status": "Proposed",
+      "timeline": "Starting development 2027 or 2028"
+     },
+     {
+      "project": "W Holdings Energy Generation and Technology Campus (Data Center, BESS, Natural Gas Plant)",
+      "developer": "W Holdings",
+      "county": "Pinal County",
+      "investment_b": 10,
+      "status": "Planned",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Project Blue Data Center Campus",
+      "developer": "Beale Infrastructure (formerly associated with Amazon Web Services)",
+      "county": "Pima County",
+      "investment_b": 3.6,
+      "status": "Under construction",
+      "timeline": "First buildings open 2027, 3 phases completed by 2029"
+     },
+     {
+      "project": "Google Mesa Data Center Campus (Project Redhawk)",
+      "developer": "Google",
+      "county": "Maricopa County",
+      "investment_b": 1,
+      "status": "Under construction",
+      "timeline": "2019-2030"
+     }
+    ]
+   }
+  },
+  "AR": {
+   "pharma": {
+    "est": 8,
+    "emp": 78,
+    "est_325412": 8,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 4,
+    "announced_b": 11,
+    "under_construction": 1,
+    "top": [
+     {
+      "project": "AVAIO Digital Leo Data Center Campus",
+      "developer": "AVAIO Digital Partners",
+      "county": "Pulaski County",
+      "investment_b": 6,
+      "status": "Under construction",
+      "timeline": "Phase 1 completion June 2027, full development over 5 years"
+     },
+     {
+      "project": "Pulaski County Data Center (Project Goose/Poseidon)",
+      "developer": "Undisclosed Developer",
+      "county": "Pulaski County",
+      "investment_b": 3,
+      "status": "Proposed",
+      "timeline": "Proposed, aiming for 2030"
+     },
+     {
+      "project": "Google Data Center (Project Boar)",
+      "developer": "Google (via Willowbend Capital LLC)",
+      "county": "Pulaski County",
+      "investment_b": 1,
+      "status": "Planned",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Conway Data Center",
+      "developer": "Forgelight Ventures (representing an unnamed Fortune 100 company, potentially Google)",
+      "county": "Faulkner County",
+      "investment_b": 1,
+      "status": "Planned",
+      "timeline": "Planned, very early stage (as of April 2025)"
+     }
+    ]
+   }
+  },
+  "CA": {
+   "pharma": {
+    "est": 286,
+    "emp": 39509,
+    "est_325412": 215,
+    "est_325414": 71
+   },
+   "data_centers": {
+    "projects": 12,
+    "announced_b": 20.2,
+    "under_construction": 2,
+    "top": [
+     {
+      "project": "Imperial Data Center (Aten and Clark roads)",
+      "developer": "Imperial Valley Computer Manufacturing (IVCM)",
+      "county": "Imperial County",
+      "investment_b": 10,
+      "status": "Proposed",
+      "timeline": "Operational as early as January 2027"
+     },
+     {
+      "project": "CalEthos Data Center Complex",
+      "developer": "CalEthos",
+      "county": "Imperial County",
+      "investment_b": 5.5,
+      "status": "Proposed",
+      "timeline": "Unknown"
+     },
+     {
+      "project": "Perseus Data Center (Pittsburg Technology Park)",
+      "developer": "Avaio Digital Partners",
+      "county": "Contra Costa County",
+      "investment_b": 0.8,
+      "status": "Planned",
+      "timeline": "Breaking ground soon (approved December 2024)"
+     },
+     {
+      "project": "Vantage Data Centers Santa Clara I Campus Expansion",
+      "developer": "Vantage Data Centers",
+      "county": "Santa Clara County",
+      "investment_b": 0.77,
+      "status": "Operating",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Novva San Francisco Campus",
+      "developer": "Novva Data Centers",
+      "county": "San Francisco County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "CoreSite SV9 Data Center",
+      "developer": "CoreSite",
+      "county": "Santa Clara County",
+      "investment_b": 0.5,
+      "status": "Operating",
+      "timeline": "2023"
+     }
+    ]
+   }
+  },
+  "CO": {
+   "pharma": {
+    "est": 48,
+    "emp": 2021,
+    "est_325412": 43,
+    "est_325414": 5
+   },
+   "data_centers": {
+    "projects": 5,
+    "announced_b": 2.7,
+    "under_construction": 3,
+    "top": [
+     {
+      "project": "Global AI Data Center Campus",
+      "developer": "Global AI",
+      "county": "Weld County",
+      "investment_b": 1,
+      "status": "Proposed",
+      "timeline": "Planned, early stages (land purchased December 2025)"
+     },
+     {
+      "project": "CoreSite DE3 Data Center Campus",
+      "developer": "CoreSite",
+      "county": "Denver County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Targeted for availability in 2026 (first building), 25-year buildout for campus"
+     },
+     {
+      "project": "Project Sycamore Data Centers",
+      "developer": "Undisclosed (KHS&S West was contractor)",
+      "county": "Broomfield County",
+      "investment_b": 0.5,
+      "status": "Under construction",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Aurora-Denver Campus Data Center",
+      "developer": "QTS Data Centers",
+      "county": "Arapahoe County",
+      "investment_b": 0.5,
+      "status": "Operating",
+      "timeline": "Ongoing"
+     },
+     {
+      "project": "Flexential Data Center",
+      "developer": "Flexential",
+      "county": "Douglas County",
+      "investment_b": 0.19,
+      "status": "Under construction",
+      "timeline": "Operational by January 2027"
+     }
+    ]
+   }
+  },
+  "CT": {
+   "pharma": {
+    "est": 15,
+    "emp": 859,
+    "est_325412": 15,
+    "est_325414": 0
+   },
+   "data_centers": {
+    "projects": 1,
+    "announced_b": 1.6,
+    "under_construction": 0,
+    "top": [
+     {
+      "project": "NE Edge Hyperscale Data Center (Waterford)",
+      "developer": "NE Edge (in partnership with a multinational company)",
+      "county": "Northeastern Connecticut Planning Region",
+      "investment_b": 1.6,
+      "status": "Proposed",
+      "timeline": "Unknown"
+     }
+    ]
+   }
+  }
+ }
+}

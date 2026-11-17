@@ -300,7 +300,7 @@
     "id": "S90",
     "publisher": "Advanced Test Equipment Corp. (INFICON distributor)",
     "title": "INFICON ELT3000 electrolyte leak tester datasheet",
-    "url": "https://www.atecorp.com/atecorp/media/pdfs/data-sheets/elt3000-_datasheet.pdf?ext=.pdf",
+    "url": "https://www.atecorp.com/getmedia/5a383697-1ddf-40ed-a964-2942635a8992/elt3000-_datasheet.pdf",
     "source_date": "N/A",
     "access_date": "2026-11-07",
     "type": "Product documentation (distributor-hosted)"
@@ -574,5 +574,239 @@
     "source_date": "2025-03-06",
     "access_date": "2026-11-07",
     "type": "News"
+  },
+  {
+    "id": "M01",
+    "publisher": "U.S. Census Bureau",
+    "title": "2022 NAICS Descriptions (official definitions for 3254, 325411-325414)",
+    "url": "https://www.census.gov/naics/2022NAICS/2022_NAICS_Descriptions.xlsx",
+    "source_date": "2022",
+    "access_date": "2026-11-16",
+    "type": "Government data"
+  },
+  {
+    "id": "M02",
+    "publisher": "U.S. Census Bureau",
+    "title": "County Business Patterns 2023 - national file (cbp23us): establishments by NAICS and employment-size class",
+    "url": "https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23us.zip",
+    "source_date": "2023 data (latest released; 2024 file not yet available)",
+    "access_date": "2026-11-16",
+    "type": "Government data"
+  },
+  {
+    "id": "M03",
+    "publisher": "U.S. Census Bureau",
+    "title": "County Business Patterns 2023 - state file (cbp23st): establishments by NAICS and state",
+    "url": "https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23st.zip",
+    "source_date": "2023 data",
+    "access_date": "2026-11-16",
+    "type": "Government data"
+  },
+  {
+    "id": "M10",
+    "publisher": "Texas Instruments",
+    "title": "TI plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the U.S. (press release)",
+    "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+    "source_date": "2025-06-18",
+    "access_date": "2026-11-16",
+    "type": "Company press release"
+  },
+  {
+    "id": "M11",
+    "publisher": "TSMC",
+    "title": "TSMC intends to expand its investment in the United States to US$165 billion (press release)",
+    "url": "https://pr.tsmc.com/english/news/3210",
+    "source_date": "2025-03-04",
+    "access_date": "2026-11-16",
+    "type": "Company press release"
+  },
+  {
+    "id": "M12",
+    "publisher": "U.S. Department of Commerce / NIST",
+    "title": "President Trump secures $200B investment from Micron Technology for memory chip manufacturing in the United States",
+    "url": "https://www.nist.gov/news-events/news/2025/06/president-trump-secures-200b-investment-micron-technology-memory-chip",
+    "source_date": "2025-06-12",
+    "access_date": "2026-11-16",
+    "type": "Government press release"
+  },
+  {
+    "id": "M13",
+    "publisher": "U.S. Department of Commerce / NIST",
+    "title": "CHIPS for America: Samsung Electronics (Texas) - award up to $4.745B; investment over $37B",
+    "url": "https://www.nist.gov/chips/samsung-electronics-texas-austin",
+    "source_date": "N/A (accessed 2026-06 per CRS)",
+    "access_date": "2026-11-16",
+    "type": "Government data"
+  },
+  {
+    "id": "M14",
+    "publisher": "Congressional Research Service",
+    "title": "Semiconductor Fabrication Facilities Funded by the CHIPS Act: Project Status and Considerations for Congress (R49031)",
+    "url": "https://www.congress.gov/crs-product/R49031",
+    "source_date": "2026-07-14",
+    "access_date": "2026-11-16",
+    "type": "Government report"
+  },
+  {
+    "id": "M15",
+    "publisher": "TrendForce News",
+    "title": "Micron raises U.S. investment target to $250B through 2035, begins concrete work on New York first fab",
+    "url": "https://www.trendforce.com/news/2026/07/10/news-micron-raises-u-s-investment-target-to-250b-through-2035-begins-concrete-work-on-new-yorks-first-fab/",
+    "source_date": "2026-07-10",
+    "access_date": "2026-11-16",
+    "type": "Trade press (read via search excerpt)"
+  },
+  {
+    "id": "M16",
+    "publisher": "Tom's Hardware",
+    "title": "Micron details new U.S. fab projects: Idaho Fab 1 comes online in 2H 2027, New York fabs come later",
+    "url": "https://www.tomshardware.com/pc-components/dram/micron-details-new-u-s-fab-projects-idaho-fab-1-comes-online-in-2h-2027-new-york-fabs-come-later-hbm-assembly-in-the-u-s",
+    "source_date": "2025",
+    "access_date": "2026-11-16",
+    "type": "Trade press (read via search excerpt)"
+  },
+  {
+    "id": "M17",
+    "publisher": "Tom's Hardware",
+    "title": "New Texas Instruments fab will pump out tens of millions of chips per day (Sherman SM1 starts production)",
+    "url": "https://www.tomshardware.com/tech-industry/semiconductors/new-texas-instruments-fab-will-pump-out-tens-of-millions-of-chips-per-day-first-300mm-fab-starts-production-after-usd60-billion-investment",
+    "source_date": "2025-12",
+    "access_date": "2026-11-16",
+    "type": "Trade press (read via search excerpt)"
+  },
+  {
+    "id": "M18",
+    "publisher": "ThermGAS",
+    "title": "Semiconductor Gas Monitor for SF6, NF3, C4F6 and CF4 (industry page)",
+    "url": "https://thermgas.com/semiconductors/",
+    "source_date": "N/A",
+    "access_date": "2026-11-16",
+    "type": "Company website"
+  },
+  {
+    "id": "M19",
+    "publisher": "ThermGAS",
+    "title": "Data Center Refrigerant Leak Detection Systems (industry page)",
+    "url": "https://thermgas.com/data-centers/",
+    "source_date": "N/A",
+    "access_date": "2026-11-16",
+    "type": "Company website"
+  },
+  {
+    "id": "M21",
+    "publisher": "Toyota USA Newsroom",
+    "title": "Toyota Battery Manufacturing North Carolina (investment $13.9B; began shipping batteries June 2025)",
+    "url": "https://pressroom.toyota.com/facility/toyota-battery-manufacturing-north-carolina",
+    "source_date": "2025",
+    "access_date": "2026-11-16",
+    "type": "Company press room"
+  },
+  {
+    "id": "M22",
+    "publisher": "Atlanta Journal-Constitution",
+    "title": "Hyundai battery plant in Georgia set to open months after ICE raid",
+    "url": "https://www.ajc.com/business/2026/04/hyundai-battery-plant-in-georgia-set-to-open-months-after-ice-raid/",
+    "source_date": "2026-04",
+    "access_date": "2026-11-16",
+    "type": "Local press (read via search excerpt)"
+  },
+  {
+    "id": "M23",
+    "publisher": "Manufacturing.net (AP)",
+    "title": "Hyundai, LG announce $4.3B EV battery plant (Bryan County, Georgia)",
+    "url": "https://www.manufacturing.net/automotive/news/22863178/hyundai-lg-announce-43b-ev-battery-plant",
+    "source_date": "2023-05",
+    "access_date": "2026-11-16",
+    "type": "News (read via search excerpt)"
+  },
+  {
+    "id": "M24",
+    "publisher": "Korea JoongAng Daily",
+    "title": "LG Energy Solution's $5.5 billion Queen Creek, Arizona plant to start cylindrical mass production in H1 2026",
+    "url": "https://www.koreajoongangdaily.com/business/lg/12367853",
+    "source_date": "2025-03",
+    "access_date": "2026-11-16",
+    "type": "News (read via search excerpt)"
+  },
+  {
+    "id": "M30",
+    "publisher": "ConstructConnect",
+    "title": "November 2026 Data Center Report: $135.8B construction starts across 178 projects, January-September 2026",
+    "url": "https://news.constructconnect.com/november-2026-data-center-report-september-adds-9.4b-in-construction-starts-costs-continue-to-increase",
+    "source_date": "2026-11",
+    "access_date": "2026-11-16",
+    "type": "Trade press"
+  },
+  {
+    "id": "M31",
+    "publisher": "BoomTownIndex",
+    "title": "U.S. Data Center Tracker: 547 project rows (compiled April 2026; largest projects re-checked October 2026). Per-state counts computed by this project from the page data",
+    "url": "https://boomtownindex.com/data-centers/",
+    "source_date": "2026-04 / 2026-10",
+    "access_date": "2026-11-16",
+    "type": "Secondary tracker (compiled from company, agency and local-news sources)"
+  },
+  {
+    "id": "M32",
+    "publisher": "Texas Comptroller of Public Accounts",
+    "title": "State sales tax exemption for qualifying data centers and qualifying large data center projects",
+    "url": "https://comptroller.texas.gov/taxes/data-centers/",
+    "source_date": "N/A",
+    "access_date": "2026-11-16",
+    "type": "Government data"
+  },
+  {
+    "id": "M33",
+    "publisher": "Virginia Department of Taxation",
+    "title": "2026 Legislative Summary: data center electricity consumption tax ($0.011/kWh, Jul 2026 to Jul 2028) and exemption study",
+    "url": "https://www.tax.virginia.gov/laws-rules-decisions/legislative-summaries/26-82",
+    "source_date": "2026-07-06",
+    "access_date": "2026-11-16",
+    "type": "Government data"
+  },
+  {
+    "id": "M34",
+    "publisher": "Georgia General Assembly (Governor signed-legislation folder)",
+    "title": "HB 463 (2026), as passed: repeals the sales and use tax exemption for data center equipment",
+    "url": "https://gov.georgia.gov/document/2026-signed-legislation/hb-463/download",
+    "source_date": "2026",
+    "access_date": "2026-11-16",
+    "type": "Government data"
+  },
+  {
+    "id": "M35",
+    "publisher": "Ohio Governor's Office",
+    "title": "Governor DeWine announces pause of data center tax exemption (May 27, 2026)",
+    "url": "https://governor.ohio.gov/wps/portal/gov/governor/media/news-and-media/governor-dewine-announces-pause-of-data-center-tax-exemption",
+    "source_date": "2026-05-27",
+    "access_date": "2026-11-16",
+    "type": "Government press release"
+  },
+  {
+    "id": "M36",
+    "publisher": "Pennsylvania Governor's Office",
+    "title": "Governor Shapiro announces Amazon plans to invest $20 billion in Pennsylvania for AI infrastructure",
+    "url": "https://www.pa.gov/governor/newsroom/2025-press-releases/gov-announces-amazon-to-invest--20b-in-pa--largest-capital-inves",
+    "source_date": "2025-06-09",
+    "access_date": "2026-11-16",
+    "type": "Government press release"
+  },
+  {
+    "id": "M37",
+    "publisher": "State of Indiana",
+    "title": "Gov. Holcomb announces Amazon Web Services plans to invest $11B in Northern Indiana",
+    "url": "https://events.in.gov/event/gov-holcomb-announces-amazon-web-services-plans-to-invest-11b-to-create-a-new-data-center-campus-in-northern-indiana",
+    "source_date": "2024-04-25",
+    "access_date": "2026-11-16",
+    "type": "Government press release"
+  },
+  {
+    "id": "M38",
+    "publisher": "State of Indiana",
+    "title": "Gov. Braun breaks ground on $10B Meta data center campus at LEAP District",
+    "url": "https://events.in.gov/event/gov-braun-breaks-ground-on-10b-meta-data-center-campus-at-leap-district",
+    "source_date": "2026-02-11",
+    "access_date": "2026-11-16",
+    "type": "Government press release"
   }
 ]

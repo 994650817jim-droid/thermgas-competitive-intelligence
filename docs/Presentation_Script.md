@@ -1,58 +1,69 @@
-# Classroom Presentation Script (about 4 minutes)
+# 5-Minute Team Presentation: Competitive and Market
 
-*Speaker notes in [brackets] say which dashboard page to show.*
+*Two messages only. Brackets say which screen to show. Total about 5 minutes (roughly 650 spoken words).*
 
 ---
 
-**1. Opening (30 s)** [Overview page]
+**1. Opening (25 s)** [Home page]
 
-Good morning. Our project looks at one question for ThermGAS: who does it really compete with in monitoring DMC vapor, the main electrolyte solvent in lithium-ion battery plants, and where can it win?
+Good morning. ThermGAS makes gas leak detectors. Our project answers two questions for its sales team: **who do they compete with**, and **where is the market**?
 
-Quick note before we start: this is independent student research, not an official ThermGAS product. Every number you see links to a dated source.
+This is independent student research. Every number you will see links to a dated source.
 
-**2. The headline (40 s)** [Overview, hero + KPIs]
+---
 
-Here is our answer in one sentence. ThermGAS has two verified direct competitors, ION Science and Riken Keiki, and no vendor yet has a public U.S. battery-plant reference.
+**2. Competitive: the finding (90 s)** [Competitive → "Who competes"]
 
-We looked at eleven competitors. Only two officially sell DMC-capable detectors to battery makers. Most of the others, like Honeywell's Li-ion Tamer, detect a different thing: a battery venting event, not how much DMC is in the room.
+Start with competition, for one application: monitoring DMC vapor, the main solvent in lithium-ion battery electrolyte.
 
-**3. The threat matrix (40 s)** [Overview, threat matrix]
+We researched eleven companies. Only **two are real direct competitors**: ION Science and Riken Keiki. Both officially sell detectors to battery plants, and DMC is on their list.
 
-This matrix places each product by two pieces of evidence. The vertical axis is how closely it does ThermGAS's job. The horizontal axis is how strongly it is marketed to battery plants in the U.S.
+This matrix places each product by evidence. Up means: does it do the same job? Right means: is it sold to battery plants in the U.S.? The orange squares in the top right are the real threat.
 
-Top right is the real threat: ION Science and Riken. Honeywell sits next to them because it sells into the same gigafactory budget, but it measures something else.
+Honeywell is next to them, but it measures something else. Its Li-ion Tamer detects a battery venting event, not how much DMC is in the room.
 
-We deliberately did not invent market shares or threat scores. The placement follows written rules.
+[Compare products tab]
 
-**4. Battlecard (50 s)** [Product Battlecard, Haloguard IR vs FALCO 2 11.7 vs Riken]
+Here is ThermGAS next to its rivals. ION's detector costs about 3,500 dollars, but its own spec sheet says the lamp lasts up to four months, and it reacts to every solvent in the room. ThermGAS uses a different technology with no lamp to replace.
 
-Here is ThermGAS next to its two direct rivals.
+One honest warning: these specs use different units, so we do **not** rank the products. And ThermGAS's own documents disagree on its DMC limit, 0.5 versus 1 ppm. Fixing that is the first recommendation.
 
-ION's FALCO is cheap to buy, about 3,500 dollars at list price, and it is approved for hazardous areas. But its own spec sheet says the UV lamp lasts up to four months. A PID also reacts to every solvent in the room, including the IPA used for cleaning.
+---
 
-ThermGAS uses photoacoustic infrared. There is no lamp to replace, and one analyzer can watch up to 24 points.
+**3. Market: the map (2 min)** [Market → Map, Data centers layer]
 
-But notice this warning box. The products are measured in different ways, so we refuse to rank them. ThermGAS's own documents even disagree: 0.5 ppm on the website, 1 ppm in the application note.
+Now the market. This is one map with four growth markets. Let me start with **data centers**, because their chillers contain refrigerant.
 
-**5. The map (40 s)** [U.S. Landscape, Competitor presence, then Customer facilities]
+Texas has the most projects, 58, and 26 are already under construction. Virginia has the biggest announced total, over 160 billion dollars. Click Texas: it opens a state map. The shaded counties show where the projects are, Ector, Williamson and Potter lead, and the tables below give the developers and the state's tax incentives, each with its source.
 
-Offices, distributors, service sites and customers are separate layers here, and we never add them together. Gray hatching means we found no evidence. It does not mean "no competition".
+[Switch to Pharma plants]
 
-Competitor channels cluster in California, Texas and the Northeast. The battery plants are in Kentucky, Michigan, Tennessee, Georgia, Kansas and North Carolina. That gap is where channel work matters most.
+**Pharmaceutical plants.** The official NAICS codes are 325412 and 325414. The Census counts 1,877 establishments, and 665 have 50 or more employees, our best proxy for sites with chiller plants. California, New Jersey and Florida lead.
 
-**6. Strategy (50 s)** [Strategic Positioning, positioning statement, priority model, recommendations]
+[Battery plants, then Semiconductor fabs]
 
-Our recommended position: ThermGAS should be the DMC-specific, low-maintenance concentration monitor that complements, rather than fights, event detection.
+**Batteries and chips.** Panasonic in Kansas and Toyota in North Carolina are already producing. TSMC, Texas Instruments, Micron and Samsung have announced more than 100 billion dollars in U.S. fabs. We also show the setbacks: some plants were cancelled or delayed.
 
-Three actions come first:
-1. Publish one clear DMC spec with interference data.
-2. Answer the hazardous-area question before buyers ask it.
-3. Win a first reference site with a side-by-side pilot, starting in Georgia, ThermGAS's home state, near SK Battery and the new Hyundai-LG plant.
+Gray hatching means we found no evidence. It does not mean no competition or no opportunity.
 
-The priority model is fully transparent. You can move these sliders and see the ranking change.
+---
 
-**7. Close (20 s)** [Sources & Method]
+**4. Recommendation (50 s)** [Market → Data centers (Q3)]
 
-Everything is traceable. We have 64 sources, and you can export them as CSV, along with the gaps we could not close: ThermGAS pricing, lamp costs and matched DMC tests.
+Our recommendation for outreach: **Texas first, Virginia second, Georgia third.** Georgia is ThermGAS's home state, so service is closest. But its equipment tax exemption is being repealed, and Ohio paused new exemptions, so we put Ohio on a watch list.
 
-Our goal was not to prove ThermGAS is better than everyone. It was to show exactly where it can win, and what evidence it still needs. Thank you.
+For competitors: **publish one tested DMC specification** and show it next to ION Science and Riken.
+
+---
+
+**5. Close (20 s)** [Sources & Method]
+
+Everything is traceable: 90 sources, exportable as CSV. Where we could not find data, such as ThermGAS prices, we say so instead of guessing. Our goal was not to prove ThermGAS is best, but to show where it can win. Thank you.
+
+---
+
+## Likely questions
+
+- **How did you pick the pharma NAICS codes?** From the official Census definitions: 325412 covers finished dosage forms (vials, ampoules, solutions) and 325414 covers vaccines and blood fractions. Both depend on cold storage and cleanrooms. That choice is our reasoning, labeled Inferred.
+- **Are the data center numbers audited?** No. They are announced investment from a project tracker (April–October 2026); we verified the incentives and flagship projects against state government sources.
+- **Why no price comparison?** ThermGAS prices are not public, and the competitors' lamp prices are not either. A three-year cost needs real quotes.

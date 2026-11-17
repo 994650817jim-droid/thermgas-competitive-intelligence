@@ -1,0 +1,452 @@
+{
+ "S01": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S07": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S03": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S02": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S04": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S08": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S06": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S05": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S09": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S10": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S11": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S12": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S30": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S32": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S33": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S31": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S36": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S20": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S35": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S41": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S22": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S21": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S23": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S34": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S40": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S51": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S70": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S60": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S91": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S71": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S80": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S92": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S61": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S42": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S100": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S102": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S132": {
+  "status": 0,
+  "result": "No response",
+  "date": "2026-11-17"
+ },
+ "S101": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S131": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S130": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S110": {
+  "status": 404,
+  "result": "Not found (404)",
+  "date": "2026-11-17"
+ },
+ "S24": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S37": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S38": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S120": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S140": {
+  "status": 0,
+  "result": "No response",
+  "date": "2026-11-17"
+ },
+ "S44": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S39": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S53": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S103": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S50": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S25": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S141": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S142": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S144": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S52": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S145": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S146": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "S143": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S148": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "M02": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M01": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S43": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M03": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M11": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "M10": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M14": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "M12": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S147": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M18": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M13": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M19": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M17": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M16": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M21": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M23": {
+  "status": 403,
+  "result": "Blocked by site (403); open in a browser",
+  "date": "2026-11-17"
+ },
+ "M15": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M30": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M31": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M32": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S90": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M24": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M22": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "S54": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M36": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M34": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M33": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M38": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M37": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ },
+ "M35": {
+  "status": 200,
+  "result": "OK",
+  "date": "2026-11-17"
+ }
+}

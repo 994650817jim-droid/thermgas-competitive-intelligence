@@ -33,6 +33,7 @@ export function SourceProvider({ children }: { children: ReactNode }) {
                   <div className="src-meta">{s.publisher}</div>
                   <div className="src-meta">Source date: {s.source_date} · Accessed: {s.access_date}</div>
                   <a href={s.url} target="_blank" rel="noreferrer" className="src-link">{s.url}</a>
+                  {s.link_check && <div className={`src-meta link-${s.link_check === 'OK' ? 'ok' : 'warn'}`}>Link check ({s.link_checked}): {s.link_check}</div>}
                 </div>
               );
             })}
@@ -98,3 +99,37 @@ export const Legend = () => (
     <span><Badge status="Unknown" /> not available</span>
   </div>
 );
+
+export function Bars({ rows, unit, onClick }: { rows: { key: string; label: string; value: number; title?: string }[]; unit?: string; onClick?: (k: string) => void }) {
+  const max = Math.max(1, ...rows.map(r => r.value));
+  return (
+    <div className="bars">
+      {rows.map(r => (
+        <div key={r.key} className="bar-row" title={r.title} style={{ cursor: onClick ? 'pointer' : undefined }} onClick={() => onClick?.(r.key)}>
+          <span>{r.label}</span>
+          <div className="bar-track"><div className="bar-fill" style={{ width: `${(r.value / max) * 100}%` }} /></div>
+          <span className="n mono">{r.value}{unit ? ` ${unit}` : ''}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/** Executive summary strip: four keyword cards plus one "so what" line. */
+export function Summary({ title, items, foot }: { title: string; items: { label: string; kw: string; line: string; src?: string[] }[]; foot?: ReactNode }) {
+  return (
+    <section className="summary" aria-label={title}>
+      <div className="summary-head"><b>{title}</b><span>in 4 keywords</span>{foot && <div className="summary-foot">{foot}</div>}</div>
+      <div className="summary-grid">
+        {items.map(i => (
+          <div key={i.label} className="summary-card">
+            <div className="summary-label">{i.label}</div>
+            <div className="summary-kw">{i.kw}</div>
+            <div className="summary-line">{i.line}</div>
+            {i.src && i.src.length > 0 && <Src ids={i.src} />}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

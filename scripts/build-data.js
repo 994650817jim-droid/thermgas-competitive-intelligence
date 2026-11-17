@@ -12,6 +12,8 @@ const competitors = load('competitors.json');
 const products = load('products.json');
 const evidence = load('state_evidence.json').rows;
 const facilities = load('facilities.json').rows;
+const lc = fs.existsSync(path.join(D, 'link_check.json')) ? load('link_check.json') : {};
+sources.forEach(s => { if (lc[s.id]) { s.link_check = lc[s.id].result; s.link_checked = lc[s.id].date; } });
 const srcIds = new Set(sources.map(s => s.id));
 const compIds = new Set(competitors.map(c => c.id));
 
@@ -23,9 +25,19 @@ products.forEach(p => { checkSrc(p.sources, `product ${p.id}`); if (!compIds.has
 evidence.forEach((e, i) => { checkSrc(e.source, `evidence #${i}`); if (!compIds.has(e.company)) errors.push(`evidence #${i}: unknown company`); if (!['Verified','Inferred','Unknown'].includes(e.status)) errors.push(`evidence #${i}: bad status ${e.status}`); });
 facilities.forEach((f, i) => checkSrc([f.source, f.status_update_source], `facility #${i}`));
 const analysis = load('analysis.json');
+const market = load('market_sizing.json');
+const marketStates = load('market_states.json');
+const marketGeo = load('market_geo.json');
+const watchouts = load('watchouts.json');
 const excluded = load('excluded.json');
-const walk = (o, ctx) => { if (Array.isArray(o)) o.forEach((x, i) => walk(x, `${ctx}[${i}]`)); else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) { if ((k === 'sources' || k === 'evidence') && Array.isArray(v) && v.every(x => typeof x === 'string')) checkSrc(v, `${ctx}.${k}`); else walk(v, `${ctx}.${k}`); } };
+const walk = (o, ctx) => { if (Array.isArray(o)) o.forEach((x, i) => walk(x, `${ctx}[${i}]`)); else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) { if ((k === 'sources' || k === 'evidence' || k === 'incentive_sources') && Array.isArray(v) && v.every(x => typeof x === 'string')) checkSrc(v, `${ctx}.${k}`); else walk(v, `${ctx}.${k}`); } };
 walk(analysis, 'analysis');
+walk(market, 'market');
+walk(marketStates.sources, 'marketStates');
+walk(marketGeo.places, 'marketGeo.places');
+walk(watchouts.items, 'watchouts');
+watchouts.items.forEach(w => { if (!['risk', 'opportunity', 'caution'].includes(w.level)) errors.push('watchout ' + w.id + ': bad level'); });
+walk(marketGeo.sources, 'marketGeo.sources');
 const prodIds = new Set(products.map(p => p.id));
 analysis.threats.forEach(t => { if (!prodIds.has(t.product)) errors.push(`threat: unknown product ${t.product}`); });
 analysis.battlecards.forEach(b => { if (!prodIds.has(b.product)) errors.push(`battlecard: unknown product ${b.product}`); });
@@ -68,7 +80,7 @@ const csv = (rows, cols) => [cols.join(',')].concat(rows.map(r => cols.map(c => 
   v = String(v); return /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
 }).join(','))).join('\n');
 const write = (f, rows, cols) => fs.writeFileSync(path.join(OUT, f), '﻿' + csv(rows, cols));
-write('source_register.csv', sources, ['id','publisher','title','url','source_date','access_date','type']);
+write('source_register.csv', sources, ['id','publisher','title','url','source_date','access_date','type','link_check','link_checked']);
 write('competitors.csv', competitors, ['id','name','category','hq','hq_state','hq_status','website','industry_focus','relevant_products','us_presence','battery_experience','relationship','rationale','evidence_level','sources']);
 write('competitor_comparison_matrix.csv', products, ['id','company','model','category','technology','target_gases','dmc_capability','dmc_status','range','sensitivity','resolution','response_time','selectivity','accuracy','calibration','maintenance','installation','integration','certifications','applications','price','warranty','conditions','sources']);
 const srcUrl = Object.fromEntries(sources.map(s => [s.id, s]));
@@ -80,11 +92,11 @@ write('facilities.csv', facilities, ['operator','city','state','type','status_in
 const dash = path.join(__dirname, '..', 'dashboard', 'src', 'data');
 if (fs.existsSync(path.join(__dirname, '..', 'dashboard'))) {
   fs.mkdirSync(dash, { recursive: true });
-  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded }, null, 1));
+  fs.writeFileSync(path.join(dash, 'dataset.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), sources, competitors, products, evidence, facilities, states, analysis, excluded, market, marketStates, marketGeo, watchouts }, null, 1));
   const pub = path.join(__dirname, '..', 'dashboard', 'public', 'export');
   fs.mkdirSync(pub, { recursive: true });
   for (const f of fs.readdirSync(OUT)) fs.copyFileSync(path.join(OUT, f), path.join(pub, f));
-  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded }, null, 2));
+  fs.writeFileSync(path.join(pub, 'thermgas_ci_dataset.json'), JSON.stringify({ sources, competitors, products, evidence, facilities, states, analysis, excluded, market, marketStates, marketGeo, watchouts }, null, 2));
 }
 
 const s = states;
